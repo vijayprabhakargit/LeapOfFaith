@@ -95,19 +95,26 @@ async function fetchWithTimeout(url: string, init: RequestInit): Promise<Respons
 }
 
 async function callOpenAiCompatible(c: ProviderConfig, messages: ChatMessage[]): Promise<string> {
-  const res = await fetchWithTimeout(`${c.baseUrl}/chat/completions`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${c.apiKey}`,
-    },
-    body: JSON.stringify({
-      model: c.model,
-      messages,
-      temperature: 0.3,
-      response_format: { type: "json_object" },
-    }),
-  });
+  const send = (jsonMode: boolean) =>
+    fetchWithTimeout(`${c.baseUrl}/chat/completions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${c.apiKey}`,
+      },
+      body: JSON.stringify({
+        model: c.model,
+        messages,
+        temperature: 0.3,
+        ...(jsonMode ? { response_format: { type: "json_object" } } : {}),
+      }),
+    });
+
+  // Some providers/models (e.g. certain OpenRouter models) reject
+  // response_format. Fall back to plain JSON-in-text, which parseJsonLoose
+  // still handles.
+  let res = await send(true);
+  if (res.status === 400) res = await send(false);
   if (!res.ok) throw new Error(`LLM ${res.status}: ${await res.text()}`);
   const data = (await res.json()) as any;
   return data.choices?.[0]?.message?.content ?? "";

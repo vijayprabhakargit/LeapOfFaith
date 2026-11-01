@@ -22,7 +22,7 @@ export async function fetchOnThisDay(date: Date, useLlm: boolean): Promise<OnThi
 
   let data: WikiResponse;
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 12000);
+  const timer = setTimeout(() => controller.abort(), 20000);
   try {
     const res = await fetch(url, {
       headers: { "User-Agent": "TheDailyBrief/1.0 (UPSC study aggregator)" },
@@ -30,7 +30,8 @@ export async function fetchOnThisDay(date: Date, useLlm: boolean): Promise<OnThi
     });
     if (!res.ok) throw new Error(`wiki ${res.status}`);
     data = (await res.json()) as WikiResponse;
-  } catch {
+  } catch (err) {
+    console.warn(`   ⚠ On this day unavailable: ${err instanceof Error ? err.message : err}`);
     return [];
   } finally {
     clearTimeout(timer);
