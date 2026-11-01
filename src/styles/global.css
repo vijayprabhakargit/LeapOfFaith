@@ -104,7 +104,6 @@ h4 {
 
 .masthead {
   border-top: 4px solid var(--ink);
-  border-bottom: 2px solid var(--ink);
   background: var(--paper);
   padding-top: 4px;
 }
@@ -124,6 +123,10 @@ h4 {
   text-transform: uppercase;
   letter-spacing: 0.22em;
   color: var(--muted);
+}
+
+.masthead-ears a.ear:hover {
+  color: var(--ink);
 }
 
 .masthead-flag {
@@ -973,51 +976,129 @@ footer.site a {
   line-height: 1.5;
 }
 
-/* ---- Archive ------------------------------------------------------------ */
-.archive-month {
-  margin-bottom: 34px;
-}
-
-.archive-month h3 {
+/* ---- Archive (calendar) ------------------------------------------------- */
+.archive-stats {
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--accent);
-  border-bottom: 1px solid var(--rule);
-  padding-bottom: 8px;
-  margin-bottom: 14px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  margin-top: 12px;
 }
 
-.archive-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 12px;
-}
-
-.archive-item {
+.year {
   border: 1px solid var(--rule);
   background: var(--card);
-  padding: 16px;
-  transition: transform 0.15s ease, border-color 0.15s ease;
+  box-shadow: var(--shadow);
+  margin-bottom: 22px;
 }
 
-.archive-item:hover {
-  transform: translateY(-2px);
-  border-color: var(--ink);
+.year-head {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--rule);
 }
 
-.archive-item .d {
+.year-head::-webkit-details-marker {
+  display: none;
+}
+
+.year-label {
   font-family: var(--display);
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 700;
 }
 
-.archive-item .meta {
-  font-family: var(--sans);
-  font-size: 12px;
+.year-label::before {
+  content: "▾";
+  font-size: 13px;
   color: var(--muted);
-  margin-top: 6px;
+  margin-right: 10px;
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.year:not([open]) .year-label::before {
+  transform: rotate(-90deg);
+}
+
+.year-meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+.month {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.month:last-child {
+  border-bottom: none;
+}
+
+.month-name {
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.calendar .dow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-align: center;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  font-family: var(--display);
+  font-size: 15px;
+}
+
+.cell.empty {
+  visibility: hidden;
+}
+
+.cell.day {
+  color: var(--muted);
+  border: 1px solid transparent;
+}
+
+.cell.has {
+  border: 1px solid var(--rule-strong);
+  color: var(--ink);
+  background: var(--paper-2);
+  font-weight: 600;
+  transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease, color 0.12s ease;
+}
+
+.cell.has:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
 }
 
 /* ---- Empty state -------------------------------------------------------- */

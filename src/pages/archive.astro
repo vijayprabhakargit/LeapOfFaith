@@ -1,20 +1,63 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { getArchiveByMonth } from "../lib/editions";
+import { getAllEditions } from "../lib/editions";
 import { formatDateShort } from "../lib/format";
 
-const months = getArchiveByMonth();
+const editions = getAllEditions();
+const byDate = new Map(editions.map((e) => [e.date, e]));
+const years = [...new Set(editions.map((e) => e.date.slice(0, 4)))].sort().reverse();
+
+interface Cell {
+  day: number;
+  date: string;
+  edition?: (typeof editions)[number];
+}
+
+const WEEKDAYS = ["S", "M", "T", "W", "T", "F", "S"];
+
+function monthsOf(year: string) {
+  const keys = [...new Set(editions.filter((e) => e.date.startsWith(year)).map((e) => e.date.slice(0, 7)))].sort();
+  return keys.map((key) => {
+    const [y, m] = key.split("-").map(Number);
+    const offset = new Date(Date.UTC(y, m - 1, 1)).getUTCDay(); // 0 = Sunday
+    const daysInMonth = new Date(Date.UTC(y, m, 0)).getUTCDate();
+    const cells: (Cell | null)[] = [];
+    for (let i = 0; i < offset; i++) cells.push(null);
+    for (let d = 1; d <= daysInMonth; d++) {
+      const date = `${key}-${String(d).padStart(2, "0")}`;
+      cells.push({ day: d, date, edition: byDate.get(date) });
+    }
+    return {
+      key,
+      label: new Date(`${key}-01T00:00:00Z`).toLocaleDateString("en-IN", {
+        month: "long",
+        year: "numeric",
+        timeZone: "UTC",
+      }),
+      cells,
+    };
+  });
+}
+
+const yearGroups = years.map((year) => ({
+  year,
+  count: editions.filter((e) => e.date.startsWith(year)).length,
+  months: monthsOf(year),
+}));
 ---
-<BaseLayout title="Archive — The Daily Brief" description="Every past edition of The Daily Brief.">
+<BaseLayout title="Archive — Leap of Faith" description="Every past edition of The Daily Brief.">
   <div class="wrap">
     <div class="hero">
       <div class="eyebrow">The Daily Brief</div>
       <h1>Archive</h1>
-      <p class="tagline">Every edition, in reverse order.</p>
+      <p class="tagline">Every edition, by month. Click a day to read it.</p>
+      <div class="archive-stats">
+        {editions.length} edition{editions.length === 1 ? "" : "s"} · {years.length} year{years.length === 1 ? "" : "s"}
+      </div>
     </div>
 
     {
-      months.length === 0 && (
+      editions.length === 0 && (
         <div class="empty">
           <h2>Nothing archived yet</h2>
           <p class="note">Editions appear here after you run <code>npm run generate</code>.</p>
@@ -23,20 +66,42 @@ const months = getArchiveByMonth();
     }
 
     {
-      months.map((m) => (
-        <div class="archive-month">
-          <h3>{m.label}</h3>
-          <div class="archive-grid">
-            {m.editions.map((e) => (
-              <a class="archive-item" href={`/editions/${e.date}/`}>
-                <div class="d">{formatDateShort(e.date)}</div>
-                <div class="meta">
-                  {e.stats.stories} stories · {e.stats.articles} articles
+      yearGroups.map((group) => (
+        <details class="year" open>
+          <summary class="year-head">
+            <span class="year-label">{group.year}</span>
+            <span class="year-meta">
+              {group.count} edition{group.count === 1 ? "" : "s"}
+            </span>
+          </summary>
+          <div class="year-body">
+            {group.months.map((month) => (
+              <div class="month">
+                <div class="month-name">{month.label}</div>
+                <div class="calendar">
+                  {WEEKDAYS.map((d) => (
+                    <span class="dow">{d}</span>
+                  ))}
+                  {month.cells.map((cell) =>
+                    cell === null ? (
+                      <span class="cell empty" />
+                    ) : cell.edition ? (
+                      <a
+                        class="cell day has"
+                        href={`/editions/${cell.date}/`}
+                        title={`${formatDateShort(cell.date)} · ${cell.edition.stats.stories} stories`}
+                      >
+                        {cell.day}
+                      </a>
+                    ) : (
+                      <span class="cell day">{cell.day}</span>
+                    ),
+                  )}
                 </div>
-              </a>
+              </div>
             ))}
           </div>
-        </div>
+        </details>
       ))
     }
   </div>
