@@ -1,0 +1,11 @@
+# CODEOWNERS
+#
+# Workflow and infrastructure changes require maintainer review before merge,
+# because a modified workflow runs with the repository's Actions secrets.
+# Enforced when branch protection enables "Require review from Code Owners".
+#
+# Docs: https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+/.github/   @vijayprabhakargit
+/scripts/   @vijayprabhakargit
+/config/    @vijayprabhakargit
