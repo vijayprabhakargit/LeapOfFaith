@@ -211,6 +211,9 @@ test/               # unit tests (node --test via tsx)
 - **PDF edition** — a print-ready A4 page per day (the newsprint `@media print` styles already exist).
 - **Wider regional perspectives** — extend `GOOGLE_NEWS_LOCALES` and add stream-language sources.
 - **Revision tools** — export each story's static links + prelims pointers into a spaced-revision list.
+- **Tag browsing by period** — the tag cloud (`/tags/`) currently spans every edition; add year and
+  custom date-range filters so you can revise a topic across a chosen window (e.g. all "Environment"
+  stories in 2026).
 
 ---
 
