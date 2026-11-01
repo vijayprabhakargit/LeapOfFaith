@@ -1,6 +1,11 @@
 name: Leap of Faith — Daily Brief
 
 on:
+  # Redeploy on every push to main so code/UI changes go live immediately,
+  # using the latest committed edition (no regeneration — no token cost here).
+  # The daily edition commit carries [skip ci], so it never re-triggers this.
+  push:
+    branches: [main]
   schedule:
     # 6:00 AM IST == 00:30 UTC
     - cron: "30 0 * * *"
@@ -51,6 +56,7 @@ jobs:
         run: npm ci
 
       - name: Generate today's edition
+        if: github.event_name != 'push'
         env:
           DAY: ${{ github.event.inputs.day }}
           NO_REGIONAL: ${{ github.event.inputs.no_regional }}
@@ -64,6 +70,7 @@ jobs:
         run: npm run build
 
       - name: Commit edition back to the repository
+        if: github.event_name != 'push'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -139,6 +139,11 @@ revision notes there and they will appear in the brief.
 1. installs deps, 2. generates the edition, 3. builds the site, 4. commits the new edition back
 (`[skip ci]`), 5. deploys `dist/` to Cloudflare Pages.
 
+It also **runs on every push to `main`**, but on a push it only **builds and deploys the latest
+committed edition** — no regeneration, so no token cost. That way code or UI changes go live
+immediately instead of waiting for the next morning. The daily edition commit carries `[skip ci]`, so
+it never re-triggers a build.
+
 Add these repository **secrets** (Settings → Secrets → Actions):
 
 | Secret | Purpose |
