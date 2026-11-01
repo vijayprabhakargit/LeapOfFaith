@@ -433,6 +433,7 @@ h4 {
   position: relative;
   opacity: 1;
   transform: none;
+  scroll-margin-top: 72px;
   transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.2s ease;
 }
 
@@ -446,6 +447,25 @@ h4 {
 .story.reveal {
   opacity: 1;
   transform: none;
+}
+
+/* Brief highlight when you land on a story via a #story-<slug> link. */
+.story-target {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent), var(--shadow);
+  animation: storyPop 1.5s ease;
+}
+
+@keyframes storyPop {
+  0% {
+    transform: scale(1);
+  }
+  18% {
+    transform: scale(1.012);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .story:hover {
@@ -1475,6 +1495,9 @@ footer.site a {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+  .story-target {
+    animation: none;
   }
   html {
     scroll-behavior: auto;

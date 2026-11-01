@@ -239,6 +239,7 @@ function sizeClass(count: number, max: number): string {
       selected = a.dataset.tag || null;
       syncUrl();
       render();
+      focusView();
     });
     clearEl?.addEventListener("click", (e) => {
       e.preventDefault();
@@ -246,6 +247,13 @@ function sizeClass(count: number, max: number): string {
       syncUrl();
       render();
     });
+
+    function focusView() {
+      if (!viewEl || viewEl.hidden) return;
+      requestAnimationFrame(() => {
+        viewEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
 
     readUrl();
     render();

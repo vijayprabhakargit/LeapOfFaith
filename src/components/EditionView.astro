@@ -58,3 +58,21 @@ const stories = edition.stories;
   <OnThisDay items={edition.onThisDay} date={edition.date} />
   <Extras items={edition.extras ?? []} />
 </div>
+
+<script>
+  // When arriving via a deep link like #story-<slug>, make sure the story is
+  // revealed and briefly flash it so it's obvious which tile you landed on.
+  function highlightStory() {
+    const hash = decodeURIComponent(location.hash || "");
+    if (!hash.startsWith("#story-")) return;
+    const el = document.getElementById(hash.slice(1));
+    if (!el) return;
+    el.classList.add("reveal");
+    el.classList.remove("story-target");
+    void (el as HTMLElement).offsetWidth; // restart the animation
+    el.classList.add("story-target");
+    window.setTimeout(() => el.classList.remove("story-target"), 2400);
+  }
+  highlightStory();
+  addEventListener("hashchange", highlightStory);
+</script>
