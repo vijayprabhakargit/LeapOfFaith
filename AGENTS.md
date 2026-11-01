@@ -41,6 +41,10 @@ The single source of truth for shapes is `src/lib/types.ts` (`Edition`, `Story`,
 `Perspective`, `OnThisDayItem`). The generator must produce JSON that matches it; the site reads it
 via `src/lib/editions.ts`.
 
+Tag browsing is **client-side by design**: `src/pages/tags/index.astro` embeds a JSON payload built by
+`src/lib/tags.ts` and filters it in the browser (time range + selected tag live in the URL query). Do
+**not** add a page-per-tag generator — that is what this replaced, and it doesn't scale.
+
 ## Adding a source
 
 Append to `SOURCES` in `config/sources.ts`. Prefer a native RSS/Atom URL. If a publisher has no feed

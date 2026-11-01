@@ -24,6 +24,9 @@ Each edition (last 24 hours of news) is one newspaper page with:
   (when it came, by whom), geography, socio-economic context, key terms, prelims pointers and a mains angle.
 - **Prelims — remember this** and **Mains practice** — ready-made revision pointers and a question.
 - **On this day** — history from the Wikimedia "On this day" feed, curated for syllabus relevance.
+- **Tags** — every story is tagged; browse them in a **client-side tag cloud** (`/tags/`) with a time
+  filter (all time / 1–12 months / custom range). Clicking a tag lists its stories in place, and the
+  state lives in the URL (`/tags/?tag=iran&range=6m`) so it's shareable.
 - **Filters + search** — by section, "must read", or free text; a reading-progress bar; light / dark themes.
 
 Copyright-safe by design: we store only short excerpts and **always link back to the publisher**.
@@ -211,9 +214,6 @@ test/               # unit tests (node --test via tsx)
 - **PDF edition** — a print-ready A4 page per day (the newsprint `@media print` styles already exist).
 - **Wider regional perspectives** — extend `GOOGLE_NEWS_LOCALES` and add stream-language sources.
 - **Revision tools** — export each story's static links + prelims pointers into a spaced-revision list.
-- **Tag browsing by period** — the tag cloud (`/tags/`) currently spans every edition; add year and
-  custom date-range filters so you can revise a topic across a chosen window (e.g. all "Environment"
-  stories in 2026).
 
 ---
 

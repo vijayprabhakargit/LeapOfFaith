@@ -1229,16 +1229,85 @@ footer.site a {
   font-size: 36px;
 }
 
-.tag-back {
-  margin: 0 0 10px;
+.tag-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 2px 0 18px;
 }
 
-.tag-back a {
+.tag-toolbar label {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+.tag-select,
+.tag-date {
+  font-family: var(--sans);
+  font-size: 13px;
+  border: 1px solid var(--rule-strong);
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 6px;
+  padding: 7px 10px;
+  outline: none;
+}
+
+.tag-select:focus,
+.tag-date:focus {
+  border-color: var(--accent);
+}
+
+.tag-custom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tag-custom[hidden] {
+  display: none;
+}
+
+.tag-dash {
+  color: var(--muted);
+}
+
+.tag-view {
+  margin-top: 6px;
+}
+
+.tag-active {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 4px 0 10px;
+  border-top: 1px solid var(--rule);
+  padding-top: 14px;
+}
+
+.tag-active-label {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.tag-clear {
   font-family: var(--mono);
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   color: var(--accent);
+}
+
+.tag-empty {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 14px;
+  padding: 18px 0;
 }
 
 .tag-story-list {
