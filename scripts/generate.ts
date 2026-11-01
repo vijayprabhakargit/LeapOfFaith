@@ -30,7 +30,7 @@ function loadDotEnv(path: string) {
 import type { Edition, Story } from "../src/lib/types";
 import { ENABLED_SOURCES, GOOGLE_NEWS_LOCALES } from "../config/sources";
 import { fetchFeeds, fetchGoogleNewsArticles } from "./lib/fetchFeeds";
-import { clusterArticles, enrichStory, buildHeuristicStories, type ClusterSpec } from "./lib/enrich";
+import { clusterArticles, enrichStory, buildHeuristicStories, selectCandidates, assignSignals, type ClusterSpec } from "./lib/enrich";
 import { fetchOnThisDay } from "./lib/onthisday";
 import { llmConfigured, describeLlm } from "./lib/llm";
 
@@ -96,15 +96,9 @@ async function main() {
     return;
   }
 
-  // Rank candidates: source priority first, then recency.
+  // Balanced candidate selection across outlets (avoids one paper dominating).
   const priorityOf = new Map(ENABLED_SOURCES.map((s) => [s.id, s.priority]));
-  const ranked = [...articles].sort((a, b) => {
-    const pa = priorityOf.get(a.sourceId) ?? 3;
-    const pb = priorityOf.get(b.sourceId) ?? 3;
-    if (pa !== pb) return pa - pb;
-    return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
-  });
-  const candidates = ranked.slice(0, 60);
+  const candidates = selectCandidates(articles, priorityOf, 64, 4);
 
   // 2. Cluster ---------------------------------------------------------------
   let brief: string[] = [];
@@ -151,9 +145,9 @@ async function main() {
     ];
   }
 
-  stories = stories
-    .filter((s): s is Story => Boolean(s))
-    .sort((a, b) => b.importance - a.importance);
+  stories = assignSignals(
+    stories.filter((s): s is Story => Boolean(s)).sort((a, b) => b.importance - a.importance),
+  );
 
   // 4. On This Day -----------------------------------------------------------
   console.log("→ Building 'On This Day'…");

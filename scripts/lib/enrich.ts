@@ -26,6 +26,57 @@ export function sanitizeArticleIds(ids: unknown, max: number): number[] {
   return ids.map((i) => Number(i)).filter((i) => Number.isInteger(i) && i >= 0 && i < max);
 }
 
+// The "outlet family" of a source — e.g. "The Hindu — World" belongs to
+// "The Hindu". Used to stop a paper with several feeds from dominating.
+export function outletFamily(source: string): string {
+  return source.split(" — ")[0].trim();
+}
+
+// Pick a balanced, recent set of candidate articles for the model. Rather than
+// ranking purely by source priority (which lets one paper with many feeds crowd
+// out the rest), we round-robin across outlet families and cap each family.
+export function selectCandidates(
+  articles: Article[],
+  priorityOf: Map<string, number>,
+  limit = 64,
+  perFamilyCap = 4,
+): Article[] {
+  const byFamily = new Map<string, Article[]>();
+  for (const a of articles) {
+    const key = outletFamily(a.source);
+    const list = byFamily.get(key) ?? [];
+    list.push(a);
+    byFamily.set(key, list);
+  }
+  // Newest first within each family.
+  for (const list of byFamily.values()) {
+    list.sort((x, y) => new Date(y.publishedAt).getTime() - new Date(x.publishedAt).getTime());
+  }
+  // Families ordered by the best (lowest) priority number they contain.
+  const familyPriority = (list: Article[]) => Math.min(...list.map((a) => priorityOf.get(a.sourceId) ?? 3));
+  const families = [...byFamily.entries()].sort((a, b) => familyPriority(a[1]) - familyPriority(b[1]));
+
+  const picked: Article[] = [];
+  for (let round = 0; round < perFamilyCap && picked.length < limit; round++) {
+    for (const [, list] of families) {
+      if (list[round]) {
+        picked.push(list[round]);
+        if (picked.length >= limit) break;
+      }
+    }
+  }
+  return picked;
+}
+
+// Assign the "signal" badge relative to the whole edition so a "must read" always
+// exists: the top-ranked story and any rated 5 are must-reads, 3+ are recommended.
+export function assignSignals(stories: Story[]): Story[] {
+  return stories.map((s, i) => ({
+    ...s,
+    signal: s.importance >= 5 || i === 0 ? "must-read" : s.importance >= 3 ? "recommended" : "all",
+  }));
+}
+
 function indexArticles(articles: Article[]): string {
   return articles
     .map(
@@ -44,6 +95,9 @@ You are given raw articles from many feeds published in the last 24 hours. Your 
 Rules:
 - Prefer 8 to 14 stories. Ignore pure entertainment/gossip/sports unless policy-relevant.
 - Weight stories by UPSC relevance: polity, economy, IR, environment, security, science & tech, society, culture, geography, agriculture.
+- Spread importance across the full 1-5 range. Rate at least one story 5 (a genuine must-read for the exam), several 4, and the rest lower; do not rate everything the same.
+- Build each story from articles by DIFFERENT outlets where possible. When several outlets cover the same event, merge them; do not let one newspaper's many items dominate a story.
+- Prefer widely-accessible outlets; if a story is covered by both a paywalled paper and a free one, include both links but do not treat the paywalled one as the only source.
 - Every story must reference at least one article index. Use only indices that exist.
 - category must be one of: ${CATEGORY_KEYS.join(", ")}.
 Return STRICT JSON: {"brief": string[], "stories": [{"headline": string, "kicker": string, "category": string, "region": "india"|"global", "importance": number, "countryFocus": string|null, "articleIds": number[]}]}`;

@@ -12,13 +12,26 @@ const { story, lead = false } = Astro.props;
 const cat = CATEGORY_BY_KEY[story.category]?.label ?? story.category;
 const primary = story.articles[0];
 const signalLabel = story.signal === "must-read" ? "Must read" : story.signal === "recommended" ? "Recommended" : "Brief";
+const googleUrl = `https://www.google.com/search?q=${encodeURIComponent(story.headline)}`;
+// Everything visible in the card is searchable — including the static panels and
+// perspectives, so a query like "JCPOA" or "NDMA" still finds the story.
 const searchBlob = [
   story.headline,
   story.kicker,
+  cat,
   story.summary,
+  story.whyItMatters,
   story.tags.join(" "),
   story.articles.map((a) => a.source).join(" "),
-].join(" ").toLowerCase();
+  story.perspectives.map((p) => `${p.source} ${p.take}`).join(" "),
+  story.static
+    .map((s) => `${s.topic} ${s.syllabusNode} ${s.whatIsIt} ${s.background} ${s.keyTerms.join(" ")} ${s.mainsAngle}`)
+    .join(" "),
+  story.prelims.join(" "),
+  story.mainsQuestion ?? "",
+]
+  .join(" ")
+  .toLowerCase();
 ---
 <article
   class:list={["story", lead && "lead"]}
@@ -37,7 +50,22 @@ const searchBlob = [
   </div>
 
   <h2 class="story-headline">
-    <a href={primary?.link ?? "#story-" + story.slug} target="_blank" rel="noopener noreferrer">{story.headline}</a>
+    <a
+      class="headline-link"
+      href={primary?.link ?? "#story-" + story.slug}
+      target="_blank"
+      rel="noopener noreferrer">{story.headline}</a
+    >
+    <a
+      class="gs"
+      href={googleUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Search this headline on Google"
+      aria-label="Search this headline on Google"
+    >
+      <span>G</span>
+    </a>
   </h2>
 
   <div class="byline">

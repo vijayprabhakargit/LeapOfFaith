@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { slugify, sanitizeArticleIds, buildHeuristicStories } from "../scripts/lib/enrich";
+import { slugify, sanitizeArticleIds, buildHeuristicStories, outletFamily, selectCandidates, assignSignals } from "../scripts/lib/enrich";
 import type { Article } from "../src/lib/types";
 
 function makeArticle(overrides: Partial<Article> = {}): Article {
@@ -67,4 +67,63 @@ test("buildHeuristicStories maps articles into story shape", () => {
 test("buildHeuristicStories keeps global region for global articles", () => {
   const stories = buildHeuristicStories([makeArticle({ region: "global" })]);
   assert.equal(stories[0].region, "global");
+});
+
+test("outletFamily collapses multi-feed papers to one family", () => {
+  assert.equal(outletFamily("The Hindu — World"), "The Hindu");
+  assert.equal(outletFamily("Mint"), "Mint");
+});
+
+test("selectCandidates round-robins across outlets and caps each family", () => {
+  const hindu = Array.from({ length: 10 }, (_, i) =>
+    makeArticle({ id: `h${i}`, source: "The Hindu", sourceId: "the-hindu", link: `https://e.com/h${i}`, publishedAt: new Date(Date.UTC(2026, 9, 31, 10, i)).toISOString() }),
+  );
+  const ie = Array.from({ length: 2 }, (_, i) =>
+    makeArticle({ id: `ie${i}`, source: "The Indian Express", sourceId: "indian-express", link: `https://e.com/ie${i}` }),
+  );
+  const pib = [makeArticle({ id: "p1", source: "PIB (Press Information Bureau)", sourceId: "pib", link: "https://e.com/p1" })];
+  const priority = new Map([
+    ["the-hindu", 1],
+    ["indian-express", 1],
+    ["pib", 1],
+  ]);
+
+  const picked = selectCandidates([...hindu, ...ie, ...pib], priority, 20, 4);
+  const families = picked.map((a) => outletFamily(a.source));
+  const count = (f: string) => families.filter((x) => x === f).length;
+
+  assert.equal(count("The Hindu"), 4, "Hindu capped at 4 despite 10 articles");
+  assert.equal(count("The Indian Express"), 2);
+  assert.equal(count("PIB (Press Information Bureau)"), 1);
+  assert.equal(picked.length, 7);
+});
+
+test("selectCandidates respects the overall limit", () => {
+  const articles = Array.from({ length: 30 }, (_, i) =>
+    makeArticle({ id: `a${i}`, source: `Paper ${i}`, sourceId: `p${i}`, link: `https://e.com/${i}` }),
+  );
+  const priority = new Map(articles.map((a) => [a.sourceId, 3]));
+  assert.equal(selectCandidates(articles, priority, 5, 4).length, 5);
+});
+
+test("assignSignals guarantees a must-read and tiers the rest", () => {
+  const base = buildHeuristicStories([
+    makeArticle({ id: "x", title: "Top story" }),
+    makeArticle({ id: "y", title: "Second" }),
+    makeArticle({ id: "z", title: "Third" }),
+  ]);
+  const stories = assignSignals([
+    { ...base[0], importance: 4 },
+    { ...base[1], importance: 4 },
+    { ...base[2], importance: 2 },
+  ]);
+  assert.equal(stories[0].signal, "must-read", "top-ranked story is a must-read");
+  assert.equal(stories[1].signal, "recommended");
+  assert.equal(stories[2].signal, "all");
+});
+
+test("assignSignals marks any importance-5 story as must-read", () => {
+  const base = buildHeuristicStories([makeArticle(), makeArticle({ id: "b", title: "B" })]);
+  const stories = assignSignals([{ ...base[0], importance: 4 }, { ...base[1], importance: 5 }]);
+  assert.equal(stories[1].signal, "must-read");
 });

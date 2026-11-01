@@ -103,47 +103,56 @@ h4 {
 }
 
 .masthead {
+  border-top: 4px solid var(--ink);
   border-bottom: 2px solid var(--ink);
-  background: color-mix(in srgb, var(--paper) 88%, transparent);
-  backdrop-filter: saturate(140%) blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 50;
+  background: var(--paper);
+  padding-top: 4px;
 }
 
-.masthead-inner {
+.masthead-ears {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  padding: 12px 0;
-}
-
-.brand {
-  display: flex;
-  align-items: baseline;
   gap: 12px;
+  padding: 10px 0 8px;
+  border-bottom: 1px solid var(--rule);
 }
 
-.brand-mark {
+.masthead-ears .ear {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--muted);
+}
+
+.masthead-flag {
+  text-align: center;
+  padding: 16px 0 8px;
+}
+
+.flag-name {
   font-family: var(--display);
   font-weight: 700;
-  font-size: 26px;
+  font-size: clamp(34px, 8vw, 62px);
   letter-spacing: -0.02em;
+  line-height: 1;
+  display: inline-block;
 }
 
-.brand-mark span {
+.flag-name span {
   color: var(--accent);
 }
 
-.brand-dateline {
+.masthead-strap {
+  text-align: center;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 10.5px;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   color: var(--muted);
-  border-left: 1px solid var(--rule-strong);
-  padding-left: 12px;
+  padding-bottom: 12px;
+  border-bottom: 3px double var(--ink);
 }
 
 .masthead-actions {
@@ -190,58 +199,82 @@ h4 {
   color: #fff;
 }
 
-/* ---- Hero / front page -------------------------------------------------- */
+/* ---- Page hero (archive / simple pages) -------------------------------- */
 .hero {
   text-align: center;
-  padding: 42px 0 26px;
+  padding: 34px 0 22px;
   border-bottom: 1px solid var(--rule);
 }
 
 .hero .eyebrow {
   font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.3em;
+  font-size: 11px;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--accent);
 }
 
 .hero h1 {
-  font-size: clamp(38px, 7vw, 72px);
-  margin: 12px 0 6px;
+  font-size: clamp(34px, 6vw, 56px);
+  margin: 10px 0 6px;
   font-weight: 700;
 }
 
 .hero .tagline {
-  font-size: 17px;
+  font-size: 16px;
   color: var(--ink-soft);
-  max-width: 640px;
+  max-width: 620px;
   margin: 0 auto;
   font-style: italic;
 }
 
-.hero .dateline {
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-top: 16px;
+/* ---- Edition bar -------------------------------------------------------- */
+.edition-bar {
+  border-bottom: 1px solid var(--rule);
+  padding: 12px 0;
+  margin-bottom: 8px;
 }
 
-.stats-row {
+.edition-bar-inner {
   display: flex;
-  gap: 22px;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
   flex-wrap: wrap;
-  margin-top: 20px;
+}
+
+.eb-date {
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.eb-stats {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
   font-family: var(--sans);
   font-size: 12.5px;
   color: var(--muted);
 }
 
-.stats-row b {
+.eb-stats b {
   color: var(--ink);
   font-weight: 700;
+}
+
+.eb-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.eb-nav a {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
 }
 
 /* ---- Brief -------------------------------------------------------------- */
@@ -276,7 +309,7 @@ h4 {
 /* ---- Controls ----------------------------------------------------------- */
 .controls {
   position: sticky;
-  top: 57px;
+  top: 0;
   z-index: 40;
   background: color-mix(in srgb, var(--paper) 92%, transparent);
   backdrop-filter: blur(8px);
@@ -323,20 +356,43 @@ h4 {
   border-color: var(--ink);
 }
 
+.chip-count {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 10.5px;
+  opacity: 0.75;
+}
+
+.search-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--rule-strong);
+  background: var(--card);
+  border-radius: 999px;
+  padding: 0 4px 0 12px;
+  transition: border-color 0.15s ease;
+}
+
+.search-box:focus-within {
+  border-color: var(--accent);
+}
+
+.search-ico {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1;
+}
+
 .search {
   font-family: var(--sans);
   font-size: 13px;
-  border: 1px solid var(--rule-strong);
-  background: var(--card);
+  border: none;
+  background: transparent;
   color: var(--ink);
-  border-radius: 999px;
-  padding: 7px 14px;
+  padding: 8px 10px 8px 2px;
   min-width: 190px;
   outline: none;
-}
-
-.search:focus {
-  border-color: var(--accent);
 }
 
 /* ---- Story grid --------------------------------------------------------- */
@@ -387,6 +443,16 @@ h4 {
   display: none;
 }
 
+.no-results {
+  text-align: center;
+  padding: 48px 20px;
+  margin: 0 0 60px;
+  border: 1px dashed var(--rule-strong);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 14px;
+}
+
 .kicker {
   font-family: var(--mono);
   font-size: 11px;
@@ -424,10 +490,42 @@ h4 {
 .story-headline {
   font-size: clamp(22px, 2.6vw, 30px);
   margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.story-headline .headline-link {
+  flex: 1;
+  text-wrap: balance;
 }
 
 .story-headline a:hover {
   color: var(--accent-ink);
+}
+
+.gs {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  margin-top: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--rule-strong);
+  border-radius: 50%;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--muted);
+  background: var(--paper-2);
+  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.gs:hover {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .byline {
@@ -880,23 +978,45 @@ footer.site a {
     gap: 4px;
   }
 
-.brand-sub {
-  font-family: var(--mono);
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--muted);
-  border: 1px solid var(--rule-strong);
-  border-radius: 999px;
-  padding: 3px 9px;
-}
+  .masthead-flag {
+    padding: 12px 0 6px;
+  }
 
-.brand-dateline {
+  .masthead-ears .ear {
     display: none;
   }
 
-  .controls {
-    top: 53px;
+  .controls-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 3px;
+  }
+
+  .chips::-webkit-scrollbar {
+    display: none;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .edition-bar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
 }
 

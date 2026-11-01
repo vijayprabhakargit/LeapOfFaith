@@ -49,18 +49,22 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://leap-of-fai
   <body>
     <div class="progress" id="progress"></div>
     <header class="masthead">
-      <div class="wrap masthead-inner">
-        <div class="brand">
-          <a href="/" class="brand-mark">Leap of <span>Faith</span></a>
-          <span class="brand-sub">The Daily Brief</span>
-          {dateline && <span class="brand-dateline">{dateline}</span>}
+      <div class="wrap">
+        <div class="masthead-ears">
+          <span class="ear">Leap of Faith</span>
+          <div class="masthead-actions">
+            <a class="btn" href="/archive/">Archive</a>
+            <a class="btn" href="/rss.xml">RSS</a>
+            <button class="btn icon" id="themeToggle" aria-label="Toggle theme" title="Toggle light / dark">
+              <span id="themeIcon">◐</span>
+            </button>
+          </div>
         </div>
-        <div class="masthead-actions">
-          <a class="btn" href="/archive/">Archive</a>
-          <a class="btn" href="/rss.xml">RSS</a>
-          <button class="btn icon" id="themeToggle" aria-label="Toggle theme" title="Toggle light / dark">
-            <span id="themeIcon">◐</span>
-          </button>
+        <div class="masthead-flag">
+          <a href="/" class="flag-name">The Daily <span>Brief</span></a>
+        </div>
+        <div class="masthead-strap">
+          {dateline ? `${dateline} · ` : ""}Stories stitched across trusted sources · the static syllabus, linked in
         </div>
       </div>
     </header>

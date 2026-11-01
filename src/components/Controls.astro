@@ -8,15 +8,31 @@ interface Props {
 const { edition } = Astro.props;
 const present = new Set(edition.stories.map((s) => s.category));
 const cats = CATEGORIES.filter((c) => present.has(c.key));
+const mustReads = edition.stories.filter((s) => s.signal === "must-read").length;
 ---
 <div class="controls" id="controls">
   <div class="wrap controls-inner">
-    <div class="chips" id="chips">
-      <button class="chip active" data-filter="all">All stories</button>
-      <button class="chip" data-filter="must-read">Must read</button>
+    <div class="chips" id="chips" role="tablist" aria-label="Filter stories">
+      <button class="chip active" data-filter="all">All</button>
+      {
+        mustReads > 0 && (
+          <button class="chip" data-filter="must-read">
+            Must read <span class="chip-count">{mustReads}</span>
+          </button>
+        )
+      }
       {cats.map((c) => <button class="chip" data-filter={c.key}>{c.label}</button>)}
     </div>
-    <input class="search" id="search" type="search" placeholder="Search stories, sources, tags…" aria-label="Search stories" />
+    <label class="search-box">
+      <span class="search-ico" aria-hidden="true">⌕</span>
+      <input
+        class="search"
+        id="search"
+        type="search"
+        placeholder="Search stories, sources, tags…"
+        aria-label="Search stories"
+      />
+    </label>
   </div>
 </div>
 
@@ -24,6 +40,8 @@ const cats = CATEGORIES.filter((c) => present.has(c.key));
   const chips = document.getElementById("chips");
   const search = document.getElementById("search") as HTMLInputElement | null;
   const stories = Array.from(document.querySelectorAll<HTMLElement>(".story"));
+  const noResults = document.getElementById("noResults");
+  const countEl = document.getElementById("visibleCount");
   let active = "all";
 
   function apply() {
@@ -37,12 +55,17 @@ const cats = CATEGORIES.filter((c) => present.has(c.key));
       const matchQuery = !q || blob.includes(q);
       const visible = matchFilter && matchQuery;
       el.classList.toggle("hidden", !visible);
-      if (visible) shown++;
+      if (visible) {
+        el.classList.add("reveal");
+        shown++;
+      }
     }
-    const first = stories.find((s) => !s.classList.contains("hidden"));
+    // Promote the first visible story into the lead slot.
     stories.forEach((s) => s.classList.remove("lead"));
+    const first = stories.find((s) => !s.classList.contains("hidden"));
     if (first) first.classList.add("lead");
-    document.getElementById("visibleCount")?.replaceChildren(document.createTextNode(String(shown)));
+    if (countEl) countEl.textContent = String(shown);
+    if (noResults) noResults.hidden = shown !== 0;
   }
 
   chips?.addEventListener("click", (e) => {
@@ -53,9 +76,11 @@ const cats = CATEGORIES.filter((c) => present.has(c.key));
     active = (btn as HTMLElement).dataset.filter || "all";
     apply();
   });
-  search?.addEventListener("input", apply);
 
-  // Reveal-on-scroll.
+  search?.addEventListener("input", apply);
+  search?.addEventListener("search", apply); // native clear button
+
+  // Reveal-on-scroll only applies before any filtering; filtering reveals directly.
   const io = new IntersectionObserver(
     (entries) => {
       for (const en of entries) if (en.isIntersecting) en.target.classList.add("reveal");
