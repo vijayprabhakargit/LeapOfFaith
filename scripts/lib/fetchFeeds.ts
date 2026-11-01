@@ -105,6 +105,18 @@ export async function fetchFeeds(
           articles.push(article);
         }
       } catch (err) {
+        // Some publishers block datacenter IPs (e.g. indianexpress.com returns
+        // 403 to GitHub Actions runners). Fall back to a Google-News site feed
+        // so the source still contributes to the brief.
+        if (!source.viaGoogle) {
+          const alt = await fetchViaGoogle(source, cutoff);
+          if (alt.length) {
+            console.log(`   ↺ ${source.name}: direct feed failed, used Google News fallback (${alt.length} items)`);
+            ok.push(source);
+            articles.push(...alt);
+            return;
+          }
+        }
         failed.push({ source, error: err instanceof Error ? err.message : String(err) });
       }
     }),
@@ -120,6 +132,50 @@ export async function fetchFeeds(
   });
 
   return { articles: deduped, ok, failed };
+}
+
+function safeHost(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return "";
+  }
+}
+
+// Google-News site: feed — a resilient fallback for direct feeds that are
+// blocked from datacenter IPs. Articles keep the original source's identity so
+// attribution and source-balancing still work.
+async function fetchViaGoogle(source: Source, cutoff: number): Promise<Article[]> {
+  const domain = safeHost(source.homepage);
+  if (!domain) return [];
+  try {
+    const xml = await fetchXml(googleNewsUrl(`site:${domain}`, "india", "2d"));
+    const feed = await parser.parseString(xml);
+    const out: Article[] = [];
+    for (const item of feed.items || []) {
+      const raw = decodeEntities(item.title || "");
+      const sep = raw.lastIndexOf(" - ");
+      const headline = sep > 0 ? raw.slice(0, sep).trim() : raw;
+      if (!item.link || !headline) continue;
+      const publishedAt = item.isoDate ? new Date(item.isoDate).toISOString() : new Date().toISOString();
+      if (new Date(publishedAt).getTime() < cutoff) continue;
+      out.push({
+        id: `${source.id}:g:${Buffer.from(item.link).toString("base64url").slice(0, 20)}`,
+        title: headline,
+        link: item.link,
+        source: source.name,
+        sourceId: source.id,
+        region: source.region,
+        categories: source.categories,
+        publishedAt,
+        snippet: snippet(item.contentSnippet || item.content || ""),
+      });
+      if (out.length >= 20) break;
+    }
+    return out;
+  } catch {
+    return [];
+  }
 }
 
 // Google News search feed — used to pull a *country-specific* set of outlets
