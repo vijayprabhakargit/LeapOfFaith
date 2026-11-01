@@ -92,17 +92,19 @@ sanitising. Add new tests under `test/` and list the file in the `test` script i
 
 ## Choosing your LLM
 
-The generator is provider-agnostic. Set these in `.env`:
+The generator is provider-agnostic. This project is configured for **OpenRouter → DeepSeek V4.1 Flash**;
+set these in `.env` (or as GitHub Action secrets):
 
 ```ini
-LLM_PROVIDER=openai          # openai | anthropic | gemini | openrouter | compatible
-LLM_MODEL=gpt-4o-mini
-LLM_API_KEY=sk-...
+LLM_PROVIDER=openrouter
+LLM_MODEL=deepseek/deepseek-v4.1-flash
+LLM_API_KEY=sk-or-...       # or OPENROUTER_API_KEY
 ```
 
-`compatible` + `LLM_BASE_URL` works with any OpenAI-compatible server (Ollama, vLLM, LM Studio, etc.),
-so you can run it fully locally at zero API cost. Without a key the site still builds — it just falls
-back to a heuristic, unstitched feed.
+Any provider works — `openai` / `anthropic` / `gemini` / `openrouter`, or `compatible` + `LLM_BASE_URL`
+for any OpenAI-compatible server (Ollama, vLLM, LM Studio, etc.), so you can run it fully locally at
+zero API cost. If OpenRouter exposes a different slug for the model, use that slug for `LLM_MODEL`.
+Without a key the site still builds — it just falls back to a heuristic, unstitched feed.
 
 ---
 
