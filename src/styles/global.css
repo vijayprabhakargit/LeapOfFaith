@@ -1071,6 +1071,8 @@ footer.site a {
   border-radius: 6px;
   padding: 12px;
   box-shadow: var(--shadow);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .archive-month-heading {
@@ -1082,7 +1084,7 @@ footer.site a {
 
 .archive-calendar-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 3px;
 }
 
@@ -1097,7 +1099,8 @@ footer.site a {
 }
 
 .archive-calendar-cell {
-  aspect-ratio: 1 / 1;
+  min-width: 0;
+  height: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1105,6 +1108,8 @@ footer.site a {
   border: 1px solid transparent;
   border-radius: 4px;
   font-family: var(--display);
+  font-size: 12px;
+  line-height: 1.05;
 }
 
 .cal-date {
