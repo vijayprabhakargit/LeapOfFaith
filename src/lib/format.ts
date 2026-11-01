@@ -42,3 +42,11 @@ export function hostOf(url: string): string {
     return "source";
   }
 }
+
+export function tagSlug(input: string): string {
+  return input
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 60);
+}

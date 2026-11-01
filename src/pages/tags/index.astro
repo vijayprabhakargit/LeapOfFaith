@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getTagIndex } from "../../lib/tags";
+
+const tags = getTagIndex();
+const max = Math.max(1, ...tags.map((t) => t.count));
+
+function sizeClass(count: number): string {
+  const r = count / max;
+  if (r > 0.75) return "t5";
+  if (r > 0.5) return "t4";
+  if (r > 0.35) return "t3";
+  if (r > 0.15) return "t2";
+  return "t1";
+}
+---
+<BaseLayout title="Tags — Leap of Faith" description="Browse stories by tag across every edition of The Daily Brief.">
+  <div class="wrap">
+    <div class="archive-page">
+      <header class="archive-header">
+        <h1 class="archive-heading">Tags</h1>
+        <span class="archive-count">{tags.length} tag{tags.length === 1 ? "" : "s"}</span>
+      </header>
+      <hr class="archive-rule-thin" />
+
+      {
+        tags.length === 0 && (
+          <div class="empty">
+            <h2>No tags yet</h2>
+            <p class="note">Tags appear here once editions are generated.</p>
+          </div>
+        )
+      }
+
+      <div class="tag-cloud">
+        {
+          tags.map((t) => (
+            <a class={`tag-cloud-item ${sizeClass(t.count)}`} href={`/tags/${t.slug}/`} title={`${t.count} stor${t.count === 1 ? "y" : "ies"}`}>
+              {t.tag}
+              <span class="tc-count">{t.count}</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</BaseLayout>

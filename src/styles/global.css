@@ -56,8 +56,16 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  /* Hide the blinking insertion caret on non-editable text (e.g. if the
+     browser's Caret Browsing / F7 is on); real inputs keep theirs below. */
+  caret-color: transparent;
   background-image: radial-gradient(circle at 1px 1px, rgba(120, 100, 60, 0.05) 1px, transparent 0);
   background-size: 22px 22px;
+}
+
+input,
+textarea {
+  caret-color: auto;
 }
 
 :root[data-theme="dark"] body {
@@ -889,6 +897,26 @@ details.static[open] > summary {
   border: 1px solid var(--rule);
   background: var(--card);
   box-shadow: var(--shadow);
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule-strong) transparent;
+}
+
+.extras-list::-webkit-scrollbar {
+  width: 12px;
+}
+
+.extras-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.extras-list::-webkit-scrollbar-thumb {
+  background: var(--rule-strong);
+  border: 4px solid var(--card);
+  border-radius: 999px;
+}
+
+.extras-list::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }
 
 .extras-item {
@@ -1153,6 +1181,110 @@ footer.site a {
 .archive-calendar-blank {
   height: 30px;
   visibility: hidden;
+}
+
+/* ---- Tags (cloud + listing) -------------------------------------------- */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px 16px;
+  padding: 6px 0 44px;
+}
+
+.tag-cloud-item {
+  font-family: var(--display);
+  color: var(--ink);
+  line-height: 1.15;
+  border-bottom: 1px solid transparent;
+  transition: color 0.12s ease, border-color 0.12s ease;
+}
+
+.tag-cloud-item:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.tag-cloud-item .tc-count {
+  font-family: var(--mono);
+  font-size: 0.5em;
+  color: var(--muted);
+  margin-left: 3px;
+  vertical-align: super;
+}
+
+.t1 {
+  font-size: 14px;
+}
+.t2 {
+  font-size: 18px;
+}
+.t3 {
+  font-size: 23px;
+}
+.t4 {
+  font-size: 29px;
+}
+.t5 {
+  font-size: 36px;
+}
+
+.tag-back {
+  margin: 0 0 10px;
+}
+
+.tag-back a {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+
+.tag-story-list {
+  list-style: none;
+  margin: 0 0 60px;
+  padding: 0;
+}
+
+.tag-story-list li {
+  border-bottom: 1px solid var(--rule);
+}
+
+.tsl-link {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 11px 2px;
+  transition: padding-left 0.12s ease;
+}
+
+.tsl-link:hover {
+  padding-left: 8px;
+}
+
+.tsl-date {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+  min-width: 84px;
+}
+
+.tsl-headline {
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.tsl-link:hover .tsl-headline {
+  color: var(--accent);
+}
+
+@media (max-width: 560px) {
+  .tsl-link {
+    flex-direction: column;
+    gap: 2px;
+  }
 }
 
 /* ---- Empty state -------------------------------------------------------- */
