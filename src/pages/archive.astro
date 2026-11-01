@@ -13,7 +13,8 @@ interface Cell {
   edition?: (typeof editions)[number];
 }
 
-const WEEKDAYS = ["S", "M", "T", "W", "T", "F", "S"];
+const DAY_NAMES = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 function monthsOf(year: string) {
   const keys = [...new Set(editions.filter((e) => e.date.startsWith(year)).map((e) => e.date.slice(0, 7)))].sort();
@@ -27,15 +28,7 @@ function monthsOf(year: string) {
       const date = `${key}-${String(d).padStart(2, "0")}`;
       cells.push({ day: d, date, edition: byDate.get(date) });
     }
-    return {
-      key,
-      label: new Date(`${key}-01T00:00:00Z`).toLocaleDateString("en-IN", {
-        month: "long",
-        year: "numeric",
-        timeZone: "UTC",
-      }),
-      cells,
-    };
+    return { key, name: MONTH_NAMES[m - 1], cells };
   });
 }
 
@@ -47,62 +40,64 @@ const yearGroups = years.map((year) => ({
 ---
 <BaseLayout title="Archive — Leap of Faith" description="Every past edition of The Daily Brief.">
   <div class="wrap">
-    <div class="hero">
-      <div class="eyebrow">The Daily Brief</div>
-      <h1>Archive</h1>
-      <p class="tagline">Every edition, by month. Click a day to read it.</p>
-      <div class="archive-stats">
-        {editions.length} edition{editions.length === 1 ? "" : "s"} · {years.length} year{years.length === 1 ? "" : "s"}
-      </div>
-    </div>
+    <div class="archive-page">
+      <header class="archive-header">
+        <h1 class="archive-heading">Archive</h1>
+        <span class="archive-count">{editions.length} edition{editions.length === 1 ? "" : "s"}</span>
+      </header>
+      <hr class="archive-rule-thin" />
 
-    {
-      editions.length === 0 && (
-        <div class="empty">
-          <h2>Nothing archived yet</h2>
-          <p class="note">Editions appear here after you run <code>npm run generate</code>.</p>
-        </div>
-      )
-    }
-
-    {
-      yearGroups.map((group) => (
-        <details class="year" open>
-          <summary class="year-head">
-            <span class="year-label">{group.year}</span>
-            <span class="year-meta">
-              {group.count} edition{group.count === 1 ? "" : "s"}
-            </span>
-          </summary>
-          <div class="year-body">
-            {group.months.map((month) => (
-              <div class="month">
-                <div class="month-name">{month.label}</div>
-                <div class="calendar">
-                  {WEEKDAYS.map((d) => (
-                    <span class="dow">{d}</span>
-                  ))}
-                  {month.cells.map((cell) =>
-                    cell === null ? (
-                      <span class="cell empty" />
-                    ) : cell.edition ? (
-                      <a
-                        class="cell day has"
-                        href={`/editions/${cell.date}/`}
-                        title={`${formatDateShort(cell.date)} · ${cell.edition.stats.stories} stories`}
-                      >
-                        {cell.day}
-                      </a>
-                    ) : (
-                      <span class="cell day">{cell.day}</span>
-                    ),
-                  )}
-                </div>
-              </div>
-            ))}
+      {
+        editions.length === 0 && (
+          <div class="empty">
+            <h2>Nothing archived yet</h2>
+            <p class="note">Editions appear here after you run <code>npm run generate</code>.</p>
           </div>
-        </details>
-      ))
-    }
+        )
+      }
+
+      {
+        yearGroups.map((group) => (
+          <details class="year" open>
+            <summary class="year-head">
+              <span class="year-label">{group.year}</span>
+              <span class="year-meta">
+                {group.count} edition{group.count === 1 ? "" : "s"}
+              </span>
+            </summary>
+            <div class="archive-months-grid">
+              {group.months.map((month) => (
+                <div class="archive-month-block">
+                  <h3 class="archive-month-heading">{month.name}</h3>
+                  <div class="archive-calendar-grid">
+                    {DAY_NAMES.map((d) => (
+                      <div class="archive-calendar-day-header">{d}</div>
+                    ))}
+                    {month.cells.map((cell) =>
+                      cell === null ? (
+                        <span class="archive-calendar-cell empty" />
+                      ) : cell.edition ? (
+                        <a
+                          class="archive-calendar-cell active"
+                          href={`/editions/${cell.date}/`}
+                          title={`${formatDateShort(cell.date)} · ${cell.edition.stats.stories} stories`}
+                        >
+                          <span class="cal-date">{cell.day}</span>
+                          <span class="cal-count">{cell.edition.stats.stories}</span>
+                        </a>
+                      ) : (
+                        <span class="archive-calendar-cell inactive">
+                          <span class="cal-date">{cell.day}</span>
+                        </span>
+                      ),
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </details>
+        ))
+      }
+    </div>
   </div>
 </BaseLayout>

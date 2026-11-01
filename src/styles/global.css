@@ -977,20 +977,43 @@ footer.site a {
 }
 
 /* ---- Archive (calendar) ------------------------------------------------- */
-.archive-stats {
+.archive-page {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 26px 0 60px;
+}
+
+.archive-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.archive-heading {
+  font-family: var(--display);
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.archive-count {
   font-family: var(--mono);
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   color: var(--muted);
-  margin-top: 12px;
+}
+
+.archive-rule-thin {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 12px 0 20px;
 }
 
 .year {
-  border: 1px solid var(--rule);
-  background: var(--card);
-  box-shadow: var(--shadow);
-  margin-bottom: 22px;
+  margin-bottom: 26px;
 }
 
 .year-head {
@@ -1000,8 +1023,9 @@ footer.site a {
   align-items: baseline;
   justify-content: space-between;
   gap: 12px;
-  padding: 14px 18px;
+  padding-bottom: 6px;
   border-bottom: 1px solid var(--rule);
+  margin-bottom: 16px;
 }
 
 .year-head::-webkit-details-marker {
@@ -1010,15 +1034,15 @@ footer.site a {
 
 .year-label {
   font-family: var(--display);
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 700;
 }
 
 .year-label::before {
   content: "▾";
-  font-size: 13px;
+  font-size: 12px;
   color: var(--muted);
-  margin-right: 10px;
+  margin-right: 9px;
   display: inline-block;
   transition: transform 0.15s ease;
 }
@@ -1029,76 +1053,98 @@ footer.site a {
 
 .year-meta {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 10.5px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--muted);
 }
 
-.month {
-  padding: 16px 18px;
-  border-bottom: 1px solid var(--rule);
-}
-
-.month:last-child {
-  border-bottom: none;
-}
-
-.month-name {
-  font-family: var(--mono);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--accent);
-  margin-bottom: 12px;
-}
-
-.calendar {
+.archive-months-grid {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 6px;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 16px;
 }
 
-.calendar .dow {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  text-align: center;
-}
-
-.cell {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1 / 1;
+.archive-month-block {
+  border: 1px solid var(--rule);
+  background: var(--card);
   border-radius: 6px;
+  padding: 12px;
+  box-shadow: var(--shadow);
+}
+
+.archive-month-heading {
   font-family: var(--display);
   font-size: 15px;
+  text-align: center;
+  margin: 0 0 10px;
 }
 
-.cell.empty {
-  visibility: hidden;
+.archive-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
 }
 
-.cell.day {
+.archive-calendar-day-header {
+  font-family: var(--mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--muted);
+  text-align: center;
+  padding-bottom: 2px;
+}
+
+.archive-calendar-cell {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: var(--display);
 }
 
-.cell.has {
-  border: 1px solid var(--rule-strong);
-  color: var(--ink);
+.cal-date {
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+.cal-count {
+  font-size: 0.55rem;
+  line-height: 1;
+  margin-top: 1px;
+  color: var(--muted);
+}
+
+.archive-calendar-cell.active {
   background: var(--paper-2);
+  border-color: var(--rule-strong);
+  color: var(--ink);
   font-weight: 600;
-  transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease, color 0.12s ease;
+  transition: transform 0.1s ease, border-color 0.1s ease, background 0.1s ease, color 0.1s ease;
 }
 
-.cell.has:hover {
+.archive-calendar-cell.active:hover {
   transform: translateY(-1px);
   border-color: var(--accent);
   background: var(--accent);
   color: #fff;
+}
+
+.archive-calendar-cell.active:hover .cal-count {
+  color: #fff;
+}
+
+.archive-calendar-cell.inactive {
+  color: var(--muted);
+  opacity: 0.5;
+}
+
+.archive-calendar-cell.empty {
+  visibility: hidden;
 }
 
 /* ---- Empty state -------------------------------------------------------- */
