@@ -127,8 +127,18 @@ h4 {
 }
 
 .masthead-flag {
-  text-align: center;
   padding: 16px 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.flag-cat {
+  width: clamp(28px, 5vw, 46px);
+  height: auto;
+  color: var(--ink);
+  flex: none;
 }
 
 .flag-name {
