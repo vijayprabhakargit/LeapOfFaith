@@ -1,0 +1,36 @@
+---
+import type { OnThisDayItem } from "../lib/types";
+
+interface Props {
+  items: OnThisDayItem[];
+  date: string;
+}
+const { items, date } = Astro.props;
+const label = new Date(`${date}T06:00:00+05:30`).toLocaleDateString("en-IN", {
+  day: "numeric",
+  month: "long",
+  timeZone: "Asia/Kolkata",
+});
+const catLabel: Record<string, string> = { event: "Event", birth: "Born", death: "Passed", discovery: "Discovery" };
+---
+{
+  items.length > 0 && (
+    <section id="on-this-day">
+      <div class="section-head">
+        <h2>On this day</h2>
+        <span class="sub">Looking back from {label} — history that still shapes the syllabus</span>
+      </div>
+      <div class="otd">
+        {items.map((it) => (
+          <div class="otd-card">
+            <span class="otd-cat">{catLabel[it.category] ?? "Event"}</span>
+            <div class="otd-year">{it.year}</div>
+            <h3>{it.title}</h3>
+            <p>{it.description}</p>
+            {it.upscLink && <span class="otd-link">↳ {it.upscLink}</span>}
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}

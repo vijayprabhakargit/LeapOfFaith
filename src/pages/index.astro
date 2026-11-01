@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import EditionView from "../components/EditionView.astro";
+import { getLatestEdition, getEditionDates } from "../lib/editions";
+
+const edition = getLatestEdition();
+const dates = getEditionDates();
+const prevDate = edition && dates.length > 1 ? dates[1] : null;
+---
+<BaseLayout
+  title={edition ? `Leap of Faith — The Daily Brief — ${edition.date}` : "Leap of Faith — The Daily Brief"}
+  dateline={edition ? edition.date : ""}
+>
+  {
+    edition ? (
+      <EditionView edition={edition} prevDate={prevDate} nextDate={null} />
+    ) : (
+      <div class="wrap">
+        <div class="empty">
+          <h2>No edition yet</h2>
+          <p class="note" style="margin: 12px auto 18px">
+            Generate your first brief. Add an LLM key to <code>.env</code> and run the generator.
+          </p>
+          <p>
+            <code>npm run generate</code>
+          </p>
+        </div>
+      </div>
+    )
+  }
+</BaseLayout>

@@ -1,0 +1,347 @@
+// Curated sources for The Daily Brief.
+//
+// Design rules:
+//  - We only ever store a SHORT excerpt (<= 320 chars) from each feed and always
+//    link back to the publisher. This mirrors how The Daily Diff (our reference)
+//    behaves and keeps us well clear of copyright headaches.
+//  - Feeds are grouped by region and tagged with a "lean" so the stitcher can
+//    deliberately present multiple perspectives.
+//  - Some publishers (The Wire, ORF, PRS, Dekoder) no longer expose a native
+//    RSS feed. For those we fall back to a Google-News "site:" feed, which is
+//    the copyright-safe pattern the reference project also uses.
+//  - Add or remove feeds freely; set enabled: false to pause one.
+
+export interface Source {
+  id: string;
+  name: string;
+  homepage: string;
+  rss: string;
+  region: "india" | "global";
+  lean: "official" | "centre" | "left" | "right" | "independent" | "global-north" | "global-south" | "unknown";
+  categories: string[];
+  priority: number; // 1 = highest signal
+  enabled: boolean;
+  viaGoogle?: boolean; // true when the rss URL is a Google-News site: feed
+  language?: string; // ISO code when the outlet publishes in a non-English language
+}
+
+export const SOURCES: Source[] = [
+  // ---- Core Indian news (user's trusted list) --------------------------
+  {
+    id: "the-hindu",
+    name: "The Hindu",
+    homepage: "https://www.thehindu.com/",
+    rss: "https://www.thehindu.com/news/national/feeder/default.rss",
+    region: "india",
+    lean: "centre",
+    categories: ["polity", "economy", "ir", "society", "scitech", "environment"],
+    priority: 1,
+    enabled: true,
+  },
+  {
+    id: "the-hindu-world",
+    name: "The Hindu — World",
+    homepage: "https://www.thehindu.com/news/international/",
+    rss: "https://www.thehindu.com/news/international/feeder/default.rss",
+    region: "global",
+    lean: "centre",
+    categories: ["ir", "security", "economy"],
+    priority: 1,
+    enabled: true,
+  },
+  {
+    id: "the-hindu-editorial",
+    name: "The Hindu — Opinion",
+    homepage: "https://www.thehindu.com/opinion/",
+    rss: "https://www.thehindu.com/opinion/feeder/default.rss",
+    region: "india",
+    lean: "centre",
+    categories: ["polity", "economy", "ir", "society"],
+    priority: 1,
+    enabled: true,
+  },
+  {
+    id: "indian-express",
+    name: "The Indian Express",
+    homepage: "https://indianexpress.com/",
+    rss: "https://indianexpress.com/feed/",
+    region: "india",
+    lean: "centre",
+    categories: ["polity", "economy", "ir", "society", "scitech"],
+    priority: 1,
+    enabled: true,
+  },
+  {
+    id: "indian-express-explained",
+    name: "The Indian Express — Explained",
+    homepage: "https://indianexpress.com/section/explained/",
+    rss: "https://indianexpress.com/section/explained/feed/",
+    region: "india",
+    lean: "centre",
+    categories: ["polity", "economy", "ir", "environment", "scitech", "culture", "geography"],
+    priority: 1,
+    enabled: true,
+  },
+  {
+    id: "newslaundry",
+    name: "Newslaundry",
+    homepage: "https://www.newslaundry.com/",
+    // Quintype sites expose an empty feed to anonymous fetchers — the S3 Atom
+    // mirror is the stable endpoint.
+    rss: "https://prod-qt-images.s3.amazonaws.com/production/newslaundry/feed.xml",
+    region: "india",
+    lean: "left",
+    categories: ["polity", "society", "culture"],
+    priority: 2,
+    enabled: true,
+  },
+  {
+    id: "the-news-minute",
+    name: "The News Minute",
+    homepage: "https://www.thenewsminute.com/",
+    rss: "https://prod-qt-images.s3.amazonaws.com/production/thenewsminute/feed.xml",
+    region: "india",
+    lean: "left",
+    categories: ["society", "polity", "culture"],
+    priority: 3,
+    enabled: true,
+  },
+  {
+    id: "dekoder",
+    name: "Dekoder",
+    homepage: "https://www.dekoder.com/",
+    rss: "https://news.google.com/rss/search?q=site:dekoder.com+when:2d&hl=en-IN&gl=IN&ceid=IN:en",
+    region: "india",
+    lean: "independent",
+    categories: ["society", "culture", "polity"],
+    priority: 3,
+    enabled: true,
+    viaGoogle: true,
+  },
+  {
+    id: "the-red-mike",
+    name: "The Red Mike",
+    homepage: "https://www.theredmike.com/",
+    rss: "https://www.theredmike.com/feed/",
+    region: "india",
+    lean: "independent",
+    categories: ["polity", "security", "ir"],
+    priority: 3,
+    enabled: true,
+    language: "hi",
+  },
+
+  // ---- Official / public-domain (safest, highest signal for UPSC) ------
+  {
+    id: "pib",
+    name: "PIB (Press Information Bureau)",
+    homepage: "https://pib.gov.in/",
+    rss: "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+    region: "india",
+    lean: "official",
+    categories: ["polity", "economy", "society", "scitech", "environment", "agriculture", "security"],
+    priority: 1,
+    enabled: true,
+  },
+  {
+    id: "prs",
+    name: "PRS Legislative Research",
+    homepage: "https://prsindia.org/",
+    rss: "https://news.google.com/rss/search?q=site:prsindia.org+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
+    region: "india",
+    lean: "official",
+    categories: ["polity"],
+    priority: 2,
+    enabled: true,
+    viaGoogle: true,
+  },
+  {
+    id: "down-to-earth",
+    name: "Down To Earth",
+    homepage: "https://www.downtoearth.org.in/",
+    rss: "https://prod-qt-images.s3.amazonaws.com/production/downtoearth/feed.xml",
+    region: "india",
+    lean: "independent",
+    categories: ["environment", "agriculture", "scitech"],
+    priority: 2,
+    enabled: true,
+  },
+  {
+    id: "mongabay-india",
+    name: "Mongabay India",
+    homepage: "https://india.mongabay.com/",
+    rss: "https://india.mongabay.com/feed/",
+    region: "india",
+    lean: "independent",
+    categories: ["environment"],
+    priority: 2,
+    enabled: true,
+  },
+
+  // ---- Additional reputable Indian + global ----------------------------
+  {
+    id: "scroll",
+    name: "Scroll.in",
+    homepage: "https://scroll.in/",
+    rss: "https://feeds.feedburner.com/ScrollinArticles.rss",
+    region: "india",
+    lean: "left",
+    categories: ["polity", "society", "culture"],
+    priority: 3,
+    enabled: true,
+  },
+  {
+    id: "the-print",
+    name: "ThePrint",
+    homepage: "https://theprint.in/",
+    rss: "https://theprint.in/feed/?post_type=post",
+    region: "india",
+    lean: "centre",
+    categories: ["polity", "ir", "security", "economy"],
+    priority: 2,
+    enabled: true,
+  },
+  {
+    id: "livemint",
+    name: "Mint",
+    homepage: "https://www.livemint.com/",
+    rss: "https://www.livemint.com/rss/news",
+    region: "india",
+    lean: "centre",
+    categories: ["economy", "polity"],
+    priority: 2,
+    enabled: true,
+  },
+  {
+    id: "business-standard",
+    name: "Business Standard",
+    homepage: "https://www.business-standard.com/",
+    rss: "https://news.google.com/rss/search?q=site:business-standard.com+when:2d&hl=en-IN&gl=IN&ceid=IN:en",
+    region: "india",
+    lean: "centre",
+    categories: ["economy"],
+    priority: 3,
+    enabled: true,
+    viaGoogle: true,
+  },
+  {
+    id: "the-wire",
+    name: "The Wire",
+    homepage: "https://thewire.in/",
+    rss: "https://news.google.com/rss/search?q=site:thewire.in+when:2d&hl=en-IN&gl=IN&ceid=IN:en",
+    region: "india",
+    lean: "left",
+    categories: ["polity", "society", "ir"],
+    priority: 3,
+    enabled: true,
+    viaGoogle: true,
+  },
+  {
+    id: "orf",
+    name: "Observer Research Foundation",
+    homepage: "https://www.orfonline.org/",
+    rss: "https://news.google.com/rss/search?q=site:orfonline.org+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
+    region: "india",
+    lean: "independent",
+    categories: ["ir", "security", "economy"],
+    priority: 2,
+    enabled: true,
+    viaGoogle: true,
+  },
+  {
+    id: "the-conversation",
+    name: "The Conversation",
+    homepage: "https://theconversation.com/",
+    rss: "https://theconversation.com/articles.atom",
+    region: "global",
+    lean: "independent",
+    categories: ["scitech", "environment", "society", "economy"],
+    priority: 3,
+    enabled: true,
+  },
+  {
+    id: "nature",
+    name: "Nature",
+    homepage: "https://www.nature.com/",
+    rss: "https://www.nature.com/nature.rss",
+    region: "global",
+    lean: "independent",
+    categories: ["scitech"],
+    priority: 3,
+    enabled: true,
+  },
+
+  // ---- YouTube (curated explainers) ------------------------------------
+  {
+    id: "yt-dhruv-rathee",
+    name: "Dhruv Rathee",
+    homepage: "https://www.youtube.com/@dhruvrathee",
+    rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UC-CSyyi47VX1lD9zyeABW3w",
+    region: "india",
+    lean: "independent",
+    categories: ["society", "scitech", "ir"],
+    priority: 3,
+    enabled: true,
+  },
+  {
+    id: "yt-india-global-review",
+    name: "India Global Review",
+    homepage: "https://www.youtube.com/@IndiaGlobalReview",
+    rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UC83iGbaOhZR8AWNYYNzSNjg",
+    region: "global",
+    lean: "independent",
+    categories: ["ir", "security", "economy"],
+    priority: 3,
+    enabled: true,
+  },
+  {
+    id: "yt-sansad-tv",
+    name: "Sansad TV",
+    homepage: "https://www.youtube.com/@sansadtv",
+    rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCISgnSNwqQ2i8lhCun3KtQg",
+    region: "india",
+    lean: "official",
+    categories: ["polity", "culture"],
+    priority: 3,
+    enabled: true,
+  },
+];
+
+export const ENABLED_SOURCES = SOURCES.filter((s) => s.enabled);
+
+// ---- Google News (dynamic per-story perspectives) ----------------------
+// Google News exposes RSS search feeds. Swap the locale triple to get the
+// press of a specific country: hl = UI language, gl = country, ceid = CC:lang.
+export const GOOGLE_NEWS_LOCALES: Record<string, { hl: string; gl: string; ceid: string }> = {
+  india: { hl: "en-IN", gl: "IN", ceid: "IN:en" },
+  us: { hl: "en-US", gl: "US", ceid: "US:en" },
+  uk: { hl: "en-GB", gl: "GB", ceid: "GB:en" },
+  iran: { hl: "en", gl: "IR", ceid: "IR:en" },
+  israel: { hl: "en", gl: "IL", ceid: "IL:en" },
+  russia: { hl: "en", gl: "RU", ceid: "RU:en" },
+  china: { hl: "en", gl: "CN", ceid: "CN:en" },
+  pakistan: { hl: "en-PK", gl: "PK", ceid: "PK:en" },
+  japan: { hl: "en", gl: "JP", ceid: "JP:en" },
+  france: { hl: "en", gl: "FR", ceid: "FR:en" },
+  germany: { hl: "en", gl: "DE", ceid: "DE:en" },
+  australia: { hl: "en-AU", gl: "AU", ceid: "AU:en" },
+  canada: { hl: "en-CA", gl: "CA", ceid: "CA:en" },
+  brazil: { hl: "en", gl: "BR", ceid: "BR:en" },
+  southafrica: { hl: "en-ZA", gl: "ZA", ceid: "ZA:en" },
+  bangladesh: { hl: "en", gl: "BD", ceid: "BD:en" },
+  srilanka: { hl: "en", gl: "LK", ceid: "LK:en" },
+  nepal: { hl: "en", gl: "NP", ceid: "NP:en" },
+  ukraine: { hl: "en", gl: "UA", ceid: "UA:en" },
+  turkey: { hl: "en", gl: "TR", ceid: "TR:en" },
+  global: { hl: "en-US", gl: "US", ceid: "US:en" },
+};
+
+export function googleNewsUrl(query: string, localeKey = "india", when = "1d"): string {
+  const loc = GOOGLE_NEWS_LOCALES[localeKey] ?? GOOGLE_NEWS_LOCALES.india;
+  const q = encodeURIComponent(`${query} when:${when}`);
+  return `https://news.google.com/rss/search?q=${q}&hl=${loc.hl}&gl=${loc.gl}&ceid=${loc.ceid}`;
+}
+
+export function youtubeFeed(channelId: string): string {
+  return `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
+}

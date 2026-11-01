@@ -1,0 +1,34 @@
+{
+  "name": "leap-of-faith",
+  "version": "1.0.0",
+  "description": "A daily, AI-curated current-affairs newspaper that stitches stories across trusted sources and links them to the UPSC static syllabus.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "generate": "tsx scripts/generate.ts",
+    "generate:day": "tsx scripts/generate.ts --day",
+    "generate:dry": "tsx scripts/generate.ts --dry-run",
+    "test": "node --import tsx --test test/format.test.ts test/syllabus.test.ts test/sources.test.ts test/enrich.test.ts test/llm.test.ts test/editions.test.ts",
+    "deploy": "wrangler pages deploy dist --project-name the-daily-brief"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.11",
+    "astro": "^5.13.0",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "wrangler": "^3.99.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

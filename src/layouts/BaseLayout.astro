@@ -1,0 +1,112 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  dateline?: string;
+  activeDate?: string;
+}
+const {
+  title = "Leap of Faith — The Daily Brief",
+  description = "A daily, AI-curated current-affairs newspaper for UPSC — stories stitched across trusted sources, with the static syllabus linked in.",
+  dateline = "",
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://the-daily-brief.pages.dev");
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="alternate" type="application/rss+xml" title="The Daily Brief" href="/rss.xml" />
+    <link rel="alternate" type="application/json" title="The Daily Brief (JSON)" href="/editions/latest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script is:inline>
+      (function () {
+        try {
+          document.documentElement.classList.add("js");
+          var t = localStorage.getItem("tdb-theme");
+          if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="progress" id="progress"></div>
+    <header class="masthead">
+      <div class="wrap masthead-inner">
+        <div class="brand">
+          <a href="/" class="brand-mark">Leap of <span>Faith</span></a>
+          <span class="brand-sub">The Daily Brief</span>
+          {dateline && <span class="brand-dateline">{dateline}</span>}
+        </div>
+        <div class="masthead-actions">
+          <a class="btn" href="/archive/">Archive</a>
+          <a class="btn" href="/rss.xml">RSS</a>
+          <button class="btn icon" id="themeToggle" aria-label="Toggle theme" title="Toggle light / dark">
+            <span id="themeIcon">◐</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site">
+      <div class="wrap foot-grid">
+        <div>
+          <strong style="font-family: var(--display); font-size: 16px; color: var(--ink)"
+            >Leap of Faith — The Daily Brief</strong
+          >
+          <p class="note" style="margin-top: 8px">
+            An UPSC current-affairs newspaper. Stories are stitched and summarised across trusted sources, with the
+            static syllabus linked in. We show short excerpts only and always link back to the publisher — read the
+            originals.
+          </p>
+        </div>
+        <div class="note">
+          <div><a href="/archive/">Archive</a> · <a href="/rss.xml">RSS</a> · <a href="/editions/latest.json">JSON</a></div>
+          <div style="margin-top: 8px">Built for daily revision. Not affiliated with UPSC.</div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const bar = document.getElementById("progress");
+      const onScroll = () => {
+        const h = document.documentElement;
+        const max = h.scrollHeight - h.clientHeight;
+        if (bar) bar.style.width = `${max > 0 ? (h.scrollTop / max) * 100 : 0}%`;
+      };
+      addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      const toggle = document.getElementById("themeToggle");
+      const icon = document.getElementById("themeIcon");
+      const apply = (t: string) => {
+        document.documentElement.setAttribute("data-theme", t);
+        if (icon) icon.textContent = t === "dark" ? "☀" : "◐";
+      };
+      apply(document.documentElement.getAttribute("data-theme") || "light");
+      toggle?.addEventListener("click", () => {
+        const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        localStorage.setItem("tdb-theme", next);
+        apply(next);
+      });
+    </script>
+  </body>
+</html>

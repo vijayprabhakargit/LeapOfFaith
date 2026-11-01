@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getArchiveByMonth } from "../lib/editions";
+import { formatDateShort } from "../lib/format";
+
+const months = getArchiveByMonth();
+---
+<BaseLayout title="Archive — The Daily Brief" description="Every past edition of The Daily Brief.">
+  <div class="wrap">
+    <div class="hero">
+      <div class="eyebrow">The Daily Brief</div>
+      <h1>Archive</h1>
+      <p class="tagline">Every edition, in reverse order.</p>
+    </div>
+
+    {
+      months.length === 0 && (
+        <div class="empty">
+          <h2>Nothing archived yet</h2>
+          <p class="note">Editions appear here after you run <code>npm run generate</code>.</p>
+        </div>
+      )
+    }
+
+    {
+      months.map((m) => (
+        <div class="archive-month">
+          <h3>{m.label}</h3>
+          <div class="archive-grid">
+            {m.editions.map((e) => (
+              <a class="archive-item" href={`/editions/${e.date}/`}>
+                <div class="d">{formatDateShort(e.date)}</div>
+                <div class="meta">
+                  {e.stats.stories} stories · {e.stats.articles} articles
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</BaseLayout>

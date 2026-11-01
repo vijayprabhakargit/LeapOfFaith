@@ -1,0 +1,66 @@
+---
+import { CATEGORIES } from "../../config/syllabus";
+import type { Edition } from "../lib/types";
+
+interface Props {
+  edition: Edition;
+}
+const { edition } = Astro.props;
+const present = new Set(edition.stories.map((s) => s.category));
+const cats = CATEGORIES.filter((c) => present.has(c.key));
+---
+<div class="controls" id="controls">
+  <div class="wrap controls-inner">
+    <div class="chips" id="chips">
+      <button class="chip active" data-filter="all">All stories</button>
+      <button class="chip" data-filter="must-read">Must read</button>
+      {cats.map((c) => <button class="chip" data-filter={c.key}>{c.label}</button>)}
+    </div>
+    <input class="search" id="search" type="search" placeholder="Search stories, sources, tags…" aria-label="Search stories" />
+  </div>
+</div>
+
+<script>
+  const chips = document.getElementById("chips");
+  const search = document.getElementById("search") as HTMLInputElement | null;
+  const stories = Array.from(document.querySelectorAll<HTMLElement>(".story"));
+  let active = "all";
+
+  function apply() {
+    const q = (search?.value || "").trim().toLowerCase();
+    let shown = 0;
+    for (const el of stories) {
+      const cat = el.dataset.category || "";
+      const sig = el.dataset.signal || "";
+      const blob = el.dataset.search || "";
+      const matchFilter = active === "all" || cat === active || sig === active;
+      const matchQuery = !q || blob.includes(q);
+      const visible = matchFilter && matchQuery;
+      el.classList.toggle("hidden", !visible);
+      if (visible) shown++;
+    }
+    const first = stories.find((s) => !s.classList.contains("hidden"));
+    stories.forEach((s) => s.classList.remove("lead"));
+    if (first) first.classList.add("lead");
+    document.getElementById("visibleCount")?.replaceChildren(document.createTextNode(String(shown)));
+  }
+
+  chips?.addEventListener("click", (e) => {
+    const btn = (e.target as HTMLElement).closest(".chip");
+    if (!btn) return;
+    chips.querySelectorAll(".chip").forEach((c) => c.classList.remove("active"));
+    btn.classList.add("active");
+    active = (btn as HTMLElement).dataset.filter || "all";
+    apply();
+  });
+  search?.addEventListener("input", apply);
+
+  // Reveal-on-scroll.
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const en of entries) if (en.isIntersecting) en.target.classList.add("reveal");
+    },
+    { rootMargin: "0px 0px -40px 0px" },
+  );
+  stories.forEach((s) => io.observe(s));
+</script>

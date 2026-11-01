@@ -1,0 +1,304 @@
+{
+  "date": "2026-10-31",
+  "generatedAt": "2026-10-31T00:40:00.000Z",
+  "windowStart": "2026-10-30T00:40:00.000Z",
+  "windowEnd": "2026-10-31T00:40:00.000Z",
+  "stats": { "feeds": 21, "articles": 184, "stories": 4 },
+  "brief": [
+    "Sample edition shipped with the project so the site renders before your first run — regenerate with `npm run generate`.",
+    "Economy: the RBI held the policy rate while revising its inflation glide-path downward.",
+    "International: a long-running India–EU trade negotiation reached a headline conclusion.",
+    "Environment: the Cabinet approved the next phase of the national water mission."
+  ],
+  "stories": [
+    {
+      "id": "rbi-holds-repo-rate-inflation-cools",
+      "slug": "rbi-holds-repo-rate-inflation-cools",
+      "headline": "RBI holds the repo rate as inflation cools toward the target band",
+      "kicker": "Economy · Monetary Policy",
+      "category": "economy",
+      "region": "india",
+      "importance": 5,
+      "signal": "must-read",
+      "summary": "The Monetary Policy Committee left the policy repo rate unchanged, citing a favourable inflation trajectory and resilient growth. Commentary across sources focused on the central bank's revised inflation glide-path and the timing of any future cut. Some outlets highlighted subdued rural demand, while business dailies stressed the growth-inflation trade-off and transmission to borrowers.",
+      "whyItMatters": "Monetary policy decisions anchor the GS-III economy paper and directly link to inflation-targeting, the MPC framework and the fiscal-monetary mix.",
+      "perspectives": [
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Emphasised the inflation glide-path and the RBI's cautious stance on food-price volatility."
+        },
+        {
+          "source": "Mint",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Focused on the growth-inflation trade-off and the pace of rate transmission to retail lending."
+        },
+        {
+          "source": "Business Standard",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Led with market reaction and implications for the bond and currency markets."
+        }
+      ],
+      "articles": [
+        {
+          "id": "seed:hindu-rbi",
+          "title": "RBI holds repo rate, flags food inflation risk",
+          "link": "https://www.thehindu.com/business/Economy/",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": ["economy"],
+          "publishedAt": "2026-10-31T04:10:00.000Z",
+          "snippet": "The Monetary Policy Committee voted to keep the policy repo rate unchanged…"
+        },
+        {
+          "id": "seed:mint-rbi",
+          "title": "What the RBI's pause means for your EMIs",
+          "link": "https://www.livemint.com/economy",
+          "source": "Mint",
+          "sourceId": "livemint",
+          "region": "india",
+          "categories": ["economy"],
+          "publishedAt": "2026-10-31T05:00:00.000Z",
+          "snippet": "Loan transmission may lag even as the central bank signals a data-dependent path…"
+        }
+      ],
+      "static": [
+        {
+          "topic": "RBI & Monetary Policy",
+          "paper": "GS-III",
+          "syllabusNode": "Indian Economy — Banking & Monetary Policy",
+          "whatIsIt": "The RBI conducts monetary policy through the six-member Monetary Policy Committee (MPC), which has a flexible inflation-targeting mandate of 4% CPI with a tolerance band of ±2%.",
+          "background": "Inflation targeting was adopted after a 2016 amendment to the RBI Act, 1934, following the Urjit Patel Committee (2014). The MPC sets the repo rate; tools include the reverse repo, MSF, CRR, SLR and open market operations.",
+          "whyInNews": "The MPC's latest review kept the repo rate unchanged while revising its inflation outlook.",
+          "wayForward": "Improve monetary transmission through external benchmark lending and monitor food-price shocks in the index.",
+          "keyTerms": ["Repo rate", "MPC", "Inflation targeting", "CRR", "SLR", "OMOs"],
+          "prelimsPointers": [
+            "Inflation target: 4% CPI, band 2–6%, reviewed every five years.",
+            "MPC: 3 RBI members + 3 external; Governor holds the casting vote."
+          ],
+          "mainsAngle": "Examine how India balances growth support with price stability, and the limits of monetary policy when inflation is supply-driven."
+        }
+      ],
+      "prelims": [
+        "MPC has six members and meets at least four times a year.",
+        "CPI inflation is the nominal anchor, not WPI."
+      ],
+      "mainsQuestion": "Discuss whether India's flexible inflation-targeting framework is adequate to handle supply-side food shocks. (150 words)",
+      "tags": ["rbi", "monetary-policy", "inflation"],
+      "readMinutes": 5
+    },
+    {
+      "id": "india-eu-trade-pact",
+      "slug": "india-eu-trade-pact",
+      "headline": "India and the EU conclude long-running trade negotiations",
+      "kicker": "IR · Europe",
+      "category": "ir",
+      "region": "global",
+      "importance": 4,
+      "signal": "recommended",
+      "summary": "Negotiators signalled the conclusion of talks on a broad trade agreement covering tariffs, investment and sustainability chapters. Coverage ranged from tariff concessions on Indian exports to European demands on labour and environment standards. Analysts debated the strategic signalling at a time of global trade fragmentation.",
+      "whyItMatters": "Trade diplomacy and the strategic implications of a major bilateral pact fall squarely within GS-II international relations and GS-III external-sector economy.",
+      "perspectives": [
+        {
+          "source": "The Indian Express",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Explained the tariff math and the sectors most exposed to EU competition."
+        },
+        {
+          "source": "Observer Research Foundation",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Framed the deal as part of India's multi-alignment and de-risking strategy."
+        },
+        {
+          "source": "Reuters",
+          "region": "European Union",
+          "lean": "unknown",
+          "take": "Highlighted the sustainability and carbon-border provisions sought by Brussels.",
+          "isRegional": true
+        }
+      ],
+      "articles": [
+        {
+          "id": "seed:ie-eu",
+          "title": "India, EU wrap up trade talks: what's in it",
+          "link": "https://indianexpress.com/section/explained/",
+          "source": "The Indian Express",
+          "sourceId": "indian-express-explained",
+          "region": "india",
+          "categories": ["ir", "economy"],
+          "publishedAt": "2026-10-31T03:20:00.000Z",
+          "snippet": "Tariff concessions and investment chapters form the core of the announced framework…"
+        }
+      ],
+      "static": [
+        {
+          "topic": "India's Foreign Policy & Strategic Autonomy",
+          "paper": "GS-II",
+          "syllabusNode": "International Relations — India & the World",
+          "whatIsIt": "India's trade diplomacy is one arm of a broader multi-alignment strategy, balancing ties with the West, Russia and the Global South.",
+          "background": "India has pursued FTAs/CECAs with the UAE, Australia, Japan and EFTA. The EU is among India's largest trading partners; negotiations have run for years over tariffs, data and sustainability.",
+          "whyInNews": "A headline conclusion of India–EU trade talks marks a strategic and economic milestone.",
+          "keyTerms": ["FTA/CECA", "Tariff concession", "CBAM", "Rules of origin", "Strategic autonomy"],
+          "prelimsPointers": [
+            "India–UAE CEPA (2022) was India's first major FTA of the last decade.",
+            "The EU's CBAM is a carbon border adjustment mechanism affecting exports."
+          ],
+          "mainsAngle": "Assess how trade agreements advance India's strategic autonomy amid global trade fragmentation."
+        }
+      ],
+      "prelims": ["CBAM is the EU's carbon border adjustment mechanism.", "India–EU talks cover goods, services and investment."],
+      "mainsQuestion": "How do trade agreements fit into India's strategy of multi-alignment? Illustrate with recent examples. (250 words)",
+      "tags": ["trade", "eu", "foreign-policy"],
+      "readMinutes": 4
+    },
+    {
+      "id": "national-water-mission-phase-two",
+      "slug": "national-water-mission-phase-two",
+      "headline": "Cabinet approves the next phase of the national water mission",
+      "kicker": "Environment · Water",
+      "category": "environment",
+      "region": "india",
+      "importance": 4,
+      "signal": "recommended",
+      "summary": "The government approved a further phase of its flagship water mission, targeting groundwater recharge, basin-level planning and urban water security. Reports grounded the decision in falling water tables across several states and recurring drought stress in peninsular India.",
+      "whyItMatters": "Water governance links GS-I geography, GS-III environment and GS-II governance, and is a perennial UPSC theme.",
+      "perspectives": [
+        {
+          "source": "Down To Earth",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Stressed the groundwater crisis and the need for demand-side management."
+        },
+        {
+          "source": "PIB (Press Information Bureau)",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Set out the mission's objectives, funding and institutional coordination."
+        }
+      ],
+      "articles": [
+        {
+          "id": "seed:dte-water",
+          "title": "Why groundwater recharge needs more than schemes",
+          "link": "https://www.downtoearth.org.in/",
+          "source": "Down To Earth",
+          "sourceId": "down-to-earth",
+          "region": "india",
+          "categories": ["environment", "geography"],
+          "publishedAt": "2026-10-31T02:30:00.000Z",
+          "snippet": "Basin-level planning and cropping choices will determine outcomes more than funding alone…"
+        }
+      ],
+      "static": [
+        {
+          "topic": "Indian Monsoon & Physical Geography",
+          "paper": "GS-I",
+          "syllabusNode": "Geography — Physical Geography of India",
+          "whatIsIt": "India's water availability is driven by a monsoon that delivers about 75% of annual rainfall in four months, unevenly across space.",
+          "background": "The National Water Mission is one of the eight missions under the National Action Plan on Climate Change (2008), aiming at conservation and improved efficiency.",
+          "geography": "Peninsular rivers are largely rain-fed; the Indo-Gangetic plain and deltas face contrasting flood and scarcity regimes.",
+          "socioEconomic": "Agriculture consumes the bulk of freshwater, making cropping patterns central to any demand-side solution.",
+          "whyInNews": "A new phase of the mission was approved with a focus on recharge and urban supply.",
+          "keyTerms": ["Groundwater", "Recharge", "Blue water", "National Water Mission", "Basin planning"],
+          "prelimsPointers": [
+            "National Water Mission is one of the eight NAPCC missions.",
+            "Himalayan rivers are perennial; peninsular rivers are seasonal."
+          ],
+          "mainsAngle": "Discuss the institutional and behavioural reforms needed to make water conservation missions effective."
+        }
+      ],
+      "prelims": ["NAPCC was released in 2008.", "Groundwater over-extraction is highest in the northwest."],
+      "mainsQuestion": "Water scarcity in India is a governance challenge as much as a physical one. Examine. (250 words)",
+      "tags": ["water", "environment", "geography"],
+      "readMinutes": 4
+    },
+    {
+      "id": "data-protection-amendment",
+      "slug": "data-protection-amendment",
+      "headline": "Amendments to the data-protection regime expand consent rules",
+      "kicker": "Polity · Digital Governance",
+      "category": "polity",
+      "region": "india",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "Proposed amendments would refine consent requirements and tighten obligations on significant data fiduciaries, according to reports. Commentators weighed the balance between innovation, state access and privacy safeguards, against the backdrop of the 2023 data-protection law.",
+      "whyItMatters": "Data governance spans GS-II e-governance and GS-III security, and connects to a fast-moving legislative area.",
+      "perspectives": [
+        {
+          "source": "The Wire",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Scrutinised the scope of state exemptions and oversight mechanisms."
+        },
+        {
+          "source": "The Print",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Examined the compliance burden on startups and platform firms."
+        }
+      ],
+      "articles": [
+        {
+          "id": "seed:wire-dpdp",
+          "title": "What the data-protection amendments change",
+          "link": "https://thewire.in/",
+          "source": "The Wire",
+          "sourceId": "the-wire",
+          "region": "india",
+          "categories": ["polity", "scitech"],
+          "publishedAt": "2026-10-31T01:15:00.000Z",
+          "snippet": "Consent, purpose limitation and the powers of the Data Protection Board are at the centre of the debate…"
+        }
+      ],
+      "static": [
+        {
+          "topic": "Digital Public Infrastructure & Data Governance",
+          "paper": "GS-II",
+          "syllabusNode": "Governance — e-Governance & Data",
+          "whatIsIt": "India's Digital Personal Data Protection Act, 2023 governs processing of personal data through consent and a Data Protection Board.",
+          "background": "The law followed the Puttaswamy judgment (2017) recognising privacy as a fundamental right, and successive draft bills.",
+          "whyInNews": "Proposed amendments refine consent and obligations on significant data fiduciaries.",
+          "keyTerms": ["Data fiduciary", "Consent", "Data Protection Board", "Puttaswamy judgment", "Purpose limitation"],
+          "prelimsPointers": [
+            "Puttaswamy (2017) recognised privacy as part of Article 21.",
+            "DPDP Act 2023 establishes a Data Protection Board of India."
+          ],
+          "mainsAngle": "Balance privacy, innovation and legitimate state access in India's data-protection framework."
+        }
+      ],
+      "prelims": ["Privacy is a fundamental right under Article 21.", "DPDP Act was enacted in 2023."],
+      "mainsQuestion": "Critically examine whether India's data-protection law adequately safeguards privacy while enabling innovation. (250 words)",
+      "tags": ["privacy", "governance", "technology"],
+      "readMinutes": 4
+    }
+  ],
+  "onThisDay": [
+    {
+      "year": "1875",
+      "title": "Birth of Sardar Vallabhbhai Patel",
+      "description": "Independent India's first Deputy Prime Minister and Home Minister, who led the integration of over 500 princely states into the Union.",
+      "category": "birth",
+      "upscLink": "GS-I Modern History · integration of princely states; GS-II federalism"
+    },
+    {
+      "year": "1984",
+      "title": "Indira Gandhi assassinated",
+      "description": "Prime Minister Indira Gandhi was assassinated in New Delhi, an event that reshaped Indian politics and security policy.",
+      "category": "death",
+      "upscLink": "GS-I Post-Independence India · political developments"
+    },
+    {
+      "year": "1517",
+      "title": "Martin Luther's 95 Theses",
+      "description": "Luther is said to have posted his 95 Theses, an event commonly taken as the start of the Protestant Reformation in Europe.",
+      "category": "event",
+      "upscLink": "GS-I World History · Reformation and its impact"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# Build output
+dist/
+.output/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Wrangler / Cloudflare
+.wrangler/
+.dev.vars
+
+# Generated PDFs (regenerate on demand)
+public/pdf/*
+!public/pdf/.gitkeep

@@ -1,0 +1,181 @@
+---
+import type { Story } from "../lib/types";
+import { CATEGORY_BY_KEY } from "../../config/syllabus";
+import { relTime } from "../lib/format";
+
+interface Props {
+  story: Story;
+  lead?: boolean;
+  index?: number;
+}
+const { story, lead = false } = Astro.props;
+const cat = CATEGORY_BY_KEY[story.category]?.label ?? story.category;
+const primary = story.articles[0];
+const signalLabel = story.signal === "must-read" ? "Must read" : story.signal === "recommended" ? "Recommended" : "Brief";
+const searchBlob = [
+  story.headline,
+  story.kicker,
+  story.summary,
+  story.tags.join(" "),
+  story.articles.map((a) => a.source).join(" "),
+].join(" ").toLowerCase();
+---
+<article
+  class:list={["story", lead && "lead"]}
+  id={`story-${story.slug}`}
+  data-category={story.category}
+  data-signal={story.signal}
+  data-region={story.region}
+  data-search={searchBlob}
+>
+  <div class="kicker">
+    <span>{cat}</span>
+    <span class="dot">·</span>
+    <span class="region">{story.kicker}</span>
+    <span style="flex: 1"></span>
+    <span class:list={["signal", story.signal !== "must-read" && "rec"]}>{signalLabel}</span>
+  </div>
+
+  <h2 class="story-headline">
+    <a href={primary?.link ?? "#story-" + story.slug} target="_blank" rel="noopener noreferrer">{story.headline}</a>
+  </h2>
+
+  <div class="byline">
+    <span>{story.articles.length} source{story.articles.length === 1 ? "" : "s"}</span>
+    <span class="dot">•</span>
+    <span>{story.readMinutes} min read</span>
+    <span class="dot">•</span>
+    <span>{primary ? relTime(primary.publishedAt) : ""}</span>
+  </div>
+
+  <div class="story-body">
+    <p class:list={[lead && "lead-para"]}>{story.summary}</p>
+    {story.whyItMatters && (
+      <div class="why">
+        <b>Why it matters</b>
+        {story.whyItMatters}
+      </div>
+    )}
+  </div>
+
+  {
+    story.perspectives.length > 1 && (
+      <details class="persp" open={lead}>
+        <summary>Multiple perspectives · {story.perspectives.length} sources</summary>
+        <div class="persp-grid">
+          {story.perspectives.map((p) => (
+            <div class="persp-row">
+              <div class="persp-src">
+                {p.source}
+                <small>{p.region}{p.isRegional ? " · regional" : ""}</small>
+                {p.isRegional && <span class="tag-regional">fresh angle</span>}
+              </div>
+              <div class="persp-take">
+                {p.take}
+                <a href={p.link} target="_blank" rel="noopener noreferrer">Read ›</a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </details>
+    )
+  }
+
+  {
+    story.static.length > 0 && (
+      <details class="static">
+        <summary>The static syllabus behind this story</summary>
+        {story.static.map((s) => (
+          <div class="static-card">
+            <h4>{s.topic}</h4>
+            <div class="static-paper">
+              {s.paper} · {s.syllabusNode}
+            </div>
+            <dl>
+              <dt>What it is</dt>
+              <dd>{s.whatIsIt}</dd>
+              <dt>Background</dt>
+              <dd>{s.background}</dd>
+              {s.geography && (
+                <>
+                  <dt>Geography</dt>
+                  <dd>{s.geography}</dd>
+                </>
+              )}
+              {s.socioEconomic && (
+                <>
+                  <dt>Socio-economic context</dt>
+                  <dd>{s.socioEconomic}</dd>
+                </>
+              )}
+              <dt>Why in the news</dt>
+              <dd>{s.whyInNews}</dd>
+              {s.wayForward && (
+                <>
+                  <dt>Way forward</dt>
+                  <dd>{s.wayForward}</dd>
+                </>
+              )}
+            </dl>
+            {s.keyTerms.length > 0 && (
+              <>
+                <dt style="margin-top: 10px; font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent)">
+                  Key terms
+                </dt>
+                <div class="terms">
+                  {s.keyTerms.map((t) => (
+                    <span class="term">{t}</span>
+                  ))}
+                </div>
+              </>
+            )}
+            {s.prelimsPointers && s.prelimsPointers.length > 0 && (
+              <div class="exam">
+                <h5>Prelims pointers</h5>
+                <ul>
+                  {s.prelimsPointers.map((p) => (
+                    <li>{p}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {s.mainsAngle && <div class="mains-q">{s.mainsAngle}</div>}
+          </div>
+        ))}
+      </details>
+    )
+  }
+
+  {
+    (story.prelims.length > 0 || story.mainsQuestion) && (
+      <div class="exam">
+        {story.prelims.length > 0 && (
+          <>
+            <h5>Prelims — remember this</h5>
+            <ul>
+              {story.prelims.map((p) => (
+                <li>{p}</li>
+              ))}
+            </ul>
+          </>
+        )}
+        {story.mainsQuestion && (
+          <>
+            <h5>Mains practice</h5>
+            <div class="mains-q">{story.mainsQuestion}</div>
+          </>
+        )}
+      </div>
+    )
+  }
+
+  {
+    story.tags.length > 0 && (
+      <div class="tags">
+        {story.tags.map((t) => (
+          <span class="tag">#{t}</span>
+        ))}
+      </div>
+    )
+  }
+</article>

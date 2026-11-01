@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EditionView from "../../components/EditionView.astro";
+import { getAllEditions, getEdition } from "../../lib/editions";
+import { formatDateLong } from "../../lib/format";
+
+export function getStaticPaths() {
+  const dates = getAllEditions().map((e) => e.date); // newest first
+  return dates.map((date, i) => ({
+    params: { date },
+    props: { nextDate: i > 0 ? dates[i - 1] : null, prevDate: i < dates.length - 1 ? dates[i + 1] : null },
+  }));
+}
+
+const { date } = Astro.params;
+const { prevDate, nextDate } = Astro.props as { prevDate: string | null; nextDate: string | null };
+const edition = getEdition(date!);
+---
+{
+  edition ? (
+    <BaseLayout title={`The Daily Brief — ${edition.date}`} dateline={formatDateLong(edition.date)}>
+      <EditionView edition={edition} prevDate={prevDate} nextDate={nextDate} />
+    </BaseLayout>
+  ) : (
+    <BaseLayout title="Edition not found">
+      <div class="wrap">
+        <div class="empty">
+          <h2>Edition not found</h2>
+          <p><a href="/archive/">Back to the archive ›</a></p>
+        </div>
+      </div>
+    </BaseLayout>
+  )
+}

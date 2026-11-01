@@ -1,0 +1,61 @@
+---
+import type { Edition } from "../lib/types";
+import { formatDateLong } from "../lib/format";
+import Controls from "./Controls.astro";
+import StoryCard from "./StoryCard.astro";
+import OnThisDay from "./OnThisDay.astro";
+
+interface Props {
+  edition: Edition;
+  prevDate?: string | null;
+  nextDate?: string | null;
+}
+const { edition, prevDate, nextDate } = Astro.props;
+const stories = edition.stories;
+---
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Leap of Faith · for the Civil Services</div>
+    <h1>The Daily Brief</h1>
+    <p class="tagline">
+      One place to read the world. Stories stitched from across trusted sources, with the static syllabus linked in.
+    </p>
+    <div class="dateline">{formatDateLong(edition.date)}</div>
+    <div class="stats-row">
+      <span><b>{edition.stats.stories}</b> stories</span>
+      <span><b>{edition.stats.articles}</b> articles</span>
+      <span><b>{edition.stats.feeds}</b> feeds</span>
+      <span>window · last 24h</span>
+      <span style="display: flex; gap: 10px; margin-left: 6px">
+        {prevDate && <a href={`/editions/${prevDate}/`}>‹ prev</a>}
+        {nextDate && <a href={`/editions/${nextDate}/`}>next ›</a>}
+      </span>
+    </div>
+  </div>
+</section>
+
+{
+  edition.brief.length > 0 && (
+    <div class="wrap">
+      <div class="brief">
+        <h2>Today's brief</h2>
+        <ul>
+          {edition.brief.map((b) => (
+            <li>{b}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+<div class="wrap">
+  <Controls edition={edition} />
+  <div style="font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--muted); margin-bottom: 14px">
+    Showing <span id="visibleCount">{stories.length}</span> of {stories.length} stories
+  </div>
+  <div class="stories" id="stories">
+    {stories.map((s, i) => <StoryCard story={s} lead={i === 0} />)}
+  </div>
+  <OnThisDay items={edition.onThisDay} date={edition.date} />
+</div>

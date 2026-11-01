@@ -1,0 +1,84 @@
+name: Leap of Faith — Daily Brief
+
+on:
+  schedule:
+    # 6:00 AM IST == 00:30 UTC
+    - cron: "30 0 * * *"
+  workflow_dispatch:
+    inputs:
+      day:
+        description: "Edition date (YYYY-MM-DD). Blank = today (IST)."
+        required: false
+        default: ""
+      no_regional:
+        description: "Skip dynamic regional perspectives"
+        type: boolean
+        default: false
+
+# Allow the job to commit the generated edition back to the repo.
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-brief
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    env:
+      LLM_PROVIDER: ${{ secrets.LLM_PROVIDER }}
+      LLM_MODEL: ${{ secrets.LLM_MODEL }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+      LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      # Cloudflare creds live in job env so the step `if` can test them (the
+      # `secrets` context is not available inside a step-level `if`).
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate today's edition
+        env:
+          DAY: ${{ github.event.inputs.day }}
+          NO_REGIONAL: ${{ github.event.inputs.no_regional }}
+        run: |
+          ARGS=""
+          if [ -n "$DAY" ]; then ARGS="--day $DAY"; fi
+          if [ "$NO_REGIONAL" = "true" ]; then ARGS="$ARGS --no-regional"; fi
+          npm run generate -- $ARGS
+
+      - name: Build site
+        run: npm run build
+
+      - name: Commit edition back to the repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/editions
+          if git diff --cached --quiet; then
+            echo "No new edition to commit."
+          else
+            git commit -m "chore(edition): $(date -u +'%Y-%m-%d') [skip ci]"
+            git push
+          fi
+
+      - name: Deploy to Cloudflare Pages
+        if: ${{ env.CLOUDFLARE_API_TOKEN != '' }}
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ env.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ env.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=the-daily-brief --branch=main
