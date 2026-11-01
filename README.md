@@ -190,6 +190,25 @@ test/               # unit tests (node --test via tsx)
 
 ---
 
+## Roadmap
+
+- **Cheaper / free inference.** The generator is provider-agnostic, so the daily model can be swapped
+  with config only, no code changes: OpenRouter `:free` model variants, the Google Gemini free tier
+  (`LLM_PROVIDER=gemini`), or Groq's free tier (`LLM_PROVIDER=compatible` +
+  `LLM_BASE_URL=https://api.groq.com/openai/v1`). Fully local models (Ollama / vLLM) work the same way
+  and are ideal if you run the job on your own machine instead of GitHub Actions.
+
+  > **Note on GitHub's own AI:** GitHub Models — the free, OpenAI-compatible GitHub inference API —
+  > was **retired on 30 July 2026**, and GitHub Copilot is not a runtime inference API, so neither can
+  > back this generator. GitHub's suggested successor, **Azure AI Foundry**, is usable but would need a
+  > small provider adapter addition.
+
+- **PDF edition** — a print-ready A4 page per day (the newsprint `@media print` styles already exist).
+- **Wider regional perspectives** — extend `GOOGLE_NEWS_LOCALES` and add stream-language sources.
+- **Revision tools** — export each story's static links + prelims pointers into a spaced-revision list.
+
+---
+
 ## License
 
 Open source under the [MIT License](LICENSE) — free to use, modify and share.
