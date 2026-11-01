@@ -1,0 +1,2046 @@
+{
+  "date": "2026-11-02",
+  "generatedAt": "2026-11-01T21:11:33.703Z",
+  "windowStart": "2026-10-31T21:11:33.703Z",
+  "windowEnd": "2026-11-01T21:11:33.703Z",
+  "stats": {
+    "feeds": 22,
+    "articles": 304,
+    "stories": 14
+  },
+  "brief": [
+    "Cyclone Murasu intensifies off the Tamil Nadu coast; orange alerts in Telangana and Andhra districts, power restoration assistance sought from neighbouring States.",
+    "INDIA bloc's Ramlila Maidan rally presses for electoral roll reforms; BJP dismisses it as a 'designed drama' against the CEC.",
+    "Quality of employment in focus as EPFO is urged to make social security worker-centric amid falling but poor-quality jobs.",
+    "ISRO's GSLV-F18 mission review flags resource constraints; solar tariffs hit ₹2.15 a unit as India chases 500 GW non-fossil capacity.",
+    "West Asia and Ukraine remain flashpoints: Trump-Netanyahu call on Iran, Israeli poll-funding probe, and drone strikes on Russian refinery."
+  ],
+  "stories": [
+    {
+      "id": "cyclone-murasu-triggers-alerts-across-tamil-nadu-and-andhra",
+      "slug": "cyclone-murasu-triggers-alerts-across-tamil-nadu-and-andhra",
+      "headline": "Cyclone Murasu triggers alerts across Tamil Nadu and Andhra Pradesh coasts",
+      "kicker": "Disaster · Cyclone Murasu",
+      "category": "geography",
+      "region": "india",
+      "importance": 4,
+      "signal": "recommended",
+      "summary": "Cyclone Murasu lay over the Bay of Bengal, centred roughly 350 km east of Chennai and at varying distances from Nellore, Machilipatnam, Kavali, Ongole and Visakhapatnam, according to IMD. The system prompted an orange alert in six Telangana districts and a yellow alert in five, while Tamil Nadu and Andhra Pradesh announced school and college holidays in vulnerable districts. North Tamil Nadu, including Chennai, Chengalpattu, Kancheepuram, Ranipet and Nilgiris, was forecast to receive very heavy rain. Andhra Pradesh sought power-restoration assistance from Tamil Nadu and Karnataka, indicating the storm's cross-state infrastructure impact.",
+      "whyItMatters": "Tests understanding of tropical cyclone dynamics, IMD warning protocols, and inter-state disaster coordination—key for GS-I geography and GS-III disaster management.",
+      "perspectives": [
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "National daily's live and regional reports frame Murasu as a multi-state coastal emergency, tracking IMD positions, colour-coded alerts, school holidays and Andhra Pradesh's request for inter-state power restoration.",
+          "link": "https://www.thehindu.com/news/national/murasu-cyclone-live-updates-on-november-2-2026-tamil-nadu-telangana-andhra-pradesh-odisha/article71654226.ece",
+          "isRegional": false
+        }
+      ],
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Cyclone Murasu LIVE update: Orange alert in six Telangana districts, yellow alert in five; holiday announced for schools, colleges in T.N., A.P. districts",
+          "link": "https://www.thehindu.com/news/national/murasu-cyclone-live-updates-on-november-2-2026-tamil-nadu-telangana-andhra-pradesh-odisha/article71654226.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T19:08:22.000Z",
+          "snippet": "The cyclonic storm lay centred about 350 km east of Chennai, 400 km east-southeast of Nellore, 430 km southeast of Machilipatnam, 420 km east-southeast of Kavali, 450 km southeast of Ongole, and 520 km south of Visakhapatnam, according to IMD."
+        },
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "‘Cyclone Murasu’: Palnadu District Collector declares November 2 holiday for schools, colleges over",
+          "link": "https://www.thehindu.com/news/national/andhra-pradesh/collector-declares-november-2-holiday-for-schools-colleges-over-cyclone-murasu/article71654088.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T18:36:32.000Z",
+          "snippet": ""
+        },
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "A.P. seeks assistance from Tamil Nadu, Karnataka for cyclone power restoration",
+          "link": "https://www.thehindu.com/news/national/andhra-pradesh/ap-seeks-assistance-from-tamil-nadu-karnataka-for-cyclone-power-restoration/article71653981.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T18:26:34.000Z",
+          "snippet": ""
+        },
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Storm ‘Murasu’ to bring very heavy rain over north Tamil Nadu",
+          "link": "https://www.thehindu.com/news/cities/chennai/storm-murasu-to-bring-very-heavy-rains-over-north-tamil-nadu/article71653048.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T17:32:59.000Z",
+          "snippet": "Isolated places over Chennai, Chengalpattu, Kancheepuram, Ranipet and Nilgiris districts are likely to get heavy rainfall on Monday, November 2; Chennai District Collector S. Malathi Helen announced holiday for schools on account of heavy rains"
+        }
+      ],
+      "static": [
+        {
+          "topic": "Tropical Cyclones and the Indian Monsoon System",
+          "paper": "GS-I",
+          "syllabusNode": "Geography — Physical Geography of India",
+          "whatIsIt": "Tropical cyclones are intense low-pressure systems over warm oceans, while the Indian monsoon is the seasonal reversal of winds driven by differential heating, the ITCZ shift and the Tibetan Plateau's heat pump; both influence rainfall and coastal hazards.",
+          "background": "El Niño usually weakens the monsoon; La Niña strengthens it; the Indian Ocean Dipole also modulates it. The Western Ghats and Himalayan rivers define drainage, while peninsular rivers are rain-fed. Bay of Bengal cyclones frequently affect India's eastern coast.",
+          "geography": "Bay of Bengal and coastal peninsular India, including Tamil Nadu, Andhra Pradesh and Telangana's interior districts.",
+          "socioEconomic": "Cyclones disrupt agriculture, fishing, power supply, transport and schooling; coastal livelihoods and infrastructure are especially vulnerable.",
+          "whyInNews": "Cyclone Murasu triggered alerts, holidays and power-restoration coordination across Tamil Nadu, Andhra Pradesh and Telangana.",
+          "wayForward": "Strengthen early warning dissemination, cyclone shelters, inter-state power and disaster response coordination, and climate-resilient coastal infrastructure.",
+          "keyTerms": [
+            "ITCZ",
+            "El Niño/La Niña",
+            "IOD",
+            "Jet stream",
+            "Western disturbances",
+            "Rain shadow",
+            "Tropical cyclone"
+          ],
+          "prelimsPointers": [
+            "Himalayan rivers are perennial (snow-fed); peninsular rivers are seasonal.",
+            "Western Ghats lie west of the Deccan; highest peak Anamudi (Kerala).",
+            "IMD uses colour-coded weather alerts, including yellow, orange and red."
+          ],
+          "mainsAngle": "Monsoon variability and climate change; disaster preparedness for floods and cyclones."
+        },
+        {
+          "topic": "Cyclone Disaster Management and Inter-State Coordination",
+          "paper": "GS-III",
+          "syllabusNode": "Disaster Management",
+          "whatIsIt": "India's cyclone management framework combines IMD early warnings, colour-coded alerts, NDMA guidelines, state and district disaster management authorities, and NDRF response teams.",
+          "background": "The Disaster Management Act, 2005 created NDMA, SDMAs and DDMAs. Cyclone preparedness has improved through early warning, evacuation and cyclone shelters, but inter-state infrastructure coordination remains critical.",
+          "geography": "Coastal India, especially Bay of Bengal littoral states.",
+          "socioEconomic": "Power, transport and communication networks are shared across states; restoration requires mutual aid and coordinated logistics.",
+          "whyInNews": "Andhra Pradesh sought assistance from Tamil Nadu and Karnataka for power restoration after Cyclone Murasu.",
+          "wayForward": "Institutionalise inter-state mutual aid protocols, pre-position restoration crews, and integrate climate resilience into coastal infrastructure.",
+          "keyTerms": [
+            "NDMA",
+            "SDMA",
+            "DDMA",
+            "NDRF",
+            "Colour-coded alerts",
+            "Cyclone shelter"
+          ],
+          "prelimsPointers": [
+            "The Disaster Management Act, 2005 established NDMA at the national level.",
+            "IMD issues cyclone warnings and colour-coded alerts for weather hazards.",
+            "NDRF is a specialised federal disaster response force."
+          ],
+          "mainsAngle": "Evaluate India's cyclone disaster preparedness and the role of inter-state coordination in reducing damage."
+        }
+      ],
+      "prelims": [
+        "IMD located Cyclone Murasu about 350 km east of Chennai and 400 km east-southeast of Nellore.",
+        "Orange alert was issued for six Telangana districts and yellow alert for five.",
+        "Very heavy rain was forecast over north Tamil Nadu, including Chennai, Chengalpattu, Kancheepuram, Ranipet and Nilgiris.",
+        "Andhra Pradesh sought power-restoration assistance from Tamil Nadu and Karnataka."
+      ],
+      "mainsQuestion": "Cyclone Murasu underlines the importance of early warning and inter-state coordination in disaster management. Discuss how India can strengthen its cyclone preparedness along the eastern coast.",
+      "tags": [
+        "Cyclone Murasu",
+        "Disaster Management",
+        "IMD",
+        "Coastal India",
+        "Inter-state coordination",
+        "Geography"
+      ],
+      "readMinutes": 6
+    },
+    {
+      "id": "trump-netanyahu-hold-tough-call-on-iran-war-as-israel-probes",
+      "slug": "trump-netanyahu-hold-tough-call-on-iran-war-as-israel-probes",
+      "headline": "Trump, Netanyahu hold tough call on Iran war as Israel probes Raam funding",
+      "kicker": "IR · West Asia",
+      "category": "ir",
+      "region": "global",
+      "importance": 4,
+      "signal": "recommended",
+      "summary": "US President Donald Trump and Israeli Prime Minister Benjamin Netanyahu spoke about the state of the Iran war, with an Israeli source describing the exchange as \"tough\" and an American source calling it \"direct\", according to Axios; Israeli reporting frames the call as coming amid preparations to renew strikes on Iran. The conversation points to close but not frictionless US-Israel coordination as the Iran file enters another active phase. Separately, Israel's elections chief said a Shin Bet inquiry into alleged irregularities would not undermine the declared result; the agency opened the probe at his request to establish whether the Arab Israeli party Raam received money from Qatar, an accusation both Doha and the party deny. Read together, the two developments show external security pressure and internal electoral scrutiny converging on Israel's leadership.",
+      "whyItMatters": "The Iran file, US-Israel alignment and Israel's coalition arithmetic all feed directly into India's energy security, the safety of its West Asian diaspora and its connectivity plans (IMEC, I2U2), making this a standard GS-II International Relations prompt.",
+      "perspectives": [
+        {
+          "source": "The Hindu — World",
+          "region": "israel",
+          "lean": "unknown",
+          "take": "Carries both threads in wire-style summaries — the Axios 'tough/direct' framing of the call and the Shin Bet inquiry into alleged Qatari funding of Raam — with minimal independent sourcing or editorial colour.",
+          "link": "https://www.thehindu.com/news/international/trump-holds-call-with-netanyahu-over-state-of-iran-war-report/article71654260.ece",
+          "isRegional": false
+        },
+        {
+          "source": "Arab News",
+          "region": "israel",
+          "lean": "unknown",
+          "take": "Gulf-based outlet foregrounds the Iran-war call, reflecting regional anxiety about renewed strikes and possible spillover across the Gulf.",
+          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTHNUUXBSTWdURW14R1NoQXMxbUNaMW1HbWYyZ0xWNTNNM2ZzYnY5U0V4d1hCemYxeEF4M1dXTkItU29GZmdkSUxENkV2ZzRjM1I1N0wwWUVfeWZMRXhyRkhsNmFUSmhFZWh1YnhPMlBKZGNmSEFEVUZFUGpLa0tWVzJoMFJnSTdqV0gwOVFadHNRenJ4UklTY0Zic1pNZi1OQnFuS1g5Y1NsZw?oc=5",
+          "isRegional": true
+        },
+        {
+          "source": "The Times of Israel",
+          "region": "israel",
+          "lean": "unknown",
+          "take": "Israeli outlet headlines the call as occurring amid preparations to renew strikes, a security-first domestic framing that treats Israeli operational readiness as the story's centre.",
+          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNdWluR210TDk5VTZTZHNNRklLcVFDN3A4bDBRTzUxQmJpSmJBcjRTdUctZlB5c3Y3TlBqVm96dXluVV9nUjhVOXJaUkVjRnNkUnZjdjRUVFVoaXpKZEpXdFV4T2NVNXFjWExqZmVxTDFwc2IyRjhaWXZsZWJ3UnduN1F0NFBJOVFLNV9kUm1WNnEwTHhtdG1NdWwwQ0txVXFpREpaT29rdVBRQjJXS0hfSGtn0gG3AUFVX3lxTE9USVRTN3ZxWWV4ZVVWbWRRdXk4ZlM1Y1FGcTJWTFlja2V6MDJ6OXFhOTJ2OEt2Uk9ma3poaWkyMHdaeDBUdEJxWlFqY1hxSHFLczloQ1RYbDY0akMwVzV2TURxeWdjc2M0aUxHM1BlWTRXZHlBdUMzX3VYMUFoWkFrSURtVUFRWmtDa0hVSDR2QjRaOHpRQnBKRlRMZFJ6dXJpOElNczhQUjQ0OS12ZlRIeHNsVUdfWQ?oc=5",
+          "isRegional": true
+        },
+        {
+          "source": "Axios",
+          "region": "israel",
+          "lean": "unknown",
+          "take": "The outlet that broke the call description; frames it as 'frank', emphasising Washington's tone towards its ally rather than Israeli priorities.",
+          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9MVUdNZ28zQzRiOVNwaDQyMC1WblRmazY5Y3VIbktXSk5BYkpNUFBHWG1GbnJ2RTg0dTFiMHZCbTRCME5ONEplcDZWVlRpQW1nZF9jdzAwT1dnNVNDWi0zdG1ySy1yc3k3UEVmZ2pucGZDNFJ4NzRPd0ln?oc=5",
+          "isRegional": true
+        }
+      ],
+      "articles": [
+        {
+          "id": "the-hindu-world:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Trump holds call with Netanyahu over state of Iran war: report",
+          "link": "https://www.thehindu.com/news/international/trump-holds-call-with-netanyahu-over-state-of-iran-war-report/article71654260.ece",
+          "source": "The Hindu — World",
+          "sourceId": "the-hindu-world",
+          "region": "global",
+          "categories": [
+            "ir",
+            "security",
+            "economy"
+          ],
+          "publishedAt": "2026-11-01T20:35:58.000Z",
+          "snippet": "The Israeli source described the call as “tough,” while the American source said it was “direct,” according to Axios"
+        },
+        {
+          "id": "the-hindu-world:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Israel elections chief says inquiry into irregularities will not undermine result",
+          "link": "https://www.thehindu.com/news/international/israel-elections-chief-says-inquiry-into-irregularities-will-not-undermine-result/article71654256.ece",
+          "source": "The Hindu — World",
+          "sourceId": "the-hindu-world",
+          "region": "global",
+          "categories": [
+            "ir",
+            "security",
+            "economy"
+          ],
+          "publishedAt": "2026-11-01T20:20:59.000Z",
+          "snippet": "The Shin Bet security agency launched the inquiry last week, at the elections chief’s request, to determine whether the Arab Israeli party Raam received money from Qatar — an accusation both the Gulf state and the party deny"
+        },
+        {
+          "id": "gnews:aHR0cHM6Ly9uZXdzLmdv",
+          "title": "Trump holds call with Netanyahu over state of Iran war: report",
+          "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTHNUUXBSTWdURW14R1NoQXMxbUNaMW1HbWYyZ0xWNTNNM2ZzYnY5U0V4d1hCemYxeEF4M1dXTkItU29GZmdkSUxENkV2ZzRjM1I1N0wwWUVfeWZMRXhyRkhsNmFUSmhFZWh1YnhPMlBKZGNmSEFEVUZFUGpLa0tWVzJoMFJnSTdqV0gwOVFadHNRenJ4UklTY0Zic1pNZi1OQnFuS1g5Y1NsZw?oc=5",
+          "source": "Arab News",
+          "sourceId": "gnews-israel",
+          "region": "global",
+          "categories": [],
+          "publishedAt": "2026-11-01T19:31:24.000Z",
+          "snippet": "Trump holds call with Netanyahu over state of Iran war: report Arab News"
+        },
+        {
+          "id": "gnews:aHR0cHM6Ly9uZXdzLmdv",
+          "title": "Trump holds call with Netanyahu amid preparations to renew strikes on Iran — report",
+          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNdWluR210TDk5VTZTZHNNRklLcVFDN3A4bDBRTzUxQmJpSmJBcjRTdUctZlB5c3Y3TlBqVm96dXluVV9nUjhVOXJaUkVjRnNkUnZjdjRUVFVoaXpKZEpXdFV4T2NVNXFjWExqZmVxTDFwc2IyRjhaWXZsZWJ3UnduN1F0NFBJOVFLNV9kUm1WNnEwTHhtdG1NdWwwQ0txVXFpREpaT29rdVBRQjJXS0hfSGtn0gG3AUFVX3lxTE9USVRTN3ZxWWV4ZVVWbWRRdXk4ZlM1Y1FGcTJWTFlja2V6MDJ6OXFhOTJ2OEt2Uk9ma3poaWkyMHdaeDBUdEJxWlFqY1hxSHFLczloQ1RYbDY0akMwVzV2TURxeWdjc2M0aUxHM1BlWTRXZHlBdUMzX3VYMUFoWkFrSURtVUFRWmtDa0hVSDR2QjRaOHpRQnBKRlRMZFJ6dXJpOElNczhQUjQ0OS12ZlRIeHNsVUdfWQ?oc=5",
+          "source": "The Times of Israel",
+          "sourceId": "gnews-israel",
+          "region": "global",
+          "categories": [],
+          "publishedAt": "2026-11-01T02:36:32.000Z",
+          "snippet": "Trump holds call with Netanyahu amid preparations to renew strikes on Iran — report The Times of Israel"
+        },
+        {
+          "id": "gnews:aHR0cHM6Ly9uZXdzLmdv",
+          "title": "Trump has frank call with Netanyahu about next move in Iran war",
+          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9MVUdNZ28zQzRiOVNwaDQyMC1WblRmazY5Y3VIbktXSk5BYkpNUFBHWG1GbnJ2RTg0dTFiMHZCbTRCME5ONEplcDZWVlRpQW1nZF9jdzAwT1dnNVNDWi0zdG1ySy1yc3k3UEVmZ2pucGZDNFJ4NzRPd0ln?oc=5",
+          "source": "Axios",
+          "sourceId": "gnews-israel",
+          "region": "global",
+          "categories": [],
+          "publishedAt": "2026-11-01T18:01:45.000Z",
+          "snippet": "Trump has frank call with Netanyahu about next move in Iran war Axios"
+        }
+      ],
+      "static": [
+        {
+          "topic": "Iran's nuclear programme and the JCPOA",
+          "paper": "GS-II",
+          "syllabusNode": "International Relations — West Asia; Nuclear Non-Proliferation and Global Governance",
+          "whatIsIt": "Iran's uranium enrichment programme has been the core of a two-decade standoff. Iran is a party to the NPT (in force 1970) and its declared facilities are under IAEA safeguards, but Western powers and Israel allege undeclared weaponisation-related activity, which Iran denies. The 2015 Joint Comprehensive Plan of Action (JCPOA) traded sanctions relief for verified limits on enrichment; it was endorsed by UN Security Council Resolution 2231, which also contains a 'snapback' mechanism to restore UN sanctions.",
+          "background": "JCPOA signed in July 2015 between Iran and the P5+1 (US, UK, France, Russia, China and Germany). The US withdrew in May 2018 and reimposed sanctions; Iran progressively rolled back its JCPOA commitments. Talks to revive the deal have repeatedly stalled, and UN Security Council sanctions architecture remains the legal backdrop to any renewed pressure.",
+          "geography": "Iran sits on the Persian Gulf and the Strait of Hormuz, through which roughly a fifth of global petroleum liquids trade passes; it shares borders with Iraq, Turkey, Armenia, Azerbaijan, Turkmenistan, Afghanistan and Pakistan.",
+          "socioEconomic": "Sanctions and military escalation affect global crude prices, shipping insurance and inflation — all of which transmit to India's import bill, current account and fuel prices.",
+          "whyInNews": "Reported US-Israel consultations on the next move in the Iran war, including preparations for renewed strikes, with the Trump-Netanyahu call described differently by Israeli and American sources.",
+          "wayForward": "A verification-based diplomatic track remains the least-cost option for energy markets; India's interest lies in de-escalation, uninterrupted crude and LNG supply, and the security of its regional connectivity projects rather than in alignment with any single camp.",
+          "keyTerms": [
+            "NPT",
+            "IAEA safeguards",
+            "JCPOA",
+            "UNSCR 2231",
+            "Snapback mechanism",
+            "Strait of Hormuz",
+            "Uranium enrichment"
+          ],
+          "prelimsPointers": [
+            "Iran is a party to the NPT; India is not.",
+            "The IAEA is headquartered in Vienna and reports to the UN General Assembly and Security Council.",
+            "UN Security Council has 15 members — 5 permanent (with veto) and 10 elected for two-year terms."
+          ],
+          "mainsAngle": "Renewed US-Israeli pressure on Iran is a test of India's strategic autonomy: examine the trade-offs between energy security, Gulf diaspora interests and India's growing partnership with Israel and the US."
+        },
+        {
+          "topic": "India–Israel relations and West Asia realignment",
+          "paper": "GS-II",
+          "syllabusNode": "International Relations — Bilateral Relations; India and West Asia",
+          "whatIsIt": "India recognised Israel in 1950 but established full diplomatic relations only in 1992. Ties now cover defence procurement, agriculture and water technology, cyber and homeland security, and innovation, while remaining de-hyphenated from India's ties with Iran, the Gulf states and the Palestinian cause.",
+          "background": "Landmark moments include the first Indian Prime Ministerial visit to Israel in 2017 and the return visit by the Israeli Prime Minister in 2018; the I2U2 grouping (India, Israel, UAE, US) took shape in 2021-22; and the India-Middle East-Europe Economic Corridor (IMEC) was announced on the sidelines of the G20 New Delhi Summit in 2023, alongside the Abraham Accords of 2020 that normalised Israel's ties with several Arab states.",
+          "geography": "Israel lies on the eastern Mediterranean, bordering Lebanon, Syria, Jordan and Egypt, and controls the strategic approaches to the Suez-Sinai corridor; India's West Asian interests run from the Gulf to the Levant.",
+          "socioEconomic": "West Asia supplies the bulk of India's crude and a large share of its remittances, and hosts millions of Indian workers, mainly in the Gulf — making regional stability a direct livelihood issue.",
+          "whyInNews": "The reported Trump-Netanyahu call on the Iran war underscores how quickly a West Asian escalation can reshape the region in which India's energy, labour and connectivity interests sit.",
+          "wayForward": "India should continue issue-based engagement with Israel while deepening Gulf and Iran channels, and push for early operationalisation of IMEC with credible security guarantees for its maritime leg.",
+          "keyTerms": [
+            "De-hyphenation",
+            "I2U2",
+            "IMEC",
+            "Abraham Accords",
+            "Chabahar port",
+            "Defence trade"
+          ],
+          "prelimsPointers": [
+            "India established full diplomatic relations with Israel in 1992, though recognition came in 1950.",
+            "IMEC was announced during the G20 New Delhi Summit in 2023.",
+            "The Abraham Accords (2020) normalised Israel's relations with the UAE, Bahrain, Morocco and Sudan."
+          ],
+          "mainsAngle": "Assess how a prolonged Iran-Israel confrontation would test India's balancing strategy in West Asia and what instruments India has to protect its energy and diaspora interests."
+        },
+        {
+          "topic": "Political funding, election integrity and foreign interference",
+          "paper": "GS-II",
+          "syllabusNode": "Polity and Governance — Elections, Political Funding and Electoral Reforms",
+          "whatIsIt": "Democratic systems regulate how parties are financed, and separately guard against foreign money entering electoral politics. In India this is governed by the Representation of the People Act, 1951 (Sections 29B-29C), the Foreign Contribution (Regulation) Act, 2010, the Income Tax Act and Election Commission disclosure norms. Israel's Shin Bet inquiry into alleged Qatari funding of an Arab Israeli party raises the same category of question: external money and electoral legitimacy.",
+          "background": "India's FCRA regime dates from 1976 and was recast in 2010; a 2016 amendment eased the route for Indian-owned foreign companies to donate to parties. The electoral bond scheme, notified in 2018, was struck down by the Supreme Court in February 2024, which held that anonymous political funding violates the voter's right to information under Article 19(1)(a).",
+          "geography": null,
+          "socioEconomic": "Opacity in political funding weakens accountability, distorts the level playing field between parties and invites foreign or corporate capture of policy.",
+          "whyInNews": "Israel's elections chief said the Shin Bet inquiry into whether the Arab Israeli party Raam received Qatari money — denied by Qatar and the party — will not undermine the declared result.",
+          "wayForward": "Strengthen disclosure through prompt reporting of donations and enforcement of foreign-contribution prohibitions, and treat election-result challenges as a judicial, not a security-agency, function.",
+          "keyTerms": [
+            "FCRA 2010",
+            "Electoral Bonds",
+            "Section 29C, RP Act 1951",
+            "Article 19(1)(a)",
+            "Election Commission of India",
+            "Foreign contribution"
+          ],
+          "prelimsPointers": [
+            "The Supreme Court struck down the electoral bond scheme in February 2024.",
+            "Under Section 29C of the RP Act, parties must report contributions above ₹20,000.",
+            "FCRA 2010 bars organisations of a political nature from accepting foreign contributions."
+          ],
+          "mainsAngle": "Transparency in political funding is inseparable from electoral integrity — discuss in the light of the electoral bonds judgment and concerns over foreign or anonymous money in elections."
+        }
+      ],
+      "prelims": [
+        "The reported Trump-Netanyahu call concerned the state of the Iran war; an Israeli source called it \"tough\" while an American source called it \"direct\", as reported by Axios.",
+        "Israeli media framed the call as taking place amid preparations to renew strikes on Iran.",
+        "Israel's Shin Bet opened an inquiry, at the elections chief's request, into whether the Arab Israeli party Raam received money from Qatar; both Qatar and the party deny the charge.",
+        "The elections chief stated that the inquiry into irregularities will not undermine the declared election result."
+      ],
+      "mainsQuestion": "West Asia is again at an inflection point, with US-Israeli pressure on Iran intensifying even as Israel's domestic politics comes under scrutiny. Examine the implications for India's energy security, diaspora safety and connectivity ambitions, and suggest a calibrated diplomatic response.",
+      "tags": [
+        "West Asia",
+        "Iran",
+        "Israel",
+        "India-Israel ties",
+        "Election funding"
+      ],
+      "readMinutes": 7
+    },
+    {
+      "id": "russia-reports-drone-strike-on-industrial-site-kyiv-claims-r",
+      "slug": "russia-reports-drone-strike-on-industrial-site-kyiv-claims-r",
+      "headline": "Russia reports drone strike on industrial site; Kyiv claims refinery hit",
+      "kicker": "IR · Russia-Ukraine",
+      "category": "ir",
+      "region": "global",
+      "importance": 4,
+      "signal": "recommended",
+      "summary": "Russian regional authorities reported a large overnight drone attack on the Nizhny Novgorod region, with the governor stating that an industrial enterprise in the Kstovo district suffered significant damage. Ukrainian sources claimed the target was a major oil refinery, though Moscow's official framing referred only to an unspecified industrial facility. The strike is part of a continuing pattern of long-range drone exchanges in which each side targets the other's energy and industrial infrastructure. In parallel, Russian strikes reportedly disrupted power supplies in parts of Ukraine, underscoring the war's shift toward attrition against critical infrastructure. Neither side's damage claims have been independently verified.",
+      "whyItMatters": "The deepening Russia-Ukraine infrastructure war shapes global energy markets, sanctions politics and the diplomatic space in which India balances ties with Moscow and the West. It is a live case study for GS-II questions on strategic autonomy, multi-alignment and the conduct of modern warfare.",
+      "perspectives": [
+        {
+          "source": "The Hindu — World",
+          "region": "russia",
+          "lean": "unknown",
+          "take": "Reports the governor's official statement on the Kstovo district industrial enterprise, while noting Kyiv's separate claim of a refinery hit — a restrained, attribution-cautious framing.",
+          "link": "https://www.thehindu.com/news/international/russia-says-drone-hit-industrial-enterprise-near-moscow-kyiv-claims-hit-major-refinery/article71653925.ece",
+          "isRegional": false
+        },
+        {
+          "source": "Arab News",
+          "region": "russia",
+          "lean": "unknown",
+          "take": "Carries the same dual claim structure with minimal added context, reflecting Gulf-region interest in energy-supply implications of refinery strikes.",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNS25SVEpKVTl2S2p3aDNFZlkydXNWX1hZeWV3RmRwMVFEY0lucV9QMzZCaXY2ZHJkbjI1alBqQkM2N1N2eWVKWG1yVkZBTTBBWGp4QUFScE0yNjVrS0dxeDlzTktrMGV6UjZ2RXR2YUIwZFR4TUlFYTFrMURBaEgxNG9oYW1tRWRCRldHM3BCN2dnYkpxWVdYN3lscHY2NUlJQzF6bTVtVm9KdHQ3bUd5Nklfa0czQjNIcWFUVVdHVGJwcEE?oc=5",
+          "isRegional": true
+        },
+        {
+          "source": "Euronews.com",
+          "region": "russia",
+          "lean": "unknown",
+          "take": "Foregrounds the word 'massive' from Russian officials and highlights the gap between Moscow's 'industrial enterprise' label and reports of an oil refinery hit.",
+          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPcHMzMXk4dHkwMkpoWXI3NUg4ek44akMwX3BHcDRTOXpKcTNJN0htcnp3al9VV1VVLThKdlFya0NnMlNIdnpoMGtMVEVvMzA5RlBiTFNubjVZRmpUMlJNdDhETTBsOS0waEQwNkljYjFrV0Fiam84QkJIZG9XT3VQYVBjTnNnS2JIVng5OWhud1VUODdNREk0X01xeTZBWmZ2WmNJeDFKR0JiRkZJSG1CcExTSEFNTVY2UG5XWGsyNzkzc2xi?oc=5",
+          "isRegional": true
+        },
+        {
+          "source": "Radio Free Europe/Radio Liberty",
+          "region": "russia",
+          "lean": "unknown",
+          "take": "Pairs the Nizhny Novgorod attack with Russian strikes cutting power in Ukraine, framing the exchange as reciprocal infrastructure warfare; a US-funded broadcaster generally sympathetic to Kyiv's position.",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSWd6YmhpMXZvbl9kbWVoUjJxRi0tOG50TEM2MDBpclNSSkNsVmZ4LVduZnFBMGt6dlpHT0k3dDN4eHB1cHY2ZWpVaUdobS14aDI0aW5rTHBHZjBDRF9mcU5nUjdLeDA3Rkp3UDZ5WGJyMVRGU25mOVdCZjVFYWdlejJGdnR2akphWkZsNGxSMNIBjwFBVV95cUxPSWd6YmhpMXZvbl9kbWVoUjJxRi0tOG50TEM2MDBpclNSSkNsVmZ4LVduZnFBMGt6dlpHT0k3dDN4eHB1cHY2ZWpVaUdobS14aDI0aW5rTHBHZjBDRF9mcU5nUjdLeDA3Rkp3UDZ5WGJyMVRGU25mOVdCZjVFYWdlejJGdnR2akphWkZsNGxSMA?oc=5",
+          "isRegional": true
+        }
+      ],
+      "articles": [
+        {
+          "id": "the-hindu-world:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Russia says drone hit 'industrial enterprise' near Moscow, Kyiv claims hit major refinery",
+          "link": "https://www.thehindu.com/news/international/russia-says-drone-hit-industrial-enterprise-near-moscow-kyiv-claims-hit-major-refinery/article71653925.ece",
+          "source": "The Hindu — World",
+          "sourceId": "the-hindu-world",
+          "region": "global",
+          "categories": [
+            "ir",
+            "security",
+            "economy"
+          ],
+          "publishedAt": "2026-11-01T16:27:43.000Z",
+          "snippet": "Gleb Nikitin, governor of Nizhny Novgorod region, reported a \"massive drone attack\" during the night, during which an \"industrial enterprise in the Kstovo district sustained significant damage\""
+        },
+        {
+          "id": "gnews:aHR0cHM6Ly9uZXdzLmdv",
+          "title": "Russia says drone hit ‘industrial enterprise’ near Moscow, Kyiv claims hit major refinery",
+          "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNS25SVEpKVTl2S2p3aDNFZlkydXNWX1hZeWV3RmRwMVFEY0lucV9QMzZCaXY2ZHJkbjI1alBqQkM2N1N2eWVKWG1yVkZBTTBBWGp4QUFScE0yNjVrS0dxeDlzTktrMGV6UjZ2RXR2YUIwZFR4TUlFYTFrMURBaEgxNG9oYW1tRWRCRldHM3BCN2dnYkpxWVdYN3lscHY2NUlJQzF6bTVtVm9KdHQ3bUd5Nklfa0czQjNIcWFUVVdHVGJwcEE?oc=5",
+          "source": "Arab News",
+          "sourceId": "gnews-russia",
+          "region": "global",
+          "categories": [],
+          "publishedAt": "2026-11-01T06:17:44.000Z",
+          "snippet": "Russia says drone hit ‘industrial enterprise’ near Moscow, Kyiv claims hit major refinery Arab News"
+        },
+        {
+          "id": "gnews:aHR0cHM6Ly9uZXdzLmdv",
+          "title": "Russia says 'massive' drone attack targeted 'industrial enterprise' amid reports oil refinery hit",
+          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPcHMzMXk4dHkwMkpoWXI3NUg4ek44akMwX3BHcDRTOXpKcTNJN0htcnp3al9VV1VVLThKdlFya0NnMlNIdnpoMGtMVEVvMzA5RlBiTFNubjVZRmpUMlJNdDhETTBsOS0waEQwNkljYjFrV0Fiam84QkJIZG9XT3VQYVBjTnNnS2JIVng5OWhud1VUODdNREk0X01xeTZBWmZ2WmNJeDFKR0JiRkZJSG1CcExTSEFNTVY2UG5XWGsyNzkzc2xi?oc=5",
+          "source": "Euronews.com",
+          "sourceId": "gnews-russia",
+          "region": "global",
+          "categories": [],
+          "publishedAt": "2026-11-01T07:13:00.000Z",
+          "snippet": "Russia says 'massive' drone attack targeted 'industrial enterprise' amid reports oil refinery hit Euronews.com"
+        },
+        {
+          "id": "gnews:aHR0cHM6Ly9uZXdzLmdv",
+          "title": "Moscow Reports Drone Attack On Nizhny Novgorod As Russian Strikes Cut Power In Ukraine",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSWd6YmhpMXZvbl9kbWVoUjJxRi0tOG50TEM2MDBpclNSSkNsVmZ4LVduZnFBMGt6dlpHT0k3dDN4eHB1cHY2ZWpVaUdobS14aDI0aW5rTHBHZjBDRF9mcU5nUjdLeDA3Rkp3UDZ5WGJyMVRGU25mOVdCZjVFYWdlejJGdnR2akphWkZsNGxSMNIBjwFBVV95cUxPSWd6YmhpMXZvbl9kbWVoUjJxRi0tOG50TEM2MDBpclNSSkNsVmZ4LVduZnFBMGt6dlpHT0k3dDN4eHB1cHY2ZWpVaUdobS14aDI0aW5rTHBHZjBDRF9mcU5nUjdLeDA3Rkp3UDZ5WGJyMVRGU25mOVdCZjVFYWdlejJGdnR2akphWkZsNGxSMA?oc=5",
+          "source": "Radio Free Europe/Radio Liberty",
+          "sourceId": "gnews-russia",
+          "region": "global",
+          "categories": [],
+          "publishedAt": "2026-11-01T11:20:00.000Z",
+          "snippet": "Moscow Reports Drone Attack On Nizhny Novgorod As Russian Strikes Cut Power In Ukraine Radio Free Europe/Radio Liberty"
+        }
+      ],
+      "static": [
+        {
+          "topic": "India's Foreign Policy & Strategic Autonomy",
+          "paper": "GS-II",
+          "syllabusNode": "International Relations — India & the World",
+          "whatIsIt": "India's foreign policy combines strategic autonomy, multi-alignment, and the Neighbourhood First and Act East outlooks. It engages across the Quad, BRICS, SCO, G20 and IBSA simultaneously.",
+          "background": "Rooted in NAM (1961) and Panchsheel (1954). Post-1991 liberalisation and the 1998 nuclear tests reshaped ties with the US. The Indo-Pacific concept and Quad (with US, Japan, Australia) gained salience after 2017.",
+          "geography": null,
+          "socioEconomic": null,
+          "whyInNews": "Continued Russia-Ukraine drone and missile exchanges keep India's balancing act in focus — sustaining defence and energy ties with Moscow while deepening partnerships with the US, EU and the Global South.",
+          "wayForward": "India should continue issue-based multi-alignment, diversify defence sourcing and energy suppliers, and use its G20/Global South voice to push for diplomacy and de-escalation without abandoning strategic autonomy.",
+          "keyTerms": [
+            "Strategic autonomy",
+            "Multi-alignment",
+            "Quad",
+            "BRICS",
+            "SCO",
+            "Act East",
+            "Neighbourhood First",
+            "Vishwabandhu"
+          ],
+          "prelimsPointers": [
+            "India assumed G20 presidency in 2022–23; African Union admitted as permanent G20 member in 2023.",
+            "SCO: India and Pakistan joined in 2017."
+          ],
+          "mainsAngle": "Balancing ties with the West, Russia and the Global South; India as a 'Voice of the Global South' and bridging power."
+        },
+        {
+          "topic": "Energy Security and Crude Oil Import Dependence",
+          "paper": "GS-III",
+          "syllabusNode": "Economy — Infrastructure: Energy",
+          "whatIsIt": "India is among the world's largest crude oil importers, meeting the bulk of its requirement through imports, which makes it highly sensitive to global price shocks and supply disruptions.",
+          "background": "India has historically sourced crude from West Asia, and after 2022 significantly expanded purchases of discounted Russian crude, making Russia a leading supplier. Refinery strikes in Russia and sanctions regimes therefore directly affect India's import economics.",
+          "geography": "India's refining hubs are concentrated in Gujarat, Maharashtra, Odisha and Tamil Nadu, with imports routed through major west- and east-coast ports.",
+          "socioEconomic": "Higher crude prices feed into inflation, the current account deficit and subsidy burdens, affecting household fuel costs and fiscal space.",
+          "whyInNews": "Drone strikes on Russian refining and industrial capacity raise questions about the reliability of discounted crude supply that India has come to depend on.",
+          "wayForward": "Diversify supplier base, expand strategic petroleum reserves, accelerate ethanol blending and renewables, and pursue rupee-based settlement mechanisms to cushion price and payment shocks.",
+          "keyTerms": [
+            "Strategic Petroleum Reserve",
+            "Current Account Deficit",
+            "OPEC+",
+            "Price cap",
+            "Rupee trade settlement",
+            "Energy transition"
+          ],
+          "prelimsPointers": [
+            "India is the third-largest consumer of crude oil globally and imports over 80% of its requirement.",
+            "India's strategic petroleum reserves are located at Visakhapatnam, Mangaluru and Padur."
+          ],
+          "mainsAngle": "Examine how geopolitical conflicts and sanctions reshape India's energy import basket and what it means for energy security and strategic autonomy."
+        }
+      ],
+      "prelims": [
+        "Nizhny Novgorod is a major industrial region in western Russia; Kstovo, within it, hosts significant petrochemical and refining capacity.",
+        "Long-range drone warfare has become a central instrument in the Russia-Ukraine conflict, used by both sides against energy and industrial infrastructure.",
+        "Russia is a leading supplier of crude oil to India, making strikes on Russian refining capacity relevant to India's import economics.",
+        "Damage claims in the Russia-Ukraine conflict are rarely independently verifiable, so official statements from either side must be read with caution."
+      ],
+      "mainsQuestion": "The Russia-Ukraine conflict has increasingly become a war on critical infrastructure. Examine its implications for global energy markets and for India's pursuit of strategic autonomy and energy security.",
+      "tags": [
+        "Russia-Ukraine",
+        "Drone warfare",
+        "Energy security",
+        "Strategic autonomy",
+        "International Relations"
+      ],
+      "readMinutes": 6
+    },
+    {
+      "id": "falling-unemployment-masks-indias-decent-work-deficit-epfo-t",
+      "slug": "falling-unemployment-masks-indias-decent-work-deficit-epfo-t",
+      "headline": "Falling unemployment masks India's 'decent work' deficit, EPFO told",
+      "kicker": "Economy · Employment",
+      "category": "economy",
+      "region": "india",
+      "importance": 4,
+      "signal": "recommended",
+      "summary": "India's falling unemployment rate does not fully reflect the quality of jobs being created, with a persistent 'decent work' deficit. The Hindu's opinion piece argues that poor-quality employment, especially without social security, constrains consumption, savings and resilience to economic shocks, ultimately affecting growth. Separately, Labour Minister Mansukh Mandaviya told EPFO employees to focus on worker-centric innovations across domains. He stressed that social security delivery must be driven by human sensitivity and that workers' grievances should be addressed with compassion and empathy. Together, the two reports frame the policy challenge as one of expanding decent, secure employment rather than merely reducing joblessness.",
+      "whyItMatters": "Directly relevant to GS-III inclusive growth, employment quality, social security and labour reforms; also useful for GS-II governance and welfare delivery.",
+      "perspectives": [
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Opinion piece: Falling unemployment is not enough; lack of decent work, weak social security and precarious jobs hurt growth and worker resilience.",
+          "link": "https://www.thehindu.com/opinion/lead/even-as-unemployment-falls-lack-of-decent-work-in-india/article71653971.ece",
+          "isRegional": false
+        },
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "News report: Labour Minister Mandaviya directs EPFO to pursue worker-centric innovations and compassionate, empathetic grievance redress.",
+          "link": "https://www.thehindu.com/opinion/lead/even-as-unemployment-falls-lack-of-decent-work-in-india/article71653971.ece",
+          "isRegional": false
+        }
+      ],
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Even as unemployment falls, lack of ‘decent work’ in India",
+          "link": "https://www.thehindu.com/opinion/lead/even-as-unemployment-falls-lack-of-decent-work-in-india/article71653971.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T19:27:03.000Z",
+          "snippet": "Poor-quality employment generation has consequences for economic growth; workers without social security spend less, save less and remain vulnerable to economic shocks"
+        },
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Focus on worker-centric innovations across domains, Labour Minister tells EPFO employees",
+          "link": "https://www.thehindu.com/news/national/focus-on-worker-centric-innovations-across-domains-labour-minister-tells-epfo-employees/article71653633.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T16:33:08.000Z",
+          "snippet": "Social security must be driven by human sensitivity and every concern and grievance of workers must be addressed with compassion and empathy, says Mansukh Mandaviya"
+        }
+      ],
+      "static": [
+        {
+          "topic": "Poverty, Inequality & Employment",
+          "paper": "GS-III",
+          "syllabusNode": "Economy — Inclusive Growth & Employment",
+          "whatIsIt": "Poverty and employment measurement frameworks: NITI Aayog's Multidimensional Poverty Index and the Periodic Labour Force Survey track deprivation and labour market outcomes.",
+          "background": "NITI Aayog's National MPI (2021) uses 12 indicators across health, education and living standards. PLFS, since 2017, reports quarterly urban and annual all-India data. India became the world's most populous country in 2023.",
+          "geography": "India; all-India annual and quarterly urban labour market data.",
+          "socioEconomic": "Poor-quality employment in the informal sector limits social security, savings, consumption and shock resilience.",
+          "whyInNews": "Debate over falling unemployment versus a decent work deficit; Labour Minister's EPFO remarks on worker-centric social security.",
+          "wayForward": "Improve job quality, formalisation, social security coverage, skilling and worker-centric grievance redress.",
+          "keyTerms": [
+            "Multidimensional Poverty Index",
+            "PLFS",
+            "LFPR",
+            "Gini coefficient",
+            "Demographic dividend",
+            "Informal sector"
+          ],
+          "prelimsPointers": [
+            "MPI dimensions: health, education, standard of living (3 dimensions, 12 indicators).",
+            "Unemployment Rate = unemployed / labour force.",
+            "PLFS has reported labour market indicators since 2017."
+          ],
+          "mainsAngle": "Quality of employment, structural transformation and the skills gap; evaluate policies for formalisation, social security and inclusive growth."
+        },
+        {
+          "topic": "EPFO and Social Security",
+          "paper": "GS-II",
+          "syllabusNode": "Governance — Welfare Schemes and Social Security; Labour Reforms",
+          "whatIsIt": "The Employees' Provident Fund Organisation is a statutory body administering retirement savings, pension and insurance schemes for covered workers.",
+          "background": "The Employees' Provident Funds and Miscellaneous Provisions Act, 1952 established the EPF framework. The Code on Social Security, 2020 consolidates existing social security laws and recognises gig and platform workers; implementation and coverage remain work in progress.",
+          "geography": null,
+          "socioEconomic": "Low social security coverage leaves workers vulnerable to income shocks, reduces savings and consumption, and perpetuates informality.",
+          "whyInNews": "Labour Minister's remarks to EPFO employees amid a debate on decent work and social security coverage.",
+          "wayForward": "Extend coverage to informal and gig workers, strengthen portability and digital grievance redress, and align EPFO services with worker-centric design.",
+          "keyTerms": [
+            "EPFO",
+            "EPF & MP Act, 1952",
+            "Code on Social Security, 2020",
+            "Social security",
+            "Gig and platform workers",
+            "Formalisation"
+          ],
+          "prelimsPointers": [
+            "EPFO administers the Employees' Provident Fund, Employees' Pension Scheme and Employees' Deposit Linked Insurance Scheme.",
+            "The Code on Social Security, 2020 consolidates social security laws and includes gig and platform workers."
+          ],
+          "mainsAngle": "How can India's social security architecture be reformed to cover a workforce dominated by informal and precarious employment?"
+        }
+      ],
+      "prelims": [
+        "Unemployment Rate = unemployed / labour force; PLFS reports LFPR, WPR and unemployment since 2017.",
+        "NITI Aayog's National MPI (2021) uses 3 dimensions and 12 indicators.",
+        "EPFO administers EPF, EPS and EDLI under the EPF & MP Act, 1952."
+      ],
+      "mainsQuestion": "Despite a falling unemployment rate, India faces a 'decent work' deficit. Examine the causes and consequences of poor-quality employment, and suggest measures to expand social security and worker-centric reforms.",
+      "tags": [
+        "Employment",
+        "Decent Work",
+        "EPFO",
+        "Social Security",
+        "Inclusive Growth"
+      ],
+      "readMinutes": 6
+    },
+    {
+      "id": "gslv-f18-review-flags-resource-crunch-as-isros-mandate-widen",
+      "slug": "gslv-f18-review-flags-resource-crunch-as-isros-mandate-widen",
+      "headline": "GSLV-F18 review flags resource crunch as ISRO's mandate widens",
+      "kicker": "Sci-Tech · Space",
+      "category": "scitech",
+      "region": "india",
+      "importance": 4,
+      "signal": "recommended",
+      "summary": "An editorial reviewing ISRO's GSLV-F18 mission reads the episode as evidence that the space agency's recovery from setbacks is proceeding slowly rather than as an isolated technical failure. The argument is that ISRO's problem is structural: an expanding mandate — crewed flight, lunar and solar science, navigation and commercial launches — is being pursued with limited scientific manpower, technical staff and material resources. Because the same pool of people and facilities must service routine launches, advanced missions and reviews, delays and stretched timelines tend to compound. The editorial's prescription is therefore institutional rather than technical: more human and material investment so that the organisation can actually deliver on what it has been asked to do. The piece sits within the wider debate over how far IN-SPACe- and NSIL-led private participation can absorb routine capacity and free ISRO for frontier work.",
+      "whyItMatters": "Space capacity is a strategic and economic asset, and this story links mission outcomes directly to institutional resourcing — a standard GS-III question on Indian science and technology. It also feeds the governance debate on how far liberalisation and private participation can substitute for public investment in ISRO.",
+      "perspectives": [
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Reads the GSLV-F18 mission review as a symptom of chronic under-resourcing and argues ISRO needs substantially more human and material resources to fulfil its mandate; a national daily editorial, framed in favour of greater public investment in science.",
+          "link": "https://www.thehindu.com/opinion/editorial/the-hindu-editorial-november-2-2026-slow-recovery-on-the-isros-gslv-f18-mission/article71654004.ece",
+          "isRegional": false
+        }
+      ],
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Slow recovery: On the ISRO’s GSLV-F18 mission",
+          "link": "https://www.thehindu.com/opinion/editorial/the-hindu-editorial-november-2-2026-slow-recovery-on-the-isros-gslv-f18-mission/article71654004.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T19:23:27.000Z",
+          "snippet": "ISRO needs more human and material resources to fulfil its mandate"
+        }
+      ],
+      "static": [
+        {
+          "topic": "India's Space Programme (ISRO)",
+          "paper": "GS-III",
+          "syllabusNode": "Science & Technology — Space: Indian space programme, institutional capacity and achievements",
+          "whatIsIt": "ISRO, established in 1969 under the Department of Space, runs India's space programme across communication, remote sensing, navigation (NavIC) and exploration. IN-SPACe (2020) and NSIL now promote and commercialise private participation.",
+          "background": "Aryabhata (1975) was India's first satellite. Mangalyaan reached Mars orbit in 2013 on its first attempt, and Chandrayaan-3 soft-landed near the lunar south pole in 2023. Gaganyaan is India's first crewed mission. The GSLV family, including the heavier Mk-III/LVM3 variant, is used for heavier geosynchronous payloads, while PSLV remains the workhorse launcher.",
+          "geography": "Launch activity is centred at the Satish Dhawan Space Centre, Sriharikota (Andhra Pradesh), India's principal spaceport.",
+          "socioEconomic": "A widening mission basket is being met with a limited pool of scientists, engineers and capital, raising questions of workload, talent retention and mission prioritisation.",
+          "whyInNews": "An editorial on the GSLV-F18 mission review argues that ISRO's recovery is slow because of human and material resource constraints.",
+          "wayForward": "Augment manpower and budget, sequence missions realistically, deepen private participation through IN-SPACe and NSIL, and sustain a transparent, learning-oriented failure-review culture.",
+          "keyTerms": [
+            "GSLV / LVM3",
+            "PSLV",
+            "IN-SPACe",
+            "NSIL",
+            "NavIC",
+            "Gaganyaan",
+            "Satish Dhawan Space Centre"
+          ],
+          "prelimsPointers": [
+            "PSLV is ISRO's workhorse launcher; GSLV Mk-III (LVM3) can carry heavier geosynchronous payloads.",
+            "ISRO was set up in 1969 under the Department of Space.",
+            "India is a founder of the Outer Space Treaty framework; UN COPUOS governs space law."
+          ],
+          "mainsAngle": "Examine how resource and institutional constraints affect ISRO's ability to deliver on an expanding mandate, and suggest reforms."
+        },
+        {
+          "topic": "Space Sector Reforms and Private Participation",
+          "paper": "GS-III",
+          "syllabusNode": "Science & Technology — Space: liberalisation of the space sector, IN-SPACe, NSIL",
+          "whatIsIt": "IN-SPACe (2020) is the single-window autonomous agency to promote and authorise private space activities, while NSIL is the commercial arm of the Department of Space.",
+          "background": "These bodies followed the 2020 space sector reforms, which sought to shift ISRO's role towards research, development and advanced missions while industry takes on routine launch and application services.",
+          "geography": null,
+          "socioEconomic": "Private entry is expected to expand the space economy, generate high-skill jobs and relieve ISRO of routine operational load.",
+          "whyInNews": "The GSLV-F18 mission review's emphasis on ISRO's resource constraints strengthens the case for institutional and private-sector support.",
+          "wayForward": "Predictable regulation, clearer demand guarantees and smoother technology transfer so private players can absorb routine capacity.",
+          "keyTerms": [
+            "IN-SPACe",
+            "NSIL",
+            "Indian Space Policy 2023",
+            "space economy",
+            "technology transfer"
+          ],
+          "prelimsPointers": [
+            "IN-SPACe was created in 2020 as the single-window promoter and authoriser of private space activity.",
+            "NSIL is the commercial arm of the Department of Space."
+          ],
+          "mainsAngle": "Discuss whether space sector liberalisation can meaningfully relieve ISRO's resource constraints."
+        }
+      ],
+      "prelims": [
+        "ISRO was established in 1969 and functions under the Department of Space.",
+        "PSLV is India's workhorse launcher; GSLV Mk-III (LVM3) is capable of carrying heavier geosynchronous payloads.",
+        "IN-SPACe (2020) is the single-window agency for private space activity; NSIL is the Department of Space's commercial arm.",
+        "India's principal launch port is the Satish Dhawan Space Centre at Sriharikota, Andhra Pradesh."
+      ],
+      "mainsQuestion": "Resource constraints, rather than technical capability, are increasingly seen as the binding limit on India's space ambitions. Critically examine this proposition in the light of recent mission reviews, and suggest institutional reforms.",
+      "tags": [
+        "ISRO",
+        "GSLV",
+        "space programme",
+        "resource constraints",
+        "GS-III",
+        "Sci-Tech"
+      ],
+      "readMinutes": 5
+    },
+    {
+      "id": "solar-tariffs-fall-to-215-a-unit-as-india-chases-500-gw-non",
+      "slug": "solar-tariffs-fall-to-215-a-unit-as-india-chases-500-gw-non",
+      "headline": "Solar tariffs fall to ₹2.15 a unit as India chases 500 GW non-fossil target",
+      "kicker": "Environment · Energy",
+      "category": "environment",
+      "region": "india",
+      "importance": 4,
+      "signal": "recommended",
+      "summary": "India's solar sector has seen a dramatic cost collapse, with tariffs now quoted as low as ₹2.15 per unit against roughly ₹10 per unit in 2014. The shift is attributed to a policy-and-market ecosystem built around the national goal of 500 GW of installed non-fossil fuel capacity by 2030. Falling tariffs reflect competitive reverse auctions, scale economics from large solar parks, and a maturing domestic supply chain. The commentary frames this as an ongoing energy transition whose next test is grid integration, storage and manufacturing self-reliance.",
+      "whyItMatters": "Renewable energy economics, India's climate pledges and the 500 GW target are recurring themes in GS-III environment and infrastructure questions, and feed directly into prelims facts on solar missions and capacity targets.",
+      "perspectives": [
+        {
+          "source": "The Hindu — Opinion",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Frames the tariff fall from about ₹10 to ₹2.15 a unit as evidence of a deliberate, vision-driven energy revolution tied to the 500 GW non-fossil capacity goal; an optimistic, policy-endorsing editorial view.",
+          "link": "https://www.thehindu.com/opinion/op-ed/an-energy-revolution-in-the-making/article71652686.ece",
+          "isRegional": false
+        }
+      ],
+      "articles": [
+        {
+          "id": "the-hindu-editorial:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "An energy revolution in the making",
+          "link": "https://www.thehindu.com/opinion/op-ed/an-energy-revolution-in-the-making/article71652686.ece",
+          "source": "The Hindu — Opinion",
+          "sourceId": "the-hindu-editorial",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society"
+          ],
+          "publishedAt": "2026-11-01T18:26:50.000Z",
+          "snippet": "Solar power that cost close to ₹10 a unit in 2014 now sells for as low as ₹2.15, thanks to an ecosystem built on the vision to achieve 500 GW of installed power capacity from non-fossil fuel sources by 2030"
+        }
+      ],
+      "static": [
+        {
+          "topic": "India's Solar Energy Programme and the 500 GW Non-Fossil Target",
+          "paper": "GS-III",
+          "syllabusNode": "Infrastructure — Energy; Environment — Renewable Energy",
+          "whatIsIt": "India's solar programme combines a national mission, competitive tariff-based auctions, solar parks and manufacturing incentives to scale solar capacity and lower per-unit generation cost.",
+          "background": "The Jawaharlal Nehru National Solar Mission was launched in 2010 under the National Action Plan on Climate Change, with an initial focus on grid-connected solar and later on rooftop and off-grid applications. At COP26 in Glasgow (2021), India announced the Panchamrit pledges, including 500 GW of installed non-fossil fuel capacity and meeting 50% of energy requirements from renewable sources by 2030. Solar capacity has since grown through SECI-led reverse auctions and large solar parks.",
+          "geography": "Solar potential is highest in Rajasthan, Gujarat, Karnataka, Andhra Pradesh and Telangana; large solar parks such as Bhadla (Rajasthan) and Pavagada (Karnataka) anchor capacity addition.",
+          "socioEconomic": "Lower tariffs reduce power purchase costs for discoms, support energy access, and create jobs in installation and manufacturing; land acquisition and local community benefit-sharing remain contested issues.",
+          "whyInNews": "Solar tariffs have fallen to as low as ₹2.15 per unit, compared with close to ₹10 per unit in 2014, in the context of the 500 GW non-fossil capacity target for 2030.",
+          "wayForward": "Address intermittency through storage and grid upgrades, strengthen domestic module manufacturing under the ALMM and PLI routes, and ensure balanced growth across rooftop, utility-scale and hybrid projects.",
+          "keyTerms": [
+            "Jawaharlal Nehru National Solar Mission",
+            "Panchamrit pledges",
+            "Reverse auction",
+            "SECI",
+            "Solar park",
+            "ALMM",
+            "Renewable Purchase Obligation"
+          ],
+          "prelimsPointers": [
+            "India's target is 500 GW of installed non-fossil fuel capacity by 2030, announced as part of the Panchamrit commitments at COP26, Glasgow (2021).",
+            "Solar tariffs in India are discovered mainly through reverse auctions conducted by SECI and state agencies.",
+            "Bhadla Solar Park in Rajasthan is among the largest solar parks in India."
+          ],
+          "mainsAngle": "Examine how falling solar tariffs reshape India's energy mix, and assess the constraints — storage, grid readiness and supply-chain dependence — in achieving the 500 GW non-fossil target."
+        },
+        {
+          "topic": "Renewable Energy and India's Climate Commitments",
+          "paper": "GS-III",
+          "syllabusNode": "Environment — Climate Change; International Agreements",
+          "whatIsIt": "India's climate commitments under the Paris Agreement are operationalised through Nationally Determined Contributions and domestic missions on solar, wind, energy efficiency and green hydrogen.",
+          "background": "India ratified the Paris Agreement in 2016. Its updated NDC commits to reducing the emissions intensity of GDP and achieving about 50% of installed electric power capacity from non-fossil sources by 2030. The National Action Plan on Climate Change (2008) provides the domestic eight-mission framework.",
+          "geography": "Renewable deployment is uneven, with the highest concentration in western and southern states endowed with high solar insolation and wind corridors.",
+          "socioEconomic": "Cheap renewables can lower the cost of power, but discom financial health, open-access rules and land use determine how far benefits reach consumers and farmers.",
+          "whyInNews": "Record-low solar tariffs are cited as evidence that India's climate and capacity targets are becoming economically viable.",
+          "wayForward": "Integrate renewables with storage, modernise transmission, and align state-level policies on open access and net metering to sustain cost declines.",
+          "keyTerms": [
+            "Nationally Determined Contributions",
+            "Paris Agreement",
+            "Panchamrit",
+            "National Action Plan on Climate Change",
+            "Green hydrogen",
+            "Energy transition"
+          ],
+          "prelimsPointers": [
+            "India's updated NDC targets about 50% of installed electric power capacity from non-fossil fuel sources by 2030.",
+            "The National Action Plan on Climate Change was launched in 2008 and has eight national missions.",
+            "India ratified the Paris Agreement in 2016."
+          ],
+          "mainsAngle": "Discuss whether falling renewable tariffs alone are sufficient to meet India's climate commitments, highlighting the role of storage, grid infrastructure and demand-side measures."
+        }
+      ],
+      "prelims": [
+        "Solar tariffs in India have fallen to as low as ₹2.15 per unit, against close to ₹10 per unit in 2014.",
+        "India's target is 500 GW of installed non-fossil fuel power capacity by 2030, part of the Panchamrit pledges made at COP26 (Glasgow, 2021).",
+        "Solar tariffs are discovered through reverse auctions, primarily conducted by the Solar Energy Corporation of India (SECI) and state nodal agencies.",
+        "The Jawaharlal Nehru National Solar Mission was launched in 2010 under the National Action Plan on Climate Change."
+      ],
+      "mainsQuestion": "Falling solar tariffs are often cited as proof of a successful energy transition. Critically examine this claim in the light of India's 500 GW non-fossil capacity target, grid integration challenges and domestic manufacturing goals.",
+      "tags": [
+        "Solar energy",
+        "Renewable energy",
+        "500 GW target",
+        "Energy transition",
+        "Climate commitments"
+      ],
+      "readMinutes": 5
+    },
+    {
+      "id": "india-bloc-rally-at-ramlila-maidan-demands-electoral-roll-re",
+      "slug": "india-bloc-rally-at-ramlila-maidan-demands-electoral-roll-re",
+      "headline": "INDIA bloc rally at Ramlila Maidan demands electoral roll reforms",
+      "kicker": "Polity · Elections",
+      "category": "polity",
+      "region": "india",
+      "importance": 4,
+      "signal": "recommended",
+      "summary": "On November 1, 2026, the INDIA bloc held a rally at Ramlila Maidan in Delhi, with the Congress claiming a massive turnout and participants including citizens, youth groups, farmers and party workers from across the country. The protest demanded electoral roll reforms and targeted the Chief Election Commissioner, with Rahul Gandhi reiterating that 'Gyanesh will go to jail' amid the SIR row and allegations of vote theft. BJP leaders rejected the event: Nadda called it a 'foolish and designed drama', while Amit Shah said Delhi traders had urged postponement until after Diwali. The BJP also alleged a rift between Rahul Gandhi and Priyanka Vadra, accusing the Leader of Opposition of sidelining his sister at the Congress-led mock Parliament. Nadda further accused Rahul Gandhi of rubbing salt into the wounds of Sikhs on the anniversary of the 1984 anti-Sikh riots.",
+      "whyItMatters": "The rally and counter-claims spotlight the contested terrain of electoral integrity, the independence of the Election Commission, and the political fault lines that shape India's democratic institutions—core themes for GS-II polity and governance.",
+      "perspectives": [
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Reports BJP's allegation that Rahul Gandhi sidelined Priyanka Vadra at the Congress-led mock Parliament, framing opposition unity as internally fractured.",
+          "link": "https://www.thehindu.com/news/national/bjp-alleges-rift-between-rahul-priyanka-accuses-lop-of-sidelining-sister-at-india-bloc-protests/article71654117.ece",
+          "isRegional": false
+        },
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Carries Nadda's criticism that the INDIA bloc rally is a 'foolish and designed drama' and that Rahul Gandhi's remarks on the 1984 anti-Sikh riots anniversary hurt Sikh sentiments.",
+          "link": "https://www.thehindu.com/news/national/bjp-alleges-rift-between-rahul-priyanka-accuses-lop-of-sidelining-sister-at-india-bloc-protests/article71654117.ece",
+          "isRegional": false
+        },
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Live report highlights Congress's claim of massive turnout, Rahul Gandhi's 'Gyanesh will go to jail' remark, and Amit Shah's claim that Delhi traders sought postponement until after Diwali.",
+          "link": "https://www.thehindu.com/news/national/bjp-alleges-rift-between-rahul-priyanka-accuses-lop-of-sidelining-sister-at-india-bloc-protests/article71654117.ece",
+          "isRegional": false
+        },
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Ground report emphasises diverse participants—citizens, youth, farmers and party workers—framing the rally as a united movement against alleged vote theft and electoral roll irregularities.",
+          "link": "https://www.thehindu.com/news/national/bjp-alleges-rift-between-rahul-priyanka-accuses-lop-of-sidelining-sister-at-india-bloc-protests/article71654117.ece",
+          "isRegional": false
+        }
+      ],
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "BJP alleges rift between Rahul, Priyanka; accuses LoP of sidelining sister at INDIA bloc protests",
+          "link": "https://www.thehindu.com/news/national/bjp-alleges-rift-between-rahul-priyanka-accuses-lop-of-sidelining-sister-at-india-bloc-protests/article71654117.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T18:55:18.000Z",
+          "snippet": "‘Yesterday, during the mock Parliament organised by the Congress party and led by Rahul Gandhi, I observed one thing: Priyanka Vadra was not given an opportunity to speak by Rahul Gandhi or the Congress party,’ said Sambit Patra"
+        },
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Nadda terms INDIA bloc rally against CEC a ‘foolish and designed drama’",
+          "link": "https://www.thehindu.com/news/national/foolish-drama-will-be-final-nail-in-coffin-of-congress-political-future-nadda/article71652408.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T17:28:18.000Z",
+          "snippet": "Health Minister says Rahul Gandhi was ‘rubbing salt into the wounds of the Sikhs’ on the anniversary of the 1984 anti-Sikh riots"
+        },
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "'Massive turnout at Ramlila Maidan,' says Congress; Rahul reiterates, 'Gyanesh will go to jail' | HIGHLIGHTS",
+          "link": "https://www.thehindu.com/news/national/india-bloc-mega-delhi-rally-cec-gyanesh-kumar-impeachment-anti-cec-protests-sir-row-live-updates-november-1-2026/article71651970.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T17:03:18.000Z",
+          "snippet": "Union Home Minister Amit Shah said Delhi traders had repeatedly urged the Congress to postpone its November 1 rally until after Diwali, citing concerns over festival-season business"
+        },
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "‘You can break a stick, not a bundle’: Thousands turn up for INDIA bloc rally from across the country",
+          "link": "https://www.thehindu.com/news/national/you-can-break-a-stick-not-a-bundle-from-an-it-couple-to-a-hospital-patient-citizens-turn-up-for-india-bloc-rally/article71652556.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T16:34:45.000Z",
+          "snippet": "Citizens, youth groups, farmers and political party workers gather ahead of the Ramlila Maidan rally, saying a united movement is needed to fight alleged vote theft and electoral roll irregularities"
+        }
+      ],
+      "static": [
+        {
+          "topic": "Election Commission of India and Electoral Roll Reforms",
+          "paper": "GS-II",
+          "syllabusNode": "Polity — Constitutional Bodies; Elections and Electoral Reforms",
+          "whatIsIt": "The ECI is a constitutional authority under Article 324 vested with superintendence, direction and control of elections to Parliament, State Legislatures, and the offices of President and Vice-President. Electoral rolls are prepared and revised under the Representation of the People Act, 1950.",
+          "background": "The ECI was established in 1950. The Chief Election Commissioner can be removed only in the manner and on the grounds applicable to a Supreme Court judge; other Election Commissioners are removed on the CEC's recommendation. The appointment and service conditions of the CEC and ECs are governed by the Chief Election Commissioner and other Election Commissioners (Appointment, Conditions of Service and Term of Office) Act, 2023.",
+          "geography": "India-wide constitutional and electoral jurisdiction.",
+          "socioEconomic": "Accuracy and inclusivity of electoral rolls affect political representation, welfare delivery, and citizen trust in democratic processes.",
+          "whyInNews": "The INDIA bloc rally at Ramlila Maidan demanded electoral roll reforms and protested against the CEC, amid the SIR row and allegations of vote theft.",
+          "wayForward": "Strengthen transparency and stakeholder consultation in roll revision; ensure institutional safeguards for ECI independence; address genuine inclusion errors through due process.",
+          "keyTerms": [
+            "Article 324",
+            "Chief Election Commissioner",
+            "Election Commissioners",
+            "Electoral Roll",
+            "SIR",
+            "Representation of the People Act, 1950",
+            "Model Code of Conduct"
+          ],
+          "prelimsPointers": [
+            "ECI is a constitutional body under Article 324.",
+            "CEC can be removed in the same manner as a Supreme Court judge; other ECs on CEC's recommendation.",
+            "Electoral rolls are prepared under the RP Act, 1950."
+          ],
+          "mainsAngle": "Examine the constitutional safeguards for the independence of the Election Commission and the challenges of maintaining accurate, inclusive electoral rolls in India."
+        },
+        {
+          "topic": "Parliament, Legislation and Institutional Accountability",
+          "paper": "GS-II",
+          "syllabusNode": "Polity — Parliament and Legislative Process",
+          "whatIsIt": "Parliament consists of the President, Lok Sabha and Rajya Sabha under Article 79. Bills become law after passage by both Houses and Presidential assent under Article 111.",
+          "background": "Money Bills originate only in Lok Sabha; Rajya Sabha can delay but not amend money provisions. Ordinances under Article 123 must be approved within six weeks of reassembly. Departmentally Related Standing Committees scrutinise Bills.",
+          "geography": null,
+          "socioEconomic": "Parliamentary scrutiny and debate shape accountability, representation, and the quality of legislation affecting citizens.",
+          "whyInNews": "The INDIA bloc protest and BJP's counter-allegations have intensified political confrontation over electoral institutions, with Parliament likely to remain a key arena for accountability debates.",
+          "wayForward": "Strengthen committee referrals and structured debate; ensure procedural routes for institutional accountability are used without undermining constitutional independence.",
+          "keyTerms": [
+            "Article 79",
+            "Money Bill",
+            "Ordinance",
+            "Joint sitting (Article 108)",
+            "Zero Hour",
+            "Departmentally Related Standing Committees"
+          ],
+          "prelimsPointers": [
+            "Parliament comprises President, Lok Sabha and Rajya Sabha under Article 79.",
+            "A Money Bill originates only in Lok Sabha; Rajya Sabha cannot amend money provisions.",
+            "Ordinances must be approved within six weeks of Parliament reassembly."
+          ],
+          "mainsAngle": "Assess the role of parliamentary procedures and committees in ensuring accountability of constitutional bodies while preserving their independence."
+        }
+      ],
+      "prelims": [
+        "INDIA bloc held a rally at Ramlila Maidan, Delhi, on November 1, 2026, demanding electoral roll reforms and protesting against the Chief Election Commissioner.",
+        "Rahul Gandhi reiterated the slogan 'Gyanesh will go to jail' at the rally; the Congress claimed a massive turnout.",
+        "BJP leaders Nadda and Amit Shah criticised the rally; Nadda called it a 'foolish and designed drama' and Shah said Delhi traders sought postponement until after Diwali.",
+        "The BJP also alleged that Rahul Gandhi sidelined Priyanka Vadra at the Congress-led mock Parliament."
+      ],
+      "mainsQuestion": "Discuss the constitutional safeguards for the independence of the Election Commission of India. In the context of recent demands for electoral roll reforms, examine the balance between institutional autonomy and democratic accountability.",
+      "tags": [
+        "INDIA bloc",
+        "Election Commission",
+        "Electoral Roll Reforms",
+        "SIR",
+        "Ramlila Maidan",
+        "Polity"
+      ],
+      "readMinutes": 6
+    },
+    {
+      "id": "west-bengal-promises-caa-certificates-to-25-lakh-matuas-by-2",
+      "slug": "west-bengal-promises-caa-certificates-to-25-lakh-matuas-by-2",
+      "headline": "West Bengal promises CAA certificates to 2.5 lakh Matuas by 2026",
+      "kicker": "Polity · Citizenship",
+      "category": "polity",
+      "region": "india",
+      "importance": 4,
+      "signal": "recommended",
+      "summary": "On a first visit to Thakurbari in North 24 Parganas after assuming the office of Chief Minister, Suvendu Adhikari committed that West Bengal would deliver Citizenship (Amendment) Act certificates to about 2.5 lakh members of the Matua community by the end of 2026. He accused Mamata Banerjee of dividing the Matuas and of opposing the CAA, and argued that the State would have become part of Bangladesh had the BJP not come to power. The announcement places the implementation of CAA rules — notified in 2024 — at the centre of West Bengal's refugee-citizenship politics. The Matuas, a largely Namasudra Dalit community with roots in East Bengal, have long sought secure citizenship documentation.",
+      "whyItMatters": "Citizenship, refugee rehabilitation and minority/Dalit electoral mobilisation intersect here — a recurring theme for GS-II governance and GS-I society questions, and for prelims on the CAA's scope and beneficiaries.",
+      "perspectives": [
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Reports the State government's 2026 deadline for 2.5 lakh Matua CAA certificates alongside the CM's political attack on the Opposition, framing it as both an administrative promise and an electoral claim in North 24 Parganas.",
+          "link": "https://www.thehindu.com/news/national/west-bengal/suvendu-adhikari-accuses-mamata-banerjee-of-dividing-matuas-and-opposing-caa/article71652508.ece",
+          "isRegional": false
+        }
+      ],
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "West Bengal CM promises CAA certificates to 2.5 lakh Matuas by end of 2026",
+          "link": "https://www.thehindu.com/news/national/west-bengal/suvendu-adhikari-accuses-mamata-banerjee-of-dividing-matuas-and-opposing-caa/article71652508.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T16:37:21.000Z",
+          "snippet": "During his first visit to Thakurbari in North 24 Parganas after taking up the office of Chief Minister, Suvendu Adhikari says West Bengal would have turned into Bangladesh had the BJP not come to power in 2026"
+        }
+      ],
+      "static": [
+        {
+          "topic": "Citizenship Amendment Act, 2019",
+          "paper": "GS-II",
+          "syllabusNode": "Government Policies and Interventions; Indian Constitution — Citizenship",
+          "whatIsIt": "An amendment to the Citizenship Act, 1955 that makes Hindu, Sikh, Buddhist, Jain, Parsi and Christian migrants from Bangladesh, Pakistan and Afghanistan, who entered India on or before 31 December 2014, eligible for Indian citizenship, with the qualifying period of residence relaxed for them. It also provides for cancellation of Overseas Citizen of India registration on certain grounds.",
+          "background": "Citizenship in India is governed by Part II of the Constitution (Articles 5–11) and the Citizenship Act, 1955, which provides for citizenship by birth, descent, registration, naturalisation and incorporation of territory. The 2019 amendment was passed by Parliament in December 2019 and received assent the same month; the rules were notified in March 2024, operationalising the Act. The legislation followed the 2015 and 2016 exemptions for minority communities from certain northeastern states and the 2018 draft rules.",
+          "geography": "Implementation is concentrated in West Bengal, Assam and other northeastern states bordering Bangladesh, where migrant and refugee settlement is densest.",
+          "socioEconomic": "Beneficiaries are largely poor, landless or marginal-holding refugee families; documentation gaps (legacy land records, voter rolls, refugee cards) are the main practical barrier to certification.",
+          "whyInNews": "West Bengal has promised CAA certificates to about 2.5 lakh Matuas by end-2026, making the State the key theatre for implementing the amended law.",
+          "wayForward": "Transparent, time-bound processing of applications with clear documentary standards, coordination between the State and the Union government, and safeguards against exclusion errors for genuine long-settled residents.",
+          "keyTerms": [
+            "Citizenship Act, 1955",
+            "Section 6B",
+            "Cut-off date 31 December 2014",
+            "Overseas Citizen of India (OCI)",
+            "Part II of the Constitution (Articles 5–11)",
+            "Rules notified March 2024"
+          ],
+          "prelimsPointers": [
+            "CAA 2019 covers six minority communities: Hindus, Sikhs, Buddhists, Jains, Parsis and Christians.",
+            "The cut-off for eligibility is entry into India on or before 31 December 2014 from Bangladesh, Pakistan or Afghanistan.",
+            "The CAA rules were notified in March 2024, operationalising the 2019 amendment."
+          ],
+          "mainsAngle": "Evaluate whether the CAA's community-and-country-specific framework is consistent with the constitutional promise of a single citizenship and with India's obligations to refugees."
+        },
+        {
+          "topic": "Matua community and refugee citizenship in West Bengal",
+          "paper": "GS-I",
+          "syllabusNode": "Society — Social Empowerment; Population and Associated Issues",
+          "whatIsIt": "The Matuas are a largely Namasudra Dalit community whose ancestors migrated from East Bengal (present-day Bangladesh) after Partition and the 1971 war, settled mainly in districts such as North 24 Parganas and Nadia, and follow the teachings of Harichand Thakur and Guruchand Thakur. Their principal religious centre in India is at Thakurnagar, with the original Thakurbari at Orakandi in Bangladesh.",
+          "background": "The Matua Mahasangha emerged as a socio-religious reform movement among Namasudras in colonial Bengal, opposing caste hierarchy and untouchability. Post-Partition migration created a large refugee population in West Bengal; the community's demand for secure citizenship and rehabilitation has been a persistent political issue, and Namasudras are listed as a Scheduled Caste in West Bengal.",
+          "geography": "Concentrated in North 24 Parganas, Nadia and adjoining districts of West Bengal, along the India–Bangladesh border belt.",
+          "socioEconomic": "Predominantly Dalit, historically landless or marginal farmers and refugees; documentation of citizenship is tied to access to welfare, land rights and political representation.",
+          "whyInNews": "A State-level commitment to issue CAA certificates to roughly 2.5 lakh Matuas by end-2026 has renewed focus on the community's citizenship status.",
+          "wayForward": "Streamlined documentation drives, community-level awareness of application procedures, and depoliticised delivery of citizenship and welfare entitlements.",
+          "keyTerms": [
+            "Matua Mahasangha",
+            "Namasudra",
+            "Harichand Thakur",
+            "Thakurnagar / Thakurbari",
+            "Orakandi",
+            "Partition-era refugee rehabilitation"
+          ],
+          "prelimsPointers": [
+            "The Matua movement was founded around the teachings of Harichand Thakur and carried forward by Guruchand Thakur.",
+            "Thakurnagar in North 24 Parganas, West Bengal, is the community's main centre in India; Orakandi is in Bangladesh.",
+            "Namasudras are notified as a Scheduled Caste in West Bengal."
+          ],
+          "mainsAngle": "Discuss how refugee rehabilitation, caste identity and electoral competition shape the citizenship claims of communities such as the Matuas in West Bengal."
+        }
+      ],
+      "prelims": [
+        "CAA, 2019 amends the Citizenship Act, 1955 to grant eligibility for citizenship to six minority communities from Bangladesh, Pakistan and Afghanistan who entered India on or before 31 December 2014.",
+        "The CAA rules were notified in March 2024, operationalising the amendment.",
+        "The Matuas are a largely Namasudra Dalit community of East Bengal origin, concentrated in North 24 Parganas and Nadia districts of West Bengal.",
+        "Citizenship provisions are contained in Part II of the Constitution (Articles 5–11) and the Citizenship Act, 1955."
+      ],
+      "mainsQuestion": "Examine how the implementation of the Citizenship Amendment Act, 2019 intersects with refugee rehabilitation, caste identity and electoral politics in West Bengal, with reference to the Matua community.",
+      "tags": [
+        "CAA 2019",
+        "Matua community",
+        "Citizenship",
+        "West Bengal",
+        "Refugee rehabilitation"
+      ],
+      "readMinutes": 5
+    },
+    {
+      "id": "india-urged-to-oppose-us-embargo-as-cubas-isolation-deepens",
+      "slug": "india-urged-to-oppose-us-embargo-as-cubas-isolation-deepens",
+      "headline": "India urged to oppose US embargo as Cuba's isolation deepens",
+      "kicker": "IR · Americas",
+      "category": "ir",
+      "region": "global",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "A The Hindu editorial argues that the long-standing US economic embargo on Cuba is deepening the island's isolation and that India, along with the wider international community, should oppose such coercive unilateral measures. The embargo, in place for decades, has been repeatedly condemned at the UN General Assembly, where support for ending it has been near-universal. The editorial frames the issue as a test of strategic autonomy and South-South solidarity, urging New Delhi not to yield to US pressure. It also highlights the humanitarian and developmental costs of extraterritorial sanctions on Cuba.",
+      "whyItMatters": "Useful for GS-II questions on India's foreign policy, UN diplomacy, unilateral coercive measures, and the relevance of strategic autonomy in India-US relations.",
+      "perspectives": [
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Coverage available at source.",
+          "link": "https://www.thehindu.com/opinion/editorial/the-hindu-editorial-dwindling-support-on-the-us-and-the-cuban-embargo/article71654007.ece",
+          "isRegional": false
+        }
+      ],
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Dwindling support: On the U.S. and the Cuban embargo",
+          "link": "https://www.thehindu.com/opinion/editorial/the-hindu-editorial-dwindling-support-on-the-us-and-the-cuban-embargo/article71654007.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T19:16:50.000Z",
+          "snippet": "India and the world must stand up against the bullying of Cuba by the U.S."
+        },
+        {
+          "id": "gnews:aHR0cHM6Ly9uZXdzLmdv",
+          "title": "the hindu editorial Dwindling support: On the U.S. and the Cuban embargo",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNcHJmZF8zTU9fMDFBYVlwcGowaW50Xy1yOFhra2MzWmxLNHAwdHhMOFA1cmQybk9lblFPMERscUJZN1hLdHdlenBEN3h4VUxZNXdxOURyTHcyNDg2WHFvdk9ielNLd1hRMDRjU0hTdEtybFpFWVRIaUR3dEkyQ0d6WnZ6RFVycTl6N2pkaTZ2dGlUR3phUGREcjFzclBnOEZiYUdUci13bWZHU0E5RF9XUURPRmFIaVBIbmdBd0paek4wcWFhRzdFbVY3VXHSAdMBQVVfeXFMTVdBdkNfQl9YTHczQ3RvaEtSQTlYV3NEd0h6NnFKamlUaUJpTzVibXZSUkNKN2RhWkhEVEhaN0lPNFphVDhaUkJWUWN6b3hscEdENHNUY2R4alM0dGMtcEdOUWxiMVRYNEFnTXB6NUVjS0ZoTVpocFdXQ1hNcnNIUzBrNVZzQ2UySnJqU240VzJ2dXZFbktjdEJfZ01lVVZKUEZHRk4wclpEWHhPbmg2Zm1hNW83R29zRTlMaG8yRHVzRjhGdHg1MDVOdXdzM3AyNG9GTQ?oc=5",
+          "source": "The Hindu",
+          "sourceId": "gnews-us",
+          "region": "global",
+          "categories": [],
+          "publishedAt": "2026-11-01T18:50:00.000Z",
+          "snippet": "the hindu editorial Dwindling support: On the U.S. and the Cuban embargo The Hindu"
+        }
+      ],
+      "static": [
+        {
+          "topic": "US embargo on Cuba and UNGA opposition",
+          "paper": "GS-II",
+          "syllabusNode": "International Relations: Effect of policies and politics of developed and developing countries on India's interests; Important International institutions.",
+          "whatIsIt": "A comprehensive US economic, commercial and financial embargo imposed on Cuba, reinforced by laws such as the Helms-Burton Act, which also penalises third-country entities for certain dealings with Cuba.",
+          "background": "The US imposed partial restrictions in 1960 and a full embargo in 1962 after the Cuban Revolution and nationalisation of US-owned properties. The Helms-Burton Act of 1996 codified and strengthened the embargo, including extraterritorial provisions. Since 1992, the UN General Assembly has annually adopted a resolution titled 'Necessity of ending the economic, commercial and financial embargo imposed by the United States of America against Cuba', with overwhelming support; the US and Israel have usually voted against.",
+          "geography": "Cuba is the largest island in the Caribbean, located south of Florida and east of Mexico; Havana is its capital.",
+          "socioEconomic": "The embargo restricts Cuba's access to trade, finance, food, medicines and development finance, and has been criticised for humanitarian and developmental costs; Cuba and its supporters estimate cumulative losses in billions of dollars.",
+          "whyInNews": "A The Hindu editorial urged India and the international community to oppose the US embargo as Cuba's isolation deepens.",
+          "wayForward": "India can continue voting for the annual UNGA resolution, uphold opposition to unilateral coercive measures, and deepen South-South cooperation without compromising its broader engagement with the US.",
+          "keyTerms": [
+            "Unilateral coercive measures",
+            "Helms-Burton Act",
+            "UNGA resolution",
+            "Extraterritorial sanctions",
+            "Strategic autonomy",
+            "South-South cooperation"
+          ],
+          "prelimsPointers": [
+            "The US embargo on Cuba was imposed in 1962.",
+            "The UNGA has adopted an annual resolution against the embargo since 1992.",
+            "The Helms-Burton Act of 1996 strengthened the US embargo with extraterritorial provisions.",
+            "India has traditionally voted in favour of the UNGA resolution against the embargo."
+          ],
+          "mainsAngle": "Discuss how India should balance its strategic autonomy and opposition to unilateral sanctions with its deepening partnership with the United States."
+        },
+        {
+          "topic": "Unilateral coercive measures and the UN Charter",
+          "paper": "GS-II",
+          "syllabusNode": "International Relations: Important International institutions, agencies and fora — their structure, mandate; India and the UN.",
+          "whatIsIt": "Unilateral coercive measures are economic or political sanctions imposed by one country or group of countries without UN Security Council authorisation, often criticised as violating the UN Charter's principles of sovereign equality and non-intervention.",
+          "background": "The UN Charter prohibits intervention in the domestic jurisdiction of states and emphasises peaceful settlement of disputes. However, major powers have frequently used unilateral sanctions. The UN General Assembly and bodies such as the Human Rights Council have debated the human rights and development impact of such measures. India has historically opposed unilateral sanctions and supported UN-centred multilateralism.",
+          "geography": null,
+          "socioEconomic": "Unilateral sanctions can disrupt trade, energy, food and medicine supplies, affecting civilian populations and third countries; they also raise questions about the extraterritorial reach of domestic laws.",
+          "whyInNews": "The The Hindu editorial on Cuba invokes the wider debate on US unilateral coercion and calls for international resistance.",
+          "wayForward": "India can push for greater UNGA scrutiny of unilateral coercive measures, strengthen coalitions such as BRICS and NAM, and advocate humanitarian exemptions in sanctions regimes.",
+          "keyTerms": [
+            "UN Charter",
+            "Sovereign equality",
+            "Non-intervention",
+            "Unilateral sanctions",
+            "Extraterritoriality",
+            "Multilateralism"
+          ],
+          "prelimsPointers": [
+            "Article 2(7) of the UN Charter prohibits UN intervention in matters essentially within the domestic jurisdiction of states.",
+            "Unilateral sanctions lack explicit UN Security Council authorisation.",
+            "India has consistently advocated UN-centred multilateralism and opposed unilateral coercive measures."
+          ],
+          "mainsAngle": "Examine the tension between unilateral coercive measures and the UN Charter, and suggest how India can uphold international law while protecting its strategic interests."
+        }
+      ],
+      "prelims": [
+        "The US imposed a comprehensive embargo on Cuba in 1962; the Helms-Burton Act of 1996 strengthened it.",
+        "The UN General Assembly has annually adopted a resolution against the US embargo on Cuba since 1992.",
+        "India has traditionally supported the UNGA resolution calling for an end to the embargo.",
+        "Cuba is the largest island in the Caribbean, with Havana as its capital."
+      ],
+      "mainsQuestion": "Critically examine India's traditional position on unilateral coercive measures in the light of the US embargo on Cuba. How can India balance strategic autonomy with its partnership with the United States?",
+      "tags": [
+        "Cuba",
+        "US embargo",
+        "India foreign policy",
+        "UNGA",
+        "Strategic autonomy",
+        "Unilateral sanctions"
+      ],
+      "readMinutes": 6
+    },
+    {
+      "id": "lulas-brazil-win-puts-welfare-labour-and-debt-relief-in-focu",
+      "slug": "lulas-brazil-win-puts-welfare-labour-and-debt-relief-in-focu",
+      "headline": "Lula's Brazil win puts welfare, labour and debt relief in focus",
+      "kicker": "IR · Latin America",
+      "category": "ir",
+      "region": "global",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "Reports from Brazil point to a historic electoral win for Luiz Inácio Lula da Silva, alongside what the coverage calls 'humongous challenges'. During the campaign, Lula shifted his messaging towards reducing working hours, providing relief to indebted households and expanding welfare payments under the Bolsa Família conditional cash transfer scheme. The framing suggests a mandate built on social protection and labour reform rather than solely on macro-economic themes, even as the incoming government faces fiscal and institutional constraints. The story is relevant to India for the comparative welfare-policy debate and for the wider Global South grouping in which Brazil and India are partners. A third feed item in the same bundle concerns a US competitive fishing tournament and carries no connection to the Brazil story.",
+      "whyItMatters": "Brazil is a G4 partner of India and a fellow BRICS and IBSA member, so its domestic political turn shapes coalition politics on UNSC reform and Global South agendas. For GS-II, its welfare and working-hours debate offers a direct comparative parallel to India's own rights-based welfare and labour-code transition.",
+      "perspectives": [
+        {
+          "source": "The Hindu — World",
+          "region": "brazil",
+          "lean": "unknown",
+          "take": "Frames it as a historic win paired with 'humongous challenges', highlighting Lula's campaign pivot to working hours, relief for indebted families and higher Bolsa Família payouts — a social-democratic mandate with delivery risk.",
+          "link": "https://www.thehindu.com/news/international/historic-win-humongous-challenges/article71649828.ece",
+          "isRegional": false
+        },
+        {
+          "source": "The Hindu",
+          "region": "brazil",
+          "lean": "unknown",
+          "take": "The identical report carried on the same feed; no distinct framing, indicating a duplicated wire item rather than an independent editorial line.",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNMjdsY2k5N2RraHJ2dERYSHphVWRaWnF4enE3VHdGVVZmZjFWQWROZ2w4MldEajFUQlVXTVhqNGhpTi05Q1o4SjM0SWxKMzhZdFA0dWFFTThjdzF5bHBPZjFpNkdPWHFqeTQ5UUNxLXFiRFhQYmRlZ1dUTGF4bU01SE1QLVdVRE1JUTlpWjFsWUVNM05BN1FfSU9Td3BfZ9IBpAFBVV95cUxNbWZMMEx0V1ozcWtZMWlocThvYnlBU1lsLW1zWW1qVldzbUZaTnZ1MzV4LUp6LVI0OU9weTgyZFlld3Y0WUJIbnRWc1lrRVFKTkhYWjRhQXhIdGxRZHRmanc0dTdLVXpHMDZBUEV4eVNWSVRJVjJ2ZmVGckVjMTctcm9PM0RkZDM2TDBseWUzdHdpNGY4c281bFB3ZUdGY0VFSzQ3LQ?oc=5",
+          "isRegional": true
+        },
+        {
+          "source": "Major League Fishing",
+          "region": "brazil",
+          "lean": "unknown",
+          "take": "A US sport-fishing tournament report with a $1.25 million prize — entirely off-topic for the Brazil story and best treated as feed noise to be excluded.",
+          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNbGNfSUZKTmdtcmtPbEszcUFrd1F0WUZNSEpYNm1rUDJ2T1pkb0hjUF9BS2EyUlNLOUw0d1ZEUzdfVGRhU1VfVUJZNnM0T2l1MFlzdXZwZGhBdlFJRk1iSkZkMFU2Znd2Q2dHVkdMNTFRN2FsWTNzcWxMNmRVcGdLMmZvZmhGR2lJR2ZJYUlEWE9WZUF6QXJZMjFUclFLZWJaTnlOdTNiQ0RJWDg5R2phSFE3dW1rT3A3Umg1elNHMzhoSERCVTg4ektvSDVKR3RrRGc?oc=5",
+          "isRegional": true
+        }
+      ],
+      "articles": [
+        {
+          "id": "the-hindu-world:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Historic win, humongous challenges",
+          "link": "https://www.thehindu.com/news/international/historic-win-humongous-challenges/article71649828.ece",
+          "source": "The Hindu — World",
+          "sourceId": "the-hindu-world",
+          "region": "global",
+          "categories": [
+            "ir",
+            "security",
+            "economy"
+          ],
+          "publishedAt": "2026-11-01T17:11:00.000Z",
+          "snippet": "Lula tweaked his campaign’s message, speaking more about reducing working hours, relief for indebted families and higher welfare payments under the Bolsa Familia scheme"
+        },
+        {
+          "id": "gnews:aHR0cHM6Ly9uZXdzLmdv",
+          "title": "Historic win, humongous challenges",
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNMjdsY2k5N2RraHJ2dERYSHphVWRaWnF4enE3VHdGVVZmZjFWQWROZ2w4MldEajFUQlVXTVhqNGhpTi05Q1o4SjM0SWxKMzhZdFA0dWFFTThjdzF5bHBPZjFpNkdPWHFqeTQ5UUNxLXFiRFhQYmRlZ1dUTGF4bU01SE1QLVdVRE1JUTlpWjFsWUVNM05BN1FfSU9Td3BfZ9IBpAFBVV95cUxNbWZMMEx0V1ozcWtZMWlocThvYnlBU1lsLW1zWW1qVldzbUZaTnZ1MzV4LUp6LVI0OU9weTgyZFlld3Y0WUJIbnRWc1lrRVFKTkhYWjRhQXhIdGxRZHRmanc0dTdLVXpHMDZBUEV4eVNWSVRJVjJ2ZmVGckVjMTctcm9PM0RkZDM2TDBseWUzdHdpNGY4c281bFB3ZUdGY0VFSzQ3LQ?oc=5",
+          "source": "The Hindu",
+          "sourceId": "gnews-brazil",
+          "region": "global",
+          "categories": [],
+          "publishedAt": "2026-11-01T17:11:00.000Z",
+          "snippet": "Historic win, humongous challenges The Hindu"
+        },
+        {
+          "id": "gnews:aHR0cHM6Ly9uZXdzLmdv",
+          "title": "GALLERY: Final weigh-in crowns a $1.25 million champion at The Champions on Old Hickory Lake",
+          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNbGNfSUZKTmdtcmtPbEszcUFrd1F0WUZNSEpYNm1rUDJ2T1pkb0hjUF9BS2EyUlNLOUw0d1ZEUzdfVGRhU1VfVUJZNnM0T2l1MFlzdXZwZGhBdlFJRk1iSkZkMFU2Znd2Q2dHVkdMNTFRN2FsWTNzcWxMNmRVcGdLMmZvZmhGR2lJR2ZJYUlEWE9WZUF6QXJZMjFUclFLZWJaTnlOdTNiQ0RJWDg5R2phSFE3dW1rT3A3Umg1elNHMzhoSERCVTg4ektvSDVKR3RrRGc?oc=5",
+          "source": "Major League Fishing",
+          "sourceId": "gnews-brazil",
+          "region": "global",
+          "categories": [],
+          "publishedAt": "2026-10-31T23:27:51.000Z",
+          "snippet": "GALLERY: Final weigh-in crowns a $1.25 million champion at The Champions on Old Hickory Lake Major League Fishing"
+        }
+      ],
+      "static": [
+        {
+          "topic": "Conditional Cash Transfers: Bolsa Família and India's Welfare Architecture",
+          "paper": "GS-II",
+          "syllabusNode": "Social Justice — Welfare Schemes and Rights-Based Entitlements",
+          "whatIsIt": "Conditional cash transfers (CCTs) pay households a stipend on condition of behaviours such as school attendance or health check-ups. Brazil's Bolsa Família is the archetypal CCT; India's comparable architecture blends rights-based laws with DBT-enabled schemes delivered through the JAM (Jan Dhan–Aadhaar–Mobile) backbone.",
+          "background": "Bolsa Família was launched in 2003 during Lula's first presidency and is widely cited as a model for reducing extreme poverty and inequality in Brazil. India's route was different: MGNREGA (2005) guarantees wage employment, the RTE Act (2009) and the National Food Security Act (2013) created rights-based entitlements, and Ayushman Bharat (2018) added a health-insurance arm through PM-JAY alongside Health and Wellness Centres, with POSHAN Abhiyaan targeting malnutrition. Article 15/16 and Indra Sawhney (1992) frame India's reservation policy.",
+          "geography": "Brazil is South America's largest country and India's partner in the IBSA and BRICS groupings; both are large federal democracies with high informal-sector employment.",
+          "socioEconomic": "Both countries use welfare transfers to blunt inequality and hunger. India's key frictions are exclusion errors, urban poverty and the shift from entitlement to capability; Brazil's are fiscal sustainability and debt burdens among low-income households.",
+          "whyInNews": "Lula's campaign emphasised higher Bolsa Família payments and relief for indebted families, reviving global interest in the CCT model at a time when India is debating labour codes and welfare targeting.",
+          "wayForward": "Comparative evaluation of targeting versus universalism, portability of benefits to urban migrants and using welfare as a capability-building instrument rather than only income support.",
+          "keyTerms": [
+            "Conditional Cash Transfer (CCT)",
+            "Bolsa Família",
+            "DBT",
+            "JAM trinity",
+            "MGNREGA",
+            "PM-JAY",
+            "POSHAN Abhiyaan"
+          ],
+          "prelimsPointers": [
+            "MGNREGA guarantees 100 days of unskilled wage employment per rural household per year.",
+            "Four labour codes consolidate 29 central labour laws.",
+            "NITI Aayog's National MPI (2021) uses 12 indicators across health, education and standard of living."
+          ],
+          "mainsAngle": "Compare Brazil's conditional cash transfer model with India's rights-based welfare approach: which delivers better on inclusion, and what does each reveal about exclusion errors and fiscal space?"
+        },
+        {
+          "topic": "G4 and UN Security Council Reform",
+          "paper": "GS-II",
+          "syllabusNode": "International Relations — Global Governance and Multilateral Reform",
+          "whatIsIt": "The United Nations, founded in 1945, has six principal organs. The Security Council has five permanent veto-wielding members (P5) and ten elected members serving two-year terms. India has long sought permanent UNSC membership, and the G4 — India, Brazil, Germany and Japan — campaigns jointly for expansion.",
+          "background": "India is a founding UN member and among the largest troop contributors to peacekeeping. The Intergovernmental Negotiations (IGN) process on Security Council reform has remained inconclusive, with the Africa group's Ezulwini Consensus and P5 veto politics among the key obstacles.",
+          "geography": null,
+          "socioEconomic": "G4 members together represent a substantial share of world population and economic output, which underpins their claim that the Council's composition no longer reflects current geopolitical weight.",
+          "whyInNews": "A change of government in Brazil, a G4 member, refocuses attention on whether Brasília will keep pushing Security Council reform and coordinating with India on Global South positions.",
+          "wayForward": "Sustained G4 coordination, engagement with African and Latin American groupings, and text-based negotiations within the IGN rather than procedural delays.",
+          "keyTerms": [
+            "P5 veto",
+            "G4",
+            "UNGA",
+            "Peacekeeping",
+            "Responsibility to Protect",
+            "ECOSOC",
+            "Ezulwini Consensus"
+          ],
+          "prelimsPointers": [
+            "UNSC has 15 members: 5 permanent and 10 elected for two-year terms.",
+            "The International Court of Justice sits in The Hague; UN headquarters is in New York.",
+            "India is a founding member of the United Nations and a major troop-contributing country."
+          ],
+          "mainsAngle": "Assess India's claim for permanent UNSC membership on grounds of representativeness and contributions, and evaluate the obstacles posed by veto politics and divergent regional positions."
+        },
+        {
+          "topic": "Poverty, Inequality and Employment Measurement",
+          "paper": "GS-III",
+          "syllabusNode": "Economy — Inclusive Growth, Poverty and Employment",
+          "whatIsIt": "Poverty is tracked through NITI Aayog's Multidimensional Poverty Index (MPI) and consumption surveys, while employment is captured by the Periodic Labour Force Survey (PLFS). Both measures matter for judging whether welfare transfers actually change living standards.",
+          "background": "NITI Aayog's National MPI (2021) uses 12 indicators across health, education and living standards. PLFS, running since 2017, reports quarterly urban and annual all-India data. India became the world's most populous country in 2023, sharpening the employment challenge.",
+          "geography": null,
+          "socioEconomic": "Large informal sectors in both India and Brazil mean measured unemployment understates distress; the more revealing variables are labour force participation, earnings quality and household indebtedness.",
+          "whyInNews": "Lula's focus on reducing working hours and relieving household debt turns the spotlight onto job quality and indebtedness as dimensions of welfare, not just income levels.",
+          "wayForward": "Shift policy attention from headline unemployment to employment quality, formalisation incentives, skills matching and household debt monitoring.",
+          "keyTerms": [
+            "Multidimensional Poverty Index",
+            "PLFS",
+            "LFPR",
+            "Gini coefficient",
+            "Demographic dividend",
+            "Informal sector"
+          ],
+          "prelimsPointers": [
+            "MPI dimensions: health, education and standard of living (3 dimensions, 12 indicators).",
+            "Unemployment Rate = unemployed persons divided by the labour force.",
+            "PLFS has reported quarterly urban and annual all-India data since 2017."
+          ],
+          "mainsAngle": "Discuss how quality of employment and household indebtedness, rather than headline unemployment, should shape welfare design in developing economies."
+        }
+      ],
+      "prelims": [
+        "Bolsa Família is Brazil's flagship conditional cash transfer scheme, launched in 2003 during Lula's first term.",
+        "Brazil is a member of the G4 along with India, Germany and Japan, all campaigning for permanent UNSC seats.",
+        "India and Brazil are partners in BRICS and in the IBSA trilateral grouping.",
+        "Household indebtedness and working hours have emerged as welfare-policy variables alongside direct cash transfers."
+      ],
+      "mainsQuestion": "Electoral mandates built on welfare expansion and labour reform, as in Brazil, inevitably collide with fiscal limits. Examine how developing democracies can balance expanded social protection with macro-economic stability, drawing comparative lessons for India.",
+      "tags": [
+        "Brazil",
+        "Lula",
+        "Bolsa Família",
+        "Welfare",
+        "Labour reform",
+        "Global South"
+      ],
+      "readMinutes": 5
+    },
+    {
+      "id": "bhutan-dedicates-108-stupas-honours-pm-modi-for-gelephu-supp",
+      "slug": "bhutan-dedicates-108-stupas-honours-pm-modi-for-gelephu-supp",
+      "headline": "Bhutan dedicates 108 stupas, honours PM Modi for Gelephu support",
+      "kicker": "IR · Neighbourhood",
+      "category": "ir",
+      "region": "global",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "Bhutan has constructed 108 stupas within nine hours and dedicated the 76th to Prime Minister Narendra Modi, according to The Hindu — World. King Jigme Khesar Namgyel Wangchuck described the gesture as recognition of India's steadfast support for the Gelephu Mindfulness City project. The event highlights the symbolic dimension of India-Bhutan ties and Bhutan's effort to project the Gelephu initiative internationally. It also underscores how India's neighbourhood diplomacy is acknowledged in Bhutan's public diplomacy.",
+      "whyItMatters": "Useful for GS-II India and the neighbourhood, India-Bhutan relations, and symbolic diplomacy; links to Neighbourhood First and strategic autonomy.",
+      "perspectives": [
+        {
+          "source": "The Hindu — World",
+          "region": "Global",
+          "lean": "unknown",
+          "take": "Frames the stupa dedication as Bhutan's public recognition of India's role in the Gelephu Mindfulness City; report is factual and India-centric in highlighting PM Modi's honour.",
+          "link": "https://www.thehindu.com/news/international/bhutan-builds-108-stupas-in-9-hours-dedicates-no-76-to-pm-modi/article71653715.ece",
+          "isRegional": false
+        }
+      ],
+      "articles": [
+        {
+          "id": "the-hindu-world:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Bhutan builds 108 stupas in 9 hours, dedicates No. 76 to PM Modi",
+          "link": "https://www.thehindu.com/news/international/bhutan-builds-108-stupas-in-9-hours-dedicates-no-76-to-pm-modi/article71653715.ece",
+          "source": "The Hindu — World",
+          "sourceId": "the-hindu-world",
+          "region": "global",
+          "categories": [
+            "ir",
+            "security",
+            "economy"
+          ],
+          "publishedAt": "2026-11-01T16:37:27.000Z",
+          "snippet": "King Jigme Khesar Namgyel Wangchuk says gesture recognises India’s steadfast support for realisation of Gelephu Mindfulness City"
+        }
+      ],
+      "static": [
+        {
+          "topic": "India-Bhutan relations and Neighbourhood First",
+          "paper": "GS-II",
+          "syllabusNode": "International Relations — India & the World",
+          "whatIsIt": "India-Bhutan relations are a key pillar of India's Neighbourhood First policy, marked by close consultations on development, hydropower, security and connectivity.",
+          "background": "India's foreign policy combines strategic autonomy, multi-alignment, and the Neighbourhood First and Act East outlooks. The supplied knowledge card traces this approach to NAM (1961) and Panchsheel (1954), with post-1991 liberalisation and the 1998 nuclear tests reshaping ties with the US. The Indo-Pacific concept and Quad gained salience after 2017. India-Bhutan ties are also underpinned by the 1949 Treaty of Friendship and Cooperation, revised in 2007.",
+          "geography": "Bhutan is a landlocked Himalayan kingdom bordering India and China; Gelephu is in southern Bhutan near the Indian border.",
+          "socioEconomic": "Bhutan's economy is closely linked to India through trade, hydropower and development assistance; the Gelephu Mindfulness City is envisioned as an economic and mindfulness hub.",
+          "whyInNews": "Bhutan built 108 stupas in nine hours and dedicated the 76th to PM Modi for India's support to Gelephu Mindfulness City.",
+          "wayForward": "Continue deepening connectivity, hydropower and people-to-people ties while respecting Bhutan's sovereignty and development priorities.",
+          "keyTerms": [
+            "Neighbourhood First",
+            "Strategic autonomy",
+            "Multi-alignment",
+            "Gelephu Mindfulness City",
+            "India-Bhutan Treaty",
+            "Panchsheel",
+            "NAM"
+          ],
+          "prelimsPointers": [
+            "India's Neighbourhood First policy prioritises close ties with immediate neighbours.",
+            "Bhutan is a landlocked Himalayan state bordering India and China.",
+            "The 1949 India-Bhutan Treaty was revised in 2007.",
+            "Gelephu Mindfulness City is a Bhutanese initiative in southern Bhutan."
+          ],
+          "mainsAngle": "Discuss how symbolic diplomacy and development partnership shape India's neighbourhood policy, with reference to Bhutan."
+        }
+      ],
+      "prelims": [
+        "Bhutan constructed 108 stupas in nine hours; the 76th was dedicated to PM Modi.",
+        "King Jigme Khesar Namgyel Wangchuck linked the gesture to India's support for Gelephu Mindfulness City.",
+        "Gelephu Mindfulness City is a Bhutanese project in southern Bhutan."
+      ],
+      "mainsQuestion": "India's neighbourhood diplomacy often blends strategic interests with symbolic gestures. Examine this in the context of India-Bhutan relations and the Gelephu Mindfulness City initiative.",
+      "tags": [
+        "India-Bhutan",
+        "Neighbourhood First",
+        "Gelephu Mindfulness City",
+        "Symbolic Diplomacy",
+        "GS-II"
+      ],
+      "readMinutes": 5
+    },
+    {
+      "id": "andhra-pradesh-civic-polls-largely-peaceful-sec-orders-repol",
+      "slug": "andhra-pradesh-civic-polls-largely-peaceful-sec-orders-repol",
+      "headline": "Andhra Pradesh civic polls largely peaceful; SEC orders repoll in four wards",
+      "kicker": "Polity · Local Polls",
+      "category": "polity",
+      "region": "india",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "Polling for urban local bodies across Andhra Pradesh — covering 13 municipal corporations and 79 municipalities and nagar panchayats — concluded largely peacefully, with the State Election Commission reporting an overall turnout of 48.03% by 3 p.m. The SEC said 275 FIRs were registered in connection with about 40 incidents of sporadic violence, and announced that repolling, where required, would be held on November 2; it subsequently ordered repolling in four wards spread across three urban local bodies. YSRCP leader Y.S. Jagan Mohan Reddy demanded a repoll in Pulivendula following clashes there. Reporting from Vijayawada suggested voter choices turned more on individual candidates than on development claims, while polling in the Greater Visakhapatnam Municipal Corporation and in Nellore district was described as smooth, including for senior citizens and first-time voters.",
+      "whyItMatters": "Urban local body elections are the operational test of the 74th Constitutional Amendment's promise of empowered, accountable municipal government. Turnout patterns, violence and repoll orders feed directly into GS-II questions on local self-government, State Election Commission powers and municipal electoral reform.",
+      "perspectives": [
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Ground report from Vijayawada argues voters weighed candidate identity and accessibility above development record — a commentary on the personalisation of local politics.",
+          "link": "https://www.thehindu.com/news/national/andhra-pradesh/voters-prioritise-candidates-over-development-in-local-polls-in-vijayawada/article71653653.ece",
+          "isRegional": false
+        },
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "GVMC-focused report frames the poll as an inclusion story, highlighting smooth arrangements for senior citizens and first-time voters.",
+          "link": "https://www.thehindu.com/news/national/andhra-pradesh/voters-prioritise-candidates-over-development-in-local-polls-in-vijayawada/article71653653.ece",
+          "isRegional": false
+        },
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Statewide wrap foregrounds the official line: largely peaceful polling, 48.03% turnout by 3 p.m., 275 FIRs across 40 incidents, and opposition demand for repoll in Pulivendula.",
+          "link": "https://www.thehindu.com/news/national/andhra-pradesh/voters-prioritise-candidates-over-development-in-local-polls-in-vijayawada/article71653653.ece",
+          "isRegional": false
+        },
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Short institutional report records the SEC's corrective action — repolling ordered in four wards across three urban local bodies.",
+          "link": "https://www.thehindu.com/news/national/andhra-pradesh/voters-prioritise-candidates-over-development-in-local-polls-in-vijayawada/article71653653.ece",
+          "isRegional": false
+        },
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "District-level report from Nellore presents a contrast case of orderly, incident-free municipal polling.",
+          "link": "https://www.thehindu.com/news/national/andhra-pradesh/voters-prioritise-candidates-over-development-in-local-polls-in-vijayawada/article71653653.ece",
+          "isRegional": false
+        }
+      ],
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Voters prioritise candidates over development in local polls in Vijayawada",
+          "link": "https://www.thehindu.com/news/national/andhra-pradesh/voters-prioritise-candidates-over-development-in-local-polls-in-vijayawada/article71653653.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T18:23:27.000Z",
+          "snippet": ""
+        },
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "GVMC polls: smooth polling experience for senior citizens, first-time voters",
+          "link": "https://www.thehindu.com/news/national/andhra-pradesh/gvmc-polls-smooth-polling-experience-for-senior-citizens-first-time-voters/article71653537.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T18:21:40.000Z",
+          "snippet": ""
+        },
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Andhra Pradesh civic polls largely peaceful; Jagan demands repoll in Pulivendula after clashes",
+          "link": "https://www.thehindu.com/news/national/andhra-pradesh/ap-civic-polls-largely-peaceful-jagan-demands-repoll-in-pulivendula-after-clashes/article71653094.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T18:07:07.000Z",
+          "snippet": "Polling across 13 municipal corporations and 79 municipalities and nagar panchayats ends amid sporadic violence. The SEC puts the overall polling percentage at 48.03 by 3 p.m., reports 275 FIRs in connection with 40 incidents and says repolling, if required, will be held on November 2"
+        },
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "SEC orders repolling in four wards across three ULBs",
+          "link": "https://www.thehindu.com/news/national/andhra-pradesh/sec-orders-repolling-in-four-wards-across-three-ulbs/article71653960.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T17:59:57.000Z",
+          "snippet": ""
+        },
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Municipal polls held peacefully in Nellore district",
+          "link": "https://www.thehindu.com/news/national/andhra-pradesh/municipal-polls-held-peacefully-in-nellore-district/article71653823.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T17:08:28.000Z",
+          "snippet": ""
+        }
+      ],
+      "static": [
+        {
+          "topic": "Urban Local Bodies and the 74th Constitutional Amendment",
+          "paper": "GS-II",
+          "syllabusNode": "Polity & Governance — Local Self-Government",
+          "whatIsIt": "The 73rd and 74th Constitutional Amendments (1992) gave constitutional status to panchayats and municipalities respectively, mandating regular elections, reservations and State Finance Commissions. The 74th Amendment added Part IX-A and the Twelfth Schedule, listing 18 functional subjects for urban local bodies.",
+          "background": "Lord Ripon's Resolution of 1882 is regarded as the foundation of local self-government in India. Municipal bodies were later strengthened by the 74th Amendment (effective 1993), which created three tiers of urban bodies — Nagar Panchayat (transitional area), Municipal Council (smaller urban area) and Municipal Corporation (larger urban area) — and provided for Ward Committees in municipalities with population above three lakh. Urban reform has since been carried by missions such as Smart Cities Mission, AMRUT, Swachh Bharat and PMAY.",
+          "geography": "Urban local bodies are constituted by State governments; their number, boundaries and categories vary across States, with metropolitan corporations concentrated in larger cities and nagar panchayats in peri-urban transition zones.",
+          "socioEconomic": "Municipal elections determine who controls basic urban services — water, sanitation, roads, building permissions and local welfare delivery — and therefore shape the lived experience of India's expanding urban population.",
+          "whyInNews": "Andhra Pradesh held polls to 13 municipal corporations and 79 municipalities and nagar panchayats, with the State Election Commission reporting 48.03% polling by 3 p.m., 275 FIRs across about 40 incidents, and repolling ordered in four wards across three urban local bodies.",
+          "wayForward": "Strengthen State Election Commission capacity and expenditure monitoring, publish ward-level turnout and incident data, and pair electoral reform with fiscal devolution so elected urban bodies have untied funds and functionaries to match their mandated functions.",
+          "keyTerms": [
+            "74th Constitutional Amendment",
+            "Twelfth Schedule",
+            "Nagar Panchayat",
+            "Municipal Council",
+            "Municipal Corporation",
+            "Ward Committee",
+            "State Finance Commission"
+          ],
+          "prelimsPointers": [
+            "Three types of urban local bodies: Nagar Panchayat, Municipal Council and Municipal Corporation.",
+            "The Twelfth Schedule lists 18 subjects for municipalities; the Eleventh Schedule lists 29 for panchayats.",
+            "Ward Committees are mandated for municipalities with a population exceeding three lakh."
+          ],
+          "mainsAngle": "Weak fiscal devolution and administrative capacity gaps hamper urban local governance; examine how municipal electoral processes and finance reform together determine the effectiveness of the 74th Amendment."
+        },
+        {
+          "topic": "State Election Commission and Conduct of Local Body Elections",
+          "paper": "GS-II",
+          "syllabusNode": "Polity & Governance — Constitutional Bodies and Electoral Machinery",
+          "whatIsIt": "Superintendence, direction and control of elections to panchayats and municipalities is vested in a State Election Commission under Articles 243K and 243ZA of the Constitution, independent of the Election Commission of India which handles Lok Sabha, State Assembly and Presidential polls.",
+          "background": "Articles 243K and 243ZA were inserted by the 73rd and 74th Amendments. The SEC is appointed by the Governor and its powers mirror those of the ECI within the local-body sphere, including preparation of electoral rolls and conduct of polls. Courts have repeatedly directed States to hold overdue local body elections, and SECs have ordered repolls in wards where polling was vitiated.",
+          "geography": null,
+          "socioEconomic": "Local poll violence and repoll orders affect the credibility of grassroots representation and can depress turnout in subsequent elections.",
+          "whyInNews": "The Andhra Pradesh State Election Commission reported 275 FIRs linked to about 40 incidents during municipal polling and ordered repolling in four wards across three urban local bodies, with repolling slated for November 2 where required.",
+          "wayForward": "Deploy central or state police forces at hypersensitive booths, publish real-time incident and FIR dashboards, and institutionalise time-bound disposal of election-related criminal cases to deter violence.",
+          "keyTerms": [
+            "Article 243K",
+            "Article 243ZA",
+            "State Election Commission",
+            "Repoll",
+            "Model Code of Conduct",
+            "Hypersensitive booth"
+          ],
+          "prelimsPointers": [
+            "Local body elections are conducted by the State Election Commission, not the Election Commission of India.",
+            "Articles 243K and 243ZA provide for SEC superintendence of panchayat and municipal elections respectively."
+          ],
+          "mainsAngle": "Discuss whether State Election Commissions need statutory powers on par with the ECI to curb violence and malpractices in local body elections."
+        }
+      ],
+      "prelims": [
+        "Andhra Pradesh municipal polls covered 13 municipal corporations and 79 municipalities and nagar panchayats.",
+        "The State Election Commission put overall polling at 48.03% by 3 p.m. and reported 275 FIRs in connection with about 40 incidents.",
+        "Repolling was ordered in four wards across three urban local bodies, with November 2 fixed for repolls where required.",
+        "Local body elections in India are conducted by the State Election Commission under Articles 243K and 243ZA."
+      ],
+      "mainsQuestion": "Local body elections are the foundation of grassroots democracy, yet they are frequently marked by violence, low turnout and repoll orders. Examine the causes and suggest institutional reforms to make municipal elections in India free, fair and participative.",
+      "tags": [
+        "Local Self-Government",
+        "74th Amendment",
+        "Urban Local Bodies",
+        "State Election Commission",
+        "Andhra Pradesh",
+        "Electoral Reform"
+      ],
+      "readMinutes": 6
+    },
+    {
+      "id": "kolar-avarekai-sowing-falls-70-as-rainfall-deficit-bites",
+      "slug": "kolar-avarekai-sowing-falls-70-as-rainfall-deficit-bites",
+      "headline": "Kolar avarekai sowing falls 70% as rainfall deficit bites",
+      "kicker": "Agriculture · Karnataka",
+      "category": "agriculture",
+      "region": "india",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "Cultivation of avarekai (hyacinth bean/field bean) in Karnataka's Kolar district has dropped by about 70% this season, according to a report. The sharp fall in sowing is attributed to inadequate rainfall, depleting groundwater levels and persistently dry weather, which deterred farmers from taking up the crop. Kolar, an interior district of the Deccan plateau that lies in the rain-shadow zone of the Western Ghats, depends heavily on borewell irrigation and monsoon recharge, so a weak rainfall spell directly affects planting decisions. The decline matters because avarekai is a commercially significant, largely regional crop for Kolar farmers, and reduced area under such legumes also affects crop diversity and short-term local incomes. The story sits within the wider pattern of monsoon variability and groundwater stress across peninsular India.",
+      "whyItMatters": "Directly links monsoon variability and groundwater depletion to cropping decisions — a core GS-I geography and GS-III agriculture/irrigation theme. Useful case study for answers on climate-resilient farming, crop diversification and farmer income stress.",
+      "perspectives": [
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Frames it as a regional Karnataka farm-distress story, attributing the 70% fall in avarekai sowing to rainfall deficit, depleting groundwater and dry weather; a state-and-district level report with local farmer focus.",
+          "link": "https://www.thehindu.com/news/national/karnataka/avarekai-cultivation-in-kolar-district-drops-by-70-amid-rainfall-deficit/article71653287.ece",
+          "isRegional": false
+        }
+      ],
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Avarekai cultivation in Kolar district drops by 70% amid rainfall deficit",
+          "link": "https://www.thehindu.com/news/national/karnataka/avarekai-cultivation-in-kolar-district-drops-by-70-amid-rainfall-deficit/article71653287.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T18:43:32.000Z",
+          "snippet": "The decline is attributed to inadequate rainfall, depleting groundwater levels and dry weather conditions, which have discouraged farmers from taking up sowing"
+        }
+      ],
+      "static": [
+        {
+          "topic": "Indian monsoon variability, rainfall deficit and the rain-shadow interior",
+          "paper": "GS-I",
+          "syllabusNode": "Geography — Physical Geography of India (monsoon, rainfall distribution, variability)",
+          "whatIsIt": "The Indian monsoon is a seasonal reversal of winds driven by differential heating, the northward shift of the ITCZ and the Tibetan Plateau's 'heat pump'. It delivers roughly 75% of India's annual rainfall during June–September, and its inter-annual variability decides the fate of rain-fed and borewell-irrigated cropping in peninsular India.",
+          "background": "Monsoon strength is modulated by the El Niño–La Niña cycle — El Niño usually weakens the monsoon while La Niña strengthens it — and by the Indian Ocean Dipole (IOD). The Western Ghats intercept the southwest monsoon, leaving the interior Deccan plateau, including parts of Karnataka such as Kolar, in a rain-shadow with scanty and erratic rainfall; peninsular rivers are consequently seasonal and rain-fed, unlike the snow-fed perennial Himalayan rivers.",
+          "geography": "Kolar lies in the interior Karnataka plateau, east of the Western Ghats and in the lee of the Ghats during the southwest monsoon; the district is drought-prone with hard-rock terrain and deep, heavily exploited aquifers.",
+          "socioEconomic": "Interior Karnataka's farming economy leans on borewell irrigation, horticulture and commercial crops; when monsoon recharge fails, both surface moisture and groundwater fall together, raising input costs and pushing farmers to either skip sowing or shift cropping choices.",
+          "whyInNews": "Avarekai sowing in Kolar fell about 70% amid a rainfall deficit, depleting groundwater and dry weather, which discouraged farmers from taking up cultivation.",
+          "wayForward": "Strengthen district-level monsoon and groundwater monitoring, promote recharge structures and watershed treatment in hard-rock aquifers, and align cropping advisories with real-time rainfall and water-table data.",
+          "keyTerms": [
+            "ITCZ",
+            "El Niño / La Niña",
+            "Indian Ocean Dipole (IOD)",
+            "Rain shadow",
+            "Southwest monsoon",
+            "Groundwater recharge"
+          ],
+          "prelimsPointers": [
+            "The southwest monsoon (June–September) delivers about 75% of India's annual rainfall.",
+            "El Niño generally weakens the Indian monsoon while La Niña generally strengthens it.",
+            "Himalayan rivers are perennial (snow-fed); peninsular rivers are largely seasonal (rain-fed)."
+          ],
+          "mainsAngle": "Examine how monsoon variability and groundwater depletion together shape cropping decisions in India's rain-shadow districts, and suggest climate-resilient strategies."
+        },
+        {
+          "topic": "Agricultural sustainability, groundwater use and crop diversification",
+          "paper": "GS-III",
+          "syllabusNode": "Economy — Agriculture & Food Security (cropping patterns, irrigation, MSP, farmer income)",
+          "whatIsIt": "Indian agriculture policy balances price assurance through MSP (announced on CACP recommendations for 22 mandated crops), input and income support such as PM-KISAN (₹6,000/year), and a food-security architecture anchored in the National Food Security Act, 2013 and PDS distribution.",
+          "background": "The Green Revolution of the 1960s made India food-sufficient but concentrated procurement and irrigation in wheat and paddy, contributing to water-intensive cropping, monoculture and regional imbalances. The Shanta Kumar Committee (2015) reviewed FCI operations and procurement reform. The three 2020 farm laws were repealed in 2021, and debate continues on MSP, procurement reach and diversification towards pulses, millets and legumes such as avarekai (hyacinth bean).",
+          "geography": "Kolar's hard-rock aquifers and semi-arid climate make water-intensive cropping risky; legumes such as avarekai have historically been viable because of their lower water demand relative to paddy or sugarcane.",
+          "socioEconomic": "A collapse in area under a high-value local legume reduces immediate farm incomes, tightens market supply for a product with a strong regional customer base, and pushes farmers towards either fallowing land or less diverse cropping.",
+          "whyInNews": "A steep fall in avarekai cultivation in Kolar illustrates how water scarcity translates into income loss and reduced crop diversity in a dry-zone district.",
+          "wayForward": "Incentivise low-water legumes through procurement and market linkages, expand micro-irrigation and soil health interventions, and integrate groundwater regulation with crop-diversification incentives so that rainfall-deficit years do not wipe out a district's signature crop.",
+          "keyTerms": [
+            "MSP",
+            "CACP",
+            "PM-KISAN",
+            "Soil Health Card",
+            "e-NAM",
+            "Crop diversification",
+            "Groundwater over-exploitation"
+          ],
+          "prelimsPointers": [
+            "MSP is announced for 22 mandated crops on CACP recommendations and is a price assurance, not a legal right.",
+            "Procurement under MSP is heavily concentrated in wheat and paddy.",
+            "NFSA, 2013 covers up to 75% of the rural and 50% of the urban population."
+          ],
+          "mainsAngle": "Discuss how groundwater depletion in semi-arid districts affects crop diversification and farmer incomes, and evaluate policy tools to make dryland agriculture water-resilient."
+        }
+      ],
+      "prelims": [
+        "Avarekai is the local Kannada name for the hyacinth bean (field bean), a legume known for relatively lower water demand than water-intensive cereals.",
+        "Kolar district in Karnataka lies in the interior Deccan plateau, in the rain-shadow of the Western Ghats, and is drought-prone.",
+        "The southwest monsoon (June–September) provides roughly 75% of India's annual rainfall, and its failure directly hits rain-fed and borewell-irrigated sowing.",
+        "MSP covers 22 mandated crops on CACP recommendations, but actual procurement is concentrated in wheat and paddy."
+      ],
+      "mainsQuestion": "A rainfall deficit in a semi-arid district can erase not just a harvest but a region's signature crop. Examine the link between monsoon variability, groundwater depletion and crop diversification in India, and suggest measures to make dryland agriculture more resilient.",
+      "tags": [
+        "Agriculture",
+        "Karnataka",
+        "Monsoon",
+        "Groundwater",
+        "Crop diversification"
+      ],
+      "readMinutes": 5
+    },
+    {
+      "id": "madras-hc-denies-court-fee-refund-for-post-trial-out-of-cour",
+      "slug": "madras-hc-denies-court-fee-refund-for-post-trial-out-of-cour",
+      "headline": "Madras HC denies court fee refund for post-trial out-of-court settlements",
+      "kicker": "Polity · Judiciary",
+      "category": "polity",
+      "region": "india",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "The Madras High Court has held that litigants who settle a dispute out of court after trial has already commenced are not entitled to a refund of court fees. Justice P.B. Balaji declined to follow the Supreme Court's 2017 ruling in the M.C. Subramaniam case, which had taken a more liberal view on refunds, and instead relied on the apex court's 2010 judgment in the Afcons Infrastructure case. The bench reasoned that once trial begins, the state has already incurred the cost of adjudication, so the fee-for-service rationale for refund falls away. The order creates a divergence between High Court and Supreme Court precedent on the same question, raising the prospect of an appeal and eventual authoritative clarification.",
+      "whyItMatters": "Tests the doctrine of precedent under Article 141 and the scope of judicial discipline when a High Court disagrees with a Supreme Court ruling. Also links court-fee policy to the wider push for alternative dispute resolution and reducing litigation burden.",
+      "perspectives": [
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Frames it as a judicial-discipline story — a High Court judge expressly refusing to follow a 2017 Supreme Court verdict and preferring the 2010 Afcons Infrastructure precedent, with the practical consequence that out-of-court settlements after trial begins carry no fee refund.",
+          "link": "https://www.thehindu.com/news/national/tamil-nadu/litigants-will-not-be-entitled-to-refund-of-court-fees-if-disputes-get-settled-out-of-court-after-commencement-of-trial-rules-madras-high-court/article71653425.ece",
+          "isRegional": false
+        }
+      ],
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Litigants will not be entitled to refund of court fees if disputes get settled out of court after commencement of trial, rules Madras High Court",
+          "link": "https://www.thehindu.com/news/national/tamil-nadu/litigants-will-not-be-entitled-to-refund-of-court-fees-if-disputes-get-settled-out-of-court-after-commencement-of-trial-rules-madras-high-court/article71653425.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-01T18:56:12.000Z",
+          "snippet": "Justice P.B. Balaji refuses to follow Supreme Court’s 2017 verdict in M.C. Subramaniam’s case and instead follows the top court’s 2010 judgment in Afcons Infrastructure case"
+        }
+      ],
+      "static": [
+        {
+          "topic": "Supreme Court, High Courts and the Doctrine of Precedent",
+          "paper": "GS-II",
+          "syllabusNode": "Polity — Judiciary: structure, jurisdiction and judicial review",
+          "whatIsIt": "The Supreme Court (Article 124) is the apex court and guardian of the Constitution; High Courts (Article 214) are the highest courts at the state level. Article 141 makes the law declared by the Supreme Court binding on all courts within India, which is the constitutional basis of the doctrine of precedent.",
+          "background": "The collegium system evolved through the Three Judges Cases (1981, 1993, 1998). Kesavananda Bharati (1973) established the basic-structure doctrine. PILs expanded access to justice from the late 1970s. Article 32 (Supreme Court) and Article 226 (High Courts) provide writ jurisdiction. Precedent operates through ratio decidendi, which binds lower courts, while obiter dicta is persuasive only; a judgment delivered per incuriam or on a misreading of law may be distinguished.",
+          "geography": null,
+          "socioEconomic": "Court fees are a state revenue source and a cost barrier to litigation; refund rules influence whether parties choose settlement or continue to trial, affecting pendency in an already overburdened judiciary.",
+          "whyInNews": "The Madras High Court refused to follow the Supreme Court's 2017 ruling in M.C. Subramaniam's case on refund of court fees after out-of-court settlement, and instead followed the 2010 Afcons Infrastructure judgment.",
+          "wayForward": "An authoritative Supreme Court bench reference would resolve the divergence; until then, litigants face uncertainty on refunds depending on the forum and the stage of the suit.",
+          "keyTerms": [
+            "Article 141",
+            "Ratio decidendi",
+            "Per incuriam",
+            "Judicial discipline",
+            "Article 226",
+            "Basic structure"
+          ],
+          "prelimsPointers": [
+            "Original jurisdiction of the Supreme Court over Centre–state and inter-state disputes lies under Article 131.",
+            "Advisory jurisdiction of the Supreme Court is under Article 143.",
+            "Article 141: law declared by the Supreme Court is binding on all courts in India."
+          ],
+          "mainsAngle": "Examine how High Courts reconcile binding Supreme Court precedent with their own reasoning, and assess the implications of inter-court divergence for certainty of law and access to justice."
+        },
+        {
+          "topic": "Alternative Dispute Resolution and Court Fee Refunds",
+          "paper": "GS-II",
+          "syllabusNode": "Polity — Judiciary: dispute resolution, ADR and access to justice",
+          "whatIsIt": "Alternative Dispute Resolution covers arbitration, conciliation, mediation, judicial settlement and Lok Adalat. Section 89 of the Code of Civil Procedure, inserted by the CPC (Amendment) Act, 1999 (effective 2002), allows a court to refer a dispute to one of these modes where it appears elements of settlement exist.",
+          "background": "The Legal Services Authorities Act, 1987 institutionalised Lok Adalats and permanent Lok Adalats; awards of a Lok Adalat are deemed to be decrees of a civil court and are final, with court fee paid in the matter refunded. The Afcons Infrastructure judgment (2010) clarified the scope of Section 89 CPC and the circumstances in which reference to ADR is appropriate. Refund of court fee is governed by the Court Fees Act, 1870 read with the CPC and the Legal Services Authorities Act.",
+          "geography": null,
+          "socioEconomic": "Refund of court fee is an incentive design question: it encourages early settlement and reduces pendency, but the state forgoes revenue and has already borne adjudication costs once trial begins.",
+          "whyInNews": "The Madras High Court's ruling turns on whether a refund is available when parties settle privately after trial has commenced, distinguishing settlement through a court-referred ADR process from a purely out-of-court compromise.",
+          "wayForward": "Clearer statutory prescription on stage-wise refund of court fees would reduce litigation over refunds and give litigants predictable incentives to settle early.",
+          "keyTerms": [
+            "Section 89 CPC",
+            "Lok Adalat",
+            "Legal Services Authorities Act, 1987",
+            "Court Fees Act, 1870",
+            "Mediation",
+            "Compromise decree"
+          ],
+          "prelimsPointers": [
+            "Section 89 CPC was inserted by the CPC (Amendment) Act, 1999 and came into force in 2002.",
+            "Lok Adalat awards are deemed decrees of a civil court and are not appealable.",
+            "The Legal Services Authorities Act, 1987 provides for refund of court fee where a matter is settled before a Lok Adalat."
+          ],
+          "mainsAngle": "Discuss whether court-fee refund policy should be used as a deliberate instrument to promote early settlement, and how such policy interacts with the constitutional goal of access to justice."
+        }
+      ],
+      "prelims": [
+        "Madras High Court: no refund of court fees where a dispute is settled out of court after commencement of trial.",
+        "Justice P.B. Balaji declined to follow the Supreme Court's 2017 judgment in M.C. Subramaniam's case and followed the 2010 Afcons Infrastructure judgment instead.",
+        "Article 141 of the Constitution makes the law declared by the Supreme Court binding on all courts in India.",
+        "Section 89 of the CPC (inserted by the CPC Amendment Act, 1999) provides for reference of disputes to arbitration, conciliation, mediation, judicial settlement or Lok Adalat."
+      ],
+      "mainsQuestion": "The binding character of Supreme Court precedent under Article 141 is central to certainty in law, yet High Courts occasionally decline to follow it. Examine this tension in the light of the Madras High Court's recent ruling on refund of court fees after out-of-court settlement, and suggest how such divergences should be resolved.",
+      "tags": [
+        "Judiciary",
+        "Court Fees",
+        "Precedent",
+        "ADR",
+        "Madras High Court"
+      ],
+      "readMinutes": 5
+    }
+  ],
+  "onThisDay": [
+    {
+      "year": "1917",
+      "title": "Balfour Declaration",
+      "description": "The Balfour Declaration proclaimed British support for a \"national home for the Jewish people\" in Palestine, with safeguards for non-Jewish communities. It became a foundational document in the Israel-Palestine conflict and Middle East geopolitics.",
+      "category": "event",
+      "upscLink": "World History: Middle East, mandate system, Israel-Palestine issue"
+    },
+    {
+      "year": "1917",
+      "title": "Military Revolutionary Committee of the Petrograd Soviet holds first meeting",
+      "description": "The Military Revolutionary Committee of the Petrograd Soviet, which directed the October Revolution, held its first meeting. This body helped orchestrate the Bolshevik seizure of power in Russia.",
+      "category": "event",
+      "upscLink": "World History: Russian Revolution, rise of communism"
+    },
+    {
+      "year": "1956",
+      "title": "Suez Crisis: Israel occupies the Gaza Strip",
+      "description": "During the Suez Crisis, Israel occupied the Gaza Strip. The crisis pitted Egypt against Britain, France, and Israel, and became a turning point in Cold War Middle East politics and decolonization.",
+      "category": "event",
+      "upscLink": "World History/IR: Cold War, decolonization, Middle East conflict"
+    },
+    {
+      "year": "1988",
+      "title": "Morris worm launched",
+      "description": "The Morris worm, launched from MIT, became the first Internet-distributed computer worm to gain major mainstream attention. It infected thousands of computers and highlighted early cybersecurity vulnerabilities.",
+      "category": "event",
+      "upscLink": "Science & Tech: cybersecurity, computer worms"
+    },
+    {
+      "year": "2000",
+      "title": "Expedition 1 arrives at the International Space Station",
+      "description": "Expedition 1 arrived at the International Space Station, beginning the first long-duration stay aboard. Since then, the ISS has maintained an uninterrupted continuous human presence in space.",
+      "category": "event",
+      "upscLink": "Science & Tech: space exploration, international cooperation"
+    }
+  ]
+}
