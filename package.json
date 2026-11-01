@@ -4,6 +4,7 @@
   "description": "A daily, AI-curated current-affairs newspaper that stitches stories across trusted sources and links them to the UPSC static syllabus.",
   "type": "module",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

@@ -188,4 +188,23 @@ test/               # unit tests (node --test via tsx)
 - `/editions/<date>/` — a specific edition
 - `/archive/` — every edition
 
+---
+
+## License
+
+Open source under the [MIT License](LICENSE) — free to use, modify and share.
+
+## Contributing
+
+Contributions are welcome, especially from fellow aspirants:
+
+- **Add a trusted source** — append to `SOURCES` in [`config/sources.ts`](config/sources.ts)
+  (prefer a native RSS/Atom URL).
+- **Improve the static linking** — add or refine a knowledge card in
+  [`config/syllabus.ts`](config/syllabus.ts).
+- **Polish the paper** — the newsprint design system lives in `src/styles/global.css`.
+
+Fork, make your change, then run `npm test`, `npm run check` and `npm run build` before opening a
+pull request. Bug reports and source suggestions via Issues are just as welcome.
+
 Not affiliated with UPSC. Built for daily revision.
