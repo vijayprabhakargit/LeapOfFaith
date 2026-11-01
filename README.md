@@ -145,11 +145,11 @@ Add these repository **secrets** (Settings → Secrets → Actions):
 | `CLOUDFLARE_API_TOKEN` | Pages deploy token |
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account id |
 
-Create a Cloudflare Pages project named **`the-daily-brief`** (Direct Upload) once, then the workflow
+Create a Cloudflare Pages project named **`leap-of-faith`** (Direct Upload) once, then the workflow
 keeps it updated. You can also trigger a run manually from the Actions tab, optionally for a past date.
-(The Pages project name is just the deploy target; the site's public brand is
-**Leap of Faith — The Daily Brief**. To use a different project name, update it in `npm run deploy`
-and the `wrangler-action` step in the workflow.)
+(The Pages project name is the deploy target used by `npm run deploy` and the `wrangler-action` step;
+the site's public brand is **Leap of Faith — The Daily Brief**. To use a different project name,
+update it in both places.)
 
 To run it on your own machine instead, schedule `npm run generate; npm run build` with Windows Task
 Scheduler and open `dist/index.html`.

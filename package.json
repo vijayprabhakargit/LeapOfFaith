@@ -14,7 +14,7 @@
     "generate:day": "tsx scripts/generate.ts --day",
     "generate:dry": "tsx scripts/generate.ts --dry-run",
     "test": "node --import tsx --test test/format.test.ts test/syllabus.test.ts test/sources.test.ts test/enrich.test.ts test/llm.test.ts test/editions.test.ts",
-    "deploy": "wrangler pages deploy dist --project-name the-daily-brief"
+    "deploy": "wrangler pages deploy dist --project-name leap-of-faith"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.11",
