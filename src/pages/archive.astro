@@ -75,7 +75,7 @@ const yearGroups = years.map((year) => ({
                     ))}
                     {month.cells.map((cell) =>
                       cell === null ? (
-                        <span class="archive-calendar-cell empty" />
+                        <span class="archive-calendar-blank" />
                       ) : cell.edition ? (
                         <a
                           class="archive-calendar-cell active"

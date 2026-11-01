@@ -1063,6 +1063,7 @@ footer.site a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
   gap: 16px;
+  align-items: start;
 }
 
 .archive-month-block {
@@ -1086,6 +1087,7 @@ footer.site a {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 3px;
+  align-content: start;
 }
 
 .archive-calendar-day-header {
@@ -1148,7 +1150,8 @@ footer.site a {
   opacity: 0.5;
 }
 
-.archive-calendar-cell.empty {
+.archive-calendar-blank {
+  height: 30px;
   visibility: hidden;
 }
 
