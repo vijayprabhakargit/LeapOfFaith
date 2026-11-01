@@ -27,6 +27,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://leap-of-fai
     <meta property="og:type" content="website" />
     <link rel="alternate" type="application/rss+xml" title="The Daily Brief" href="/rss.xml" />
     <link rel="alternate" type="application/json" title="The Daily Brief (JSON)" href="/editions/latest.json" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -61,26 +63,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://leap-of-fai
           </div>
         </div>
         <div class="masthead-flag">
-          <svg class="flag-cat" viewBox="0 0 48 38" aria-hidden="true" focusable="false">
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M17 14l-2-7 7 4" />
-              <path d="M31 14l2-7-7 4" />
-              <path d="M15 15a9 9 0 0 1 18 0" />
-              <circle cx="21" cy="12" r="1.4" fill="currentColor" stroke="none" />
-              <circle cx="27" cy="12" r="1.4" fill="currentColor" stroke="none" />
-              <path d="M24 14v1.4" />
-              <rect x="5" y="16" width="38" height="19" rx="2" />
-              <path d="M24 16v19" />
-              <path d="M9 21h11M9 25h11M9 29h11" />
-              <path d="M27 21h12M27 25h12" />
-            </g>
-          </svg>
+          <img class="flag-cat" src="/favicon.svg" alt="" width="64" height="64" />
           <a href="/" class="flag-name">Leap of <span>Faith</span></a>
         </div>
         <div class="masthead-strap">

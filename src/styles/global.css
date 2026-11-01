@@ -135,10 +135,10 @@ h4 {
 }
 
 .flag-cat {
-  width: clamp(28px, 5vw, 46px);
+  width: clamp(40px, 7vw, 66px);
   height: auto;
-  color: var(--ink);
   flex: none;
+  filter: drop-shadow(0 2px 1px rgba(60, 40, 0, 0.18));
 }
 
 .flag-name {
