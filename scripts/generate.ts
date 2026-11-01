@@ -30,7 +30,7 @@ function loadDotEnv(path: string) {
 import type { Edition, Story } from "../src/lib/types";
 import { ENABLED_SOURCES, GOOGLE_NEWS_LOCALES } from "../config/sources";
 import { fetchFeeds, fetchGoogleNewsArticles } from "./lib/fetchFeeds";
-import { clusterArticles, enrichStory, buildHeuristicStories, selectCandidates, assignSignals, type ClusterSpec } from "./lib/enrich";
+import { clusterArticles, enrichStory, buildHeuristicStories, selectCandidates, assignSignals, selectExtras, type ClusterSpec } from "./lib/enrich";
 import { fetchOnThisDay } from "./lib/onthisday";
 import { llmConfigured, describeLlm } from "./lib/llm";
 
@@ -154,6 +154,12 @@ async function main() {
   const onThisDay = await fetchOnThisDay(new Date(`${date}T06:00:00+05:30`), canLlm);
   console.log(`   ${onThisDay.length} entries`);
 
+  // Extras: everything that did not become a story — a safety net so nothing
+  // important is missed.
+  const usedLinks = new Set(stories.flatMap((s) => s.articles.map((a) => a.link)));
+  const extras = selectExtras(articles, usedLinks, priorityOf, 30);
+  console.log(`   ${extras.length} extra articles for the reading list`);
+
   // 5. Compose + write -------------------------------------------------------
   const edition: Edition = {
     date,
@@ -164,6 +170,7 @@ async function main() {
     brief,
     stories,
     onThisDay,
+    extras,
   };
 
   const outDir = join(root, "src", "content", "editions");

@@ -4,6 +4,7 @@ import { formatDateLong } from "../lib/format";
 import Controls from "./Controls.astro";
 import StoryCard from "./StoryCard.astro";
 import OnThisDay from "./OnThisDay.astro";
+import Extras from "./Extras.astro";
 
 interface Props {
   edition: Edition;
@@ -55,4 +56,5 @@ const stories = edition.stories;
     No stories match that. Try another section, or clear the search.
   </p>
   <OnThisDay items={edition.onThisDay} date={edition.date} />
+  <Extras items={edition.extras ?? []} />
 </div>

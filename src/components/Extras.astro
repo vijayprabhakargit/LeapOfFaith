@@ -1,0 +1,48 @@
+---
+import type { Article } from "../lib/types";
+import { relTime } from "../lib/format";
+
+interface Props {
+  items: Article[];
+}
+const { items } = Astro.props;
+---
+{
+  items.length > 0 && (
+    <section class="extras" id="extras">
+      <div class="section-head">
+        <h2>Extras</h2>
+        <span class="sub">
+          More from the last 24 hours — a quick skim so nothing important slips by ·{" "}
+          <a
+            class="extras-ext"
+            href="https://news.google.com/?hl=en-IN&gl=IN&ceid=IN:en"
+            target="_blank"
+            rel="noopener noreferrer">Top stories on Google News ›</a
+          >
+        </span>
+      </div>
+      <ul class="extras-list">
+        {items.map((a) => (
+          <li class="extras-item">
+            <span class="ex-src">{a.source}</span>
+            <a class="ex-title" href={a.link} target="_blank" rel="noopener noreferrer">
+              {a.title}
+            </a>
+            <span class="ex-time">{relTime(a.publishedAt)}</span>
+            <a
+              class="gs gs-sm"
+              href={`https://www.google.com/search?q=${encodeURIComponent(a.title)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Search this headline on Google"
+              aria-label="Search this headline on Google"
+            >
+              <span>G</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}

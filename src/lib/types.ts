@@ -88,4 +88,7 @@ export interface Edition {
   brief: string[];
   stories: Story[];
   onThisDay: OnThisDayItem[];
+  // Articles that did not make it into a story — a safety net so nothing
+  // important is missed. Optional for backward compatibility.
+  extras?: Article[];
 }

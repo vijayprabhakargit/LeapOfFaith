@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { slugify, sanitizeArticleIds, buildHeuristicStories, outletFamily, selectCandidates, assignSignals } from "../scripts/lib/enrich";
+import { slugify, sanitizeArticleIds, buildHeuristicStories, outletFamily, selectCandidates, assignSignals, selectExtras } from "../scripts/lib/enrich";
 import type { Article } from "../src/lib/types";
 
 function makeArticle(overrides: Partial<Article> = {}): Article {
@@ -126,4 +126,29 @@ test("assignSignals marks any importance-5 story as must-read", () => {
   const base = buildHeuristicStories([makeArticle(), makeArticle({ id: "b", title: "B" })]);
   const stories = assignSignals([{ ...base[0], importance: 4 }, { ...base[1], importance: 5 }]);
   assert.equal(stories[1].signal, "must-read");
+});
+
+test("selectExtras skips used links and collapses duplicate titles", () => {
+  const articles = [
+    makeArticle({ id: "1", title: "Big story", link: "https://e.com/1", sourceId: "the-hindu" }),
+    makeArticle({ id: "2", title: "Big story", link: "https://e.com/2", sourceId: "the-print" }),
+    makeArticle({ id: "3", title: "Another angle", link: "https://e.com/3", sourceId: "pib" }),
+    makeArticle({ id: "4", title: "Used elsewhere", link: "https://e.com/used", sourceId: "pib" }),
+  ];
+  const priority = new Map([
+    ["the-hindu", 1],
+    ["the-print", 2],
+    ["pib", 1],
+  ]);
+  const extras = selectExtras(articles, new Set(["https://e.com/used"]), priority, 10);
+  assert.ok(extras.every((a) => a.link !== "https://e.com/used"));
+  assert.equal(extras.filter((a) => a.title === "Big story").length, 1);
+});
+
+test("selectExtras respects the limit", () => {
+  const articles = Array.from({ length: 40 }, (_, i) =>
+    makeArticle({ id: `a${i}`, title: `Headline ${i}`, link: `https://e.com/${i}` }),
+  );
+  const priority = new Map([["the-hindu", 1]]);
+  assert.equal(selectExtras(articles, new Set(), priority, 5).length, 5);
 });

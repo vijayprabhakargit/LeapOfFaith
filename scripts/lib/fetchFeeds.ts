@@ -59,7 +59,20 @@ function snippet(text: string): string {
 
 function toArticle(source: Source, item: any): Article | null {
   const link: string = item.link || item.guid || "";
-  const title: string = decodeEntities(item.title || "");
+  let title: string = decodeEntities(item.title || "");
+  let articleSource = source.name;
+  // Google-News items are titled "Headline - Outlet"; split so we attribute the
+  // real outlet instead of the feed wrapper.
+  if (source.viaGoogle) {
+    const sep = title.lastIndexOf(" - ");
+    if (sep > 0) {
+      const outlet = title.slice(sep + 3).trim();
+      if (outlet) {
+        articleSource = outlet;
+        title = title.slice(0, sep).trim();
+      }
+    }
+  }
   if (!link || !title) return null;
   const dateStr = item.isoDate || item.pubDate || item.pubdate || "";
   const publishedAt = dateStr && !Number.isNaN(Date.parse(dateStr)) ? new Date(dateStr).toISOString() : new Date().toISOString();
@@ -67,7 +80,7 @@ function toArticle(source: Source, item: any): Article | null {
     id: `${source.id}:${Buffer.from(link).toString("base64url").slice(0, 24)}`,
     title,
     link,
-    source: source.name,
+    source: articleSource,
     sourceId: source.id,
     region: source.region,
     categories: source.categories,

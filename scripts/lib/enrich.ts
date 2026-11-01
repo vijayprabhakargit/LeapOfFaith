@@ -77,6 +77,34 @@ export function assignSignals(stories: Story[]): Story[] {
   }));
 }
 
+// Articles that did not become a story, ranked by source priority then recency —
+// the "Extras" safety net. De-duplicated by normalised title.
+export function selectExtras(
+  all: Article[],
+  usedLinks: Set<string>,
+  priorityOf: Map<string, number>,
+  limit = 30,
+): Article[] {
+  const seen = new Set<string>();
+  const out: Article[] = [];
+  const ranked = all
+    .filter((a) => !usedLinks.has(a.link))
+    .sort((x, y) => {
+      const px = priorityOf.get(x.sourceId) ?? 3;
+      const py = priorityOf.get(y.sourceId) ?? 3;
+      if (px !== py) return px - py;
+      return new Date(y.publishedAt).getTime() - new Date(x.publishedAt).getTime();
+    });
+  for (const a of ranked) {
+    const key = a.title.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().slice(0, 70);
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    out.push(a);
+    if (out.length >= limit) break;
+  }
+  return out;
+}
+
 function indexArticles(articles: Article[]): string {
   return articles
     .map(
