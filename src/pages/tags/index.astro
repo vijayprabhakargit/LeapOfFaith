@@ -71,6 +71,7 @@ const maxAll = Math.max(1, ...tags.map((t) => stories.filter((s) => s.tags.inclu
       <div class="tag-selected" id="tag-selected" hidden></div>
 
       <div class="tag-cloud-wrap" id="tag-cloud-wrap">
+        <p class="tag-cloud-note" id="tag-cloud-note" hidden></p>
         <div class="tag-cloud" id="tag-cloud">
           {
             tags.map((t) => (
@@ -109,6 +110,7 @@ const maxAll = Math.max(1, ...tags.map((t) => stories.filter((s) => s.tags.inclu
 
     const cloudWrap = document.getElementById("tag-cloud-wrap");
     const cloud = document.getElementById("tag-cloud");
+    const cloudNote = document.getElementById("tag-cloud-note");
     const moreEl = document.getElementById("tag-more") as HTMLButtonElement | null;
     const rangeEl = document.getElementById("tag-range") as HTMLSelectElement | null;
     const customEl = document.getElementById("tag-custom");
@@ -152,9 +154,6 @@ const maxAll = Math.max(1, ...tags.map((t) => stories.filter((s) => s.tags.inclu
       return new Date(`${iso}T06:00:00+05:30`).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
     }
 
-    function countTag(slug: string, from: string | null, to: string | null) {
-      return stories.filter((s) => inRange(s.date, from, to) && s.tags.includes(slug)).length;
-    }
     function matching() {
       const { from, to } = bounds();
       const sel = [...selected];
@@ -165,17 +164,26 @@ const maxAll = Math.max(1, ...tags.map((t) => stories.filter((s) => s.tags.inclu
 
     function renderCloud() {
       if (!cloud) return;
-      const { from, to } = bounds();
       const q = (searchEl?.value || "").trim().toLowerCase();
+      // Faceted cloud: show only tags that appear in the current matches, with
+      // the count = how many results each would give. With no selection the
+      // "matches" are simply every in-range story (unchanged behaviour).
+      const base = matching();
+      const counts = new Map<string, number>();
+      for (const s of base) for (const t of s.tags) counts.set(t, (counts.get(t) || 0) + 1);
       const items = tags
-        .map((t) => ({ ...t, c: countTag(t.slug, from, to) }))
+        .map((t) => ({ ...t, c: counts.get(t.slug) || 0 }))
         .filter((t) => t.c > 0 && (!q || t.label.toLowerCase().includes(q)))
         .sort((a, b) => b.c - a.c || a.label.localeCompare(b.label));
       const max = Math.max(1, ...items.map((i) => i.c));
       const shown = expanded ? items : items.slice(0, SHOW_LIMIT);
 
       cloud.innerHTML = "";
-      if (!items.length) cloud.innerHTML = '<p class="tag-empty">No tags in this range.</p>';
+      if (!items.length) {
+        cloud.innerHTML = `<p class="tag-empty">${
+          selected.size ? "No tags narrow these results." : "No tags in this range."
+        }</p>`;
+      }
       for (const t of shown) {
         const a = document.createElement("a");
         const on = selected.has(t.slug);
@@ -228,6 +236,10 @@ const maxAll = Math.max(1, ...tags.map((t) => stories.filter((s) => s.tags.inclu
       // Collapse (not hide) the cloud once tags are chosen, so you can keep
       // selecting or searching without clearing first.
       if (cloudWrap) cloudWrap.classList.toggle("compact", hasSel);
+      if (cloudNote) {
+        cloudNote.hidden = !hasSel;
+        cloudNote.textContent = "Showing only tags that narrow your current results";
+      }
       if (!hasSel || !listEl) return;
       const list = matching();
       if (activeLabel) activeLabel.textContent = `${list.length} stor${list.length === 1 ? "y" : "ies"}`;

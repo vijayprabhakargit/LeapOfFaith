@@ -1465,6 +1465,19 @@ footer.site a {
   scrollbar-color: var(--rule-strong) transparent;
 }
 
+.tag-cloud-note {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+.tag-cloud-note::before {
+  content: "· ";
+}
+
 .tag-cloud-wrap.compact .tag-cloud::-webkit-scrollbar {
   width: 10px;
 }
