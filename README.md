@@ -128,6 +128,8 @@ Rathee channel — high-noise / opinion for an exam brief.
 
 Notes on feeds:
 
+- The Hindu and The Indian Express carry a `weight: 1.2` so they pull ~20% more candidates; every
+  enabled feed still contributes at least one article (weighted round-robin).
 - Newslaundry / The News Minute / Down To Earth run on Quintype, whose site feed is empty for
   anonymous fetchers — we use their stable S3 Atom mirrors.
 - The Wire, ORF, PRS and Dekoder no longer expose RSS — we use a Google-News `site:` feed instead

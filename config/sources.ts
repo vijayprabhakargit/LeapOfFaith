@@ -20,6 +20,7 @@ export interface Source {
   lean: "official" | "centre" | "left" | "right" | "independent" | "global-north" | "global-south" | "unknown";
   categories: string[];
   priority: number; // 1 = highest signal
+  weight?: number; // relative pull on candidate selection (default 1)
   enabled: boolean;
   viaGoogle?: boolean; // true when the rss URL is a Google-News site: feed
   language?: string; // ISO code when the outlet publishes in a non-English language
@@ -36,6 +37,7 @@ export const SOURCES: Source[] = [
     lean: "centre",
     categories: ["polity", "economy", "ir", "society", "scitech", "environment"],
     priority: 1,
+    weight: 1.2,
     enabled: true,
   },
   {
@@ -47,6 +49,7 @@ export const SOURCES: Source[] = [
     lean: "centre",
     categories: ["ir", "security", "economy"],
     priority: 1,
+    weight: 1.2,
     enabled: true,
   },
   {
@@ -58,6 +61,7 @@ export const SOURCES: Source[] = [
     lean: "centre",
     categories: ["polity", "economy", "ir", "society"],
     priority: 1,
+    weight: 1.2,
     enabled: true,
   },
   {
@@ -69,6 +73,7 @@ export const SOURCES: Source[] = [
     lean: "centre",
     categories: ["polity", "economy", "ir", "society", "scitech"],
     priority: 1,
+    weight: 1.2,
     enabled: true,
   },
   {
@@ -80,6 +85,7 @@ export const SOURCES: Source[] = [
     lean: "centre",
     categories: ["polity", "economy", "ir", "environment", "scitech", "culture", "geography"],
     priority: 1,
+    weight: 1.2,
     enabled: true,
   },
   {

@@ -34,12 +34,16 @@ export function outletFamily(source: string): string {
 
 // Pick a balanced, recent set of candidate articles for the model. Rather than
 // ranking purely by source priority (which lets one paper with many feeds crowd
-// out the rest), we round-robin across outlet families and cap each family.
+// out the rest), we round-robin across outlet families. Every family still
+// contributes at least one article, but higher-`weight` families earn slots
+// ~proportionally more often (weighted round-robin), so e.g. The Hindu / Indian
+// Express get ~1.2x while every other feed is still used.
 export function selectCandidates(
   articles: Article[],
   priorityOf: Map<string, number>,
   limit = 64,
   perFamilyCap = 4,
+  weightOf: Map<string, number> = new Map(),
 ): Article[] {
   const byFamily = new Map<string, Article[]>();
   for (const a of articles) {
@@ -52,17 +56,35 @@ export function selectCandidates(
   for (const list of byFamily.values()) {
     list.sort((x, y) => new Date(y.publishedAt).getTime() - new Date(x.publishedAt).getTime());
   }
-  // Families ordered by the best (lowest) priority number they contain.
   const familyPriority = (list: Article[]) => Math.min(...list.map((a) => priorityOf.get(a.sourceId) ?? 3));
-  const families = [...byFamily.entries()].sort((a, b) => familyPriority(a[1]) - familyPriority(b[1]));
+  const familyWeight = (list: Article[]) => Math.max(...list.map((a) => weightOf.get(a.sourceId) ?? 1));
+  // Families ordered by best priority, then by weight (higher first).
+  const families = [...byFamily.entries()].sort((a, b) => {
+    const pa = familyPriority(a[1]);
+    const pb = familyPriority(b[1]);
+    if (pa !== pb) return pa - pb;
+    return familyWeight(b[1]) - familyWeight(a[1]);
+  });
 
+  const credit = new Map<string, number>();
+  const taken = new Map<string, number>();
   const picked: Article[] = [];
-  for (let round = 0; round < perFamilyCap && picked.length < limit; round++) {
-    for (const [, list] of families) {
-      if (list[round]) {
-        picked.push(list[round]);
-        if (picked.length >= limit) break;
+  let progressed = true;
+  while (picked.length < limit && progressed) {
+    progressed = false;
+    for (const [fam, list] of families) {
+      const w = familyWeight(list);
+      const cap = Math.max(1, Math.round(perFamilyCap * w));
+      credit.set(fam, (credit.get(fam) ?? 0) + w);
+      let n = taken.get(fam) ?? 0;
+      while ((credit.get(fam) ?? 0) >= 1 && n < cap && n < list.length && picked.length < limit) {
+        picked.push(list[n]);
+        n++;
+        credit.set(fam, (credit.get(fam) ?? 0) - 1);
+        progressed = true;
       }
+      taken.set(fam, n);
+      if (picked.length >= limit) break;
     }
   }
   return picked;

@@ -96,9 +96,12 @@ async function main() {
     return;
   }
 
-  // Balanced candidate selection across outlets (avoids one paper dominating).
+  // Balanced candidate selection across outlets (avoids one paper dominating);
+  // The Hindu / Indian Express pull slightly more (weight 1.2) while every feed
+  // still contributes.
   const priorityOf = new Map(ENABLED_SOURCES.map((s) => [s.id, s.priority]));
-  const candidates = selectCandidates(articles, priorityOf, 64, 4);
+  const weightOf = new Map(ENABLED_SOURCES.map((s) => [s.id, s.weight ?? 1]));
+  const candidates = selectCandidates(articles, priorityOf, 64, 4, weightOf);
 
   // 2. Cluster ---------------------------------------------------------------
   let brief: string[] = [];

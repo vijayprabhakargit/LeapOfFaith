@@ -106,6 +106,26 @@ test("selectCandidates respects the overall limit", () => {
   assert.equal(selectCandidates(articles, priority, 5, 4).length, 5);
 });
 
+test("selectCandidates weights favoured families but still uses every feed", () => {
+  const mk = (fam: string, id: string) =>
+    Array.from({ length: 10 }, (_, i) => makeArticle({ id: `${id}${i}`, source: fam, sourceId: id, link: `https://e.com/${id}/${i}` }));
+  const articles = [...mk("The Hindu", "the-hindu"), ...mk("Mint", "livemint"), ...mk("Scroll.in", "scroll")];
+  const priority = new Map([
+    ["the-hindu", 1],
+    ["livemint", 1],
+    ["scroll", 1],
+  ]);
+  const weight = new Map([
+    ["the-hindu", 1.2],
+    ["livemint", 1],
+    ["scroll", 1],
+  ]);
+  const picked = selectCandidates(articles, priority, 10, 4, weight);
+  const count = (s: string) => picked.filter((a) => a.source === s).length;
+  assert.ok(count("The Hindu") > count("Mint"), `Hindu ${count("The Hindu")} should beat Mint ${count("Mint")}`);
+  assert.ok(count("Mint") >= 1 && count("Scroll.in") >= 1, "every feed still contributes");
+});
+
 test("assignSignals guarantees a must-read and tiers the rest", () => {
   const base = buildHeuristicStories([
     makeArticle({ id: "x", title: "Top story" }),
