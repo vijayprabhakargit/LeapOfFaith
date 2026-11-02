@@ -218,6 +218,13 @@ test/               # unit tests (node --test via tsx)
 
 - **PDF edition** — a print-ready A4 page per day (the newsprint `@media print` styles already exist).
 - **Wider regional perspectives** — extend `GOOGLE_NEWS_LOCALES` and add stream-language sources.
+- **Expand the curated source list** — grow `SOURCES` in `config/sources.ts` with more Indian and global
+  outlets, official/primary feeds (PIB, PRS, gazettes, state bulletins), state-level press and sector
+  beats, and tune each source's priority per section.
+- **Tune the curation ranking** — improve candidate selection and story importance: recency weighting, a
+  prominence signal (e.g. Google-News top stories), stronger cross-outlet stitching, and canonicalising /
+  de-duplicating tags (currently free-form model output). Likely touches `scripts/lib/enrich.ts`
+  (`selectCandidates`, the clustering + enrich prompts) and `scripts/generate.ts` (limits, per-family cap).
 - **Revision tools** — export each story's static links + prelims pointers into a spaced-revision list.
 
 ---
