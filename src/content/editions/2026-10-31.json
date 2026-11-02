@@ -303,37 +303,49 @@
   ],
   "extras": [
     {
-      "id": "seed:extra-1",
+      "title": "India and the EU conclude trade negotiations",
+      "date": "2026-10-31T05:00:00.000Z",
+      "articles": [
+        {
+          "id": "seed:x1",
+          "title": "India, EU wrap up trade talks: what's in it",
+          "link": "https://indianexpress.com/section/explained/",
+          "source": "The Indian Express",
+          "sourceId": "indian-express-explained",
+          "region": "india",
+          "categories": ["ir", "economy"],
+          "publishedAt": "2026-10-31T05:00:00.000Z",
+          "snippet": "Tariff concessions and investment chapters form the core of the framework…"
+        },
+        {
+          "id": "seed:x2",
+          "title": "Explained: the India–EU trade pact",
+          "link": "https://theprint.in/",
+          "source": "ThePrint",
+          "sourceId": "the-print",
+          "region": "india",
+          "categories": ["ir"],
+          "publishedAt": "2026-10-31T04:30:00.000Z",
+          "snippet": "A look at what the deal covers and what it leaves out."
+        }
+      ]
+    },
+    {
       "title": "Explained: How India's external debt is financed",
-      "link": "https://indianexpress.com/section/explained/",
-      "source": "The Indian Express",
-      "sourceId": "indian-express-explained",
-      "region": "india",
-      "categories": ["economy"],
-      "publishedAt": "2026-10-31T05:30:00.000Z",
-      "snippet": "A short explainer on external debt composition and repayment."
-    },
-    {
-      "id": "seed:extra-2",
-      "title": "Why the Arctic matters to Indian climate science",
-      "link": "https://www.downtoearth.org.in/",
-      "source": "Down To Earth",
-      "sourceId": "down-to-earth",
-      "region": "global",
-      "categories": ["environment"],
-      "publishedAt": "2026-10-31T03:00:00.000Z",
-      "snippet": "Arctic warming and its downstream effects on the monsoon."
-    },
-    {
-      "id": "seed:extra-3",
-      "title": "Supreme Court to hear plea on tribunal vacancies",
-      "link": "https://theprint.in/",
-      "source": "ThePrint",
-      "sourceId": "the-print",
-      "region": "india",
-      "categories": ["polity"],
-      "publishedAt": "2026-10-31T02:00:00.000Z",
-      "snippet": "The court is expected to examine delays in tribunal appointments."
+      "date": "2026-10-31T03:00:00.000Z",
+      "articles": [
+        {
+          "id": "seed:x3",
+          "title": "Explained: How India's external debt is financed",
+          "link": "https://www.downtoearth.org.in/",
+          "source": "Down To Earth",
+          "sourceId": "down-to-earth",
+          "region": "india",
+          "categories": ["economy"],
+          "publishedAt": "2026-10-31T03:00:00.000Z",
+          "snippet": "A short explainer on external debt composition and repayment."
+        }
+      ]
     }
   ]
 }

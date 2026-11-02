@@ -1,4 +1,4 @@
-import type { Article, Story, StaticLink, Perspective, Region } from "../../src/lib/types";
+import type { Article, Story, StaticLink, Perspective, Region, ExtraItem } from "../../src/lib/types";
 import { CATEGORIES, matchKnowledgeCards, type KnowledgeCard } from "../../config/syllabus";
 import { chatJson, type ChatMessage } from "./llm";
 
@@ -77,32 +77,67 @@ export function assignSignals(stories: Story[]): Story[] {
   }));
 }
 
-// Articles that did not become a story, ranked by source priority then recency —
-// the "Extras" safety net. De-duplicated by normalised title.
-export function selectExtras(
-  all: Article[],
-  usedLinks: Set<string>,
+function normTitle(t: string): string {
+  return t.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().slice(0, 70);
+}
+
+function dedupLinks(arts: Article[]): Article[] {
+  const seen = new Set<string>();
+  return arts.filter((a) => {
+    const k = a.link.replace(/[?#].*$/, "").replace(/\/$/, "");
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+}
+
+function newestISO(arts: Article[]): string {
+  return arts.reduce((m, a) => (a.publishedAt > m ? a.publishedAt : m), arts[0].publishedAt);
+}
+
+// Build the "Extras" reading list. `specs` must be sorted by importance desc.
+// The first `primaryCount` clusters already became full stories; the rest become
+// extras *as clusters* (keeping every source link), then articles that were
+// never clustered are appended as single-article items. Ranked, de-duplicated
+// and capped, so the lowest-value tail is dropped.
+export function buildExtras(
+  specs: ClusterSpec[],
+  candidates: Article[],
+  primaryCount: number,
   priorityOf: Map<string, number>,
   limit = 30,
-): Article[] {
-  const seen = new Set<string>();
-  const out: Article[] = [];
-  const ranked = all
-    .filter((a) => !usedLinks.has(a.link))
-    .sort((x, y) => {
-      const px = priorityOf.get(x.sourceId) ?? 3;
-      const py = priorityOf.get(y.sourceId) ?? 3;
-      if (px !== py) return px - py;
-      return new Date(y.publishedAt).getTime() - new Date(x.publishedAt).getTime();
-    });
-  for (const a of ranked) {
-    const key = a.title.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().slice(0, 70);
-    if (!key || seen.has(key)) continue;
-    seen.add(key);
-    out.push(a);
-    if (out.length >= limit) break;
+): ExtraItem[] {
+  const used = new Set<number>();
+  for (const s of specs) for (const i of s.articleIds) used.add(i);
+
+  const items: ExtraItem[] = [];
+  const seenTitles = new Set<string>();
+  const push = (title: string, arts: Article[]) => {
+    const key = normTitle(title);
+    if (!key || seenTitles.has(key) || !arts.length) return;
+    seenTitles.add(key);
+    items.push({ title, date: newestISO(arts), articles: arts });
+  };
+
+  for (const s of specs.slice(primaryCount)) {
+    push(
+      s.headline,
+      dedupLinks(s.articleIds.map((i) => candidates[i]).filter(Boolean)),
+    );
   }
-  return out;
+
+  const leftovers = candidates
+    .map((a, i) => ({ a, i }))
+    .filter(({ i }) => !used.has(i))
+    .sort((x, y) => {
+      const px = priorityOf.get(x.a.sourceId) ?? 3;
+      const py = priorityOf.get(y.a.sourceId) ?? 3;
+      if (px !== py) return px - py;
+      return new Date(y.a.publishedAt).getTime() - new Date(x.a.publishedAt).getTime();
+    });
+  for (const { a } of leftovers) push(a.title, [a]);
+
+  return items.slice(0, limit);
 }
 
 function indexArticles(articles: Article[]): string {
@@ -121,7 +156,7 @@ You are given raw articles from many feeds published in the last 24 hours. Your 
 2. Produce a "brief": 3-5 short bullet strings capturing the day's most exam-relevant agenda (plain text, no markdown).
 3. For each story give: a crisp headline (max 14 words, neutral, newspaper style), a "kicker" (short section label like "IR · West Asia" or "Polity · Parliament"), a category key, region ("india" or "global"), importance 1-5 (5 = must know for UPSC), an optional countryFocus (a lower-case country key for a story where a single country's own media would add a fresh perspective — e.g. "iran", "us", "china", "russia", "israel", "pakistan", "japan", "france", "uk", "australia"), and the articleIds array (use the bracket index numbers given).
 Rules:
-- Prefer 8 to 14 stories. Ignore pure entertainment/gossip/sports unless policy-relevant.
+- Produce 12 to 24 clusters. The app features the most important ~16 as full stories and lists the rest as a lighter "Extras" reading list, so cluster the tail too rather than dropping it; a single-article cluster is fine when nothing else matches.
 - Weight stories by UPSC relevance: polity, economy, IR, environment, security, science & tech, society, culture, geography, agriculture.
 - Spread importance across the full 1-5 range. Rate at least one story 5 (a genuine must-read for the exam), several 4, and the rest lower; do not rate everything the same.
 - Build each story from articles by DIFFERENT outlets where possible. When several outlets cover the same event, merge them; do not let one newspaper's many items dominate a story.

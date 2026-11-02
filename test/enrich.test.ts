@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { slugify, sanitizeArticleIds, buildHeuristicStories, outletFamily, selectCandidates, assignSignals, selectExtras } from "../scripts/lib/enrich";
+import { slugify, sanitizeArticleIds, buildHeuristicStories, outletFamily, selectCandidates, assignSignals, buildExtras, type ClusterSpec } from "../scripts/lib/enrich";
 import type { Article } from "../src/lib/types";
 
 function makeArticle(overrides: Partial<Article> = {}): Article {
@@ -128,27 +128,35 @@ test("assignSignals marks any importance-5 story as must-read", () => {
   assert.equal(stories[1].signal, "must-read");
 });
 
-test("selectExtras skips used links and collapses duplicate titles", () => {
-  const articles = [
-    makeArticle({ id: "1", title: "Big story", link: "https://e.com/1", sourceId: "the-hindu" }),
-    makeArticle({ id: "2", title: "Big story", link: "https://e.com/2", sourceId: "the-print" }),
-    makeArticle({ id: "3", title: "Another angle", link: "https://e.com/3", sourceId: "pib" }),
-    makeArticle({ id: "4", title: "Used elsewhere", link: "https://e.com/used", sourceId: "pib" }),
+test("buildExtras turns overflow clusters into multi-source items", () => {
+  const candidates = [
+    makeArticle({ id: "a0", title: "Top story", link: "https://e.com/0", source: "The Hindu", sourceId: "the-hindu" }),
+    makeArticle({ id: "a1", title: "Hormuz mines", link: "https://e.com/1", source: "ThePrint", sourceId: "the-print" }),
+    makeArticle({ id: "a2", title: "Hormuz tankers", link: "https://e.com/2", source: "Reuters", sourceId: "the-wire" }),
+    makeArticle({ id: "a3", title: "Leftover one", link: "https://e.com/3", source: "Mint", sourceId: "livemint" }),
+  ];
+  const specs: ClusterSpec[] = [
+    { headline: "Top story", kicker: "P · x", category: "polity", region: "india", importance: 5, articleIds: [0] },
+    { headline: "Hormuz shipping", kicker: "IR · y", category: "ir", region: "global", importance: 3, articleIds: [1, 2] },
   ];
   const priority = new Map([
     ["the-hindu", 1],
     ["the-print", 2],
-    ["pib", 1],
+    ["the-wire", 3],
+    ["livemint", 2],
   ]);
-  const extras = selectExtras(articles, new Set(["https://e.com/used"]), priority, 10);
-  assert.ok(extras.every((a) => a.link !== "https://e.com/used"));
-  assert.equal(extras.filter((a) => a.title === "Big story").length, 1);
+  const extras = buildExtras(specs, candidates, 1, priority, 30);
+  assert.equal(extras.length, 2);
+  assert.equal(extras[0].title, "Hormuz shipping");
+  assert.equal(extras[0].articles.length, 2, "overflow cluster keeps both sources");
+  assert.equal(extras[1].title, "Leftover one");
+  assert.equal(extras[1].articles.length, 1);
 });
 
-test("selectExtras respects the limit", () => {
-  const articles = Array.from({ length: 40 }, (_, i) =>
+test("buildExtras respects the limit and de-duplicates titles", () => {
+  const candidates = Array.from({ length: 40 }, (_, i) =>
     makeArticle({ id: `a${i}`, title: `Headline ${i}`, link: `https://e.com/${i}` }),
   );
   const priority = new Map([["the-hindu", 1]]);
-  assert.equal(selectExtras(articles, new Set(), priority, 5).length, 5);
+  assert.equal(buildExtras([], candidates, 0, priority, 5).length, 5);
 });

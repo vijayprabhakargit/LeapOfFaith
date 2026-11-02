@@ -79,6 +79,14 @@ export interface OnThisDayItem {
   upscLink?: string;
 }
 
+// A lighter-weight item for the "Extras" reading list. Usually one article,
+// but a cluster of articles covering the same event keeps all its source links.
+export interface ExtraItem {
+  title: string;
+  date: string;
+  articles: Article[];
+}
+
 export interface Edition {
   date: string;
   generatedAt: string;
@@ -88,7 +96,8 @@ export interface Edition {
   brief: string[];
   stories: Story[];
   onThisDay: OnThisDayItem[];
-  // Articles that did not make it into a story — a safety net so nothing
-  // important is missed. Optional for backward compatibility.
-  extras?: Article[];
+  // Lower-priority clusters + leftover articles — a safety net so nothing
+  // important is missed. Older editions stored a flat Article[]; the site
+  // normalises both shapes.
+  extras?: ExtraItem[];
 }

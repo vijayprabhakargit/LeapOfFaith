@@ -30,7 +30,7 @@ function loadDotEnv(path: string) {
 import type { Edition, Story } from "../src/lib/types";
 import { ENABLED_SOURCES, GOOGLE_NEWS_LOCALES } from "../config/sources";
 import { fetchFeeds, fetchGoogleNewsArticles } from "./lib/fetchFeeds";
-import { clusterArticles, enrichStory, buildHeuristicStories, selectCandidates, assignSignals, selectExtras, type ClusterSpec } from "./lib/enrich";
+import { clusterArticles, enrichStory, buildHeuristicStories, selectCandidates, assignSignals, buildExtras, type ClusterSpec } from "./lib/enrich";
 import { fetchOnThisDay } from "./lib/onthisday";
 import { llmConfigured, describeLlm } from "./lib/llm";
 
@@ -116,10 +116,16 @@ async function main() {
   }
 
   // 3. Enrich ----------------------------------------------------------------
+  // Rank clusters by importance; the top slice becomes the full stories, the
+  // rest feed the "Extras" list (as clusters, keeping their source links).
+  const PRIMARY_STORIES = 16;
+  const rankedSpecs = [...specs].sort((a, b) => (b.importance ?? 0) - (a.importance ?? 0));
+
   let stories: Story[] = [];
-  if (specs.length) {
-    console.log("→ Stitching + static-linking each story…");
-    stories = await mapLimit(specs, 3, async (spec) => {
+  if (rankedSpecs.length) {
+    const primary = rankedSpecs.slice(0, PRIMARY_STORIES);
+    console.log(`→ Stitching + static-linking ${primary.length} primary stories of ${rankedSpecs.length} clusters…`);
+    stories = await mapLimit(primary, 3, async (spec) => {
       const storyArticles = spec.articleIds.map((i) => candidates[i]).filter(Boolean);
       // Only look up a regional perspective when the country is one we have a
       // locale for, otherwise the label would not match the outlets returned.
@@ -154,11 +160,10 @@ async function main() {
   const onThisDay = await fetchOnThisDay(new Date(`${date}T06:00:00+05:30`), canLlm);
   console.log(`   ${onThisDay.length} entries`);
 
-  // Extras: everything that did not become a story — a safety net so nothing
-  // important is missed.
-  const usedLinks = new Set(stories.flatMap((s) => s.articles.map((a) => a.link)));
-  const extras = selectExtras(articles, usedLinks, priorityOf, 30);
-  console.log(`   ${extras.length} extra articles for the reading list`);
+  // Extras: lower-priority clusters + leftover articles — the 80/20 tail.
+  const extras = buildExtras(rankedSpecs, candidates, PRIMARY_STORIES, priorityOf, 30);
+  const clustered = extras.filter((e) => e.articles.length > 1).length;
+  console.log(`   ${extras.length} extras (${clustered} multi-source clusters)`);
 
   // 5. Compose + write -------------------------------------------------------
   const edition: Edition = {

@@ -1,28 +1,20 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getAllEditions } from "../../lib/editions";
 import { getTagIndex } from "../../lib/tags";
+import { tagSlug } from "../../lib/format";
 
-const index = getTagIndex();
-const maxAll = Math.max(1, ...index.map((t) => t.count));
+const tags = getTagIndex().map((t) => ({ slug: t.slug, label: t.tag }));
 
-function monthsOf(stories: { date: string }[]) {
-  const months: Record<string, number> = {};
-  for (const s of stories) {
-    const k = s.date.slice(0, 7);
-    months[k] = (months[k] ?? 0) + 1;
+const stories: { date: string; slug: string; headline: string; tags: string[] }[] = [];
+for (const ed of getAllEditions()) {
+  for (const s of ed.stories) {
+    const slugs = [...new Set((s.tags || []).map(tagSlug).filter(Boolean))];
+    if (slugs.length) stories.push({ date: ed.date, slug: s.slug, headline: s.headline, tags: slugs });
   }
-  return months;
 }
 
-// Compact payload embedded in the page; the browser filters it locally.
-const payload = {
-  tags: index.map((t) => ({
-    slug: t.slug,
-    label: t.tag,
-    months: monthsOf(t.stories),
-    stories: t.stories.map((s) => ({ date: s.date, slug: s.slug, headline: s.headline })),
-  })),
-};
+const payload = { tags, stories };
 
 function sizeClass(count: number, max: number): string {
   const r = count / max;
@@ -32,18 +24,19 @@ function sizeClass(count: number, max: number): string {
   if (r > 0.15) return "t2";
   return "t1";
 }
+const maxAll = Math.max(1, ...tags.map((t) => stories.filter((s) => s.tags.includes(t.slug)).length));
 ---
 <BaseLayout title="Tags — Leap of Faith" description="Browse every story by tag across the editions of The Daily Brief.">
   <div class="wrap">
     <div class="archive-page">
       <header class="archive-header">
         <h1 class="archive-heading">Tags</h1>
-        <span class="archive-count">{index.length} tag{index.length === 1 ? "" : "s"}</span>
+        <span class="archive-count">{tags.length} tag{tags.length === 1 ? "" : "s"}</span>
       </header>
       <hr class="archive-rule-thin" />
 
       {
-        index.length === 0 && (
+        tags.length === 0 && (
           <div class="empty">
             <h2>No tags yet</h2>
             <p class="note">Tags appear here once editions are generated.</p>
@@ -66,31 +59,42 @@ function sizeClass(count: number, max: number): string {
           <span class="tag-dash">–</span>
           <input type="date" id="tag-to" class="tag-date" aria-label="To date" />
         </div>
+        <input
+          id="tag-search"
+          class="tag-search"
+          type="search"
+          placeholder="Search tags…"
+          aria-label="Search tags"
+        />
       </div>
 
-      <div class="tag-cloud" id="tag-cloud">
-        {
-          index.map((t) => (
-            <a
-              class:list={["tag-cloud-item", sizeClass(t.count, maxAll)]}
-              href={`?tag=${t.slug}`}
-              data-tag={t.slug}
-              title={`${t.count} stor${t.count === 1 ? "y" : "ies"}`}
-            >
-              {t.tag}
-              <span class="tc-count">{t.count}</span>
-            </a>
-          ))
-        }
+      <div class="tag-selected" id="tag-selected" hidden></div>
+
+      <div class="tag-cloud-wrap" id="tag-cloud-wrap">
+        <div class="tag-cloud" id="tag-cloud">
+          {
+            tags.map((t) => (
+              <a
+                class:list={["tag-cloud-item", sizeClass(stories.filter((s) => s.tags.includes(t.slug)).length, maxAll)]}
+                href={`?tag=${t.slug}`}
+                data-tag={t.slug}
+              >
+                {t.label}
+                <span class="tc-count">{stories.filter((s) => s.tags.includes(t.slug)).length}</span>
+              </a>
+            ))
+          }
+        </div>
+        <button class="tag-more" id="tag-more" type="button" hidden></button>
       </div>
 
       <div class="tag-view" id="tag-view" hidden>
         <div class="tag-active">
           <span class="tag-active-label" id="tag-active-label"></span>
-          <a class="tag-clear" id="tag-clear" href="/tags/">Clear ×</a>
+          <button class="tag-toggle" id="tag-toggle" type="button">Show tags</button>
         </div>
         <ul class="tag-story-list" id="tag-stories"></ul>
-        <p class="tag-empty" id="tag-empty" hidden>No stories in this range.</p>
+        <p class="tag-empty" id="tag-empty" hidden>No stories match all the selected tags in this range.</p>
       </div>
     </div>
   </div>
@@ -99,21 +103,29 @@ function sizeClass(count: number, max: number): string {
 
   <script>
     const dataEl = document.getElementById("tag-data");
-    const data = dataEl ? JSON.parse(dataEl.textContent || '{"tags":[]}') : { tags: [] };
-    const tags = data.tags || [];
+    const data = dataEl ? JSON.parse(dataEl.textContent || '{"tags":[],"stories":[]}') : { tags: [], stories: [] };
+    const tags: { slug: string; label: string }[] = data.tags || [];
+    const stories: { date: string; slug: string; headline: string; tags: string[] }[] = data.stories || [];
+    const SHOW_LIMIT = 36;
 
+    const cloudWrap = document.getElementById("tag-cloud-wrap");
     const cloud = document.getElementById("tag-cloud");
+    const moreEl = document.getElementById("tag-more") as HTMLButtonElement | null;
     const rangeEl = document.getElementById("tag-range") as HTMLSelectElement | null;
     const customEl = document.getElementById("tag-custom");
     const fromEl = document.getElementById("tag-from") as HTMLInputElement | null;
     const toEl = document.getElementById("tag-to") as HTMLInputElement | null;
+    const searchEl = document.getElementById("tag-search") as HTMLInputElement | null;
+    const selectedEl = document.getElementById("tag-selected");
     const viewEl = document.getElementById("tag-view");
     const activeLabel = document.getElementById("tag-active-label");
     const listEl = document.getElementById("tag-stories");
     const emptyEl = document.getElementById("tag-empty");
-    const clearEl = document.getElementById("tag-clear");
+    const toggleEl = document.getElementById("tag-toggle") as HTMLButtonElement | null;
 
-    let selected: string | null = null;
+    const selected = new Set<string>();
+    let expanded = false;
+    let cloudOpen = true;
 
     function bounds() {
       const range = rangeEl?.value || "all";
@@ -123,13 +135,11 @@ function sizeClass(count: number, max: number): string {
       d.setMonth(d.getMonth() - parseInt(range, 10));
       return { from: d.toISOString().slice(0, 10), to: null };
     }
-
     function inRange(date: string, from: string | null, to: string | null) {
       if (from && date < from) return false;
       if (to && date > to) return false;
       return true;
     }
-
     function sizeClass(count: number, max: number) {
       const r = count / max;
       if (r > 0.75) return "t5";
@@ -138,64 +148,109 @@ function sizeClass(count: number, max: number): string {
       if (r > 0.15) return "t2";
       return "t1";
     }
-
     function esc(s: string) {
       return s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c] as string);
     }
     function fmtDate(iso: string) {
-      return new Date(`${iso}T06:00:00+05:30`).toLocaleDateString("en-GB", {
-        day: "2-digit",
-        month: "short",
-        year: "numeric",
-      });
+      return new Date(`${iso}T06:00:00+05:30`).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
     }
 
-    function render() {
+    function countTag(slug: string, from: string | null, to: string | null) {
+      return stories.filter((s) => inRange(s.date, from, to) && s.tags.includes(slug)).length;
+    }
+    function matching() {
+      const { from, to } = bounds();
+      const sel = [...selected];
+      return stories
+        .filter((s) => inRange(s.date, from, to) && sel.every((t) => s.tags.includes(t)))
+        .sort((a, b) => (a.date < b.date ? 1 : -1));
+    }
+
+    function renderCloud() {
       if (!cloud) return;
       const { from, to } = bounds();
-      const visible = tags
-        .map((t: any) => ({ t, c: t.stories.filter((s: any) => inRange(s.date, from, to)).length }))
-        .filter((x: any) => x.c > 0)
-        .sort((a: any, b: any) => b.c - a.c || a.t.label.localeCompare(b.t.label));
-      const max = Math.max(1, ...visible.map((x: any) => x.c));
+      const q = (searchEl?.value || "").trim().toLowerCase();
+      const items = tags
+        .map((t) => ({ ...t, c: countTag(t.slug, from, to) }))
+        .filter((t) => t.c > 0 && (!q || t.label.toLowerCase().includes(q)))
+        .sort((a, b) => b.c - a.c || a.label.localeCompare(b.label));
+      const max = Math.max(1, ...items.map((i) => i.c));
+      const shown = expanded ? items : items.slice(0, SHOW_LIMIT);
 
       cloud.innerHTML = "";
-      if (!visible.length) {
-        cloud.innerHTML = '<p class="tag-empty">No tags in this range.</p>';
-      }
-      for (const { t, c } of visible) {
+      if (!items.length) cloud.innerHTML = '<p class="tag-empty">No tags in this range.</p>';
+      for (const t of shown) {
         const a = document.createElement("a");
-        a.className = `tag-cloud-item ${sizeClass(c, max)}`;
+        const on = selected.has(t.slug);
+        a.className = `tag-cloud-item ${sizeClass(t.c, max)}${on ? " on" : ""}`;
         a.href = `?tag=${encodeURIComponent(t.slug)}`;
         a.dataset.tag = t.slug;
-        a.title = `${c} stor${c === 1 ? "y" : "ies"}`;
-        a.innerHTML = `${esc(t.label)}<span class="tc-count">${c}</span>`;
+        a.title = on ? "Click to remove" : `${t.c} stor${t.c === 1 ? "y" : "ies"}`;
+        a.innerHTML = `${esc(t.label)}<span class="tc-count">${t.c}</span>`;
         cloud.appendChild(a);
       }
-
-      const tag = tags.find((t: any) => t.slug === selected);
-      if (tag && viewEl && listEl) {
-        viewEl.hidden = false;
-        if (activeLabel) activeLabel.textContent = tag.label;
-        listEl.innerHTML = "";
-        const stories = tag.stories.filter((s: any) => inRange(s.date, from, to));
-        for (const s of stories) {
-          const li = document.createElement("li");
-          li.innerHTML =
-            `<a class="tsl-link" href="/editions/${s.date}/#story-${s.slug}">` +
-            `<span class="tsl-date">${fmtDate(s.date)}</span>` +
-            `<span class="tsl-headline">${esc(s.headline)}</span></a>`;
-          listEl.appendChild(li);
-        }
-        if (emptyEl) emptyEl.hidden = stories.length !== 0;
-      } else if (viewEl) {
-        viewEl.hidden = true;
+      if (moreEl) {
+        const extra = items.length - shown.length;
+        moreEl.hidden = extra <= 0;
+        moreEl.textContent = expanded ? "Show fewer" : `Show ${extra} more tag${extra === 1 ? "" : "s"}`;
       }
+    }
+
+    function renderSelected() {
+      if (!selectedEl) return;
+      selectedEl.innerHTML = "";
+      selectedEl.hidden = selected.size === 0;
+      for (const slug of selected) {
+        const tag = tags.find((t) => t.slug === slug);
+        const chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = "tag-chip";
+        chip.innerHTML = `${esc(tag ? tag.label : slug)} <span aria-hidden="true">×</span>`;
+        chip.addEventListener("click", () => {
+          selected.delete(slug);
+          sync();
+        });
+        selectedEl.appendChild(chip);
+      }
+      if (selected.size) {
+        const clear = document.createElement("button");
+        clear.type = "button";
+        clear.className = "tag-clear";
+        clear.textContent = "Clear all";
+        clear.addEventListener("click", () => {
+          selected.clear();
+          sync();
+        });
+        selectedEl.appendChild(clear);
+      }
+    }
+
+    function renderView() {
+      const hasSel = selected.size > 0;
+      if (viewEl) viewEl.hidden = !hasSel;
+      if (cloudWrap) cloudWrap.hidden = hasSel && !cloudOpen;
+      if (toggleEl) {
+        toggleEl.hidden = !hasSel;
+        toggleEl.textContent = cloudOpen ? "Hide tags" : "Show tags";
+      }
+      if (!hasSel || !listEl) return;
+      const list = matching();
+      if (activeLabel) activeLabel.textContent = `${list.length} stor${list.length === 1 ? "y" : "ies"}`;
+      listEl.innerHTML = "";
+      for (const s of list) {
+        const li = document.createElement("li");
+        li.innerHTML =
+          `<a class="tsl-link" href="/editions/${s.date}/#story-${s.slug}">` +
+          `<span class="tsl-date">${fmtDate(s.date)}</span>` +
+          `<span class="tsl-headline">${esc(s.headline)}</span></a>`;
+        listEl.appendChild(li);
+      }
+      if (emptyEl) emptyEl.hidden = list.length !== 0;
     }
 
     function syncUrl() {
       const p = new URLSearchParams();
-      if (selected) p.set("tag", selected);
+      for (const t of selected) p.append("tag", t);
       const range = rangeEl?.value;
       if (range && range !== "all") p.set("range", range);
       if (range === "custom") {
@@ -206,56 +261,64 @@ function sizeClass(count: number, max: number): string {
       history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
     }
 
-    function readUrl() {
-      const p = new URLSearchParams(location.search);
-      selected = p.get("tag");
-      const r = p.get("range");
-      const f = p.get("from");
-      const t = p.get("to");
-      if (rangeEl && r) rangeEl.value = r;
-      if (fromEl && f) fromEl.value = f;
-      if (toEl && t) toEl.value = t;
-      if (customEl) customEl.hidden = rangeEl?.value !== "custom";
+    function sync() {
+      syncUrl();
+      renderSelected();
+      renderCloud();
+      renderView();
     }
 
+    function focusView() {
+      if (!viewEl || viewEl.hidden) return;
+      requestAnimationFrame(() => viewEl.scrollIntoView({ behavior: "smooth", block: "start" }));
+    }
+
+    // --- events -------------------------------------------------------------
     rangeEl?.addEventListener("change", () => {
       if (customEl) customEl.hidden = rangeEl.value !== "custom";
-      syncUrl();
-      render();
+      sync();
     });
-    fromEl?.addEventListener("change", () => {
-      syncUrl();
-      render();
+    fromEl?.addEventListener("change", sync);
+    toEl?.addEventListener("change", sync);
+    searchEl?.addEventListener("input", renderCloud);
+    moreEl?.addEventListener("click", () => {
+      expanded = !expanded;
+      renderCloud();
     });
-    toEl?.addEventListener("change", () => {
-      syncUrl();
-      render();
+    toggleEl?.addEventListener("click", () => {
+      cloudOpen = !cloudOpen;
+      renderView();
     });
-
     cloud?.addEventListener("click", (e) => {
       const a = (e.target as HTMLElement).closest(".tag-cloud-item") as HTMLElement | null;
       if (!a) return;
       e.preventDefault();
-      selected = a.dataset.tag || null;
-      syncUrl();
-      render();
+      const slug = a.dataset.tag || "";
+      if (!slug) return;
+      if (selected.has(slug)) selected.delete(slug);
+      else selected.add(slug);
+      if (selected.size) cloudOpen = false; // retract the cloud once something is chosen
+      sync();
       focusView();
     });
-    clearEl?.addEventListener("click", (e) => {
-      e.preventDefault();
-      selected = null;
-      syncUrl();
-      render();
-    });
 
-    function focusView() {
-      if (!viewEl || viewEl.hidden) return;
-      requestAnimationFrame(() => {
-        viewEl.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
+    // --- init ---------------------------------------------------------------
+    (function init() {
+      const p = new URLSearchParams(location.search);
+      for (const t of p.getAll("tag")) if (tagSlugExists(t)) selected.add(t);
+      const r = p.get("range");
+      const f = p.get("from");
+      const tt = p.get("to");
+      if (rangeEl && r) rangeEl.value = r;
+      if (fromEl && f) fromEl.value = f;
+      if (toEl && tt) toEl.value = tt;
+      if (customEl) customEl.hidden = rangeEl?.value !== "custom";
+      if (selected.size) cloudOpen = false;
+      sync();
+    })();
+
+    function tagSlugExists(slug: string) {
+      return tags.some((t) => t.slug === slug);
     }
-
-    readUrl();
-    render();
   </script>
 </BaseLayout>
