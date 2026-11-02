@@ -24,7 +24,7 @@ export async function GET(context: APIContext) {
     title: "Leap of Faith — The Daily Brief",
     description:
       "A daily, AI-curated current-affairs newspaper for UPSC — stories stitched across trusted sources, with the static syllabus linked in.",
-    site: context.site ?? "https://leap-of-faith.pages.dev",
+    site: context.site ?? "https://leapoffaith.fyi",
     items,
     customData: "<language>en-in</language>",
   });

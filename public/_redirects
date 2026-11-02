@@ -1,0 +1,3 @@
+# Redirect the www host to the apex domain (Cloudflare Pages _redirects).
+# Only takes effect once www.leapoffaith.fyi is added as a custom domain.
+https://www.leapoffaith.fyi/*  https://leapoffaith.fyi/:splat  301

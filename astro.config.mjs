@@ -5,7 +5,7 @@ import { defineConfig } from "astro/config";
 // Deployed to Cloudflare Pages. Content is generated as JSON files under
 // src/content/editions/ by `npm run generate`.
 export default defineConfig({
-  site: "https://leap-of-faith.pages.dev",
+  site: "https://leapoffaith.fyi",
   output: "static",
   build: {
     inlineStylesheets: "auto",

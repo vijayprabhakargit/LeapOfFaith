@@ -161,6 +161,11 @@ keeps it updated. You can also trigger a run manually from the Actions tab, opti
 the site's public brand is **Leap of Faith — The Daily Brief**. To use a different project name,
 update it in both places.)
 
+The public URL is **https://leapoffaith.fyi** — set as `site` in `astro.config.mjs` so canonical, RSS and
+OpenGraph URLs use it. To attach the domain, open the Pages project → **Custom domains → Set up a custom
+domain** and add `leapoffaith.fyi` (and optionally `www.leapoffaith.fyi`); Cloudflare creates the DNS
+record and TLS certificate automatically, and `public/_redirects` forwards `www` to the apex.
+
 To run it on your own machine instead, schedule `npm run generate; npm run build` with Windows Task
 Scheduler and open `dist/index.html`.
 
