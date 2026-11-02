@@ -30,7 +30,7 @@ function loadDotEnv(path: string) {
 import type { Edition, Story } from "../src/lib/types";
 import { ENABLED_SOURCES, GOOGLE_NEWS_LOCALES } from "../config/sources";
 import { fetchFeeds, fetchGoogleNewsArticles } from "./lib/fetchFeeds";
-import { clusterArticles, enrichStory, buildHeuristicStories, selectCandidates, assignSignals, buildExtras, type ClusterSpec } from "./lib/enrich";
+import { clusterArticles, enrichStory, buildHeuristicStories, selectCandidates, assignSignals, buildExtras, clusterScore, type ClusterSpec } from "./lib/enrich";
 import { fetchOnThisDay } from "./lib/onthisday";
 import { llmConfigured, describeLlm } from "./lib/llm";
 
@@ -116,10 +116,11 @@ async function main() {
   }
 
   // 3. Enrich ----------------------------------------------------------------
-  // Rank clusters by importance; the top slice becomes the full stories, the
-  // rest feed the "Extras" list (as clusters, keeping their source links).
+  // Rank clusters by score (importance + corroboration boost); the top slice
+  // becomes the full stories, the rest feed the "Extras" list (as clusters,
+  // keeping their source links).
   const PRIMARY_STORIES = 16;
-  const rankedSpecs = [...specs].sort((a, b) => (b.importance ?? 0) - (a.importance ?? 0));
+  const rankedSpecs = [...specs].sort((a, b) => clusterScore(b, candidates) - clusterScore(a, candidates));
 
   let stories: Story[] = [];
   if (rankedSpecs.length) {
@@ -151,9 +152,9 @@ async function main() {
     ];
   }
 
-  stories = assignSignals(
-    stories.filter((s): s is Story => Boolean(s)).sort((a, b) => b.importance - a.importance),
-  );
+  // Keep the cluster-score order (the enrich result preserves the primary order);
+  // assignSignals marks the lead story — and any importance-5 story — as must-read.
+  stories = assignSignals(stories.filter((s): s is Story => Boolean(s)));
 
   // 4. On This Day -----------------------------------------------------------
   console.log("→ Building 'On This Day'…");

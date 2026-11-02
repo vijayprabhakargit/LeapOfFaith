@@ -95,6 +95,28 @@ function newestISO(arts: Article[]): string {
   return arts.reduce((m, a) => (a.publishedAt > m ? a.publishedAt : m), arts[0].publishedAt);
 }
 
+// Number of distinct outlet families covering a cluster — independent
+// corroboration, ignoring a single paper's multiple feeds.
+export function distinctOutlets(spec: ClusterSpec, candidates: Article[]): number {
+  const families = new Set<string>();
+  for (const i of spec.articleIds) {
+    const a = candidates[i];
+    if (a) families.add(outletFamily(a.source));
+  }
+  return families.size;
+}
+
+// Rank a cluster: the model's importance, plus a small bounded boost for how
+// many independent outlets covered it (importance stays dominant). Tunable via
+// OUTLET_WEIGHT / OUTLET_CAP env vars.
+export function clusterScore(spec: ClusterSpec, candidates: Article[]): number {
+  const weight = Number(process.env.OUTLET_WEIGHT ?? "0.3");
+  const cap = Number(process.env.OUTLET_CAP ?? "5");
+  const w = Number.isFinite(weight) ? weight : 0.3;
+  const c = Number.isFinite(cap) ? cap : 5;
+  return (spec.importance ?? 0) + w * Math.min(distinctOutlets(spec, candidates), c);
+}
+
 // Build the "Extras" reading list. `specs` must be sorted by importance desc.
 // The first `primaryCount` clusters already became full stories; the rest become
 // extras *as clusters* (keeping every source link), then articles that were

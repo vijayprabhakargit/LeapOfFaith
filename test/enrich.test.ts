@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { slugify, sanitizeArticleIds, buildHeuristicStories, outletFamily, selectCandidates, assignSignals, buildExtras, type ClusterSpec } from "../scripts/lib/enrich";
+import { slugify, sanitizeArticleIds, buildHeuristicStories, outletFamily, selectCandidates, assignSignals, buildExtras, distinctOutlets, clusterScore, type ClusterSpec } from "../scripts/lib/enrich";
 import type { Article } from "../src/lib/types";
 
 function makeArticle(overrides: Partial<Article> = {}): Article {
@@ -159,4 +159,31 @@ test("buildExtras respects the limit and de-duplicates titles", () => {
   );
   const priority = new Map([["the-hindu", 1]]);
   assert.equal(buildExtras([], candidates, 0, priority, 5).length, 5);
+});
+
+test("clusterScore boosts clusters covered by more distinct outlets", () => {
+  const candidates = [
+    makeArticle({ id: "a0", source: "The Hindu", sourceId: "the-hindu", link: "https://e.com/0" }),
+    makeArticle({ id: "a1", source: "ThePrint", sourceId: "the-print", link: "https://e.com/1" }),
+    makeArticle({ id: "a2", source: "Mint", sourceId: "livemint", link: "https://e.com/2" }),
+  ];
+  const solo: ClusterSpec = { headline: "Solo", kicker: "k", category: "polity", region: "india", importance: 3, articleIds: [0] };
+  const wide: ClusterSpec = { headline: "Wide", kicker: "k", category: "ir", region: "global", importance: 3, articleIds: [0, 1, 2] };
+  assert.equal(distinctOutlets(solo, candidates), 1);
+  assert.equal(distinctOutlets(wide, candidates), 3);
+  assert.ok(clusterScore(wide, candidates) > clusterScore(solo, candidates));
+  // importance stays dominant: a thin important story still beats a trivial wide one
+  const thinImportant: ClusterSpec = { headline: "Imp", kicker: "k", category: "polity", region: "india", importance: 5, articleIds: [0] };
+  const wideTrivial: ClusterSpec = { headline: "Triv", kicker: "k", category: "culture", region: "india", importance: 1, articleIds: [0, 1, 2] };
+  assert.ok(clusterScore(thinImportant, candidates) > clusterScore(wideTrivial, candidates));
+});
+
+test("clusterScore counts outlet families, not feeds", () => {
+  const candidates = [
+    makeArticle({ source: "The Hindu", sourceId: "the-hindu", link: "https://e.com/0" }),
+    makeArticle({ source: "The Hindu — World", sourceId: "the-hindu-world", link: "https://e.com/1" }),
+    makeArticle({ source: "The Hindu — Opinion", sourceId: "the-hindu-editorial", link: "https://e.com/2" }),
+  ];
+  const spec: ClusterSpec = { headline: "H", kicker: "k", category: "polity", region: "india", importance: 4, articleIds: [0, 1, 2] };
+  assert.equal(distinctOutlets(spec, candidates), 1, "three Hindu feeds = one family");
 });
