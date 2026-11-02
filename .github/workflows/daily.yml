@@ -7,8 +7,9 @@ on:
   push:
     branches: [main]
   schedule:
-    # 6:00 AM IST == 00:30 UTC
-    - cron: "30 0 * * *"
+    # ~6:00 AM IST. An off-peak minute (:43) reduces the chance GitHub's
+    # best-effort scheduler delays or drops the run (it discourages :00/:30).
+    - cron: "43 0 * * *"
   workflow_dispatch:
     inputs:
       day:

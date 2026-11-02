@@ -137,7 +137,8 @@ revision notes there and they will appear in the brief.
 
 ## Automation (GitHub Actions → Cloudflare Pages)
 
-[`.github/workflows/daily.yml`](.github/workflows/daily.yml) runs **daily at 00:30 UTC = 6:00 AM IST**:
+[`.github/workflows/daily.yml`](.github/workflows/daily.yml) runs **daily at 00:43 UTC (≈6:13 AM IST)** — an
+off-peak minute, so GitHub's best-effort scheduler is less likely to delay or drop it:
 
 1. installs deps, 2. generates the edition, 3. builds the site, 4. commits the new edition back
 (`[skip ci]`), 5. deploys `dist/` to Cloudflare Pages.
