@@ -1413,6 +1413,11 @@ footer.site a {
     gap: 4px;
   }
 
+  .kicker {
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+
   .masthead-flag {
     padding: 12px 0 6px;
   }
@@ -1430,6 +1435,8 @@ footer.site a {
   .chips {
     flex-wrap: nowrap;
     overflow-x: auto;
+    min-width: 0;
+    width: 100%;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     padding-bottom: 3px;
