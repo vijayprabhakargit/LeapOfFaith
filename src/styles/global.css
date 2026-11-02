@@ -1422,8 +1422,23 @@ footer.site a {
     padding: 12px 0 6px;
   }
 
+  .masthead-ears {
+    gap: 8px;
+    align-items: center;
+  }
+
   .masthead-ears .ear {
-    display: none;
+    font-size: 9.5px;
+    letter-spacing: 0.08em;
+  }
+
+  .masthead-actions {
+    gap: 6px;
+  }
+
+  .masthead-actions .btn {
+    padding: 6px 9px;
+    font-size: 12px;
   }
 
   .controls-inner {
