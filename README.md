@@ -230,10 +230,14 @@ test/               # unit tests (node --test via tsx)
 - **Expand the curated source list** — grow `SOURCES` in `config/sources.ts` with more Indian and global
   outlets, official/primary feeds (PIB, PRS, gazettes, state bulletins), state-level press and sector
   beats, and tune each source's priority per section.
-- **Tune the curation ranking** — improve candidate selection and story importance: recency weighting, a
-  prominence signal (e.g. Google-News top stories), stronger cross-outlet stitching, and canonicalising /
-  de-duplicating tags (currently free-form model output). Likely touches `scripts/lib/enrich.ts`
-  (`selectCandidates`, the clustering + enrich prompts) and `scripts/generate.ts` (limits, per-family cap).
+- **Tune the curation ranking** (partly done: two-lane selection + importance×corroboration scoring) —
+  still worth trying recency weighting and a prominence signal, and canonicalising/de-duplicating tags
+  (currently free-form model output). Touches `scripts/lib/enrich.ts` (`shortlistPerSource`,
+  `preselectByHeadlines`, `clusterScore`) and `scripts/generate.ts`.
+- **Coverage audit** — a `--audit` mode that compares each edition against a reference "top stories"
+  list (Google-News India top headlines / PIB) and reports the overlap plus any **missed headlines**,
+  turning "are we covering the primary news?" into a measured number. Pair it with a per-source **yield
+  report** (fetched → candidates → featured stories → extras) to prune sources that never contribute.
 - **Revision tools** — export each story's static links + prelims pointers into a spaced-revision list.
 
 ---
