@@ -115,10 +115,16 @@ Without a key the site still builds — it just falls back to a heuristic, unsti
 
 Curated in [`config/sources.ts`](config/sources.ts) — edit freely. Currently covers:
 
-**Core:** The Hindu (+ World, Opinion), The Indian Express (+ Explained), Newslaundry, The News Minute,
-Dekoder, The Red Mike (Hindi) · **Official:** PIB, PRS, Down To Earth, Mongabay India ·
-**Wider:** Scroll.in, ThePrint, Mint, Business Standard, The Wire, ORF, The Conversation, Nature ·
-**Video:** Dhruv Rathee, India Global Review, Sansad TV.
+**Core factual:** The Hindu (+ World, Opinion), The Indian Express (+ Explained), Mint, Business Standard,
+The Hindu BusinessLine, ThePrint, The Tribune, Deccan Herald, The Telegraph (India) ·
+**Primary/official:** PIB, PRS, RBI, Sansad TV ·
+**Legal/policy:** LiveLaw, Bar & Bench, Supreme Court Observer, Vidhi, CSEP ·
+**Environment/analysis:** Down To Earth, Mongabay India, India Water Portal, Carbon Brief, ORF,
+The Conversation, Nature · **Global wires:** Reuters, BBC World ·
+**Perspective (opinion):** Newslaundry, The News Minute, Scroll.in, The Wire, India Global Review.
+
+Muted by default (kept in the file with `enabled: false`): Dekoder, The Red Mike (Hindi) and the Dhruv
+Rathee channel — high-noise / opinion for an exam brief.
 
 Notes on feeds:
 
