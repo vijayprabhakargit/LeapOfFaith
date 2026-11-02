@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { slugify, sanitizeArticleIds, buildHeuristicStories, outletFamily, selectCandidates, assignSignals, buildExtras, distinctOutlets, clusterScore, type ClusterSpec } from "../scripts/lib/enrich";
+import { slugify, sanitizeArticleIds, buildHeuristicStories, outletFamily, tokenize, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, distinctOutlets, clusterScore, type ClusterSpec } from "../scripts/lib/enrich";
 import type { Article } from "../src/lib/types";
 
 function makeArticle(overrides: Partial<Article> = {}): Article {
@@ -74,56 +74,44 @@ test("outletFamily collapses multi-feed papers to one family", () => {
   assert.equal(outletFamily("Mint"), "Mint");
 });
 
-test("selectCandidates round-robins across outlets and caps each family", () => {
-  const hindu = Array.from({ length: 10 }, (_, i) =>
-    makeArticle({ id: `h${i}`, source: "The Hindu", sourceId: "the-hindu", link: `https://e.com/h${i}`, publishedAt: new Date(Date.UTC(2026, 9, 31, 10, i)).toISOString() }),
+test("shortlistPerSource keeps each source's top slice by feed order", () => {
+  const hindu = Array.from({ length: 20 }, (_, i) =>
+    makeArticle({ id: `h${i}`, source: "The Hindu", sourceId: "the-hindu", link: `https://e.com/h${i}`, feedRank: i }),
   );
-  const ie = Array.from({ length: 2 }, (_, i) =>
-    makeArticle({ id: `ie${i}`, source: "The Indian Express", sourceId: "indian-express", link: `https://e.com/ie${i}` }),
-  );
-  const pib = [makeArticle({ id: "p1", source: "PIB (Press Information Bureau)", sourceId: "pib", link: "https://e.com/p1" })];
+  const mint = [makeArticle({ id: "m0", source: "Mint", sourceId: "livemint", link: "https://e.com/m0", feedRank: 0 })];
+  const out = shortlistPerSource([...hindu, ...mint], 0.2, 3, 10);
+  const h = out.filter((a) => a.source === "The Hindu");
+  assert.equal(h.length, 4, "20% of 20 = 4");
+  assert.deepEqual(h.map((a) => a.feedRank), [0, 1, 2, 3], "kept the top of the feed");
+  assert.equal(out.filter((a) => a.source === "Mint").length, 1);
+});
+
+test("preselectByHeadlines favours corroborated stories and uses every feed", () => {
+  const mk = (id: string, source: string, sourceId: string, title: string) =>
+    makeArticle({ id, source, sourceId, title, link: `https://e.com/${id}`, feedRank: 0 });
+  const pool = [
+    mk("a1", "The Hindu", "the-hindu", "Iran war escalates as tankers hit mines in Strait of Hormuz"),
+    mk("b1", "Reuters", "reuters", "Tankers hit mines in Strait of Hormuz amid Iran war"),
+    mk("c1", "BBC World", "bbc-world", "Iran war: tankers hit mines in Strait of Hormuz"),
+    mk("d1", "Mint", "livemint", "Rupee slips against dollar on oil price worries"),
+    mk("e1", "PIB", "pib", "Cabinet approves new scheme for rural water"),
+  ];
   const priority = new Map([
     ["the-hindu", 1],
-    ["indian-express", 1],
+    ["reuters", 2],
+    ["bbc-world", 3],
+    ["livemint", 2],
     ["pib", 1],
   ]);
-
-  const picked = selectCandidates([...hindu, ...ie, ...pib], priority, 20, 4);
-  const families = picked.map((a) => outletFamily(a.source));
-  const count = (f: string) => families.filter((x) => x === f).length;
-
-  assert.equal(count("The Hindu"), 4, "Hindu capped at 4 despite 10 articles");
-  assert.equal(count("The Indian Express"), 2);
-  assert.equal(count("PIB (Press Information Bureau)"), 1);
-  assert.equal(picked.length, 7);
+  const weight = new Map([["the-hindu", 1.2]]);
+  const out = preselectByHeadlines(pool, priority, weight, 90, 10);
+  const families = new Set(out.map((a) => outletFamily(a.source)));
+  assert.equal(families.size, 5, "every feed contributes");
+  assert.ok(out.some((a) => a.id === "b1") && out.some((a) => a.id === "c1"), "corroborated items kept");
 });
 
-test("selectCandidates respects the overall limit", () => {
-  const articles = Array.from({ length: 30 }, (_, i) =>
-    makeArticle({ id: `a${i}`, source: `Paper ${i}`, sourceId: `p${i}`, link: `https://e.com/${i}` }),
-  );
-  const priority = new Map(articles.map((a) => [a.sourceId, 3]));
-  assert.equal(selectCandidates(articles, priority, 5, 4).length, 5);
-});
-
-test("selectCandidates weights favoured families but still uses every feed", () => {
-  const mk = (fam: string, id: string) =>
-    Array.from({ length: 10 }, (_, i) => makeArticle({ id: `${id}${i}`, source: fam, sourceId: id, link: `https://e.com/${id}/${i}` }));
-  const articles = [...mk("The Hindu", "the-hindu"), ...mk("Mint", "livemint"), ...mk("Scroll.in", "scroll")];
-  const priority = new Map([
-    ["the-hindu", 1],
-    ["livemint", 1],
-    ["scroll", 1],
-  ]);
-  const weight = new Map([
-    ["the-hindu", 1.2],
-    ["livemint", 1],
-    ["scroll", 1],
-  ]);
-  const picked = selectCandidates(articles, priority, 10, 4, weight);
-  const count = (s: string) => picked.filter((a) => a.source === s).length;
-  assert.ok(count("The Hindu") > count("Mint"), `Hindu ${count("The Hindu")} should beat Mint ${count("Mint")}`);
-  assert.ok(count("Mint") >= 1 && count("Scroll.in") >= 1, "every feed still contributes");
+test("tokenize drops stopwords and short words", () => {
+  assert.deepEqual(tokenize("The Iran war and the Strait of Hormuz"), ["iran", "war", "strait", "hormuz"]);
 });
 
 test("assignSignals guarantees a must-read and tiers the rest", () => {

@@ -57,7 +57,7 @@ function snippet(text: string): string {
   return `${cut.slice(0, lastSpace > 200 ? lastSpace : MAX_SNIPPET)}…`;
 }
 
-function toArticle(source: Source, item: any): Article | null {
+function toArticle(source: Source, item: any, rank: number): Article | null {
   const link: string = item.link || item.guid || "";
   let title: string = decodeEntities(item.title || "");
   let articleSource = source.name;
@@ -86,6 +86,7 @@ function toArticle(source: Source, item: any): Article | null {
     categories: source.categories,
     publishedAt,
     snippet: snippet(item.contentSnippet || item.content || item.summary || item["media:description"] || ""),
+    feedRank: rank,
   };
 }
 
@@ -111,12 +112,12 @@ export async function fetchFeeds(
         const xml = await fetchXml(source.rss);
         const feed = await parser.parseString(xml);
         ok.push(source);
-        for (const item of feed.items || []) {
-          const article = toArticle(source, item);
-          if (!article) continue;
-          if (new Date(article.publishedAt).getTime() < cutoff) continue;
+        (feed.items || []).forEach((item: any, idx: number) => {
+          const article = toArticle(source, item, idx);
+          if (!article) return;
+          if (new Date(article.publishedAt).getTime() < cutoff) return;
           articles.push(article);
-        }
+        });
       } catch (err) {
         // Some publishers block datacenter IPs (e.g. indianexpress.com returns
         // 403 to GitHub Actions runners). Fall back to a Google-News site feed
@@ -182,6 +183,7 @@ async function fetchViaGoogle(source: Source, cutoff: number): Promise<Article[]
         categories: source.categories,
         publishedAt,
         snippet: snippet(item.contentSnippet || item.content || ""),
+        feedRank: out.length,
       });
       if (out.length >= 20) break;
     }
@@ -235,6 +237,7 @@ export async function fetchGoogleNewsArticles(
         categories: [],
         publishedAt,
         snippet: snippet(item.contentSnippet || item.content || ""),
+        feedRank: out.length,
       });
       if (out.length >= limit) break;
     }

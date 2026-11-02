@@ -25,6 +25,9 @@ export interface Article {
   categories: string[];
   publishedAt: string;
   snippet: string;
+  // Position in the source's feed (0 = first, i.e. its front page). Used as a
+  // cheap "importance" signal during selection.
+  feedRank?: number;
 }
 
 export interface Perspective {

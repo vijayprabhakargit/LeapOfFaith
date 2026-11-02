@@ -32,19 +32,26 @@ export function outletFamily(source: string): string {
   return source.split(" — ")[0].trim();
 }
 
-// Pick a balanced, recent set of candidate articles for the model. Rather than
-// ranking purely by source priority (which lets one paper with many feeds crowd
-// out the rest), we round-robin across outlet families. Every family still
-// contributes at least one article, but higher-`weight` families earn slots
-// ~proportionally more often (weighted round-robin), so e.g. The Hindu / Indian
-// Express get ~1.2x while every other feed is still used.
-export function selectCandidates(
-  articles: Article[],
-  priorityOf: Map<string, number>,
-  limit = 64,
-  perFamilyCap = 4,
-  weightOf: Map<string, number> = new Map(),
-): Article[] {
+const STOPWORDS = new Set([
+  "the","a","an","and","or","of","to","in","on","for","with","at","by","from","as","is","are","was","were","be","been",
+  "it","its","this","that","these","those","after","over","into","amid","against","new","says","said","will","may",
+  "can","not","but","how","why","what","who","top","india","indian","year","years","than","then","also","more","most",
+  "out","up","off","no","yes","his","her","their","our","your","they","them","he","she","we","you","has","have","had",
+]);
+
+// Significant headline tokens (lowercased; stopwords and short words removed).
+export function tokenize(text: string): string[] {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w.length >= 3 && !STOPWORDS.has(w));
+}
+
+// Lane 1 — per-source shortlist: the top ~20% of each source's fresh articles,
+// by feed order (a publisher's feed ≈ their front page), fallback recency.
+// Headline + snippet only; no deep content.
+export function shortlistPerSource(articles: Article[], pct = 0.2, minPer = 3, maxPer = 10): Article[] {
   const byFamily = new Map<string, Article[]>();
   for (const a of articles) {
     const key = outletFamily(a.source);
@@ -52,40 +59,84 @@ export function selectCandidates(
     list.push(a);
     byFamily.set(key, list);
   }
-  // Newest first within each family.
+  const out: Article[] = [];
   for (const list of byFamily.values()) {
-    list.sort((x, y) => new Date(y.publishedAt).getTime() - new Date(x.publishedAt).getTime());
+    list.sort(
+      (x, y) =>
+        (x.feedRank ?? 999) - (y.feedRank ?? 999) ||
+        new Date(y.publishedAt).getTime() - new Date(x.publishedAt).getTime(),
+    );
+    const k = Math.min(list.length, Math.max(minPer, Math.min(maxPer, Math.ceil(list.length * pct))));
+    out.push(...list.slice(0, k));
   }
-  const familyPriority = (list: Article[]) => Math.min(...list.map((a) => priorityOf.get(a.sourceId) ?? 3));
-  const familyWeight = (list: Article[]) => Math.max(...list.map((a) => weightOf.get(a.sourceId) ?? 1));
-  // Families ordered by best priority, then by weight (higher first).
-  const families = [...byFamily.entries()].sort((a, b) => {
-    const pa = familyPriority(a[1]);
-    const pb = familyPriority(b[1]);
-    if (pa !== pb) return pa - pb;
-    return familyWeight(b[1]) - familyWeight(a[1]);
-  });
+  return out;
+}
 
-  const credit = new Map<string, number>();
-  const taken = new Map<string, number>();
-  const picked: Article[] = [];
-  let progressed = true;
-  while (picked.length < limit && progressed) {
-    progressed = false;
-    for (const [fam, list] of families) {
-      const w = familyWeight(list);
-      const cap = Math.max(1, Math.round(perFamilyCap * w));
-      credit.set(fam, (credit.get(fam) ?? 0) + w);
-      let n = taken.get(fam) ?? 0;
-      while ((credit.get(fam) ?? 0) >= 1 && n < cap && n < list.length && picked.length < limit) {
-        picked.push(list[n]);
-        n++;
-        credit.set(fam, (credit.get(fam) ?? 0) - 1);
-        progressed = true;
+// Lane 2 — smart cross-source preselect at headline level. Favours stories that
+// corroborate across different outlets (shared significant headline tokens),
+// plus source priority/weight and feed order, then guarantees every feed
+// contributes at least one and caps depth per family.
+export function preselectByHeadlines(
+  pool: Article[],
+  priorityOf: Map<string, number>,
+  weightOf: Map<string, number> = new Map(),
+  limit = 90,
+  perFamilyCap = 10,
+): Article[] {
+  const famOf = (a: Article) => outletFamily(a.source);
+  const tokens = new Map<Article, Set<string>>();
+  for (const a of pool) tokens.set(a, new Set(tokenize(a.title)));
+
+  const corroboration = new Map<Article, number>();
+  for (const a of pool) {
+    const ta = tokens.get(a)!;
+    const fa = famOf(a);
+    const families = new Set<string>();
+    for (const b of pool) {
+      if (b === a || famOf(b) === fa) continue;
+      let shared = 0;
+      for (const t of ta) {
+        if (tokens.get(b)!.has(t)) {
+          shared++;
+          if (shared >= 2) break;
+        }
       }
-      taken.set(fam, n);
-      if (picked.length >= limit) break;
+      if (shared >= 2) families.add(famOf(b));
     }
+    corroboration.set(a, families.size);
+  }
+
+  const score = (a: Article) => {
+    const p = priorityOf.get(a.sourceId) ?? 3;
+    const w = weightOf.get(a.sourceId) ?? 1;
+    const rank = Math.min(a.feedRank ?? 999, 20);
+    return (
+      4 - p + (w - 1) + (corroboration.get(a) ?? 0) * 1.5 - rank * 0.02 + new Date(a.publishedAt).getTime() / 1e14
+    );
+  };
+
+  const sorted = [...pool].sort((x, y) => score(y) - score(x));
+  const picked: Article[] = [];
+  const inPicked = new Set<Article>();
+  const famCount = new Map<string, number>();
+  const take = (a: Article) => {
+    picked.push(a);
+    inPicked.add(a);
+    const f = famOf(a);
+    famCount.set(f, (famCount.get(f) ?? 0) + 1);
+  };
+
+  // Breadth first: one article from every family.
+  for (const a of sorted) {
+    if (picked.length >= limit) break;
+    if ((famCount.get(famOf(a)) ?? 0) === 0) take(a);
+  }
+  // Then depth by score, within the per-family cap.
+  for (const a of sorted) {
+    if (picked.length >= limit) break;
+    if (inPicked.has(a)) continue;
+    if ((famCount.get(famOf(a)) ?? 0) >= perFamilyCap) continue;
+    take(a);
   }
   return picked;
 }

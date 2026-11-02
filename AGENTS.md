@@ -45,6 +45,11 @@ Tag browsing is **client-side by design**: `src/pages/tags/index.astro` embeds a
 `src/lib/tags.ts` and filters it in the browser (time range + selected tag live in the URL query). Do
 **not** add a page-per-tag generator — that is what this replaced, and it doesn't scale.
 
+Daily article selection is **two-lane** (`scripts/lib/enrich.ts`, wired in `scripts/generate.ts`):
+`shortlistPerSource` (top ~20% of each source by feed order) → `preselectByHeadlines` (cross-source
+headline corroboration + priority/weight) → LLM clustering. Deep enrichment runs only for the stories
+that are actually featured.
+
 ## Adding a source
 
 Append to `SOURCES` in `config/sources.ts`. Prefer a native RSS/Atom URL. If a publisher has no feed

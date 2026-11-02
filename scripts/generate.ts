@@ -30,7 +30,7 @@ function loadDotEnv(path: string) {
 import type { Edition, Story } from "../src/lib/types";
 import { ENABLED_SOURCES, GOOGLE_NEWS_LOCALES } from "../config/sources";
 import { fetchFeeds, fetchGoogleNewsArticles } from "./lib/fetchFeeds";
-import { clusterArticles, enrichStory, buildHeuristicStories, selectCandidates, assignSignals, buildExtras, clusterScore, type ClusterSpec } from "./lib/enrich";
+import { clusterArticles, enrichStory, buildHeuristicStories, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, clusterScore, type ClusterSpec } from "./lib/enrich";
 import { fetchOnThisDay } from "./lib/onthisday";
 import { llmConfigured, describeLlm } from "./lib/llm";
 
@@ -96,12 +96,15 @@ async function main() {
     return;
   }
 
-  // Balanced candidate selection across outlets (avoids one paper dominating);
-  // The Hindu / Indian Express pull slightly more (weight 1.2) while every feed
-  // still contributes.
+  // Two-lane selection: a per-source shortlist (top ~20% by feed order), then a
+  // smart cross-source preselect at headline level (corroboration + priority +
+  // weight). Only these go to the LLM; deeper diving happens later, and only for
+  // the stories we actually run.
   const priorityOf = new Map(ENABLED_SOURCES.map((s) => [s.id, s.priority]));
   const weightOf = new Map(ENABLED_SOURCES.map((s) => [s.id, s.weight ?? 1]));
-  const candidates = selectCandidates(articles, priorityOf, 64, 4, weightOf);
+  const shortlist = shortlistPerSource(articles, 0.2, 3, 10);
+  const candidates = preselectByHeadlines(shortlist, priorityOf, weightOf, 90, 10);
+  console.log(`   shortlist ${shortlist.length} → ${candidates.length} candidates for clustering`);
 
   // 2. Cluster ---------------------------------------------------------------
   let brief: string[] = [];
