@@ -91,7 +91,6 @@ const maxAll = Math.max(1, ...tags.map((t) => stories.filter((s) => s.tags.inclu
       <div class="tag-view" id="tag-view" hidden>
         <div class="tag-active">
           <span class="tag-active-label" id="tag-active-label"></span>
-          <button class="tag-toggle" id="tag-toggle" type="button">Show tags</button>
         </div>
         <ul class="tag-story-list" id="tag-stories"></ul>
         <p class="tag-empty" id="tag-empty" hidden>No stories match all the selected tags in this range.</p>
@@ -121,11 +120,9 @@ const maxAll = Math.max(1, ...tags.map((t) => stories.filter((s) => s.tags.inclu
     const activeLabel = document.getElementById("tag-active-label");
     const listEl = document.getElementById("tag-stories");
     const emptyEl = document.getElementById("tag-empty");
-    const toggleEl = document.getElementById("tag-toggle") as HTMLButtonElement | null;
 
     const selected = new Set<string>();
     let expanded = false;
-    let cloudOpen = true;
 
     function bounds() {
       const range = rangeEl?.value || "all";
@@ -228,11 +225,9 @@ const maxAll = Math.max(1, ...tags.map((t) => stories.filter((s) => s.tags.inclu
     function renderView() {
       const hasSel = selected.size > 0;
       if (viewEl) viewEl.hidden = !hasSel;
-      if (cloudWrap) cloudWrap.hidden = hasSel && !cloudOpen;
-      if (toggleEl) {
-        toggleEl.hidden = !hasSel;
-        toggleEl.textContent = cloudOpen ? "Hide tags" : "Show tags";
-      }
+      // Collapse (not hide) the cloud once tags are chosen, so you can keep
+      // selecting or searching without clearing first.
+      if (cloudWrap) cloudWrap.classList.toggle("compact", hasSel);
       if (!hasSel || !listEl) return;
       const list = matching();
       if (activeLabel) activeLabel.textContent = `${list.length} stor${list.length === 1 ? "y" : "ies"}`;
@@ -270,7 +265,9 @@ const maxAll = Math.max(1, ...tags.map((t) => stories.filter((s) => s.tags.inclu
 
     function focusView() {
       if (!viewEl || viewEl.hidden) return;
-      requestAnimationFrame(() => viewEl.scrollIntoView({ behavior: "smooth", block: "start" }));
+      // Keep the (now compact) cloud and search in view, with results just below.
+      const target = cloudWrap ?? viewEl;
+      requestAnimationFrame(() => target.scrollIntoView({ behavior: "smooth", block: "start" }));
     }
 
     // --- events -------------------------------------------------------------
@@ -285,10 +282,6 @@ const maxAll = Math.max(1, ...tags.map((t) => stories.filter((s) => s.tags.inclu
       expanded = !expanded;
       renderCloud();
     });
-    toggleEl?.addEventListener("click", () => {
-      cloudOpen = !cloudOpen;
-      renderView();
-    });
     cloud?.addEventListener("click", (e) => {
       const a = (e.target as HTMLElement).closest(".tag-cloud-item") as HTMLElement | null;
       if (!a) return;
@@ -297,7 +290,6 @@ const maxAll = Math.max(1, ...tags.map((t) => stories.filter((s) => s.tags.inclu
       if (!slug) return;
       if (selected.has(slug)) selected.delete(slug);
       else selected.add(slug);
-      if (selected.size) cloudOpen = false; // retract the cloud once something is chosen
       sync();
       focusView();
     });
@@ -313,7 +305,6 @@ const maxAll = Math.max(1, ...tags.map((t) => stories.filter((s) => s.tags.inclu
       if (fromEl && f) fromEl.value = f;
       if (toEl && tt) toEl.value = tt;
       if (customEl) customEl.hidden = rangeEl?.value !== "custom";
-      if (selected.size) cloudOpen = false;
       sync();
     })();
 

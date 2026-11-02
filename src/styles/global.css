@@ -1457,6 +1457,24 @@ footer.site a {
   padding: 0;
 }
 
+/* Retracted (but still usable) cloud once tags are selected. */
+.tag-cloud-wrap.compact .tag-cloud {
+  max-height: 190px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule-strong) transparent;
+}
+
+.tag-cloud-wrap.compact .tag-cloud::-webkit-scrollbar {
+  width: 10px;
+}
+
+.tag-cloud-wrap.compact .tag-cloud::-webkit-scrollbar-thumb {
+  background: var(--rule-strong);
+  border: 3px solid var(--paper);
+  border-radius: 999px;
+}
+
 .tag-cloud-item.on {
   color: var(--accent);
   border-bottom-color: var(--accent);
