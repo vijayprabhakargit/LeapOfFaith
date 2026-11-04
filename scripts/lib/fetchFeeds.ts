@@ -17,19 +17,73 @@ const HEADERS = {
   "Cache-Control": "no-cache",
 };
 
-// Hard, abortable fetch — rss-parser's own timeout does not reliably abort
-// stalled sockets, which is what can hang a build.
-async function fetchXml(url: string): Promise<string> {
+// Abortable fetch with bounded retries. rss-parser's own timeout does not
+// reliably abort stalled sockets, and many feeds return transient 429/5xx under
+// burst — so we hard-timeout, then retry a few times with backoff + jitter
+// (honouring Retry-After). Permanent errors (e.g. 403/404) are not retried.
+const MAX_ATTEMPTS = 3;
+const TRANSIENT_STATUS = new Set([429, 500, 502, 503, 504]);
+
+interface HttpError extends Error {
+  status?: number;
+  retryAfterMs?: number;
+}
+
+function sleep(ms: number) {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
+async function fetchOnce(url: string): Promise<string> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
   try {
     const res = await fetch(url, { headers: HEADERS, signal: controller.signal, redirect: "follow" });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    if (!res.ok) {
+      const err = new Error(`HTTP ${res.status}`) as HttpError;
+      err.status = res.status;
+      const ra = Number(res.headers.get("retry-after"));
+      if (Number.isFinite(ra) && ra > 0) err.retryAfterMs = ra * 1000;
+      throw err;
+    }
     return await res.text();
   } finally {
     clearTimeout(timer);
   }
 }
+
+async function fetchXml(url: string): Promise<string> {
+  let lastErr: unknown;
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      return await fetchOnce(url);
+    } catch (err) {
+      lastErr = err;
+      const e = err as HttpError;
+      const transient = e.status === undefined || TRANSIENT_STATUS.has(e.status);
+      if (!transient || attempt === MAX_ATTEMPTS) break;
+      const backoff = e.retryAfterMs ?? 400 * 2 ** (attempt - 1);
+      await sleep(backoff + Math.random() * 250);
+    }
+  }
+  throw lastErr instanceof Error ? lastErr : new Error(String(lastErr));
+}
+
+// Concurrency-capped async map — fetching 35 feeds at once spikes request bursts
+// and invites 429/503s; a small cap smooths that out.
+async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T) => Promise<R>): Promise<R[]> {
+  const out: R[] = new Array(items.length);
+  let cursor = 0;
+  const workers = Array.from({ length: Math.min(limit, items.length) }, async () => {
+    while (cursor < items.length) {
+      const i = cursor++;
+      out[i] = await fn(items[i]);
+    }
+  });
+  await Promise.all(workers);
+  return out;
+}
+
+const FEED_CONCURRENCY = 6;
 
 function decodeEntities(input: string): string {
   return input
@@ -106,8 +160,7 @@ export async function fetchFeeds(
   const ok: Source[] = [];
   const failed: { source: Source; error: string }[] = [];
 
-  await Promise.all(
-    sources.map(async (source) => {
+  await mapLimit(sources, FEED_CONCURRENCY, async (source) => {
       try {
         const xml = await fetchXml(source.rss);
         const feed = await parser.parseString(xml);
@@ -133,8 +186,7 @@ export async function fetchFeeds(
         }
         failed.push({ source, error: err instanceof Error ? err.message : String(err) });
       }
-    }),
-  );
+  });
 
   // De-duplicate by normalised URL.
   const seen = new Set<string>();

@@ -238,6 +238,13 @@ test/               # unit tests (node --test via tsx)
   list (Google-News India top headlines / PIB) and reports the overlap plus any **missed headlines**,
   turning "are we covering the primary news?" into a measured number. Pair it with a per-source **yield
   report** (fetched → candidates → featured stories → extras) to prune sources that never contribute.
+- **Reliable scheduling** — GitHub's `schedule` is best-effort and can slip by hours. Add an **external
+  trigger** (cron-job.org / Cloudflare Worker Cron) calling the `workflow_dispatch` API at the exact
+  time, keep the GitHub schedule as a backup, add an **`--if-missing`** flag so a duplicate run does not
+  regenerate, and a **staleness check** that re-dispatches if an edition is missing after ~07:00 IST.
+- **Notifications & subscriptions** — RSS already exists (`/rss.xml`); add a **Telegram channel bot** and
+  an **email newsletter** (hosted, e.g. Buttondown/Substack), fired from the workflow right after deploy.
+  Optional **Web Push (PWA)** later if native browser notifications are wanted.
 - **Revision tools** — export each story's static links + prelims pointers into a spaced-revision list.
 
 ---
