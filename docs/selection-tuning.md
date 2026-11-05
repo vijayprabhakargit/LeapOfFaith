@@ -1,82 +1,69 @@
 # Selection tuning: a wider Hindu / Indian Express pull
 
-**Status: evaluated, not implemented.** The idea is to read more of the two
-"core" papers for UPSC — The Hindu and The Indian Express — so a paper-heavy day
-is covered end-to-end, instead of only its top 20% like every other feed.
+**Status: implemented (2026-11-05).** The core papers — The Hindu and The Indian
+Express — are now read much more deeply than the rest, so a paper-heavy day is
+covered more fully.
 
-## The proposal
+## What changed
 
-Today `shortlistPerSource(articles, 0.2, 3, 10)` keeps each **outlet family's**
-top ~20% by feed order (`scripts/lib/enrich.ts`). The idea: keep 20% for all
-feeds, but raise **The Hindu** and **The Indian Express** to ~80%, let their
-articles stitch into stories (possibly single-source ones), and raise the story
-count a little to absorb the extra articles.
+Two selection controls live in `scripts/lib/enrich.ts` as `CORE_PAPERS` (keyed by
+`outletFamily()`), and are applied in both selection lanes in
+`scripts/generate.ts`:
 
-## What we measured (live fetch, 2026-11-05)
-
-35/35 feeds OK, **1,134 articles in the 24 h window**. The two "boost" families:
-
-| Outlet family | Feeds | Articles in window |
+| Knob | Everyone else | Core papers |
 | --- | --- | --- |
-| The Indian Express | 2 (`feed`, `explained`) | 203 |
-| The Hindu | 3 (`national`, `world`, `opinion`) | 115 |
+| Shortlist fraction (Lane 1, `shortlistPerSource`) | 20% | **45%** |
+| Shortlist cap (`maxPer`) | 10 | **60** |
+| Preselect per-family cap (Lane 2, `preselectByHeadlines`) | 10 | **30** |
+| Preselect total (`limit`) | was 90 → now **130** | — |
+| `PRIMARY_STORIES` | was 16 → now **21** | — |
 
-> Note: selection groups by **outlet family**, so "80% for The Hindu" means 80% of
-> all three Hindu feeds combined, not 80% per feed.
+Selection groups by **outlet family**, so "The Hindu" means all three Hindu feeds
+(national + world + opinion) combined, and "The Indian Express" its two feeds.
 
-### The catch: the percentage alone changes nothing
+## Why 45%, not 80%
 
-`preselectByHeadlines(...)` caps the cluster input at **90 candidates total** and
-**10 per family**. Both families already hit the 10-cap at 20%, so raising the
-percentage only pads a shortlist that is then trimmed away:
+Because the shortlist cap (`maxPer`) binds first, the percentage barely matters
+near the top. On a live pull: The Hindu 115 articles/24h → 45% = 52, 80% = 92
+(cap 60); Indian Express 203 → 45% = 91, 80% = 163 (cap 60). Both fill the cap,
+so 45% is the more conservative choice that lands in the same place.
 
-| Scenario | Shortlist | Candidates | Hindu/IE in candidates | Cluster input (tokens) |
-| --- | --- | --- | --- | --- |
-| Current (20%, cap 10) | 170 | 90 | 20 | ~4,870 |
-| 80% only, no other change | 268 | 90 | 20 | ~5,060 |
-| 80% + candidate limit 120, family cap 25 | 268 | 120 | 50 | ~6,410 |
-| 80% + candidate limit 150, family cap 35 | 268 | 150 | 70 | ~7,690 |
-| 80% + candidate limit 180, family cap 45 | 268 | 180 | 90 | ~9,110 |
+**The real levers are the caps**, not the percentage — without raising
+`preselectCap` (and the total `limit`), a bigger percentage changes nothing,
+because preselect would still admit only 10 per family.
 
-To actually get more Hindu/IE articles into stories we must **also** raise the
-candidate limit and the per-family cap, and likely `PRIMARY_STORIES`
-(currently 16, `scripts/generate.ts`).
+## Measured effect (live fetch, 2026-11-05, 1,117 articles)
 
-## Token / load impact
+| | Shortlist | Candidates | Families | Hindu | IE | Hindu+IE | Cluster in-tokens |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Before (90/10) | 166 | 90 | 27 | 10 | 10 | 20 | ~4,825 |
+| After (130 + core) | 259 | 130 | 27 | 30 | 30 | **60** | ~6,937 |
 
-Current per edition (measured from a generated edition + prompt construction):
+All 27 families stay represented, so the extra breath for the core papers is
+**additive**, not taken from other outlets.
 
-| Stage | Input | Output |
-| --- | --- | --- |
-| Clustering (90 candidates) | ~4,900 | ~2,500 |
-| Enrich (16 stories) | ~21,600 | ~27,500 |
-| On This Day | ~1,200 | ~600 |
-| **Total** | | **~58,000 tokens/edition** |
+## Cost
 
-With a realistic boost — candidate limit ~120–150, family cap ~25–35,
-`PRIMARY_STORIES` ~20–22, and average articles/story rising from ~5.1 to ~6.5 —
-the daily total lands around **~75,000–95,000 tokens**, roughly **1.3×–1.7×**
-today. In absolute terms that is **+17k to +37k tokens/day**; at flash-tier
-pricing the marginal cost is small (multiply by your provider's per-token rate).
-Clustering is barely affected (it is capped); the cost is almost entirely in
-enrich, because we write up more stories that each cite more articles.
+Clustering input grows ~44% (~+2,100 tokens) because the candidate pool went
+90 → 130. The bigger term is enrichment: **21 stories instead of 16** (+31%),
+each citing more articles. Overall expect roughly **1.3×–1.5×** the daily tokens
+(~58k → ~75k–90k/edition). Clustering itself is capped, so most of the increase
+is writing up more stories.
 
-## Recommendation
+## Watch-outs
 
-Feasible and cheap in absolute terms, but **not a one-line percentage change** —
-it needs a per-family selector plus higher caps. If we do it:
+- More **single-source stories** (Hindu-only or IE-only). Expected and fine for
+  breadth; the story card should still read well with one perspective.
+- More near-duplicate items between the two core papers; the existing
+  cross-source stitching and `clusterScore` should absorb most of it.
+- Re-check the numbers on a slow news day — 203/115 above is a busy day.
+- Tilting further: raise `preselectCap` (per core paper) and/or `PRIMARY_STORIES`
+  before raising the percentage. Bumping the total `limit` is the main token lever.
 
-- Model it as `BOOST: { family: { pct, maxPer } }` so `shortlistPerSource` keeps
-  per-family controls instead of one global `pct`, and give
-  `preselectByHeadlines` a per-family cap (or a family → cap map) rather than a
-  single `perFamilyCap`.
-- Start modest: candidate limit ~120, family cap ~25, `PRIMARY_STORIES` ~20.
-  That already puts ~50 Hindu/IE articles into the pool for ~6.4k cluster tokens.
-- Expect more **single-source stories** (Hindu-only or IE-only). That is fine for
-  breadth, but the cluster prompt should explicitly allow it and the story card
-  should read well with one perspective.
-- Watch for redundancy: two "core" papers covered end-to-end will surface more
-  near-duplicate items; the existing cross-source stitching and `clusterScore`
-  should absorb most of it, but worth an audit after the first runs.
-- Re-run this measurement on a slow news day too — the 203/115 split above is a
-  busy day and is not guaranteed.
+## Reading the "N articles" stat
+
+The number shown at the top of an edition is **every article fetched in the 24h
+window** (`stats.articles = articles.length` in `scripts/generate.ts`), before any
+shortlisting or preselect. The per-edition `/editions/<date>/articles/` page groups
+that same set by feed, so its total matches the stat. The shortlist/preselect
+counts above are internal and never appear on the site.

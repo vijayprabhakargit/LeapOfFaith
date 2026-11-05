@@ -30,7 +30,7 @@ function loadDotEnv(path: string) {
 import type { Edition, Story, FeedStat } from "../src/lib/types";
 import { ENABLED_SOURCES, GOOGLE_NEWS_LOCALES } from "../config/sources";
 import { fetchFeeds, fetchGoogleNewsArticles } from "./lib/fetchFeeds";
-import { clusterArticles, enrichStory, buildHeuristicStories, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, clusterScore, buildFeedStats, type ClusterSpec } from "./lib/enrich";
+import { clusterArticles, enrichStory, buildHeuristicStories, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, clusterScore, buildFeedStats, CORE_PAPERS, type ClusterSpec } from "./lib/enrich";
 import { fetchOnThisDay } from "./lib/onthisday";
 import { llmConfigured, describeLlm } from "./lib/llm";
 
@@ -96,14 +96,15 @@ async function main() {
     return;
   }
 
-  // Two-lane selection: a per-source shortlist (top ~20% by feed order), then a
-  // smart cross-source preselect at headline level (corroboration + priority +
+  // Two-lane selection: a per-source shortlist (top ~20% by feed order, but
+  // ~45% for the core papers — The Hindu, The Indian Express), then a smart
+  // cross-source preselect at headline level (corroboration + priority +
   // weight). Only these go to the LLM; deeper diving happens later, and only for
-  // the stories we actually run.
+  // the stories we actually run. CORE_PAPERS lifts both lanes for those two.
   const priorityOf = new Map(ENABLED_SOURCES.map((s) => [s.id, s.priority]));
   const weightOf = new Map(ENABLED_SOURCES.map((s) => [s.id, s.weight ?? 1]));
-  const shortlist = shortlistPerSource(articles, 0.2, 3, 10);
-  const candidates = preselectByHeadlines(shortlist, priorityOf, weightOf, 90, 10);
+  const shortlist = shortlistPerSource(articles, 0.2, 3, 10, CORE_PAPERS);
+  const candidates = preselectByHeadlines(shortlist, priorityOf, weightOf, 130, 10, CORE_PAPERS);
   console.log(`   shortlist ${shortlist.length} → ${candidates.length} candidates for clustering`);
 
   // 2. Cluster ---------------------------------------------------------------
@@ -125,7 +126,7 @@ async function main() {
   // Rank clusters by score (importance + corroboration boost); the top slice
   // becomes the full stories, the rest feed the "Extras" list (as clusters,
   // keeping their source links).
-  const PRIMARY_STORIES = 16;
+  const PRIMARY_STORIES = 21;
   const rankedSpecs = [...specs].sort((a, b) => clusterScore(b, candidates) - clusterScore(a, candidates));
 
   let stories: Story[] = [];

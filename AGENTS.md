@@ -55,7 +55,8 @@ Tag browsing is **client-side by design**: `src/pages/tags/index.astro` embeds a
 Daily article selection is **two-lane** (`scripts/lib/enrich.ts`, wired in `scripts/generate.ts`):
 `shortlistPerSource` (top ~20% of each source by feed order) → `preselectByHeadlines` (cross-source
 headline corroboration + priority/weight) → LLM clustering. Deep enrichment runs only for the stories
-that are actually featured.
+that are actually featured. The core papers (The Hindu, The Indian Express) are exceptions: `CORE_PAPERS`
+gives them ~45% of their feed and a higher preselect cap (30 vs 10). See `docs/selection-tuning.md`.
 
 ## Adding a source
 

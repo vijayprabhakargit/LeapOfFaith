@@ -196,6 +196,37 @@ test("clusterScore counts outlet families, not feeds", () => {
   assert.equal(distinctOutlets(spec, candidates), 1, "three Hindu feeds = one family");
 });
 
+test("shortlistPerSource honours per-family boosts", () => {
+  const hindu = Array.from({ length: 100 }, (_, i) =>
+    makeArticle({ id: `h${i}`, source: "The Hindu", sourceId: "the-hindu", link: `https://e.com/h${i}`, feedRank: i }),
+  );
+  const mint = Array.from({ length: 100 }, (_, i) =>
+    makeArticle({ id: `m${i}`, source: "Mint", sourceId: "livemint", link: `https://e.com/m${i}`, feedRank: i }),
+  );
+  const out = shortlistPerSource([...hindu, ...mint], 0.2, 3, 10, {
+    "The Hindu": { pct: 0.45, maxPer: 60, preselectCap: 30 },
+  });
+  assert.equal(out.filter((a) => a.source === "The Hindu").length, 45, "boosted family keeps 45%");
+  assert.equal(out.filter((a) => a.source === "Mint").length, 10, "others stay at 20%, capped at 10");
+});
+
+test("preselectByHeadlines honours per-family preselect boosts", () => {
+  const mk = (id: string, source: string, sourceId: string) =>
+    makeArticle({ id, source, sourceId, title: `Story ${id}`, link: `https://e.com/${id}`, feedRank: 0 });
+  const hindu = Array.from({ length: 40 }, (_, i) => mk(`h${i}`, "The Hindu", "the-hindu"));
+  const mint = Array.from({ length: 40 }, (_, i) => mk(`m${i}`, "Mint", "livemint"));
+  const priority = new Map([
+    ["the-hindu", 1],
+    ["livemint", 2],
+  ]);
+  const noBoost = preselectByHeadlines([...hindu, ...mint], priority, new Map(), 100, 10);
+  assert.equal(noBoost.filter((a) => a.source === "The Hindu").length, 10, "default cap 10");
+  const boosted = preselectByHeadlines([...hindu, ...mint], priority, new Map(), 100, 10, {
+    "The Hindu": { pct: 0.45, maxPer: 60, preselectCap: 30 },
+  });
+  assert.equal(boosted.filter((a) => a.source === "The Hindu").length, 30, "boosted cap 30");
+});
+
 test("buildFeedStats counts per feed and lists every fetched feed, heaviest first", () => {
   const articles = [
     makeArticle({ source: "The Hindu", sourceId: "the-hindu", link: "https://e.com/1" }),

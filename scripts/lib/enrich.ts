@@ -49,10 +49,33 @@ export function tokenize(text: string): string[] {
     .filter((w) => w.length >= 3 && !STOPWORDS.has(w));
 }
 
+// A few "core" papers are read much more deeply than the rest: UPSC aspirants
+// often read The Hindu and The Indian Express end to end, so we keep a much
+// larger slice of their feed (~80% vs ~20% for everyone else) and let more of
+// them through preselect. Keyed by outletFamily() name; every other family is
+// unchanged. Tune here.
+export interface FamilyBoost {
+  pct: number; // shortlist fraction of the family's window articles
+  maxPer: number; // shortlist cap for the family
+  preselectCap: number; // preselect per-family cap
+}
+
+export const CORE_PAPERS: Record<string, FamilyBoost> = {
+  "The Hindu": { pct: 0.45, maxPer: 60, preselectCap: 30 },
+  "The Indian Express": { pct: 0.45, maxPer: 60, preselectCap: 30 },
+};
+
 // Lane 1 — per-source shortlist: the top ~20% of each source's fresh articles,
 // by feed order (a publisher's feed ≈ their front page), fallback recency.
-// Headline + snippet only; no deep content.
-export function shortlistPerSource(articles: Article[], pct = 0.2, minPer = 3, maxPer = 10): Article[] {
+// Headline + snippet only; no deep content. `boosts` (keyed by family name)
+// overrides the fraction/cap for the core papers.
+export function shortlistPerSource(
+  articles: Article[],
+  pct = 0.2,
+  minPer = 3,
+  maxPer = 10,
+  boosts: Record<string, FamilyBoost> = {},
+): Article[] {
   const byFamily = new Map<string, Article[]>();
   for (const a of articles) {
     const key = outletFamily(a.source);
@@ -61,13 +84,15 @@ export function shortlistPerSource(articles: Article[], pct = 0.2, minPer = 3, m
     byFamily.set(key, list);
   }
   const out: Article[] = [];
-  for (const list of byFamily.values()) {
+  for (const [family, list] of byFamily) {
     list.sort(
       (x, y) =>
         (x.feedRank ?? 999) - (y.feedRank ?? 999) ||
         new Date(y.publishedAt).getTime() - new Date(x.publishedAt).getTime(),
     );
-    const k = Math.min(list.length, Math.max(minPer, Math.min(maxPer, Math.ceil(list.length * pct))));
+    const effPct = boosts[family]?.pct ?? pct;
+    const effMax = boosts[family]?.maxPer ?? maxPer;
+    const k = Math.min(list.length, Math.max(minPer, Math.min(effMax, Math.ceil(list.length * effPct))));
     out.push(...list.slice(0, k));
   }
   return out;
@@ -83,8 +108,10 @@ export function preselectByHeadlines(
   weightOf: Map<string, number> = new Map(),
   limit = 90,
   perFamilyCap = 10,
+  boosts: Record<string, FamilyBoost> = {},
 ): Article[] {
   const famOf = (a: Article) => outletFamily(a.source);
+  const capFor = (family: string) => boosts[family]?.preselectCap ?? perFamilyCap;
   const tokens = new Map<Article, Set<string>>();
   for (const a of pool) tokens.set(a, new Set(tokenize(a.title)));
 
@@ -136,7 +163,7 @@ export function preselectByHeadlines(
   for (const a of sorted) {
     if (picked.length >= limit) break;
     if (inPicked.has(a)) continue;
-    if ((famCount.get(famOf(a)) ?? 0) >= perFamilyCap) continue;
+    if ((famCount.get(famOf(a)) ?? 0) >= capFor(famOf(a))) continue;
     take(a);
   }
   return picked;

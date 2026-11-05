@@ -255,10 +255,10 @@ docs/               # storage/scaling + selection-tuning notes
   an **email newsletter** (hosted, e.g. Buttondown/Substack), fired from the workflow right after deploy.
   Optional **Web Push (PWA)** later if native browser notifications are wanted.
 - **Revision tools** — export each story's static links + prelims pointers into a spaced-revision list.
-- **Deeper core-paper coverage** — read more of The Hindu and The Indian Express (their top ~80%, not the
-  top 20% every feed gets) so a paper-heavy day is covered end-to-end. Evaluated — including why a
-  percentage change alone does nothing and the token cost — in
-  [`docs/selection-tuning.md`](docs/selection-tuning.md). Not implemented yet.
+- **Deeper core-paper coverage** — The Hindu and The Indian Express are read more deeply than the rest
+  (~45% of their feed and a higher preselect cap, vs 20% / 10 for everyone else), so a paper-heavy day is
+  covered end-to-end. Implemented; the knobs (`CORE_PAPERS`), the measured effect, and the token cost are
+  in [`docs/selection-tuning.md`](docs/selection-tuning.md).
 - **Storage & scaling** — the Cloudflare Pages free-tier limits, measured per-day growth, and the scaling
   plan live in [`docs/storage-and-scaling.md`](docs/storage-and-scaling.md). Revisit if builds or clones
   slow down (the repo, not the site, is the thing that grows).
