@@ -1,0 +1,103 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getAllEditions, getEdition } from "../../../lib/editions";
+import { formatDateLong } from "../../../lib/format";
+import type { FeedStat } from "../../../lib/types";
+
+export function getStaticPaths() {
+  return getAllEditions()
+    .filter((e) => (e.feeds?.length ?? 0) > 0)
+    .map((e) => ({ params: { date: e.date } }));
+}
+
+const { date } = Astro.params;
+const edition = getEdition(date!);
+
+const feeds: FeedStat[] = edition?.feeds ?? [];
+const total = feeds.reduce((n, f) => n + f.count, 0);
+
+function host(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+}
+
+function istTime(iso: string): string {
+  return new Date(iso).toLocaleString("en-IN", {
+    day: "numeric",
+    month: "short",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZone: "Asia/Kolkata",
+  });
+}
+
+const window =
+  edition && edition.windowStart && edition.windowEnd
+    ? `${istTime(edition.windowStart)} – ${istTime(edition.windowEnd)} IST`
+    : "";
+---
+
+{
+  edition ? (
+    <BaseLayout
+      title={`Articles — ${edition.date} — The Daily Brief`}
+      description={`The feeds behind the ${edition.stats.articles} articles collected for ${edition.date}.`}
+      dateline={formatDateLong(edition.date)}
+    >
+      <div class="wrap">
+        <div class="archive-page">
+          <header class="archive-header">
+            <h1 class="archive-heading">Where the articles came from</h1>
+            <span class="archive-count">{total} articles · {feeds.length} feeds</span>
+          </header>
+          <hr class="archive-rule-thin" />
+
+          <p class="note sources-intro">
+            These are the feeds we read for the <a href={`/editions/${edition.date}/`}>edition of{" "}
+            {formatDateLong(edition.date)}</a>{window && <> (window: {window})</>}. The count is how many
+            in-window articles each feed returned. <strong>Open a feed</strong> to see those items at the
+            source — we keep only short excerpts and never store the full list here. For a directory of the
+            publications themselves, see <a href="/sources/">Sources</a>.
+          </p>
+
+          <ul class="feed-list">
+            <li class="feed-row feed-head" aria-hidden="true">
+              <span class="feed-name">Feed</span>
+              <span class="feed-count">Articles</span>
+            </li>
+            {feeds.map((f) => (
+              <li class="feed-row">
+                <a class="feed-name" href={f.rss} target="_blank" rel="noopener noreferrer">
+                  {f.source}
+                </a>
+                <span class="feed-url" title={f.rss}>{host(f.rss)}</span>
+                <span class="feed-count">{f.count}</span>
+              </li>
+            ))}
+            <li class="feed-row feed-total">
+              <span class="feed-name">Total</span>
+              <span class="feed-count">{total}</span>
+            </li>
+          </ul>
+
+          <p class="note" style="margin-top: 22px">
+            <a href={`/editions/${edition.date}/`}>‹ Back to the edition</a> ·{" "}
+            <a href="/sources/">Browse all sources ›</a>
+          </p>
+        </div>
+      </div>
+    </BaseLayout>
+  ) : (
+    <BaseLayout title="Articles not found">
+      <div class="wrap">
+        <div class="empty">
+          <h2>No feed breakdown for that date</h2>
+          <p><a href="/archive/">Back to the archive ›</a></p>
+        </div>
+      </div>
+    </BaseLayout>
+  )
+}

@@ -18,9 +18,20 @@ const stories = edition.stories;
   <div class="wrap edition-bar-inner">
     <span class="eb-date">{formatDateLong(edition.date)}</span>
     <div class="eb-stats">
-      <span><b>{edition.stats.stories}</b> stories</span>
-      <span><b>{edition.stats.articles}</b> articles</span>
-      <span><b>{edition.stats.feeds}</b> feeds</span>
+      <a class="eb-stat" href="/" title="Browse the stories on the home page"
+        ><b>{edition.stats.stories}</b> stories</a
+      >
+      <a
+        class="eb-stat"
+        href={edition.feeds?.length ? `/editions/${edition.date}/articles/` : "/sources/"}
+        title={edition.feeds?.length
+          ? "See which feeds the articles came from"
+          : "See the sources we read from"}
+        ><b>{edition.stats.articles}</b> articles</a
+      >
+      <a class="eb-stat" href="/sources/" title="See the sources we read from"
+        ><b>{edition.stats.feeds}</b> feeds</a
+      >
       <span class="eb-nav">
         {prevDate && <a href={`/editions/${prevDate}/`}>‹ prev</a>}
         {nextDate && <a href={`/editions/${nextDate}/`}>next ›</a>}

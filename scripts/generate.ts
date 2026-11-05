@@ -27,10 +27,10 @@ function loadDotEnv(path: string) {
   }
 }
 
-import type { Edition, Story } from "../src/lib/types";
+import type { Edition, Story, FeedStat } from "../src/lib/types";
 import { ENABLED_SOURCES, GOOGLE_NEWS_LOCALES } from "../config/sources";
 import { fetchFeeds, fetchGoogleNewsArticles } from "./lib/fetchFeeds";
-import { clusterArticles, enrichStory, buildHeuristicStories, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, clusterScore, type ClusterSpec } from "./lib/enrich";
+import { clusterArticles, enrichStory, buildHeuristicStories, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, clusterScore, buildFeedStats, type ClusterSpec } from "./lib/enrich";
 import { fetchOnThisDay } from "./lib/onthisday";
 import { llmConfigured, describeLlm } from "./lib/llm";
 
@@ -173,6 +173,11 @@ async function main() {
   console.log(`   ${extras.length} extras (${clustered} multi-source clusters)`);
 
   // 5. Compose + write -------------------------------------------------------
+  // Per-feed article counts (feed URL + how many in-window articles it yielded),
+  // so the edition page's "N articles" stat can justify where they came from.
+  // We store no individual article URLs — just the feed links to open.
+  const feeds: FeedStat[] = buildFeedStats(articles, ok);
+
   const edition: Edition = {
     date,
     generatedAt: now.toISOString(),
@@ -183,6 +188,7 @@ async function main() {
     stories,
     onThisDay,
     extras,
+    feeds,
   };
 
   const outDir = join(root, "src", "content", "editions");

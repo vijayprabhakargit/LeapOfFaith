@@ -6,10 +6,11 @@ on:
   # The daily edition commit carries [skip ci], so it never re-triggers this.
   push:
     branches: [main]
-  schedule:
-    # ~6:00 AM IST. An off-peak minute (:43) reduces the chance GitHub's
-    # best-effort scheduler delays or drops the run (it discourages :00/:30).
-    - cron: "43 0 * * *"
+  # NOTE: the daily cron schedule is intentionally DISABLED for now. GitHub's
+  # best-effort scheduler ran the job too late in the day, so we run the brief
+  # manually each morning via Actions → "Run workflow" (workflow_dispatch)
+  # until reliable scheduling is revisited (see README → Roadmap). To re-enable,
+  # restore:  schedule: [{ cron: "43 0 * * *" }]  (~6:13 AM IST, off-peak minute).
   workflow_dispatch:
     inputs:
       day:

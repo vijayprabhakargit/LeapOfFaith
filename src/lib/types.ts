@@ -90,6 +90,17 @@ export interface ExtraItem {
   articles: Article[];
 }
 
+// One row per feed we fetched for an edition: the display name, the feed URL
+// itself (so a reader can open it and see the last ~24h of items), and how many
+// in-window articles that feed contributed. Powers the page behind the edition's
+// "N articles" stat, justifying where the articles came from — without storing
+// every article URL.
+export interface FeedStat {
+  source: string;
+  rss: string;
+  count: number;
+}
+
 export interface Edition {
   date: string;
   generatedAt: string;
@@ -103,4 +114,6 @@ export interface Edition {
   // important is missed. Older editions stored a flat Article[]; the site
   // normalises both shapes.
   extras?: ExtraItem[];
+  // Per-feed article counts for the window. Optional: older editions predate it.
+  feeds?: FeedStat[];
 }

@@ -1,4 +1,5 @@
-import type { Article, Story, StaticLink, Perspective, Region, ExtraItem } from "../../src/lib/types";
+import type { Article, Story, StaticLink, Perspective, Region, ExtraItem, FeedStat } from "../../src/lib/types";
+import type { Source } from "../../config/sources";
 import { CATEGORIES, matchKnowledgeCards, type KnowledgeCard } from "../../config/syllabus";
 import { chatJson, type ChatMessage } from "./llm";
 
@@ -415,6 +416,22 @@ Write the JSON now.`;
     tags: e.tags || [],
     readMinutes: e.readMinutes || 5,
   };
+}
+
+// Per-feed article counts for an edition, so the "N articles" stat can justify
+// where the articles came from: one row per feed actually fetched — even when it
+// contributed nothing in the window — heaviest first. We store the feed URL so a
+// reader can open it and see the last ~24h of items themselves; we never store
+// the individual article URLs.
+export function buildFeedStats(
+  articles: Article[],
+  sources: Pick<Source, "id" | "name" | "rss">[],
+): FeedStat[] {
+  const counts = new Map<string, number>();
+  for (const a of articles) counts.set(a.sourceId, (counts.get(a.sourceId) ?? 0) + 1);
+  return sources
+    .map((s) => ({ source: s.name, rss: s.rss, count: counts.get(s.id) ?? 0 }))
+    .sort((a, b) => b.count - a.count || a.source.localeCompare(b.source));
 }
 
 export function slugify(input: string): string {

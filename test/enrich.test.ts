@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { slugify, sanitizeArticleIds, buildHeuristicStories, outletFamily, tokenize, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, distinctOutlets, clusterScore, type ClusterSpec } from "../scripts/lib/enrich";
+import { slugify, sanitizeArticleIds, buildHeuristicStories, outletFamily, tokenize, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, distinctOutlets, clusterScore, buildFeedStats, type ClusterSpec } from "../scripts/lib/enrich";
 import type { Article } from "../src/lib/types";
 
 function makeArticle(overrides: Partial<Article> = {}): Article {
@@ -194,4 +194,21 @@ test("clusterScore counts outlet families, not feeds", () => {
   ];
   const spec: ClusterSpec = { headline: "H", kicker: "k", category: "polity", region: "india", importance: 4, articleIds: [0, 1, 2] };
   assert.equal(distinctOutlets(spec, candidates), 1, "three Hindu feeds = one family");
+});
+
+test("buildFeedStats counts per feed and lists every fetched feed, heaviest first", () => {
+  const articles = [
+    makeArticle({ source: "The Hindu", sourceId: "the-hindu", link: "https://e.com/1" }),
+    makeArticle({ source: "The Hindu", sourceId: "the-hindu", link: "https://e.com/2" }),
+    makeArticle({ source: "Mint", sourceId: "livemint", link: "https://e.com/3" }),
+  ];
+  const sources = [
+    { id: "the-hindu", name: "The Hindu", rss: "https://hindu/feed" },
+    { id: "livemint", name: "Mint", rss: "https://mint/feed" },
+    { id: "pib", name: "PIB", rss: "https://pib/feed" },
+  ];
+  const out = buildFeedStats(articles, sources);
+  assert.deepEqual(out.map((f) => f.source), ["The Hindu", "Mint", "PIB"], "heaviest first, zero-count feeds kept");
+  assert.deepEqual(out.map((f) => f.count), [2, 1, 0]);
+  assert.equal(out[0].rss, "https://hindu/feed");
 });

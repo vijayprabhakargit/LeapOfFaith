@@ -1,0 +1,115 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SOURCES } from "../../config/sources";
+
+const enabled = SOURCES.filter((s) => s.enabled);
+
+const LEAN_LABEL: Record<string, string> = {
+  official: "Official",
+  centre: "Centre",
+  left: "Left",
+  right: "Right",
+  independent: "Independent",
+  "global-north": "Global North",
+  "global-south": "Global South",
+  unknown: "—",
+};
+
+function host(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return "";
+  }
+}
+function favicon(url: string): string {
+  return `https://www.google.com/s2/favicons?sz=64&domain=${host(url)}`;
+}
+function initial(name: string): string {
+  return (name.replace(/[^A-Za-z0-9]/g, "")[0] || "?").toUpperCase();
+}
+function sortByPriority(a: (typeof SOURCES)[number], b: (typeof SOURCES)[number]): number {
+  return a.priority - b.priority || a.name.localeCompare(b.name);
+}
+const enabledSorted = [...enabled].sort(sortByPriority);
+const indiaCount = enabled.filter((s) => s.region === "india").length;
+const globalCount = enabled.filter((s) => s.region === "global").length;
+---
+
+<BaseLayout
+  title="Sources — Leap of Faith"
+  description="Every publication The Daily Brief reads from, and how each feed is fetched."
+>
+  <div class="wrap">
+    <div class="archive-page">
+      <header class="archive-header">
+        <h1 class="archive-heading">Sources</h1>
+        <span class="archive-count">{enabled.length} feeds · {indiaCount} India · {globalCount} world</span>
+      </header>
+      <hr class="archive-rule-thin" />
+
+      <p class="sources-intro note">
+        These are the publications The Daily Brief reads every morning — the number on each edition's
+        <em>feeds</em> stat points here. We fetch each feed, keep only a <strong>short excerpt</strong> (≤ 320
+        characters) for stories, and always link back to the publisher. Native RSS/Atom is preferred; where a
+        publisher exposes none, we use a Google-News <code>site:</code> feed (marked <em>via Google News</em>).
+      </p>
+
+      <ul class="sources-list">
+        {
+          enabledSorted.map((s) => (
+            <li class="source-row">
+              <span class="source-fav" aria-hidden="true">
+                <img
+                  src={favicon(s.homepage)}
+                  alt=""
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  onerror="this.remove()"
+                />
+                <span>{initial(s.name)}</span>
+              </span>
+              <div class="source-main">
+                <a class="source-name" href={s.homepage} target="_blank" rel="noopener noreferrer">
+                  {s.name}
+                </a>
+                <span class="source-host">{host(s.homepage)}</span>
+                <a class="source-feed" href={s.rss} target="_blank" rel="noopener noreferrer" title={s.rss}>
+                  feed ↗
+                </a>
+                <div class="source-meta">
+                  <span class="source-region">{s.region === "india" ? "India" : "World"}</span>
+                  <span class="source-dot">·</span>
+                  <span>{LEAN_LABEL[s.lean] ?? s.lean}</span>
+                  {s.language && (
+                    <>
+                      <span class="source-dot">·</span>
+                      <span>{s.language.toUpperCase()}</span>
+                    </>
+                  )}
+                  <span class="source-dot">·</span>
+                  <span>priority {s.priority}</span>
+                  {s.viaGoogle && (
+                    <>
+                      <span class="source-dot">·</span>
+                      <span class="source-flag">via Google News</span>
+                    </>
+                  )}
+                </div>
+                {s.categories.length > 0 && (
+                  <div class="source-cats">
+                    {s.categories.map((c) => (
+                      <span class="source-cat">{c}</span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</BaseLayout>
