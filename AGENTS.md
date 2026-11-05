@@ -35,11 +35,18 @@ matching, Google-News URL building, date formatting, edition loading, loose JSON
 sanitising). Correctness is validated by `npm test`, `npm run check`, `npm run build`, and a
 `npm run generate:dry` feed check.
 
+Design notes live in `docs/` — keep them current when you touch growth, retention, or selection:
+`docs/storage-and-scaling.md` (Cloudflare free-tier limits, per-day growth, scaling plan) and
+`docs/selection-tuning.md` (widening the Hindu / Indian Express pull).
+
 ## Data model
 
 The single source of truth for shapes is `src/lib/types.ts` (`Edition`, `Story`, `StaticLink`,
-`Perspective`, `OnThisDayItem`). The generator must produce JSON that matches it; the site reads it
-via `src/lib/editions.ts`.
+`Perspective`, `OnThisDayItem`, `FeedStat`). The generator must produce JSON that matches it; the site
+reads it via `src/lib/editions.ts`. `Edition.feeds` is a small per-feed article count (feed URL +
+count) that backs the "N articles" stat at `/editions/<date>/articles/`; the `/sources/` page is the
+site-wide directory. Do **not** grow `edition.json` with per-article bulk — see
+`docs/storage-and-scaling.md`.
 
 Tag browsing is **client-side by design**: `src/pages/tags/index.astro` embeds a JSON payload built by
 `src/lib/tags.ts` and filters it in the browser (time range + selected tag live in the URL query). Do
