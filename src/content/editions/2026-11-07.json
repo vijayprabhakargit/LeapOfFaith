@@ -1,0 +1,1501 @@
+{
+  "date": "2026-11-07",
+  "generatedAt": "2026-11-07T04:39:49.789Z",
+  "windowStart": "2026-11-06T04:39:49.789Z",
+  "windowEnd": "2026-11-07T04:39:49.789Z",
+  "stats": {
+    "feeds": 35,
+    "articles": 875,
+    "stories": 12
+  },
+  "brief": [
+    "875 articles collected across 35 feeds in the last 24 hours.",
+    "Configure an LLM provider in .env to unlock story stitching and static-syllabus links."
+  ],
+  "stories": [
+    {
+      "id": "delhi-high-court-exempts-ncr-based-court-staff-lawyers-from",
+      "slug": "delhi-high-court-exempts-ncr-based-court-staff-lawyers-from",
+      "headline": "Delhi High Court Exempts NCR-Based Court Staff, Lawyers From Winter Ban On Non-BS-VI Vehicles",
+      "kicker": "polity · India",
+      "category": "polity",
+      "region": "india",
+      "importance": 3,
+      "signal": "must-read",
+      "summary": "Delhi High Court Exempts NCR-Based Court Staff, Lawyers From Winter Ban On Non-BS-VI Vehicles Live Law",
+      "whyItMatters": "Dry-run placeholder — run with an LLM configured for the full brief.",
+      "perspectives": [
+        {
+          "source": "Live Law",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Delhi High Court Exempts NCR-Based Court Staff, Lawyers From Winter Ban On Non-BS-VI Vehicles Live Law",
+          "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPMnFPVmtXTUJJTUxmdkFMdElaNHd0dnB5WWRoM2tXVlJuTC1BSWh5TmZfUUxUTTdhbVVmU2kwVnZ3aXJ0RU40UHZISXBiQ0JobFZ4X3ZsWW9xUGs3MWtrSVE4cGhtQnE1bTM4YllycVYtY24tOHZVTTY5UlNnQS1EdjVRbURHcHcyN2M3ZnF3c3FwcWQ1ZDk1N2pqbG5SOEtuUVVaQUhWUy0teFBTMllCQVhqVmx5VmpfbzJiWXl4ODh2VFBtQ3JkVkVYRFhaMThqTEZZRHZteXk0aVl6Z3ZFelFWSlrSAeoBQVVfeXFMUGZjT0t5T2YxYWtrVmtyQjlHWUh3cmNCQjJtSGw3WE1OcFFNeHNQWmhTQXpKOUttLUNOYXd3a3ltNktxaEdOOTFRZEhnNWVWa0VtUzFBYmE2YVFkSkZjeG40RHE2YVl4QUtmb2NENDRVUTJ6bHZSTDVFT1BhQS1HaDlkZzJiSDRYLXVuU3M0X0lFTkloeU56cmJSYWdITVNwMjJxQlBmQTdib0RtZG56dkVOanJlWnQtUV9qWjZJZDY3V2hNcHY1N1dnakJIWDVxN1dUakxKWXMtcnlONjY0amQ4MnJQd1ktWGhn?oc=5"
+        }
+      ],
+      "articles": [
+        {
+          "id": "livelaw:aHR0cHM6Ly9uZXdzLmdvb2ds",
+          "title": "Delhi High Court Exempts NCR-Based Court Staff, Lawyers From Winter Ban On Non-BS-VI Vehicles",
+          "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPMnFPVmtXTUJJTUxmdkFMdElaNHd0dnB5WWRoM2tXVlJuTC1BSWh5TmZfUUxUTTdhbVVmU2kwVnZ3aXJ0RU40UHZISXBiQ0JobFZ4X3ZsWW9xUGs3MWtrSVE4cGhtQnE1bTM4YllycVYtY24tOHZVTTY5UlNnQS1EdjVRbURHcHcyN2M3ZnF3c3FwcWQ1ZDk1N2pqbG5SOEtuUVVaQUhWUy0teFBTMllCQVhqVmx5VmpfbzJiWXl4ODh2VFBtQ3JkVkVYRFhaMThqTEZZRHZteXk0aVl6Z3ZFelFWSlrSAeoBQVVfeXFMUGZjT0t5T2YxYWtrVmtyQjlHWUh3cmNCQjJtSGw3WE1OcFFNeHNQWmhTQXpKOUttLUNOYXd3a3ltNktxaEdOOTFRZEhnNWVWa0VtUzFBYmE2YVFkSkZjeG40RHE2YVl4QUtmb2NENDRVUTJ6bHZSTDVFT1BhQS1HaDlkZzJiSDRYLXVuU3M0X0lFTkloeU56cmJSYWdITVNwMjJxQlBmQTdib0RtZG56dkVOanJlWnQtUV9qWjZJZDY3V2hNcHY1N1dnakJIWDVxN1dUakxKWXMtcnlONjY0amQ4MnJQd1ktWGhn?oc=5",
+          "source": "Live Law",
+          "sourceId": "livelaw",
+          "region": "india",
+          "categories": [
+            "polity"
+          ],
+          "publishedAt": "2026-11-06T11:43:21.000Z",
+          "snippet": "Delhi High Court Exempts NCR-Based Court Staff, Lawyers From Winter Ban On Non-BS-VI Vehicles Live Law",
+          "feedRank": 7
+        }
+      ],
+      "static": [],
+      "prelims": [],
+      "tags": [
+        "polity"
+      ],
+      "readMinutes": 4
+    },
+    {
+      "id": "deepavali-2026-all-you-need-to-know-about-supreme-court-perm",
+      "slug": "deepavali-2026-all-you-need-to-know-about-supreme-court-perm",
+      "headline": "Deepavali 2026: All you need to know about Supreme Court-permitted time slots, green crackers and other directives",
+      "kicker": "polity · India",
+      "category": "polity",
+      "region": "india",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "The Supreme Court permitted the bursting of certified green firecrackers between 6 a.m. and 7 a.m. and between 8 p.m. and 10 p.m. on November 7 and November 8, 2026 in Delhi-NCR",
+      "whyItMatters": "Dry-run placeholder — run with an LLM configured for the full brief.",
+      "perspectives": [
+        {
+          "source": "The Hindu",
+          "region": "India",
+          "lean": "unknown",
+          "take": "The Supreme Court permitted the bursting of certified green firecrackers between 6 a.m. and 7 a.m. and between 8 p.m. and 10 p.m. on Novembe",
+          "link": "https://www.thehindu.com/news/national/diwali-2026-supreme-court-green-cracker-norms-permitted-time-slots-and-other-directions/article71669897.ece"
+        }
+      ],
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Deepavali 2026: All you need to know about Supreme Court-permitted time slots, green crackers and other directives",
+          "link": "https://www.thehindu.com/news/national/diwali-2026-supreme-court-green-cracker-norms-permitted-time-slots-and-other-directions/article71669897.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-07T03:45:36.000Z",
+          "snippet": "The Supreme Court permitted the bursting of certified green firecrackers between 6 a.m. and 7 a.m. and between 8 p.m. and 10 p.m. on November 7 and November 8, 2026 in Delhi-NCR",
+          "feedRank": 13
+        }
+      ],
+      "static": [],
+      "prelims": [],
+      "tags": [
+        "polity",
+        "economy",
+        "ir",
+        "society",
+        "scitech",
+        "environment"
+      ],
+      "readMinutes": 4
+    },
+    {
+      "id": "daily-court-digest-major-environment-orders-november-6-2026",
+      "slug": "daily-court-digest-major-environment-orders-november-6-2026",
+      "headline": "Daily Court Digest: Major environment orders (November 6, 2026)",
+      "kicker": "environment · India",
+      "category": "environment",
+      "region": "india",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "Authorities have intensified efforts to curb illegal sand mining along the Delhi-Uttar Pradesh border, with joint patrolling, boundary demarcation, and enforcement actions underway. In Gurugram, 12 unauthorised dyeing units face legal action, while in Madhya Pradesh, 348 illegally felled teak trees and forest…",
+      "whyItMatters": "Dry-run placeholder — run with an LLM configured for the full brief.",
+      "perspectives": [
+        {
+          "source": "Down To Earth",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Authorities have intensified efforts to curb illegal sand mining along the Delhi-Uttar Pradesh border, with joint patrolling, boundary demar",
+          "link": "https://www.downtoearth.org.in/environment/daily-court-digest-major-environment-orders-november-6-2026"
+        }
+      ],
+      "articles": [
+        {
+          "id": "down-to-earth:aHR0cHM6Ly93d3cuZG93bnRv",
+          "title": "Daily Court Digest: Major environment orders (November 6, 2026)",
+          "link": "https://www.downtoearth.org.in/environment/daily-court-digest-major-environment-orders-november-6-2026",
+          "source": "Down To Earth",
+          "sourceId": "down-to-earth",
+          "region": "india",
+          "categories": [
+            "environment",
+            "agriculture",
+            "scitech"
+          ],
+          "publishedAt": "2026-11-06T14:28:10.716Z",
+          "snippet": "Authorities have intensified efforts to curb illegal sand mining along the Delhi-Uttar Pradesh border, with joint patrolling, boundary demarcation, and enforcement actions underway. In Gurugram, 12 unauthorised dyeing units face legal action, while in Madhya Pradesh, 348 illegally felled teak trees and forest…",
+          "feedRank": 2
+        }
+      ],
+      "static": [],
+      "prelims": [],
+      "tags": [
+        "environment",
+        "agriculture",
+        "scitech"
+      ],
+      "readMinutes": 4
+    },
+    {
+      "id": "delhi-high-court-exempts-lawyers-and-court-staff-in-ncr-from",
+      "slug": "delhi-high-court-exempts-lawyers-and-court-staff-in-ncr-from",
+      "headline": "Delhi High Court exempts lawyers and court staff in NCR from ban on non-BS VI vehicles",
+      "kicker": "polity · India",
+      "category": "polity",
+      "region": "india",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "Delhi High Court exempts lawyers and court staff in NCR from ban on non-BS VI vehicles Bar and Bench",
+      "whyItMatters": "Dry-run placeholder — run with an LLM configured for the full brief.",
+      "perspectives": [
+        {
+          "source": "Bar & Bench",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Delhi High Court exempts lawyers and court staff in NCR from ban on non-BS VI vehicles Bar and Bench",
+          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQMlBnYXljaTJNOTFSdWhKanFnUW9vVHhYRjM2SlJ5eWpzb056cm1TZDFRS09JdlpvS1VKMzNmVGI0M2hNZlF2NHU5eDh6REpfNXJ1TzE1MjAweVI2eWVFeDd0azlpRU5VYTFyVlptUlpGc2JDT1RSdVlYSXVIcEdCbm1fd1hSSVZoZ09GSHZrWHg5bThZOUNiZ3ctQzRWSXhodlluSkRIa3UtQmdQcktpbXZlVGlQdFl5Vng40gHIAUFVX3lxTFBpZDRSRl9COXRrbzJqYVB3dmpna2dXRENiNHRiZVduTGtLY1lMdm1PZEtHNl9hM2ZBR2IyVTRwd3JwakZ2bmpRQlRMaV9PbV9xVm9saGtybnFaVVVOS0lybUNqWjYtTDNmUzRKRElCbE9RZmJHYzNFUmo2RnBXZTN0S0lxZ1hFVC1fV3hHMjB1NnAwOXhOT056YXowSzdlR21meWRBaVg4YldiUXVzVkZ6RzZYRm0yaEpSaXIyTzlqcVNHNVQ5cTZI?oc=5"
+        }
+      ],
+      "articles": [
+        {
+          "id": "barandbench:g:aHR0cHM6Ly9uZXdzLmdv",
+          "title": "Delhi High Court exempts lawyers and court staff in NCR from ban on non-BS VI vehicles",
+          "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQMlBnYXljaTJNOTFSdWhKanFnUW9vVHhYRjM2SlJ5eWpzb056cm1TZDFRS09JdlpvS1VKMzNmVGI0M2hNZlF2NHU5eDh6REpfNXJ1TzE1MjAweVI2eWVFeDd0azlpRU5VYTFyVlptUlpGc2JDT1RSdVlYSXVIcEdCbm1fd1hSSVZoZ09GSHZrWHg5bThZOUNiZ3ctQzRWSXhodlluSkRIa3UtQmdQcktpbXZlVGlQdFl5Vng40gHIAUFVX3lxTFBpZDRSRl9COXRrbzJqYVB3dmpna2dXRENiNHRiZVduTGtLY1lMdm1PZEtHNl9hM2ZBR2IyVTRwd3JwakZ2bmpRQlRMaV9PbV9xVm9saGtybnFaVVVOS0lybUNqWjYtTDNmUzRKRElCbE9RZmJHYzNFUmo2RnBXZTN0S0lxZ1hFVC1fV3hHMjB1NnAwOXhOT056YXowSzdlR21meWRBaVg4YldiUXVzVkZ6RzZYRm0yaEpSaXIyTzlqcVNHNVQ5cTZI?oc=5",
+          "source": "Bar & Bench",
+          "sourceId": "barandbench",
+          "region": "india",
+          "categories": [
+            "polity"
+          ],
+          "publishedAt": "2026-11-06T11:17:27.000Z",
+          "snippet": "Delhi High Court exempts lawyers and court staff in NCR from ban on non-BS VI vehicles Bar and Bench",
+          "feedRank": 0
+        }
+      ],
+      "static": [],
+      "prelims": [],
+      "tags": [
+        "polity"
+      ],
+      "readMinutes": 4
+    },
+    {
+      "id": "caqm-imposes-grap-iii-in-delhi-ncr-ahead-of-diwali-as-aqi-so",
+      "slug": "caqm-imposes-grap-iii-in-delhi-ncr-ahead-of-diwali-as-aqi-so",
+      "headline": "CAQM imposes GRAP-III in Delhi-NCR ahead of Diwali as AQI soars to 382: Here’s what’s allowed and restricted",
+      "kicker": "economy · India",
+      "category": "economy",
+      "region": "india",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "After Delhi's average AQI climbed to 382 on Friday, nearing the 'severe' threshold, the CAQM invoked measures under GRAP Stage III. Here's a look at the restrictions in force, activities that can continue and the national capital's air quality forecast ahead of Diwali.",
+      "whyItMatters": "Dry-run placeholder — run with an LLM configured for the full brief.",
+      "perspectives": [
+        {
+          "source": "Mint",
+          "region": "India",
+          "lean": "unknown",
+          "take": "After Delhi's average AQI climbed to 382 on Friday, nearing the 'severe' threshold, the CAQM invoked measures under GRAP Stage III. Here's a",
+          "link": "https://www.livemint.com/news/india/caqm-imposes-grap-iii-in-delhi-ncr-ahead-of-diwali-as-aqi-soars-to-382-here-s-what-s-allowed-and-restricted-11794022821945.html"
+        }
+      ],
+      "articles": [
+        {
+          "id": "livemint:aHR0cHM6Ly93d3cubGl2ZW1p",
+          "title": "CAQM imposes GRAP-III in Delhi-NCR ahead of Diwali as AQI soars to 382: Here’s what’s allowed and restricted",
+          "link": "https://www.livemint.com/news/india/caqm-imposes-grap-iii-in-delhi-ncr-ahead-of-diwali-as-aqi-soars-to-382-here-s-what-s-allowed-and-restricted-11794022821945.html",
+          "source": "Mint",
+          "sourceId": "livemint",
+          "region": "india",
+          "categories": [
+            "economy",
+            "polity"
+          ],
+          "publishedAt": "2026-11-07T03:51:27.000Z",
+          "snippet": "After Delhi's average AQI climbed to 382 on Friday, nearing the 'severe' threshold, the CAQM invoked measures under GRAP Stage III. Here's a look at the restrictions in force, activities that can continue and the national capital's air quality forecast ahead of Diwali.",
+          "feedRank": 2
+        }
+      ],
+      "static": [],
+      "prelims": [],
+      "tags": [
+        "economy",
+        "polity"
+      ],
+      "readMinutes": 4
+    },
+    {
+      "id": "delhi-ncr-aqi-hits-382-slips-into-very-poor-category-grap-st",
+      "slug": "delhi-ncr-aqi-hits-382-slips-into-very-poor-category-grap-st",
+      "headline": "Delhi-NCR AQI hits 382, slips into very poor category; GRAP Stage III invoked ahead of Diwali",
+      "kicker": "polity · India",
+      "category": "polity",
+      "region": "india",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "Delhi-NCR AQI hits 382, slips into very poor category; GRAP Stage III invoked ahead of Diwali The Tribune",
+      "whyItMatters": "Dry-run placeholder — run with an LLM configured for the full brief.",
+      "perspectives": [
+        {
+          "source": "The Tribune",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Delhi-NCR AQI hits 382, slips into very poor category; GRAP Stage III invoked ahead of Diwali The Tribune",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSElrTkZQSkFQek9Ca1lQSFFDZktBaThhRE8waFNhUW9IdHVOVGtxNU1yMVRoMlBhU0QxVUdQMXYyVkwwN0Y0WXFoVl9oRXVFQVZ3QXp0cGJmT0pZME5iYTNxVzhzNktfTDVfWS1QU1k1Vm4zS2RXeXFhWDdHZE5UNnR4QVpCdmJzVlJUM2N5LXo4VUF5Q0FYd2gzNWJPSXJROW5ZbkU3YXVhQWt3MjdOUnVFYVY5ZnR6RFFZZzBtSHBteUo1aGRSd3ZWLVLSAdABQVVfeXFMT1JJY1VBUmtCa25WMjdXN19oVW1ybDR2V1Z3dlZSMUhGTlNDUnVURUFKQ2lWVHFWcmgyM211XzUwRmp3OFM4UjVyOTk2MEhkQl9IS2VwbHBOdEdHZzgzZEtUbFBtdnQtSThacnBZeHFUNExycmJENVVCeklOOXg2TWVHb0tka3liaGQ3NEs3MVB0endKSUhFY1ZJUXlZU1k4TW5BY1hycjFnLXNJU0NEV0IwdTk2ZlkyR3JMV2s0RDNpaEpIUVFfdUo4MmJ4M2FOag?oc=5"
+        }
+      ],
+      "articles": [
+        {
+          "id": "the-tribune:aHR0cHM6Ly9uZXdzLmdvb2ds",
+          "title": "Delhi-NCR AQI hits 382, slips into very poor category; GRAP Stage III invoked ahead of Diwali",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSElrTkZQSkFQek9Ca1lQSFFDZktBaThhRE8waFNhUW9IdHVOVGtxNU1yMVRoMlBhU0QxVUdQMXYyVkwwN0Y0WXFoVl9oRXVFQVZ3QXp0cGJmT0pZME5iYTNxVzhzNktfTDVfWS1QU1k1Vm4zS2RXeXFhWDdHZE5UNnR4QVpCdmJzVlJUM2N5LXo4VUF5Q0FYd2gzNWJPSXJROW5ZbkU3YXVhQWt3MjdOUnVFYVY5ZnR6RFFZZzBtSHBteUo1aGRSd3ZWLVLSAdABQVVfeXFMT1JJY1VBUmtCa25WMjdXN19oVW1ybDR2V1Z3dlZSMUhGTlNDUnVURUFKQ2lWVHFWcmgyM211XzUwRmp3OFM4UjVyOTk2MEhkQl9IS2VwbHBOdEdHZzgzZEtUbFBtdnQtSThacnBZeHFUNExycmJENVVCeklOOXg2TWVHb0tka3liaGQ3NEs3MVB0endKSUhFY1ZJUXlZU1k4TW5BY1hycjFnLXNJU0NEV0IwdTk2ZlkyR3JMV2s0RDNpaEpIUVFfdUo4MmJ4M2FOag?oc=5",
+          "source": "The Tribune",
+          "sourceId": "the-tribune",
+          "region": "india",
+          "categories": [
+            "polity",
+            "society",
+            "ir"
+          ],
+          "publishedAt": "2026-11-06T12:24:54.000Z",
+          "snippet": "Delhi-NCR AQI hits 382, slips into very poor category; GRAP Stage III invoked ahead of Diwali The Tribune",
+          "feedRank": 8
+        }
+      ],
+      "static": [],
+      "prelims": [],
+      "tags": [
+        "polity",
+        "society",
+        "ir"
+      ],
+      "readMinutes": 4
+    },
+    {
+      "id": "grap-iii-invoked-in-delhi-ncr-as-aqi-continues-to-remain-ver",
+      "slug": "grap-iii-invoked-in-delhi-ncr-as-aqi-continues-to-remain-ver",
+      "headline": "Grap III invoked in Delhi-NCR as AQI continues to remain 'very poor'",
+      "kicker": "economy · India",
+      "category": "economy",
+      "region": "india",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "Grap III invoked in Delhi-NCR as AQI continues to remain 'very poor' Business Standard",
+      "whyItMatters": "Dry-run placeholder — run with an LLM configured for the full brief.",
+      "perspectives": [
+        {
+          "source": "Business Standard",
+          "region": "India",
+          "lean": "unknown",
+          "take": "Grap III invoked in Delhi-NCR as AQI continues to remain 'very poor' Business Standard",
+          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNamN6ZURzTkZaN1F1TGg2VXNPbjBNQ3V3cUpNNl9MREJYdkZseUw0UGFpbGMtOWdwZmlWbkxUSXhXYnZaaG9tUFE2c2JKZDZlMnU4d3BpNE1INFpfb0RwbmZYWkptRG5NbG5RTlBvamlJVHBrZEJrbXV5MGR6Y0VFRVBkOFQ0N1c3ZUZVSHJoNjZJclB5dXIwVTRzbkxaSGJKN1lDQl80UWR6YW1EOVRmTG9ITHJqajF6dXRTWUM4dFdCREdZakVndE5iMHJFeUI0Z2Mta0Z30gHbAUFVX3lxTE93dkF4SEI2UFRuTnp1NXVOSlgxSDExVF9GYmhac1huQ2RDUlRyWFNxY2V6LXBGWjhWdWVBNzdOX05zeVRhVnBFSVFfcFQ0dzdpZ3dlOC1FaUhwTEtETEdtOEJ5U1lCeW1GV01KVE8wZlI2Sy1kakZGMEpQSzNGVEstdTgxMlpMcjlkdEstVEV2NTRueHM5eDN1UERoOU12QVVMSWt0czBuNGQ0YzZfZXUzYkJMWnVyQVZ4TnNuejVpLTlSbzZtWWstQ2g2cUNDSkRzT1FINngzenpjOA?oc=5"
+        }
+      ],
+      "articles": [
+        {
+          "id": "business-standard:aHR0cHM6Ly9uZXdzLmdvb2ds",
+          "title": "Grap III invoked in Delhi-NCR as AQI continues to remain 'very poor'",
+          "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNamN6ZURzTkZaN1F1TGg2VXNPbjBNQ3V3cUpNNl9MREJYdkZseUw0UGFpbGMtOWdwZmlWbkxUSXhXYnZaaG9tUFE2c2JKZDZlMnU4d3BpNE1INFpfb0RwbmZYWkptRG5NbG5RTlBvamlJVHBrZEJrbXV5MGR6Y0VFRVBkOFQ0N1c3ZUZVSHJoNjZJclB5dXIwVTRzbkxaSGJKN1lDQl80UWR6YW1EOVRmTG9ITHJqajF6dXRTWUM4dFdCREdZakVndE5iMHJFeUI0Z2Mta0Z30gHbAUFVX3lxTE93dkF4SEI2UFRuTnp1NXVOSlgxSDExVF9GYmhac1huQ2RDUlRyWFNxY2V6LXBGWjhWdWVBNzdOX05zeVRhVnBFSVFfcFQ0dzdpZ3dlOC1FaUhwTEtETEdtOEJ5U1lCeW1GV01KVE8wZlI2Sy1kakZGMEpQSzNGVEstdTgxMlpMcjlkdEstVEV2NTRueHM5eDN1UERoOU12QVVMSWt0czBuNGQ0YzZfZXUzYkJMWnVyQVZ4TnNuejVpLTlSbzZtWWstQ2g2cUNDSkRzT1FINngzenpjOA?oc=5",
+          "source": "Business Standard",
+          "sourceId": "business-standard",
+          "region": "india",
+          "categories": [
+            "economy"
+          ],
+          "publishedAt": "2026-11-06T11:26:12.000Z",
+          "snippet": "Grap III invoked in Delhi-NCR as AQI continues to remain 'very poor' Business Standard",
+          "feedRank": 8
+        }
+      ],
+      "static": [],
+      "prelims": [],
+      "tags": [
+        "economy"
+      ],
+      "readMinutes": 4
+    },
+    {
+      "id": "rbi-to-conduct-4-day-variable-rate-repo-vrr-auction-under-la",
+      "slug": "rbi-to-conduct-4-day-variable-rate-repo-vrr-auction-under-la",
+      "headline": "RBI to conduct 4-day Variable Rate Repo (VRR) auction under LAF on November 09, 2026",
+      "kicker": "economy · India",
+      "category": "economy",
+      "region": "india",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "On a review of current and evolving liquidity conditions in the near term, it has been decided to conduct a Variable Rate Repo (VRR) auction on Monday, November 09, 2026, as under: Sl. No. Notified Amount (₹ crore) Tenor (day) Window Timing Date of Reversal 1 50,000 4 9:30 AM to 10:00 AM November 13, 2026 (Friday) 2.…",
+      "whyItMatters": "Dry-run placeholder — run with an LLM configured for the full brief.",
+      "perspectives": [
+        {
+          "source": "RBI (Press Releases)",
+          "region": "India",
+          "lean": "unknown",
+          "take": "On a review of current and evolving liquidity conditions in the near term, it has been decided to conduct a Variable Rate Repo (VRR) auction",
+          "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63943"
+        }
+      ],
+      "articles": [
+        {
+          "id": "rbi:aHR0cHM6Ly93d3cucmJpLm9y",
+          "title": "RBI to conduct 4-day Variable Rate Repo (VRR) auction under LAF on November 09, 2026",
+          "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63943",
+          "source": "RBI (Press Releases)",
+          "sourceId": "rbi",
+          "region": "india",
+          "categories": [
+            "economy"
+          ],
+          "publishedAt": "2026-11-06T19:10:00.000Z",
+          "snippet": "On a review of current and evolving liquidity conditions in the near term, it has been decided to conduct a Variable Rate Repo (VRR) auction on Monday, November 09, 2026, as under: Sl. No. Notified Amount (₹ crore) Tenor (day) Window Timing Date of Reversal 1 50,000 4 9:30 AM to 10:00 AM November 13, 2026 (Friday) 2.…",
+          "feedRank": 0
+        }
+      ],
+      "static": [],
+      "prelims": [],
+      "tags": [
+        "economy"
+      ],
+      "readMinutes": 4
+    },
+    {
+      "id": "two-losses-this-year-but-authorities-say-great-indian-bustar",
+      "slug": "two-losses-this-year-but-authorities-say-great-indian-bustar",
+      "headline": "Two losses this year, but authorities say great Indian bustard’s rewilding is on track",
+      "kicker": "environment · India",
+      "category": "environment",
+      "region": "india",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "In what is being considered a milestone for Project Great Indian Bustard, four captive-bred great Indian bustards (GIBs) were released into the wild in early October at the Desert National Park in Rajasthan. On October 17, one of the four birds was found dead, apparently predated upon by a desert fox the day before.…",
+      "whyItMatters": "Dry-run placeholder — run with an LLM configured for the full brief.",
+      "perspectives": [
+        {
+          "source": "Mongabay India",
+          "region": "India",
+          "lean": "unknown",
+          "take": "In what is being considered a milestone for Project Great Indian Bustard, four captive-bred great Indian bustards (GIBs) were released into ",
+          "link": "https://india.mongabay.com/2026/11/two-losses-this-year-but-authorities-say-great-indian-bustards-rewilding-is-on-track/"
+        }
+      ],
+      "articles": [
+        {
+          "id": "mongabay-india:aHR0cHM6Ly9pbmRpYS5tb25n",
+          "title": "Two losses this year, but authorities say great Indian bustard’s rewilding is on track",
+          "link": "https://india.mongabay.com/2026/11/two-losses-this-year-but-authorities-say-great-indian-bustards-rewilding-is-on-track/",
+          "source": "Mongabay India",
+          "sourceId": "mongabay-india",
+          "region": "india",
+          "categories": [
+            "environment"
+          ],
+          "publishedAt": "2026-11-06T11:56:30.000Z",
+          "snippet": "In what is being considered a milestone for Project Great Indian Bustard, four captive-bred great Indian bustards (GIBs) were released into the wild in early October at the Desert National Park in Rajasthan. On October 17, one of the four birds was found dead, apparently predated upon by a desert fox the day before.…",
+          "feedRank": 2
+        }
+      ],
+      "static": [],
+      "prelims": [],
+      "tags": [
+        "environment"
+      ],
+      "readMinutes": 4
+    },
+    {
+      "id": "bomb-threats-warning-the-clock-is-ticking-disrupt-tv-channel",
+      "slug": "bomb-threats-warning-the-clock-is-ticking-disrupt-tv-channel",
+      "headline": "Bomb threats warning 'the clock is ticking' disrupt TV channels across Europe",
+      "kicker": "ir · World",
+      "category": "ir",
+      "region": "global",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "Bomb threats warning 'the clock is ticking' disrupt TV channels across Europe Reuters",
+      "whyItMatters": "Dry-run placeholder — run with an LLM configured for the full brief.",
+      "perspectives": [
+        {
+          "source": "Reuters",
+          "region": "Global",
+          "lean": "unknown",
+          "take": "Bomb threats warning 'the clock is ticking' disrupt TV channels across Europe Reuters",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOdnRXOWRIUkRMTjJUVHA5MERSRnEzbUpJLWdYbjJwUkhyMUlkaVBELWNFWWhyVDl5RTNqQkhUSTdacElqLUhNRk9RSlg2SXpvRkQwTENWZ1MzRFlfYW1OcFBMRHFRQ0RfRDZ1MkVBbHJYTncyWXVOSnh6UTBFMklGLVRiSGNoN21PNURKcUtGSXpWYnkxM19zcDNCbldTeGc4bzJrRmVZNGt4Slp3NmFHcGpLMWNTSFJr?oc=5"
+        }
+      ],
+      "articles": [
+        {
+          "id": "reuters:aHR0cHM6Ly9uZXdzLmdvb2ds",
+          "title": "Bomb threats warning 'the clock is ticking' disrupt TV channels across Europe",
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOdnRXOWRIUkRMTjJUVHA5MERSRnEzbUpJLWdYbjJwUkhyMUlkaVBELWNFWWhyVDl5RTNqQkhUSTdacElqLUhNRk9RSlg2SXpvRkQwTENWZ1MzRFlfYW1OcFBMRHFRQ0RfRDZ1MkVBbHJYTncyWXVOSnh6UTBFMklGLVRiSGNoN21PNURKcUtGSXpWYnkxM19zcDNCbldTeGc4bzJrRmVZNGt4Slp3NmFHcGpLMWNTSFJr?oc=5",
+          "source": "Reuters",
+          "sourceId": "reuters",
+          "region": "global",
+          "categories": [
+            "ir",
+            "economy",
+            "security",
+            "environment"
+          ],
+          "publishedAt": "2026-11-06T15:09:49.000Z",
+          "snippet": "Bomb threats warning 'the clock is ticking' disrupt TV channels across Europe Reuters",
+          "feedRank": 5
+        }
+      ],
+      "static": [],
+      "prelims": [],
+      "tags": [
+        "ir",
+        "economy",
+        "security",
+        "environment"
+      ],
+      "readMinutes": 4
+    },
+    {
+      "id": "i-was-contesting-to-win-meet-amus-first-woman-student-union",
+      "slug": "i-was-contesting-to-win-meet-amus-first-woman-student-union",
+      "headline": "‘I was contesting to win’: Meet AMU’s first woman student union vice-president",
+      "kicker": "polity · India",
+      "category": "polity",
+      "region": "india",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "‘I was contesting to win’: Meet AMU’s first woman student union vice-president The Indian Express",
+      "whyItMatters": "Dry-run placeholder — run with an LLM configured for the full brief.",
+      "perspectives": [
+        {
+          "source": "The Indian Express — Explained",
+          "region": "India",
+          "lean": "unknown",
+          "take": "‘I was contesting to win’: Meet AMU’s first woman student union vice-president The Indian Express",
+          "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxORk1zdXVQWjNWTWIyZEFOSkt0ZHdzdXZSSlN6U3hSckZwcTF6b1BpcWh1ZW8yQUg3RTN5WFYxcjFzSFp0THdBalVic2JHVXNCamFUeFJPZnZFWkwtajVWTDA2akExQ2ZsRWF3eDB1Q0VNWk9pR1NITEFoZnVzSGJtOTd1Qm1GREtnUjR6STcyOGhLSHJNamJUa0RLU1BCaGtyU2ZHdTlxQzc0VEpsdEtBVzFUcVRrQ0EyY1NzeDg5aGt4cmVYMWp3Z3cyX1FHalZCLTdtMm10VkdiTS1lT0HSAeQBQVVfeXFMUGxXSktmUXpRbHJVVU1jcm0yTzJwZGxsYjd0TEFFRWhsMEFXS3VOTXJuRk41R3pkMTV3dTRVZ3BsNk5HTjRHblk0ZGVabUt6aU9iMGRBRkR4SC1ySXl5Ujc4Q3Y1X1pCUDBNbWd1SzVFWnVWZFNjN05Da2VyRUdfbzR1bGhhZUh6Ui1JdTZGYUJabmJxSFcxcl9KN3FfN3c5S21hSlRVc05IVEVGTFVrV3BzcUpsT1k2Wkt3VFFYNXZ0MENYQm9yeWxvNGN5T3VWVXZSWGJvdUJqSXFRLVBkZnh1X1c5?oc=5"
+        }
+      ],
+      "articles": [
+        {
+          "id": "indian-express-explained:g:aHR0cHM6Ly9uZXdzLmdv",
+          "title": "‘I was contesting to win’: Meet AMU’s first woman student union vice-president",
+          "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxORk1zdXVQWjNWTWIyZEFOSkt0ZHdzdXZSSlN6U3hSckZwcTF6b1BpcWh1ZW8yQUg3RTN5WFYxcjFzSFp0THdBalVic2JHVXNCamFUeFJPZnZFWkwtajVWTDA2akExQ2ZsRWF3eDB1Q0VNWk9pR1NITEFoZnVzSGJtOTd1Qm1GREtnUjR6STcyOGhLSHJNamJUa0RLU1BCaGtyU2ZHdTlxQzc0VEpsdEtBVzFUcVRrQ0EyY1NzeDg5aGt4cmVYMWp3Z3cyX1FHalZCLTdtMm10VkdiTS1lT0HSAeQBQVVfeXFMUGxXSktmUXpRbHJVVU1jcm0yTzJwZGxsYjd0TEFFRWhsMEFXS3VOTXJuRk41R3pkMTV3dTRVZ3BsNk5HTjRHblk0ZGVabUt6aU9iMGRBRkR4SC1ySXl5Ujc4Q3Y1X1pCUDBNbWd1SzVFWnVWZFNjN05Da2VyRUdfbzR1bGhhZUh6Ui1JdTZGYUJabmJxSFcxcl9KN3FfN3c5S21hSlRVc05IVEVGTFVrV3BzcUpsT1k2Wkt3VFFYNXZ0MENYQm9yeWxvNGN5T3VWVXZSWGJvdUJqSXFRLVBkZnh1X1c5?oc=5",
+          "source": "The Indian Express — Explained",
+          "sourceId": "indian-express-explained",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "environment",
+            "scitech",
+            "culture",
+            "geography"
+          ],
+          "publishedAt": "2026-11-06T07:28:38.000Z",
+          "snippet": "‘I was contesting to win’: Meet AMU’s first woman student union vice-president The Indian Express",
+          "feedRank": 0
+        }
+      ],
+      "static": [],
+      "prelims": [],
+      "tags": [
+        "polity",
+        "economy",
+        "ir",
+        "environment",
+        "scitech",
+        "culture",
+        "geography"
+      ],
+      "readMinutes": 4
+    },
+    {
+      "id": "two-dead-after-bus-crashes-in-france-officials-say",
+      "slug": "two-dead-after-bus-crashes-in-france-officials-say",
+      "headline": "Two dead after bus crashes in France, officials say",
+      "kicker": "ir · World",
+      "category": "ir",
+      "region": "global",
+      "importance": 3,
+      "signal": "recommended",
+      "summary": "One child and one young adult were killed in the crash, local authorities say, with more injured.",
+      "whyItMatters": "Dry-run placeholder — run with an LLM configured for the full brief.",
+      "perspectives": [
+        {
+          "source": "BBC World",
+          "region": "Global",
+          "lean": "unknown",
+          "take": "One child and one young adult were killed in the crash, local authorities say, with more injured.",
+          "link": "https://www.bbc.co.uk/news/articles/cmly00l4p3lwo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "articles": [
+        {
+          "id": "bbc-world:aHR0cHM6Ly93d3cuYmJjLmNv",
+          "title": "Two dead after bus crashes in France, officials say",
+          "link": "https://www.bbc.co.uk/news/articles/cmly00l4p3lwo?at_medium=RSS&at_campaign=rss",
+          "source": "BBC World",
+          "sourceId": "bbc-world",
+          "region": "global",
+          "categories": [
+            "ir",
+            "security",
+            "society"
+          ],
+          "publishedAt": "2026-11-06T15:33:52.000Z",
+          "snippet": "One child and one young adult were killed in the crash, local authorities say, with more injured.",
+          "feedRank": 2
+        }
+      ],
+      "static": [],
+      "prelims": [],
+      "tags": [
+        "ir",
+        "security",
+        "society"
+      ],
+      "readMinutes": 4
+    }
+  ],
+  "onThisDay": [
+    {
+      "year": "1956",
+      "title": "UN General Assembly resolution on Suez Crisis",
+      "description": "The UN General Assembly adopted a resolution calling on the United Kingdom, France and Israel to immediately withdraw their troops from Egypt during the Suez Crisis.",
+      "category": "event",
+      "upscLink": "World history: Suez Crisis, decolonisation and UN peacekeeping; India's non-aligned role."
+    },
+    {
+      "year": "1973",
+      "title": "War Powers Resolution passed over Nixon veto",
+      "description": "The U.S. Congress overrode President Richard Nixon's veto to pass the War Powers Resolution, which limits presidential power to wage war without congressional approval.",
+      "category": "event",
+      "upscLink": "Polity: separation of powers and checks on executive war powers."
+    },
+    {
+      "year": "1975",
+      "title": "Bangladesh uprising frees Ziaur Rahman",
+      "description": "In Bangladesh, an uprising led by Colonel Abu Taher ousted and killed Brigadier Khaled Mosharraf, freeing the house-arrested army chief and future president Ziaur Rahman.",
+      "category": "event",
+      "upscLink": "India-Bangladesh relations: post-1975 Bangladesh political turmoil and rise of Ziaur Rahman."
+    },
+    {
+      "year": "1989",
+      "title": "Willi Stoph resigns in East Germany",
+      "description": "East German Prime Minister Willi Stoph and his entire cabinet were forced to resign after huge anti-government protests.",
+      "category": "event",
+      "upscLink": "Cold War: fall of Berlin Wall and German reunification."
+    },
+    {
+      "year": "1996",
+      "title": "NASA launches Mars Global Surveyor",
+      "description": "NASA launched the Mars Global Surveyor, a robotic spacecraft that mapped Mars and studied its surface, atmosphere and magnetic field.",
+      "category": "event",
+      "upscLink": "Science & Tech: Mars exploration and space missions."
+    }
+  ],
+  "extras": [
+    {
+      "title": "Board gearing up for Deepavali celebrations at Indiramma houses in Telangana",
+      "date": "2026-11-07T04:33:44.000Z",
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Board gearing up for Deepavali celebrations at Indiramma houses in Telangana",
+          "link": "https://www.thehindu.com/news/national/telangana/board-gearing-up-for-deepavali-celebrations-at-indiramma-houses-in-telangana/article71675559.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-07T04:33:44.000Z",
+          "snippet": "",
+          "feedRank": 0
+        }
+      ]
+    },
+    {
+      "title": "Two more children of a school test positive for shigellosis in Keralam’s Kozhikode",
+      "date": "2026-11-07T04:32:54.000Z",
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Two more children of a school test positive for shigellosis in Keralam’s Kozhikode",
+          "link": "https://www.thehindu.com/news/national/kerala/two-more-children-of-a-school-test-positive-for-shigellosis-in-keralams-kozhikode/article71677290.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-07T04:32:54.000Z",
+          "snippet": "",
+          "feedRank": 1
+        }
+      ]
+    },
+    {
+      "title": "Why are flight tickets so expensive now? The truth behind rising airfares | Explained",
+      "date": "2026-11-07T04:32:48.000Z",
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Why are flight tickets so expensive now? The truth behind rising airfares | Explained",
+          "link": "https://www.thehindu.com/videos/why-are-flight-tickets-so-expensive-now-the-truth-behind-rising-airfares-explained/article71677303.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-07T04:32:48.000Z",
+          "snippet": "Have you noticed that domestic flight tickets in India have become significantly more expensive? According to the Consumer Price Index, domestic airfares were nearly 30% higher in September compared to a year earlier. But what is driving this surge? In this explainer, The Hindu’s aviation reporter Jagriti Chandra…",
+          "feedRank": 2
+        }
+      ]
+    },
+    {
+      "title": "Efforts on to trace missing Telugu student in USA: Telangana Minister Komatireddy",
+      "date": "2026-11-07T04:24:53.000Z",
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Efforts on to trace missing Telugu student in USA: Telangana Minister Komatireddy",
+          "link": "https://www.thehindu.com/news/national/telangana/efforts-on-to-trace-missing-telugu-student-in-usa-telangana-minister-komatireddy/article71675548.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-07T04:24:53.000Z",
+          "snippet": "",
+          "feedRank": 3
+        }
+      ]
+    },
+    {
+      "title": "U.S. military carries out fresh targeted strikes on Iran as Tehran weighs mediator's proposals",
+      "date": "2026-11-07T04:20:23.000Z",
+      "articles": [
+        {
+          "id": "the-hindu-world:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "U.S. military carries out fresh targeted strikes on Iran as Tehran weighs mediator's proposals",
+          "link": "https://www.thehindu.com/news/international/us-military-carries-out-fresh-targeted-strikes-on-iran-as-tehran-weighs-mediators-proposals/article71677274.ece",
+          "source": "The Hindu — World",
+          "sourceId": "the-hindu-world",
+          "region": "global",
+          "categories": [
+            "ir",
+            "security",
+            "economy"
+          ],
+          "publishedAt": "2026-11-07T04:20:23.000Z",
+          "snippet": "‘They knocked out — they built a little bit of an anti-aircraft device — and we knocked it out in about 15 minutes, maybe five,’ says U.S. President Trump",
+          "feedRank": 0
+        }
+      ]
+    },
+    {
+      "title": "Maharashtra to lease reservoir land for fodder cultivation in 304 drought-hit talukas",
+      "date": "2026-11-07T04:15:03.000Z",
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Maharashtra to lease reservoir land for fodder cultivation in 304 drought-hit talukas",
+          "link": "https://www.thehindu.com/news/national/maharashtra/maharashtra-to-lease-reservoir-land-for-fodder-cultivation-in-304-drought-hit-talukas/article71675170.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-07T04:15:03.000Z",
+          "snippet": "The decision is aimed at improving fodder availability for livestock in areas affected by rainfall deficiency during the 2026 kharif season.",
+          "feedRank": 4
+        }
+      ]
+    },
+    {
+      "title": "Kerala rains: Yellow alert for 4 districts",
+      "date": "2026-11-07T04:13:41.000Z",
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Kerala rains: Yellow alert for 4 districts",
+          "link": "https://www.thehindu.com/news/national/kerala/kerala-rains-yellow-alert-for-4-districts/article71675021.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-07T04:13:41.000Z",
+          "snippet": "",
+          "feedRank": 5
+        }
+      ]
+    },
+    {
+      "title": "How a love story grew into a deep belonging to India",
+      "date": "2026-11-07T04:07:43.000Z",
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "How a love story grew into a deep belonging to India",
+          "link": "https://www.thehindu.com/news/national/sonia-gandhis-belonging-a-journey-of-love-how-a-love-story-grew-into-a-deep-belonging-to-india/article71674214.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-07T04:07:43.000Z",
+          "snippet": "Sonia Gandhi’s much-awaited Belonging is a personal memoir, with politics providing the background or “a kind of framework,” as she puts it in the book",
+          "feedRank": 6
+        }
+      ]
+    },
+    {
+      "title": "‘Where I truly belong’: Sonia Gandhi on her memoir ‘Belonging: A Journey of Love’",
+      "date": "2026-11-07T04:04:40.000Z",
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "‘Where I truly belong’: Sonia Gandhi on her memoir ‘Belonging: A Journey of Love’",
+          "link": "https://www.thehindu.com/books/books-authors/sonia-gandhi-on-her-memoir-belonging-a-journey-of-love/article71655899.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-07T04:04:40.000Z",
+          "snippet": "Ahead of the release of her much-discussed memoir, the senior Congress party leader talks about her journey from privacy to public life in India",
+          "feedRank": 7
+        }
+      ]
+    },
+    {
+      "title": "Don’t confuse PM Modi, convince him for open debate with me: Rahul Gandhi to Amit Shah",
+      "date": "2026-11-07T03:59:56.000Z",
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Don’t confuse PM Modi, convince him for open debate with me: Rahul Gandhi to Amit Shah",
+          "link": "https://www.thehindu.com/news/national/dont-confuse-pm-modi-convince-him-for-open-debate-with-me-rahul-gandhi-to-amit-shah/article71677239.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-07T03:59:56.000Z",
+          "snippet": "Congress president Mallikarjun Kharge has also said the Prime Minister should come forward and face the questions on vote theft that the nation was posing",
+          "feedRank": 8
+        }
+      ]
+    },
+    {
+      "title": "Deepavali 2026: All you need to know about Supreme Court-permitted time slots, green crackers and other directives",
+      "date": "2026-11-07T03:45:36.000Z",
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Deepavali 2026: All you need to know about Supreme Court-permitted time slots, green crackers and other directives",
+          "link": "https://www.thehindu.com/news/national/diwali-2026-supreme-court-green-cracker-norms-permitted-time-slots-and-other-directions/article71669897.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-07T03:45:36.000Z",
+          "snippet": "The Supreme Court permitted the bursting of certified green firecrackers between 6 a.m. and 7 a.m. and between 8 p.m. and 10 p.m. on November 7 and November 8, 2026 in Delhi-NCR",
+          "feedRank": 13
+        }
+      ]
+    },
+    {
+      "title": "Deepavali without mithai: What happens when a dessert addict gives up sugar for a year?",
+      "date": "2026-11-07T03:44:36.000Z",
+      "articles": [
+        {
+          "id": "the-hindu-editorial:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Deepavali without mithai: What happens when a dessert addict gives up sugar for a year?",
+          "link": "https://www.thehindu.com/life-and-style/deepavali-without-mithai-what-happens-when-a-dessert-addict-gives-up-sugar-for-a-year/article71669153.ece",
+          "source": "The Hindu — Opinion",
+          "sourceId": "the-hindu-editorial",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society"
+          ],
+          "publishedAt": "2026-11-07T03:44:36.000Z",
+          "snippet": "After nearly a year without added sugar, author Prajwal Parajuly, a former dessert obsessive, faces Deepavali without sel roti, jalebis or ladoos. He even resorted to a hummus cake. But is this the sacrifice of a lifetime worth it?",
+          "feedRank": 0
+        }
+      ]
+    },
+    {
+      "title": "Calcutta High Court restrains KMC polls until challenge on delimitation decided",
+      "date": "2026-11-07T03:02:44.000Z",
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Calcutta High Court restrains KMC polls until challenge on delimitation decided",
+          "link": "https://www.thehindu.com/news/cities/kolkata/calcutta-high-court-restrains-kmc-polls-until-challenge-on-delimitation-decided/article71675339.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-07T03:02:44.000Z",
+          "snippet": "The West Bengal government, through a delimitation, has increased the number of wards of KMC from 144 to 209. The petitioner argued that the State government and its agencies have resorted to gerrymandering in order to secure partisan advantage to the ruling political party in West Bengal on the premise of previous…",
+          "feedRank": 19
+        }
+      ]
+    },
+    {
+      "title": "China says discussions underway on Xi-Trump-Putin meeting",
+      "date": "2026-11-07T02:57:07.000Z",
+      "articles": [
+        {
+          "id": "the-hindu-world:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "China says discussions underway on Xi-Trump-Putin meeting",
+          "link": "https://www.thehindu.com/news/international/china-says-discussions-underway-on-xi-trump-putin-meeting/article71677194.ece",
+          "source": "The Hindu — World",
+          "sourceId": "the-hindu-world",
+          "region": "global",
+          "categories": [
+            "ir",
+            "security",
+            "economy"
+          ],
+          "publishedAt": "2026-11-07T02:57:07.000Z",
+          "snippet": "President Trump is expected to travel to Shenzhen to meet President Xi for the third time this year, as the fragile trade truce is set to expire in January",
+          "feedRank": 1
+        }
+      ]
+    },
+    {
+      "title": "The Imran Khan case and foreigners in national politics",
+      "date": "2026-11-07T02:42:26.000Z",
+      "articles": [
+        {
+          "id": "the-hindu-editorial:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "The Imran Khan case and foreigners in national politics",
+          "link": "https://www.thehindu.com/opinion/political-line-newsletter-the-imran-khan-case-and-foreigners-in-national-politics/article71675626.ece",
+          "source": "The Hindu — Opinion",
+          "sourceId": "the-hindu-editorial",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society"
+          ],
+          "publishedAt": "2026-11-07T02:42:26.000Z",
+          "snippet": "",
+          "feedRank": 1
+        }
+      ]
+    },
+    {
+      "title": "Condemn Hindu nationalism, support students’ protests: U.S. Representative Ro Khanna",
+      "date": "2026-11-07T01:59:59.000Z",
+      "articles": [
+        {
+          "id": "the-hindu:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Condemn Hindu nationalism, support students’ protests: U.S. Representative Ro Khanna",
+          "link": "https://www.thehindu.com/news/national/condemn-hindu-nationalism-support-students-protests-us-representative-ro-khanna/article71675671.ece",
+          "source": "The Hindu",
+          "sourceId": "the-hindu",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society",
+            "scitech",
+            "environment"
+          ],
+          "publishedAt": "2026-11-07T01:59:59.000Z",
+          "snippet": "No response from MEA, but I&B Ministry advisor slams Mr. Khanna’s remarks; USCIRF claims shootings outside gurdwaras in Punjab are ‘vigilante attacks’",
+          "feedRank": 21
+        }
+      ]
+    },
+    {
+      "title": "Iran reviewing proposals on Tehran’s nuclear programme: Officials",
+      "date": "2026-11-07T01:25:49.000Z",
+      "articles": [
+        {
+          "id": "the-hindu-world:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Iran reviewing proposals on Tehran’s nuclear programme: Officials",
+          "link": "https://www.thehindu.com/news/international/iran-reviewing-proposals-on-tehrans-nuclear-programme-officials/article71677167.ece",
+          "source": "The Hindu — World",
+          "sourceId": "the-hindu-world",
+          "region": "global",
+          "categories": [
+            "ir",
+            "security",
+            "economy"
+          ],
+          "publishedAt": "2026-11-07T01:25:49.000Z",
+          "snippet": "Mediators and Iran have discussed a potential bridge deal aimed at helping pave the way for further talks on Tehran’s nuclear programme, according to regional officials",
+          "feedRank": 2
+        }
+      ]
+    },
+    {
+      "title": "‘Pat Cummins’ availability is 50-50′: Former SRH batter on trade with CSK",
+      "date": "2026-11-07T00:50:00.000Z",
+      "articles": [
+        {
+          "id": "indian-express-explained:g:aHR0cHM6Ly9uZXdzLmdv",
+          "title": "‘Pat Cummins’ availability is 50-50′: Former SRH batter on trade with CSK",
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOelFCYXoyeF91OS1hcGY2UkxGdjJpQ2dkYUs5aWpoWEhuV0pVMkN4OFVKc3R5Rk1BREMyY1RFdExCLXRjRXJ2d3J1bE1EaUJJdUNSejBXMUJySG13X2xUNzFCMndyRWQydzdHWG9udk5sakpOWk1GS0U5X2xlQWpVQlJPZnZVNlI5djZTWXgwWkxZZzFlZFFnd3ltdFhGckJKbXozNE0tbnQ5VmZpaG04VnRlM3lNSUhPZUlqZXhSVS1OQXdVNl930gHOAUFVX3lxTE9fVkk1LW5zcWt0Mnh1ZURnUTgwNmlqWjM3Slo5aHBxVHktb1hWZTQ1cDdLcEZWVjBTUkhwanc4XzBHNFJHOXNaNVdKeThmZVR0VUdwTzNwN3pJdDAwN2dhWXBXcU5MUHlrc0JNMHNlZHB2QmtING5vdWFERmJDSkN2c0I2N3N1QWpjYnVudWNRa29sYW91TVJabUdHeUFwMXgtc0prdGdBSDF2WVl1bkd4Qmd2RUxLWWUtZXc3R3M1SzBJclRSSG9xck52eWdn?oc=5",
+          "source": "The Indian Express — Explained",
+          "sourceId": "indian-express-explained",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "environment",
+            "scitech",
+            "culture",
+            "geography"
+          ],
+          "publishedAt": "2026-11-07T00:50:00.000Z",
+          "snippet": "‘Pat Cummins’ availability is 50-50′: Former SRH batter on trade with CSK The Indian Express",
+          "feedRank": 4
+        }
+      ]
+    },
+    {
+      "title": "Paraguayan President Pena impeached over banking crisis",
+      "date": "2026-11-06T23:16:54.000Z",
+      "articles": [
+        {
+          "id": "the-hindu-world:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Paraguayan President Pena impeached over banking crisis",
+          "link": "https://www.thehindu.com/news/international/paraguayan-president-pena-impeached-over-banking-crisis/article71676251.ece",
+          "source": "The Hindu — World",
+          "sourceId": "the-hindu-world",
+          "region": "global",
+          "categories": [
+            "ir",
+            "security",
+            "economy"
+          ],
+          "publishedAt": "2026-11-06T23:16:54.000Z",
+          "snippet": "Santiago Pena had offered his resignation over the disaster, but lawmakers pressed ahead with impeachment proceedings that would strip him of immunity granted to former Presidents",
+          "feedRank": 3
+        }
+      ]
+    },
+    {
+      "title": "Wave of resignations from U.S. Justice Department after midterms",
+      "date": "2026-11-06T22:41:07.000Z",
+      "articles": [
+        {
+          "id": "the-hindu-world:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Wave of resignations from U.S. Justice Department after midterms",
+          "link": "https://www.thehindu.com/news/international/wave-of-resignations-from-us-justice-department-after-midterms/article71676248.ece",
+          "source": "The Hindu — World",
+          "sourceId": "the-hindu-world",
+          "region": "global",
+          "categories": [
+            "ir",
+            "security",
+            "economy"
+          ],
+          "publishedAt": "2026-11-06T22:41:07.000Z",
+          "snippet": "The Justice Department under Donald Trump has pursued cases against a number of perceived enemies, and several prosecutors have lost their jobs over their reluctance or inability to bring charges",
+          "feedRank": 4
+        }
+      ]
+    },
+    {
+      "title": "Trump replaces Susie Wiles with Stephen Miller as chief of staff after GOP’s midterm defeat",
+      "date": "2026-11-06T19:40:45.000Z",
+      "articles": [
+        {
+          "id": "the-hindu-world:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Trump replaces Susie Wiles with Stephen Miller as chief of staff after GOP’s midterm defeat",
+          "link": "https://www.thehindu.com/news/international/trump-replaces-susie-wiles-with-stephen-miller-as-chief-of-staff-after-gops-midterm-defeat/article71676063.ece",
+          "source": "The Hindu — World",
+          "sourceId": "the-hindu-world",
+          "region": "global",
+          "categories": [
+            "ir",
+            "security",
+            "economy"
+          ],
+          "publishedAt": "2026-11-06T19:40:45.000Z",
+          "snippet": "On his social media site, Donald Trump praised Susie Wiles and said she’d continue working for his political organisation",
+          "feedRank": 5
+        }
+      ]
+    },
+    {
+      "title": "Sailor killed in Gulf as Iran says tankers on fire",
+      "date": "2026-11-06T19:10:32.000Z",
+      "articles": [
+        {
+          "id": "the-hindu-world:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Sailor killed in Gulf as Iran says tankers on fire",
+          "link": "https://www.thehindu.com/news/international/sailor-killed-in-gulf-as-iran-says-tankers-on-fire/article71676046.ece",
+          "source": "The Hindu — World",
+          "sourceId": "the-hindu-world",
+          "region": "global",
+          "categories": [
+            "ir",
+            "security",
+            "economy"
+          ],
+          "publishedAt": "2026-11-06T19:10:32.000Z",
+          "snippet": "The Marshall Islands-flagged tanker Velos Sapphire was sailing to Bahrain empty of cargo when the attack happened on November 5, Velos Tankers said in a statement",
+          "feedRank": 6
+        }
+      ]
+    },
+    {
+      "title": "The struggle for justice is indivisible",
+      "date": "2026-11-06T18:48:37.000Z",
+      "articles": [
+        {
+          "id": "the-hindu-editorial:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "The struggle for justice is indivisible",
+          "link": "https://www.thehindu.com/opinion/lead/the-struggle-for-justice-is-indivisible/article71675148.ece",
+          "source": "The Hindu — Opinion",
+          "sourceId": "the-hindu-editorial",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society"
+          ],
+          "publishedAt": "2026-11-06T18:48:37.000Z",
+          "snippet": "From Panna to Delhi, the fight against displacement and disenfranchisement has a common thread — a struggle against state repression and the systematic erosion of a citizen’s constitutional rights",
+          "feedRank": 3
+        }
+      ]
+    },
+    {
+      "title": "Demonetisation and the health costs of cash shortages",
+      "date": "2026-11-06T18:45:06.000Z",
+      "articles": [
+        {
+          "id": "the-hindu-editorial:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Demonetisation and the health costs of cash shortages",
+          "link": "https://www.thehindu.com/opinion/op-ed/demonetisation-and-the-health-costs-of-cash-shortages/article71675256.ece",
+          "source": "The Hindu — Opinion",
+          "sourceId": "the-hindu-editorial",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society"
+          ],
+          "publishedAt": "2026-11-06T18:45:06.000Z",
+          "snippet": "Research shows the hidden public health costs of India’s demonetisation and the importance of liquidity",
+          "feedRank": 4
+        }
+      ]
+    },
+    {
+      "title": "Letters to The Editor — November 7, 2026",
+      "date": "2026-11-06T18:33:37.000Z",
+      "articles": [
+        {
+          "id": "the-hindu-editorial:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Letters to The Editor — November 7, 2026",
+          "link": "https://www.thehindu.com/opinion/letters/letters-to-the-editor-november-7-2026/article71675373.ece",
+          "source": "The Hindu — Opinion",
+          "sourceId": "the-hindu-editorial",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society"
+          ],
+          "publishedAt": "2026-11-06T18:33:37.000Z",
+          "snippet": "",
+          "feedRank": 5
+        }
+      ]
+    },
+    {
+      "title": "Epic failures: on electoral roll, welfare",
+      "date": "2026-11-06T18:29:51.000Z",
+      "articles": [
+        {
+          "id": "the-hindu-editorial:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Epic failures: on electoral roll, welfare",
+          "link": "https://www.thehindu.com/opinion/editorial/epic-failures-on-electoral-roll-welfare/article71674394.ece",
+          "source": "The Hindu — Opinion",
+          "sourceId": "the-hindu-editorial",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "society"
+          ],
+          "publishedAt": "2026-11-06T18:29:51.000Z",
+          "snippet": "The electoral roll cannot be used to determine welfare beneficiaries",
+          "feedRank": 6
+        }
+      ]
+    },
+    {
+      "title": "Two USCIRF officials claim vigilante attacks on gurdwaras in India",
+      "date": "2026-11-06T18:02:34.000Z",
+      "articles": [
+        {
+          "id": "the-hindu-world:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Two USCIRF officials claim vigilante attacks on gurdwaras in India",
+          "link": "https://www.thehindu.com/news/national/us-commission-on-international-religious-freedom-claim-vigilante-attacks-on-india-gurdwaras/article71675663.ece",
+          "source": "The Hindu — World",
+          "sourceId": "the-hindu-world",
+          "region": "global",
+          "categories": [
+            "ir",
+            "security",
+            "economy"
+          ],
+          "publishedAt": "2026-11-06T18:02:34.000Z",
+          "snippet": "India describes U.S. Commission on International Religious Freedom as a biased organisation that lacks credibility",
+          "feedRank": 10
+        }
+      ]
+    },
+    {
+      "title": "‘Shukriya, Test cricket’: Mohammed Shami calls it a day from Tests",
+      "date": "2026-11-06T17:58:48.000Z",
+      "articles": [
+        {
+          "id": "indian-express-explained:g:aHR0cHM6Ly9uZXdzLmdv",
+          "title": "‘Shukriya, Test cricket’: Mohammed Shami calls it a day from Tests",
+          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOQ2ZiNTlLaUJ6VlBsY20zWEJVTmVxYVZSM0xmRm9RZTlBUkFibnNOc2ZFakRTdWxoN0FraXQ4WU1VTVNZaHlQT196NFNJU2ltOUZhWFhuVW5aTGJYekI5MW5VcHltOEJGQTdZMGxpc3YzUk9WTUlVaERnRE5PTHBFbHg2R190MzZtRmdBZWZ0OW51M3JCVXNOeDYzVWNYUEdKM0Y4R1BDQUFNa01MLWVtOdIBtwFBVV95cUxOYzhNaEtrMi1zQXpzWGNYVENnTHpyeVdyU2hySm9yMXhUZ3RKS1RmT2NhbnNtYTBYQWhVUTROWGlWZTF2STFDM2NheXppeG9Pbl9MRHd2MVl6VHBQbE5hWU04N1h2akdKLVh5WGQ2VHlRSXhqU3lwZ0tMT0d3dlBhRF9lYy1wUGRZYmZkMUhpbVkxTGVVcXRwR2d0QnlNOFVKSjhLYXVaUXB5WjhtbWtGeWFsdVYwLWs?oc=5",
+          "source": "The Indian Express — Explained",
+          "sourceId": "indian-express-explained",
+          "region": "india",
+          "categories": [
+            "polity",
+            "economy",
+            "ir",
+            "environment",
+            "scitech",
+            "culture",
+            "geography"
+          ],
+          "publishedAt": "2026-11-06T17:58:48.000Z",
+          "snippet": "‘Shukriya, Test cricket’: Mohammed Shami calls it a day from Tests The Indian Express",
+          "feedRank": 3
+        }
+      ]
+    },
+    {
+      "title": "Iran Guards say two tankers caught fire in Hormuz",
+      "date": "2026-11-06T16:49:04.000Z",
+      "articles": [
+        {
+          "id": "the-hindu-world:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Iran Guards say two tankers caught fire in Hormuz",
+          "link": "https://www.thehindu.com/news/international/iran-guards-say-two-tankers-caught-fire-in-hormuz/article71675787.ece",
+          "source": "The Hindu — World",
+          "sourceId": "the-hindu-world",
+          "region": "global",
+          "categories": [
+            "ir",
+            "security",
+            "economy"
+          ],
+          "publishedAt": "2026-11-06T16:49:04.000Z",
+          "snippet": "Since the outbreak of the West Asia war on February 28, Tehran has sought to limit traffic through the strategic waterway, which normally carries about one-fifth of global oil consumption",
+          "feedRank": 15
+        }
+      ]
+    },
+    {
+      "title": "Trump discusses West Asia de-escalation with Qatar's Emir",
+      "date": "2026-11-06T16:32:53.000Z",
+      "articles": [
+        {
+          "id": "the-hindu-world:aHR0cHM6Ly93d3cudGhlaGlu",
+          "title": "Trump discusses West Asia de-escalation with Qatar's Emir",
+          "link": "https://www.thehindu.com/news/international/trump-discusses-west-asia-de-escalation-with-qatars-emir/article71675242.ece",
+          "source": "The Hindu — World",
+          "sourceId": "the-hindu-world",
+          "region": "global",
+          "categories": [
+            "ir",
+            "security",
+            "economy"
+          ],
+          "publishedAt": "2026-11-06T16:32:53.000Z",
+          "snippet": "The telephone call between Trump and Qatar's Emir Sheik Tamim bin Hamad al Thani centred on international efforts to end tensions, according to a statement from the Qatari ruler's media office",
+          "feedRank": 16
+        }
+      ]
+    }
+  ],
+  "feeds": [
+    {
+      "source": "Reuters",
+      "rss": "https://news.google.com/rss/search?q=site:reuters.com+when:1d&hl=en-IN&gl=IN&ceid=IN:en",
+      "count": 92
+    },
+    {
+      "source": "The Telegraph (India)",
+      "rss": "https://news.google.com/rss/search?q=site:telegraphindia.com+when:2d&hl=en-IN&gl=IN&ceid=IN:en",
+      "count": 85
+    },
+    {
+      "source": "Business Standard",
+      "rss": "https://news.google.com/rss/search?q=site:business-standard.com+when:2d&hl=en-IN&gl=IN&ceid=IN:en",
+      "count": 65
+    },
+    {
+      "source": "The Hindu",
+      "rss": "https://www.thehindu.com/news/national/feeder/default.rss",
+      "count": 60
+    },
+    {
+      "source": "The Hindu BusinessLine",
+      "rss": "https://www.thehindubusinessline.com/feeder/default.rss",
+      "count": 60
+    },
+    {
+      "source": "The Wire",
+      "rss": "https://news.google.com/rss/search?q=site:thewire.in+when:2d&hl=en-IN&gl=IN&ceid=IN:en",
+      "count": 58
+    },
+    {
+      "source": "The Tribune",
+      "rss": "https://news.google.com/rss/search?q=site:tribuneindia.com+when:2d&hl=en-IN&gl=IN&ceid=IN:en",
+      "count": 47
+    },
+    {
+      "source": "Deccan Herald",
+      "rss": "https://news.google.com/rss/search?q=site:deccanherald.com+when:2d&hl=en-IN&gl=IN&ceid=IN:en",
+      "count": 46
+    },
+    {
+      "source": "The Hindu — World",
+      "rss": "https://www.thehindu.com/news/international/feeder/default.rss",
+      "count": 46
+    },
+    {
+      "source": "LiveLaw",
+      "rss": "https://news.google.com/rss/search?q=site:livelaw.in+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
+      "count": 37
+    },
+    {
+      "source": "Mint",
+      "rss": "https://www.livemint.com/rss/news",
+      "count": 35
+    },
+    {
+      "source": "Observer Research Foundation",
+      "rss": "https://news.google.com/rss/search?q=site:orfonline.org+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
+      "count": 32
+    },
+    {
+      "source": "Scroll.in",
+      "rss": "https://feeds.feedburner.com/ScrollinArticles.rss",
+      "count": 29
+    },
+    {
+      "source": "The Conversation",
+      "rss": "https://theconversation.com/articles.atom",
+      "count": 26
+    },
+    {
+      "source": "Bar & Bench",
+      "rss": "https://prod-qt-images.s3.amazonaws.com/production/barandbench/feed.xml",
+      "count": 20
+    },
+    {
+      "source": "BBC World",
+      "rss": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "count": 20
+    },
+    {
+      "source": "India Global Review",
+      "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC83iGbaOhZR8AWNYYNzSNjg",
+      "count": 20
+    },
+    {
+      "source": "The Indian Express — Explained",
+      "rss": "https://indianexpress.com/section/explained/feed/",
+      "count": 20
+    },
+    {
+      "source": "ThePrint",
+      "rss": "https://theprint.in/feed/?post_type=post",
+      "count": 20
+    },
+    {
+      "source": "The News Minute",
+      "rss": "https://prod-qt-images.s3.amazonaws.com/production/thenewsminute/feed.xml",
+      "count": 15
+    },
+    {
+      "source": "Down To Earth",
+      "rss": "https://prod-qt-images.s3.amazonaws.com/production/downtoearth/feed.xml",
+      "count": 11
+    },
+    {
+      "source": "The Hindu — Opinion",
+      "rss": "https://www.thehindu.com/opinion/feeder/default.rss",
+      "count": 8
+    },
+    {
+      "source": "Newslaundry",
+      "rss": "https://prod-qt-images.s3.amazonaws.com/production/newslaundry/feed.xml",
+      "count": 7
+    },
+    {
+      "source": "Supreme Court Observer",
+      "rss": "https://news.google.com/rss/search?q=site:scobserver.in+when:30d&hl=en-IN&gl=IN&ceid=IN:en",
+      "count": 5
+    },
+    {
+      "source": "Mongabay India",
+      "rss": "https://india.mongabay.com/feed/",
+      "count": 3
+    },
+    {
+      "source": "Centre for Social and Economic Progress",
+      "rss": "https://news.google.com/rss/search?q=site:csep.org+when:14d&hl=en-IN&gl=IN&ceid=IN:en",
+      "count": 2
+    },
+    {
+      "source": "India Water Portal",
+      "rss": "https://prod-qt-images.s3.amazonaws.com/production/indiawaterportal/feed.xml",
+      "count": 2
+    },
+    {
+      "source": "Carbon Brief",
+      "rss": "https://www.carbonbrief.org/feed",
+      "count": 1
+    },
+    {
+      "source": "PIB (Press Information Bureau)",
+      "rss": "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3",
+      "count": 1
+    },
+    {
+      "source": "PRS Legislative Research",
+      "rss": "https://news.google.com/rss/search?q=site:prsindia.org+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
+      "count": 1
+    },
+    {
+      "source": "RBI (Press Releases)",
+      "rss": "https://www.rbi.org.in/pressreleases_rss.xml",
+      "count": 1
+    },
+    {
+      "source": "Nature",
+      "rss": "https://www.nature.com/nature.rss",
+      "count": 0
+    },
+    {
+      "source": "Sansad TV",
+      "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCISgnSNwqQ2i8lhCun3KtQg",
+      "count": 0
+    },
+    {
+      "source": "The Indian Express",
+      "rss": "https://indianexpress.com/feed/",
+      "count": 0
+    },
+    {
+      "source": "Vidhi Centre for Legal Policy",
+      "rss": "https://vidhilegalpolicy.in/feed/",
+      "count": 0
+    }
+  ]
+}
