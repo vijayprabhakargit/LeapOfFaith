@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { slugify, sanitizeArticleIds, buildHeuristicStories, outletFamily, tokenize, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, distinctOutlets, clusterScore, buildFeedStats, type ClusterSpec } from "../scripts/lib/enrich";
+import { slugify, sanitizeArticleIds, buildHeuristicStories, outletFamily, tokenize, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, distinctOutlets, clusterScore, buildFeedStats, linkPerspectives, type ClusterSpec } from "../scripts/lib/enrich";
 import type { Article } from "../src/lib/types";
 
 function makeArticle(overrides: Partial<Article> = {}): Article {
@@ -48,6 +48,50 @@ test("sanitizeArticleIds drops non-numeric and non-array input", () => {
   assert.deepEqual(sanitizeArticleIds(["x", 1.5, undefined], 3), []);
   assert.deepEqual(sanitizeArticleIds(undefined, 3), []);
   assert.deepEqual(sanitizeArticleIds("nope", 3), []);
+});
+
+test("sanitizeArticleIds de-duplicates repeated indices", () => {
+  assert.deepEqual(sanitizeArticleIds([2, 0, 2, 2, 1], 3), [2, 0, 1]);
+});
+
+test("linkPerspectives gives a duplicate source its own distinct article", () => {
+  const wireA = makeArticle({ id: "w1", source: "TheWire.in", sourceId: "the-wire", link: "https://wire/1" });
+  const wireB = makeArticle({ id: "w2", source: "TheWire.in", sourceId: "the-wire", link: "https://wire/2" });
+  const dh = makeArticle({ id: "d1", source: "Deccan Herald", sourceId: "deccan", link: "https://dh/1" });
+  const out = linkPerspectives(
+    [
+      { source: "TheWire.in", take: "Wire angle one" },
+      { source: "TheWire.in", take: "Wire angle two" },
+      { source: "Deccan Herald", take: "DH angle" },
+    ],
+    [wireA, dh, wireB],
+    [],
+  );
+  const wireLinks = out.filter((p) => p.source === "TheWire.in").map((p) => p.link);
+  assert.deepEqual(wireLinks, ["https://wire/1", "https://wire/2"], "each Wire perspective draws a distinct article");
+  assert.equal(new Set(out.map((p) => p.link)).size, out.length, "no duplicate links");
+});
+
+test("linkPerspectives collapses a repeated source with only one article", () => {
+  const tg = makeArticle({ id: "t1", source: "Telegraph India", sourceId: "telegraph", link: "https://tg/1" });
+  const out = linkPerspectives(
+    [
+      { source: "Telegraph India", take: "first" },
+      { source: "Telegraph India", take: "duplicate" },
+    ],
+    [tg],
+    [],
+  );
+  assert.equal(out.length, 1, "second entry dropped when the source has no further article");
+  assert.equal(out[0].link, "https://tg/1");
+});
+
+test("linkPerspectives still appends a source the model omitted", () => {
+  const a = makeArticle({ id: "a", source: "The Hindu", sourceId: "the-hindu", link: "https://h/1" });
+  const b = makeArticle({ id: "b", source: "Reuters", sourceId: "reuters", link: "https://r/1", region: "global" });
+  const out = linkPerspectives([{ source: "The Hindu", take: "only one" }], [a, b], []);
+  assert.equal(out.length, 2);
+  assert.ok(out.some((p) => p.source === "Reuters" && p.link === "https://r/1"));
 });
 
 test("buildHeuristicStories maps articles into story shape", () => {

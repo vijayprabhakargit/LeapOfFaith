@@ -24,7 +24,8 @@ interface BriefAndClusters {
 // strings or hallucinated positions, which would otherwise crash the pipeline.
 export function sanitizeArticleIds(ids: unknown, max: number): number[] {
   if (!Array.isArray(ids)) return [];
-  return ids.map((i) => Number(i)).filter((i) => Number.isInteger(i) && i >= 0 && i < max);
+  const valid = ids.map((i) => Number(i)).filter((i) => Number.isInteger(i) && i >= 0 && i < max);
+  return [...new Set(valid)];
 }
 
 // The "outlet family" of a source — e.g. "The Hindu — World" belongs to
@@ -326,12 +327,80 @@ function cardPrompt(cards: KnowledgeCard[]): string {
     .join("\n\n");
 }
 
+// Canonical key for a link, ignoring query/fragment and a trailing slash — used
+// to spot the same article arriving twice.
+function canonicalLink(link: string): string {
+  return link.replace(/[?#].*$/, "").replace(/\/$/, "");
+}
+
+// Link the model's perspective entries to concrete articles. The model names a
+// source per perspective but can emit the same source more than once — either
+// because the cluster holds two distinct articles from one outlet, or as a
+// straight duplicate. We resolve each entry against a per-source queue of unused
+// articles so a repeat draws the *next* article (a distinct link) instead of
+// pointing at the same first one, then drop any perspective whose resolved link
+// has already been used. A source the model omitted is appended once, so every
+// source still appears.
+export function linkPerspectives(
+  entries: { source: string; take: string }[],
+  all: Article[],
+  regionals: Article[],
+  countryFocus?: string,
+): Perspective[] {
+  const queues = new Map<string, Article[]>();
+  for (const a of all) {
+    const list = queues.get(a.source) ?? [];
+    list.push(a);
+    queues.set(a.source, list);
+  }
+  const takeFor = (source: string): Article | undefined => {
+    const exact = queues.get(source);
+    if (exact?.length) return exact.shift();
+    const key = [...queues.keys()].find((k) => k.toLowerCase() === source.toLowerCase());
+    const list = key ? queues.get(key) : undefined;
+    return list?.length ? list.shift() : undefined;
+  };
+
+  const out: Perspective[] = [];
+  const used = new Set<string>();
+  for (const p of entries) {
+    const match = takeFor(p.source);
+    if (!match) continue;
+    const key = canonicalLink(match.link);
+    if (used.has(key)) continue;
+    used.add(key);
+    out.push({
+      source: p.source,
+      region: match.region === "india" ? "India" : countryFocus ? countryFocus : "Global",
+      lean: "unknown",
+      take: p.take,
+      link: match.link,
+      isRegional: regionals.includes(match),
+    });
+  }
+  for (const a of all) {
+    if (out.some((p) => p.source === a.source)) continue;
+    const key = canonicalLink(a.link);
+    if (used.has(key)) continue;
+    used.add(key);
+    out.push({
+      source: a.source,
+      region: a.region === "india" ? "India" : countryFocus || "Global",
+      lean: "unknown",
+      take: "Coverage available at source.",
+      link: a.link,
+      isRegional: regionals.includes(a),
+    });
+  }
+  return out;
+}
+
 export async function enrichStory(
   spec: ClusterSpec,
   storyArticles: Article[],
   regionals: Article[] = [],
 ): Promise<Story> {
-  const all = [...storyArticles, ...regionals];
+  const all = dedupLinks([...storyArticles, ...regionals]);
   const corpus = all.map((a) => `${a.title}. ${a.snippet}`).join(" ");
   const cards = matchKnowledgeCards(`${spec.headline} ${spec.kicker} ${corpus}`);
 
@@ -390,38 +459,7 @@ Write the JSON now.`;
   ];
   const e = await chatJson<EnrichedStory>(messages);
 
-  const bySource = new Map<string, Article>();
-  for (const a of all) if (!bySource.has(a.source)) bySource.set(a.source, a);
-
-  const perspectives: Perspective[] = (e.perspectives || [])
-    .map((p) => {
-      const match =
-        bySource.get(p.source) ||
-        all.find((a) => a.source.toLowerCase() === p.source.toLowerCase());
-      const regional = regionals.some((r) => r.source === p.source);
-      return {
-        source: p.source,
-        region: match?.region === "india" ? "India" : spec.countryFocus ? spec.countryFocus : "Global",
-        lean: "unknown" as const,
-        take: p.take,
-        link: match?.link || "#",
-        isRegional: regional,
-      };
-    })
-    .filter((p) => p.link !== "#");
-  // Ensure every source is represented even if the model dropped one.
-  for (const a of all) {
-    if (!perspectives.some((p) => p.source === a.source)) {
-      perspectives.push({
-        source: a.source,
-        region: a.region === "india" ? "India" : spec.countryFocus || "Global",
-        lean: "unknown",
-        take: "Coverage available at source.",
-        link: a.link,
-        isRegional: regionals.includes(a),
-      });
-    }
-  }
+  const perspectives = linkPerspectives(e.perspectives || [], all, regionals, spec.countryFocus);
 
   const slug = slugify(e.headline || spec.headline);
   return {
