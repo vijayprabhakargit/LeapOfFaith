@@ -917,6 +917,16 @@ details.static[open] > summary {
   display: block;
 }
 
+.otd-ext {
+  color: var(--accent);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.otd-ext:hover {
+  text-decoration: underline;
+}
+
 /* ---- Extras (reading list) --------------------------------------------- */
 .extras-list {
   list-style: none;

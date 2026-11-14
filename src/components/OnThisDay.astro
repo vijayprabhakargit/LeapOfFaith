@@ -18,7 +18,15 @@ const catLabel: Record<string, string> = { event: "Event", birth: "Born", death:
     <section id="on-this-day">
       <div class="section-head">
         <h2>On this day</h2>
-        <span class="sub">Looking back from {label} — history that still shapes the syllabus</span>
+        <span class="sub"
+          >Looking back from {label} — history that still shapes the syllabus · Source: Wikipedia (CC BY-SA) ·{" "}
+          <a
+            class="otd-ext"
+            href="https://en.wikipedia.org/wiki/Wikipedia:On_this_day/Today"
+            target="_blank"
+            rel="noopener noreferrer">More on Wikipedia ›</a
+          ></span
+        >
       </div>
       <div class="otd">
         {items.map((it) => (
