@@ -58,6 +58,17 @@ function istDate(now = new Date()): string {
   return ist.toISOString().slice(0, 10);
 }
 
+// The edition's news window ends at this fixed IST time on the edition date, so
+// the window is identical no matter when the workflow is run: an edition covers
+// exactly the 24 hours ending at this cutoff (e.g. 2026-11-14 → 13th 07:00 →
+// 14th 07:00 IST). Set it to your normal publish time. A late run never shifts
+// the window — news published after the cutoff flows into the next edition.
+const EDITION_CUTOFF_IST = "07:00";
+
+function editionWindowEnd(date: string): Date {
+  return new Date(`${date}T${EDITION_CUTOFF_IST}:00+05:30`);
+}
+
 async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T, i: number) => Promise<R>): Promise<R[]> {
   const out: R[] = new Array(items.length);
   let cursor = 0;
@@ -74,19 +85,25 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T, i: number
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const date = args.day || istDate();
-  // When backfilling a specific day, anchor the window to that day (00:30 IST)
-  // rather than wall-clock now, so a historical edition is filled with the
-  // articles published around that date, not today's.
-  const now = args.day ? new Date(`${args.day}T00:30:00+05:30`) : new Date();
-  const windowStart = new Date(now.getTime() - args.hours * 60 * 60 * 1000);
+  // The window is pinned to a fixed IST cutoff on the edition date — never to
+  // the run time — so running at 07:00 or 10:00 produces the same edition. This
+  // also makes --day backfills reproducible.
+  const windowEnd = editionWindowEnd(date);
+  const windowStart = new Date(windowEnd.getTime() - args.hours * 60 * 60 * 1000);
+  const generatedAt = new Date();
 
   const canLlm = !args.dryRun && llmConfigured();
   console.log(`\n📰 The Daily Brief — edition ${date}`);
-  console.log(`   window: last ${args.hours}h   llm: ${canLlm ? describeLlm() : args.dryRun ? "dry-run" : "NOT CONFIGURED → falling back to heuristic"}\n`);
+  console.log(`   window: ${windowStart.toISOString()} → ${windowEnd.toISOString()} (fixed ${EDITION_CUTOFF_IST} IST cutoff)`);
+  console.log(`   llm: ${canLlm ? describeLlm() : args.dryRun ? "dry-run" : "NOT CONFIGURED → falling back to heuristic"}\n`);
 
   // 1. Fetch -----------------------------------------------------------------
   console.log("→ Fetching feeds…");
-  const { articles, ok, failed } = await fetchFeeds(undefined, args.hours, now.getTime());
+  const fetched = await fetchFeeds(undefined, args.hours, windowEnd.getTime());
+  // fetchFeeds only enforces the lower bound; drop anything published after the
+  // cutoff so the window stays fixed regardless of when the workflow runs.
+  const articles = fetched.articles.filter((a) => new Date(a.publishedAt).getTime() <= windowEnd.getTime());
+  const { ok, failed } = fetched;
   console.log(`   ${ok.length}/${ENABLED_SOURCES.length} feeds ok, ${articles.length} articles in window`);
   for (const f of failed) console.warn(`   ⚠ ${f.source.name}: ${f.error}`);
 
@@ -141,7 +158,9 @@ async function main() {
       let regionals: typeof storyArticles = [];
       if (!args.noRegional && country) {
         const query = storyArticles[0]?.title?.split(" ").slice(0, 8).join(" ") || spec.headline;
-        regionals = await fetchGoogleNewsArticles(query, country, 48, 3, now.getTime());
+        regionals = (await fetchGoogleNewsArticles(query, country, 48, 3, windowEnd.getTime())).filter(
+          (a) => new Date(a.publishedAt).getTime() <= windowEnd.getTime(),
+        );
       }
       try {
         return await enrichStory({ ...spec, countryFocus: country }, storyArticles, regionals);
@@ -181,9 +200,9 @@ async function main() {
 
   const edition: Edition = {
     date,
-    generatedAt: now.toISOString(),
+    generatedAt: generatedAt.toISOString(),
     windowStart: windowStart.toISOString(),
-    windowEnd: now.toISOString(),
+    windowEnd: windowEnd.toISOString(),
     stats: { feeds: ok.length, articles: articles.length, stories: stories.length },
     brief,
     stories,

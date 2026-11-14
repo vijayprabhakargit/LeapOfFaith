@@ -1571,6 +1571,26 @@ footer.site a {
   font-size: 13px;
 }
 
+/* ---- Today pending ------------------------------------------------------ */
+/* The home page renders the newest edition; a tiny head script adds
+   .edition-pending to <html> when that edition isn't dated today (IST), so the
+   "on the way" panel shows instead of yesterday's edition. */
+#today-pending {
+  display: none;
+}
+
+.edition-pending #edition-root {
+  display: none;
+}
+
+.edition-pending #today-pending {
+  display: block;
+}
+
+.edition-pending .dateline {
+  display: none;
+}
+
 /* ---- Responsive --------------------------------------------------------- */
 @media (max-width: 860px) {
   .story {

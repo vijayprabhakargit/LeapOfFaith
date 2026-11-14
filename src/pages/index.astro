@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import EditionView from "../components/EditionView.astro";
 import { getLatestEdition, getEditionDates } from "../lib/editions";
+import { formatDateLong } from "../lib/format";
 
 const edition = getLatestEdition();
 const dates = getEditionDates();
@@ -11,21 +12,62 @@ const prevDate = edition && dates.length > 1 ? dates[1] : null;
   title={edition ? `Leap of Faith — The Daily Brief — ${edition.date}` : "Leap of Faith — The Daily Brief"}
   dateline={edition ? edition.date : ""}
 >
-  {
-    edition ? (
-      <EditionView edition={edition} prevDate={prevDate} nextDate={null} />
-    ) : (
-      <div class="wrap">
-        <div class="empty">
-          <h2>No edition yet</h2>
-          <p class="note" style="margin: 12px auto 18px">
-            Generate your first brief. Add an LLM key to <code>.env</code> and run the generator.
-          </p>
-          <p>
-            <code>npm run generate</code>
-          </p>
+  <Fragment slot="head">
+    <meta name="edition-date" content={edition?.date ?? ""} />
+    <script is:inline>
+      // The site is static, so "today" advances at midnight with no rebuild. If
+      // the newest edition isn't dated today (IST), show the "on the way" panel
+      // instead of passing off yesterday's edition as today's. Runs in <head> so
+      // no stale edition flashes on first paint.
+      (function () {
+        try {
+          var meta = document.querySelector('meta[name="edition-date"]');
+          var date = meta && meta.getAttribute("content");
+          if (!date) return;
+          var today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata" }).format(new Date());
+          if (date !== today) document.documentElement.classList.add("edition-pending");
+        } catch (e) {
+          /* fail open: show the latest edition */
+        }
+      })();
+    </script>
+  </Fragment>
+
+  <div id="edition-root">
+    {
+      edition ? (
+        <EditionView edition={edition} prevDate={prevDate} nextDate={null} />
+      ) : (
+        <div class="wrap">
+          <div class="empty">
+            <h2>No edition yet</h2>
+            <p class="note" style="margin: 12px auto 18px">
+              Generate your first brief. Add an LLM key to <code>.env</code> and run the generator.
+            </p>
+            <p>
+              <code>npm run generate</code>
+            </p>
+          </div>
         </div>
-      </div>
-    )
-  }
+      )
+    }
+  </div>
+
+  <div id="today-pending" class="wrap">
+    <div class="empty">
+      <h2>Today's edition is on the way</h2>
+      <p class="note" style="margin: 12px auto 18px">
+        This morning's brief hasn't been published yet — it usually lands by 07:00 IST.
+      </p>
+      {
+        edition && (
+          <p>
+            <a class="btn primary" href={`/editions/${edition.date}/`}>
+              Read the {formatDateLong(edition.date)} edition
+            </a>
+          </p>
+        )
+      }
+    </div>
+  </div>
 </BaseLayout>

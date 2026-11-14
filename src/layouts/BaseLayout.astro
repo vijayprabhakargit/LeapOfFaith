@@ -47,6 +47,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://leapoffaith
         }
       })();
     </script>
+    <slot name="head" />
   </head>
   <body>
     <div class="progress" id="progress"></div>
@@ -68,7 +69,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://leapoffaith
           <a href="/" class="flag-name">Leap of <span>Faith</span></a>
         </div>
         <div class="masthead-strap">
-          {dateline ? `${dateline} · ` : ""}Stories stitched across trusted sources · the static syllabus, linked in
+          {dateline ? <span class="dateline">{dateline} · </span> : null}Stories stitched across trusted sources · the
+          static syllabus, linked in
         </div>
       </div>
     </header>
@@ -96,12 +98,6 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://leapoffaith
             >
           </div>
           <div style="margin-top: 8px">Built for daily revision. Not affiliated with UPSC.</div>
-          <div style="margin-top: 8px">
-            Built by{" "}
-            <a href="https://vijayprabhakar.netlify.app/" target="_blank" rel="noopener noreferrer"
-              >Vijay Prabhakar</a
-            >.
-          </div>
         </div>
       </div>
     </footer>
