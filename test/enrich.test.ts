@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { slugify, sanitizeArticleIds, buildHeuristicStories, outletFamily, tokenize, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, distinctOutlets, clusterScore, buildFeedStats, linkPerspectives, type ClusterSpec } from "../scripts/lib/enrich";
+import { slugify, sanitizeArticleIds, buildHeuristicStories, buildFallbackStory, normalizeEnrichedStory, outletFamily, tokenize, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, distinctOutlets, clusterScore, buildFeedStats, linkPerspectives, type ClusterSpec } from "../scripts/lib/enrich";
 import type { Article } from "../src/lib/types";
 
 function makeArticle(overrides: Partial<Article> = {}): Article {
@@ -111,6 +111,59 @@ test("buildHeuristicStories maps articles into story shape", () => {
 test("buildHeuristicStories keeps global region for global articles", () => {
   const stories = buildHeuristicStories([makeArticle({ region: "global" })]);
   assert.equal(stories[0].region, "global");
+});
+
+test("buildFallbackStory keeps real content and never emits the dry-run placeholder", () => {
+  const articles = [makeArticle({ title: "RBI holds the repo rate", snippet: "The MPC kept rates unchanged." })];
+  const story = buildFallbackStory(articles, {
+    headline: "RBI holds rates steady",
+    kicker: "Economy · India",
+    category: "economy",
+    region: "india",
+    importance: 4,
+  });
+  assert.equal(story.headline, "RBI holds rates steady");
+  assert.equal(story.importance, 4);
+  assert.equal(story.signal, "recommended");
+  assert.equal(story.whyItMatters, "");
+  assert.ok(!story.summary.includes("Dry-run"));
+  assert.equal(story.perspectives.length, 1);
+  assert.equal(story.perspectives[0].link, "https://example.com/a");
+});
+
+test("buildFallbackStory fills a static link from a matching knowledge card", () => {
+  const story = buildFallbackStory([makeArticle({ title: "RBI holds the repo rate", snippet: "The MPC kept rates unchanged." })]);
+  assert.ok(story.static.length >= 1, "monetary-policy card should match");
+  assert.ok(story.static[0].topic.length > 0);
+  assert.ok(story.static[0].syllabusNode.length > 0);
+});
+
+test("buildFallbackStory gives multi-article clusters distinct perspectives", () => {
+  const a = makeArticle({ id: "a", source: "The Hindu", sourceId: "the-hindu", link: "https://hindu/story" });
+  const b = makeArticle({ id: "b", source: "Reuters", sourceId: "reuters", link: "https://reuters/story", region: "global" });
+  const story = buildFallbackStory([a, b]);
+  assert.equal(story.perspectives.length, 2);
+  assert.equal(new Set(story.perspectives.map((p) => p.link)).size, 2);
+});
+
+test("normalizeEnrichedStory coerces partial or wrongly-typed fields", () => {
+  const e = normalizeEnrichedStory({
+    headline: "RBI holds rates",
+    perspectives: "not-an-array",
+    staticLinks: null,
+    prelims: ["one", 2],
+    readMinutes: "5",
+  });
+  assert.equal(e.headline, "RBI holds rates");
+  assert.deepEqual(e.perspectives, []);
+  assert.deepEqual(e.staticLinks, []);
+  assert.deepEqual(e.prelims, ["one"]);
+  assert.equal(e.readMinutes, 5);
+});
+
+test("normalizeEnrichedStory rejects a null or array payload", () => {
+  assert.throws(() => normalizeEnrichedStory(null));
+  assert.throws(() => normalizeEnrichedStory([]));
 });
 
 test("outletFamily collapses multi-feed papers to one family", () => {

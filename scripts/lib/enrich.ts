@@ -295,15 +295,26 @@ Return STRICT JSON: {"brief": string[], "stories": [{"headline": string, "kicker
     { role: "system", content: system },
     { role: "user", content: user },
   ];
-  const result = await chatJson<BriefAndClusters>(messages);
-  // Guard against out-of-range indices.
-  result.stories = (result.stories || [])
+  const raw = await chatJson<unknown>(messages);
+  if (!raw || typeof raw !== "object" || Array.isArray(raw)) {
+    throw new Error("Model returned a non-object clustering payload");
+  }
+  const result = raw as Partial<BriefAndClusters>;
+  if (!Array.isArray(result.stories)) {
+    throw new Error("Model returned no stories array");
+  }
+  // Resolve/validate article indices.
+  const stories = result.stories
+    .filter((s): s is ClusterSpec => Boolean(s) && typeof s === "object" && Array.isArray(s.articleIds))
     .map((s) => ({ ...s, articleIds: sanitizeArticleIds(s.articleIds, articles.length) }))
     .filter((s) => s.articleIds.length > 0);
-  return result;
+  const brief = Array.isArray(result.brief)
+    ? result.brief.filter((b): b is string => typeof b === "string")
+    : [];
+  return { brief, stories };
 }
 
-interface EnrichedStory {
+export interface EnrichedStory {
   headline: string;
   kicker: string;
   category: string;
@@ -315,6 +326,41 @@ interface EnrichedStory {
   mainsQuestion: string;
   tags: string[];
   readMinutes: number;
+}
+
+// Models occasionally return a null/array payload or a field with the wrong
+// type. Coerce the known fields and treat only a non-object payload as fatal —
+// a partial object can still produce a usable story.
+export function normalizeEnrichedStory(raw: unknown): EnrichedStory {
+  if (!raw || typeof raw !== "object" || Array.isArray(raw)) {
+    throw new Error("Model returned a non-object story payload");
+  }
+  const r = raw as Record<string, unknown>;
+  const perspectives = Array.isArray(r.perspectives)
+    ? r.perspectives.filter(
+        (p): p is { source: string; take: string } =>
+          Boolean(p) &&
+          typeof p === "object" &&
+          typeof (p as { source?: unknown }).source === "string" &&
+          typeof (p as { take?: unknown }).take === "string",
+      )
+    : [];
+  const staticLinks = Array.isArray(r.staticLinks)
+    ? (r.staticLinks.filter((s): s is StaticLink => Boolean(s) && typeof s === "object") as StaticLink[])
+    : [];
+  return {
+    headline: typeof r.headline === "string" ? r.headline : "",
+    kicker: typeof r.kicker === "string" ? r.kicker : "",
+    category: typeof r.category === "string" ? r.category : "",
+    summary: typeof r.summary === "string" ? r.summary : "",
+    whyItMatters: typeof r.whyItMatters === "string" ? r.whyItMatters : "",
+    perspectives,
+    staticLinks,
+    prelims: Array.isArray(r.prelims) ? r.prelims.filter((p): p is string => typeof p === "string") : [],
+    mainsQuestion: typeof r.mainsQuestion === "string" ? r.mainsQuestion : "",
+    tags: Array.isArray(r.tags) ? r.tags.filter((t): t is string => typeof t === "string") : [],
+    readMinutes: typeof r.readMinutes === "number" && Number.isFinite(r.readMinutes) ? r.readMinutes : 5,
+  };
 }
 
 function cardPrompt(cards: KnowledgeCard[]): string {
@@ -395,6 +441,12 @@ export function linkPerspectives(
   return out;
 }
 
+function fallbackSummary(articles: Article[]): string {
+  const snippets = [...new Set(articles.map((a) => a.snippet?.trim()).filter(Boolean))];
+  if (snippets.length) return snippets.join(" ");
+  return articles[0]?.title || "Summary unavailable.";
+}
+
 export async function enrichStory(
   spec: ClusterSpec,
   storyArticles: Article[],
@@ -457,9 +509,9 @@ Write the JSON now.`;
     { role: "system", content: system },
     { role: "user", content: user },
   ];
-  const e = await chatJson<EnrichedStory>(messages);
+  const e = normalizeEnrichedStory(await chatJson<unknown>(messages));
 
-  const perspectives = linkPerspectives(e.perspectives || [], all, regionals, spec.countryFocus);
+  const perspectives = linkPerspectives(e.perspectives, all, regionals, spec.countryFocus);
 
   const slug = slugify(e.headline || spec.headline);
   return {
@@ -471,15 +523,15 @@ Write the JSON now.`;
     region: spec.region,
     importance: spec.importance,
     signal: spec.importance >= 5 ? "must-read" : spec.importance >= 3 ? "recommended" : "all",
-    summary: e.summary,
+    summary: e.summary || fallbackSummary(all),
     whyItMatters: e.whyItMatters,
     perspectives,
     articles: all,
-    static: (e.staticLinks || []).slice(0, 3),
-    prelims: e.prelims || [],
-    mainsQuestion: e.mainsQuestion,
-    tags: e.tags || [],
-    readMinutes: e.readMinutes || 5,
+    static: e.staticLinks.slice(0, 3),
+    prelims: e.prelims,
+    mainsQuestion: e.mainsQuestion || undefined,
+    tags: e.tags.length ? e.tags : [spec.category],
+    readMinutes: e.readMinutes,
   };
 }
 
@@ -507,6 +559,57 @@ export function slugify(input: string): string {
     .replace(/\s+/g, "-")
     .slice(0, 60)
     .replace(/-+$/, "");
+}
+
+// Degraded but honest story used when one story's LLM call fails after retries.
+// It keeps the real headline/sources and never emits the dry-run placeholder.
+export function buildFallbackStory(
+  articles: Article[],
+  spec?: Pick<ClusterSpec, "headline" | "kicker" | "category" | "region" | "importance" | "countryFocus">,
+): Story {
+  const first = articles[0];
+  const headline = spec?.headline || first?.title || "Story unavailable";
+  const summary = fallbackSummary(articles);
+  const category = spec?.category || first?.categories[0] || "polity";
+  const importance = spec?.importance ?? 3;
+  const cards = matchKnowledgeCards(`${headline} ${summary}`, 1);
+  const staticLinks: StaticLink[] = cards.map((card) => ({
+    topic: card.title,
+    paper: card.paper,
+    syllabusNode: card.syllabusNode,
+    whatIsIt: card.whatIsIt,
+    background: card.background,
+    geography: card.geography,
+    socioEconomic: card.socioEconomic,
+    whyInNews: headline,
+    keyTerms: card.keyTerms,
+    prelimsPointers: card.prelimsPointers,
+    mainsAngle: card.mainsAngle,
+  }));
+  const slug = slugify(headline) || "story";
+  return {
+    id: slug,
+    slug,
+    headline,
+    kicker: spec?.kicker || (first?.categories[0] ? `${first.categories[0]} · ${first.region === "india" ? "India" : "World"}` : "News"),
+    category,
+    region: spec?.region || first?.region || "india",
+    importance,
+    signal: importance >= 5 ? "must-read" : importance >= 3 ? "recommended" : "all",
+    summary,
+    whyItMatters: "",
+    perspectives: linkPerspectives(
+      articles.map((a) => ({ source: a.source, take: a.snippet.slice(0, 140) })),
+      articles,
+      [],
+      spec?.countryFocus,
+    ),
+    articles,
+    static: staticLinks,
+    prelims: [],
+    tags: [...new Set(articles.flatMap((a) => a.categories))],
+    readMinutes: 4,
+  };
 }
 
 // Deterministic fallback used by --dry-run (no API key needed) so the UI can

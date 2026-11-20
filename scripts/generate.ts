@@ -27,10 +27,10 @@ function loadDotEnv(path: string) {
   }
 }
 
-import type { Edition, Story, FeedStat } from "../src/lib/types";
+import type { Article, Edition, Story, FeedStat } from "../src/lib/types";
 import { ENABLED_SOURCES, GOOGLE_NEWS_LOCALES } from "../config/sources";
 import { fetchFeeds, fetchGoogleNewsArticles } from "./lib/fetchFeeds";
-import { clusterArticles, enrichStory, buildHeuristicStories, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, clusterScore, buildFeedStats, CORE_PAPERS, type ClusterSpec } from "./lib/enrich";
+import { clusterArticles, enrichStory, buildHeuristicStories, buildFallbackStory, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, clusterScore, buildFeedStats, CORE_PAPERS, type ClusterSpec } from "./lib/enrich";
 import { fetchOnThisDay } from "./lib/onthisday";
 import { llmConfigured, describeLlm } from "./lib/llm";
 
@@ -82,6 +82,30 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (item: T, i: number
   return out;
 }
 
+const STORY_ATTEMPTS = 2;
+const STORY_RETRY_MS = 2500;
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function enrichWithRetry(
+  spec: ClusterSpec,
+  storyArticles: Article[],
+  regionals: Article[],
+): Promise<Story> {
+  let lastErr: unknown;
+  for (let attempt = 0; attempt < STORY_ATTEMPTS; attempt++) {
+    try {
+      return await enrichStory(spec, storyArticles, regionals);
+    } catch (err) {
+      lastErr = err;
+      if (attempt < STORY_ATTEMPTS - 1) await sleep(STORY_RETRY_MS * (attempt + 1));
+    }
+  }
+  throw lastErr instanceof Error ? lastErr : new Error(String(lastErr));
+}
+
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const date = args.day || istDate();
@@ -127,6 +151,7 @@ async function main() {
   // 2. Cluster ---------------------------------------------------------------
   let brief: string[] = [];
   let specs: ClusterSpec[] = [];
+  let clusteringFailed = false;
   if (canLlm) {
     console.log("→ Clustering stories with the model…");
     try {
@@ -135,7 +160,24 @@ async function main() {
       specs = clustered.stories;
       console.log(`   ${specs.length} stories identified`);
     } catch (err) {
+      clusteringFailed = true;
       console.warn(`   ⚠ clustering failed: ${err instanceof Error ? err.message : err}`);
+      // Clustering is a single point of failure for the whole edition, so give it
+      // one more attempt before falling back to a heuristic edition.
+      try {
+        await sleep(1500);
+        const clustered = await clusterArticles(candidates);
+        brief = clustered.brief || [];
+        specs = clustered.stories;
+        clusteringFailed = false;
+        console.log(`   ✓ clustering recovered: ${specs.length} stories identified`);
+      } catch (retryErr) {
+        console.warn(`   ⚠ clustering retry failed: ${retryErr instanceof Error ? retryErr.message : retryErr}`);
+      }
+    }
+    if (!specs.length) {
+      clusteringFailed = true;
+      console.warn("   ⚠ clustering returned no stories");
     }
   }
 
@@ -147,10 +189,11 @@ async function main() {
   const rankedSpecs = [...specs].sort((a, b) => clusterScore(b, candidates) - clusterScore(a, candidates));
 
   let stories: Story[] = [];
+  const failedStories: { index: number; spec: ClusterSpec; articles: Article[]; regionals: Article[] }[] = [];
   if (rankedSpecs.length) {
     const primary = rankedSpecs.slice(0, PRIMARY_STORIES);
     console.log(`→ Stitching + static-linking ${primary.length} primary stories of ${rankedSpecs.length} clusters…`);
-    stories = await mapLimit(primary, 3, async (spec) => {
+    stories = await mapLimit(primary, 3, async (spec, index) => {
       const storyArticles = spec.articleIds.map((i) => candidates[i]).filter(Boolean);
       // Only look up a regional perspective when the country is one we have a
       // locale for, otherwise the label would not match the outlets returned.
@@ -162,14 +205,38 @@ async function main() {
           (a) => new Date(a.publishedAt).getTime() <= windowEnd.getTime(),
         );
       }
+      const enrichedSpec = { ...spec, countryFocus: country };
       try {
-        return await enrichStory({ ...spec, countryFocus: country }, storyArticles, regionals);
+        return await enrichWithRetry(enrichedSpec, storyArticles, regionals);
       } catch (err) {
         console.warn(`   ⚠ enrich failed for "${spec.headline}": ${err instanceof Error ? err.message : err}`);
-        return buildHeuristicStories(storyArticles)[0];
+        failedStories.push({ index, spec: enrichedSpec, articles: storyArticles, regionals });
+        // Degraded but honest: real headline/sources, no dry-run placeholder.
+        return buildFallbackStory(storyArticles, enrichedSpec);
       }
     });
+
+    // The batch retry already runs inside each worker. This second, serial pass
+    // gives a transient 429/timeout time to clear without regenerating the whole
+    // edition — the same recovery the manual workflow rerun provides.
+    if (failedStories.length) {
+      console.log(`→ Retrying ${Math.min(failedStories.length, 3)} of ${failedStories.length} failed story/stories serially…`);
+      for (const item of failedStories.slice(0, 3)) {
+        try {
+          const story = await enrichStory(item.spec, item.articles, item.regionals);
+          stories[item.index] = story;
+          console.log(`   ✓ recovered "${item.spec.headline}"`);
+        } catch (err) {
+          console.warn(`   ⚠ still failed "${item.spec.headline}": ${err instanceof Error ? err.message : err}`);
+        }
+      }
+    }
   } else {
+    if (canLlm && clusteringFailed) {
+      console.error("   ✖ LLM clustering failed; refusing to write a placeholder edition. Re-run the workflow.");
+      process.exitCode = 1;
+      return;
+    }
     console.log("→ No LLM clustering; building heuristic stories.");
     stories = buildHeuristicStories(candidates);
     brief = [
@@ -197,6 +264,15 @@ async function main() {
   // so the edition page's "N articles" stat can justify where they came from.
   // We store no individual article URLs — just the feed links to open.
   const feeds: FeedStat[] = buildFeedStats(articles, ok);
+
+  // Safety net: never commit a full-brief edition that still carries the
+  // dry-run placeholder. A failed run leaves the previous edition in place.
+  const placeholder = stories.find((s) => s.whyItMatters.includes("Dry-run placeholder"));
+  if (canLlm && placeholder) {
+    console.error(`   ✖ Refusing to write edition: placeholder text found in "${placeholder.headline}".`);
+    process.exitCode = 1;
+    return;
+  }
 
   const edition: Edition = {
     date,

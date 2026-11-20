@@ -81,6 +81,40 @@ export function parseJsonLoose(raw: string): unknown {
 }
 
 const LLM_TIMEOUT_MS = 60000;
+const LLM_MAX_ATTEMPTS = 3;
+const RETRY_BASE_MS = 1200;
+
+interface LlmError extends Error {
+  status?: number;
+  retryAfterMs?: number;
+}
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// Exponential backoff with jitter so concurrent story workers do not retry in
+// lockstep. A provider's Retry-After header wins when present.
+function retryDelayMs(attempt: number, err: unknown): number {
+  const retryAfter = (err as LlmError | undefined)?.retryAfterMs;
+  if (typeof retryAfter === "number" && retryAfter > 0) return Math.min(retryAfter, 30000);
+  const base = RETRY_BASE_MS * 2 ** attempt;
+  return Math.round(base * (0.7 + Math.random() * 0.6));
+}
+
+function isRetryable(err: unknown): boolean {
+  const status = (err as LlmError | undefined)?.status;
+  if (status === undefined) return true; // network error, timeout, or malformed JSON
+  return status === 408 || status === 409 || status === 429 || status >= 500;
+}
+
+async function llmHttpError(res: Response): Promise<LlmError> {
+  const err = new Error(`LLM ${res.status}: ${await res.text()}`) as LlmError;
+  err.status = res.status;
+  const retryAfter = Number(res.headers.get("retry-after"));
+  if (Number.isFinite(retryAfter) && retryAfter > 0) err.retryAfterMs = retryAfter * 1000;
+  return err;
+}
 
 // Abortable fetch so a provider that accepts the connection but never responds
 // cannot hang the whole generation run.
@@ -115,7 +149,7 @@ async function callOpenAiCompatible(c: ProviderConfig, messages: ChatMessage[]):
   // still handles.
   let res = await send(true);
   if (res.status === 400) res = await send(false);
-  if (!res.ok) throw new Error(`LLM ${res.status}: ${await res.text()}`);
+  if (!res.ok) throw await llmHttpError(res);
   const data = (await res.json()) as any;
   return data.choices?.[0]?.message?.content ?? "";
 }
@@ -138,7 +172,7 @@ async function callAnthropic(c: ProviderConfig, messages: ChatMessage[]): Promis
       messages: rest.map((m) => ({ role: m.role, content: m.content })),
     }),
   });
-  if (!res.ok) throw new Error(`LLM ${res.status}: ${await res.text()}`);
+  if (!res.ok) throw await llmHttpError(res);
   const data = (await res.json()) as any;
   return data.content?.[0]?.text ?? "";
 }
@@ -157,7 +191,7 @@ async function callGemini(c: ProviderConfig, messages: ChatMessage[]): Promise<s
       generationConfig: { temperature: 0.3, responseMimeType: "application/json" },
     }),
   });
-  if (!res.ok) throw new Error(`LLM ${res.status}: ${await res.text()}`);
+  if (!res.ok) throw await llmHttpError(res);
   const data = (await res.json()) as any;
   return data.candidates?.[0]?.content?.parts?.[0]?.text ?? "";
 }
@@ -167,18 +201,30 @@ export async function chat(messages: ChatMessage[]): Promise<string> {
   const run =
     c.provider === "anthropic" ? callAnthropic : c.provider === "gemini" ? callGemini : callOpenAiCompatible;
   let lastErr: unknown;
-  for (let attempt = 0; attempt < 3; attempt++) {
+  for (let attempt = 0; attempt < LLM_MAX_ATTEMPTS; attempt++) {
     try {
       return await run(c, messages);
     } catch (err) {
       lastErr = err;
-      await new Promise((r) => setTimeout(r, 800 * (attempt + 1)));
+      if (!isRetryable(err)) throw err;
+      if (attempt < LLM_MAX_ATTEMPTS - 1) await sleep(retryDelayMs(attempt, err));
     }
   }
   throw lastErr instanceof Error ? lastErr : new Error(String(lastErr));
 }
 
 export async function chatJson<T>(messages: ChatMessage[]): Promise<T> {
-  const raw = await chat(messages);
-  return parseJsonLoose(raw) as T;
+  // Transport retries happen inside chat(). A malformed response gets one fresh
+  // call: models occasionally wrap JSON in prose or truncate a long object.
+  let lastErr: unknown;
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const raw = await chat(messages);
+    try {
+      return parseJsonLoose(raw) as T;
+    } catch (err) {
+      lastErr = err;
+      if (attempt === 0) await sleep(retryDelayMs(attempt, err));
+    }
+  }
+  throw lastErr instanceof Error ? lastErr : new Error(String(lastErr));
 }
