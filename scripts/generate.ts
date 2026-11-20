@@ -30,7 +30,7 @@ function loadDotEnv(path: string) {
 import type { Article, Edition, Story, FeedStat } from "../src/lib/types";
 import { ENABLED_SOURCES, GOOGLE_NEWS_LOCALES } from "../config/sources";
 import { fetchFeeds, fetchGoogleNewsArticles } from "./lib/fetchFeeds";
-import { clusterArticles, enrichStory, buildHeuristicStories, buildFallbackStory, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, clusterScore, buildFeedStats, CORE_PAPERS, type ClusterSpec } from "./lib/enrich";
+import { clusterArticles, enrichStory, buildHeuristicStories, buildFallbackStory, findPlaceholderStory, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, clusterScore, buildFeedStats, CORE_PAPERS, type ClusterSpec } from "./lib/enrich";
 import { fetchOnThisDay } from "./lib/onthisday";
 import { llmConfigured, describeLlm } from "./lib/llm";
 
@@ -267,7 +267,7 @@ async function main() {
 
   // Safety net: never commit a full-brief edition that still carries the
   // dry-run placeholder. A failed run leaves the previous edition in place.
-  const placeholder = stories.find((s) => s.whyItMatters.includes("Dry-run placeholder"));
+  const placeholder = findPlaceholderStory(stories);
   if (canLlm && placeholder) {
     console.error(`   ✖ Refusing to write edition: placeholder text found in "${placeholder.headline}".`);
     process.exitCode = 1;

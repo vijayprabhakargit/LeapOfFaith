@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { slugify, sanitizeArticleIds, buildHeuristicStories, buildFallbackStory, normalizeEnrichedStory, outletFamily, tokenize, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, distinctOutlets, clusterScore, buildFeedStats, linkPerspectives, type ClusterSpec } from "../scripts/lib/enrich";
+import { slugify, sanitizeArticleIds, buildHeuristicStories, buildFallbackStory, findPlaceholderStory, DRY_RUN_PLACEHOLDER, normalizeEnrichedStory, outletFamily, tokenize, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, distinctOutlets, clusterScore, buildFeedStats, linkPerspectives, type ClusterSpec } from "../scripts/lib/enrich";
 import type { Article } from "../src/lib/types";
 
 function makeArticle(overrides: Partial<Article> = {}): Article {
@@ -164,6 +164,18 @@ test("normalizeEnrichedStory coerces partial or wrongly-typed fields", () => {
 test("normalizeEnrichedStory rejects a null or array payload", () => {
   assert.throws(() => normalizeEnrichedStory(null));
   assert.throws(() => normalizeEnrichedStory([]));
+});
+
+test("findPlaceholderStory flags preview stories but not honest fallbacks", () => {
+  const heuristic = buildHeuristicStories([makeArticle()]);
+  assert.ok(heuristic[0].whyItMatters.startsWith(DRY_RUN_PLACEHOLDER));
+  const found = findPlaceholderStory(heuristic);
+  assert.ok(found);
+  assert.equal(found?.headline, heuristic[0].headline);
+
+  const fallback = buildFallbackStory([makeArticle()]);
+  assert.equal(findPlaceholderStory([fallback]), undefined);
+  assert.equal(findPlaceholderStory([]), undefined);
 });
 
 test("outletFamily collapses multi-feed papers to one family", () => {

@@ -612,6 +612,16 @@ export function buildFallbackStory(
   };
 }
 
+// Marker carried by the no-LLM preview stories. The generator refuses to write
+// an edition that still contains it when an LLM is configured, so a transient
+// failure can never publish placeholder text.
+export const DRY_RUN_PLACEHOLDER = "Dry-run placeholder";
+
+// Returns the first story that still carries the preview marker, if any.
+export function findPlaceholderStory(stories: Story[]): Story | undefined {
+  return stories.find((s) => s.whyItMatters.includes(DRY_RUN_PLACEHOLDER));
+}
+
 // Deterministic fallback used by --dry-run (no API key needed) so the UI can
 // be developed and previewed without spending tokens.
 export function buildHeuristicStories(articles: Article[]): Story[] {
@@ -627,7 +637,7 @@ export function buildHeuristicStories(articles: Article[]): Story[] {
       importance: 3,
       signal: "recommended" as const,
       summary: a.snippet || "Summary unavailable (dry run).",
-      whyItMatters: "Dry-run placeholder — run with an LLM configured for the full brief.",
+      whyItMatters: `${DRY_RUN_PLACEHOLDER} — run with an LLM configured for the full brief.`,
       perspectives: [
         { source: a.source, region: a.region === "india" ? "India" : "Global", lean: "unknown" as const, take: a.snippet.slice(0, 140), link: a.link },
       ],
