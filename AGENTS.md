@@ -52,6 +52,14 @@ Tag browsing is **client-side by design**: `src/pages/tags/index.astro` embeds a
 `src/lib/tags.ts` and filters it in the browser (time range + selected tag live in the URL query). Do
 **not** add a page-per-tag generator — that is what this replaced, and it doesn't scale.
 
+The daily **quiz** is generated alongside the edition by `scripts/lib/quiz.ts` and written to
+`src/content/quizzes/<date>.json`. It reads the last 7 days of editions already on disk (including
+today's), asks the LLM for 10 UPSC Prelims GS Paper I MCQs in the real paper's patterns (statement-based,
+how-many, assertion-reason, matching, direct factual), and dedupes against the previous 7 days' questions.
+The quiz is **static**: `/quiz/` lists them and `/quiz/<date>/` renders one with client-side scoring only
+(no server, no stored scores; a reload clears answers). The generator skips the quiz on `--dry-run` and
+never blocks the edition if quiz generation fails. See "Quiz" in `docs/storage-and-scaling.md`.
+
 Daily article selection is **two-lane** (`scripts/lib/enrich.ts`, wired in `scripts/generate.ts`):
 `shortlistPerSource` (top ~20% of each source by feed order) → `preselectByHeadlines` (cross-source
 headline corroboration + priority/weight) → LLM clustering. Deep enrichment runs only for the stories

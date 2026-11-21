@@ -2,11 +2,13 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import EditionView from "../components/EditionView.astro";
 import { getLatestEdition, getEditionDates } from "../lib/editions";
+import { getLatestQuiz } from "../lib/quizzes";
 import { formatDateLong } from "../lib/format";
 
 const edition = getLatestEdition();
 const dates = getEditionDates();
 const prevDate = edition && dates.length > 1 ? dates[1] : null;
+const quiz = getLatestQuiz();
 ---
 <BaseLayout
   title={edition ? `Leap of Faith — The Daily Brief — ${edition.date}` : "Leap of Faith — The Daily Brief"}
@@ -60,14 +62,26 @@ const prevDate = edition && dates.length > 1 ? dates[1] : null;
         This morning's brief hasn't been published yet — it usually lands by 07:00 IST.
       </p>
       {
-        edition && (
-          <p>
-            <a class="btn primary" href={`/editions/${edition.date}/`}>
-              Read the {formatDateLong(edition.date)} edition
-            </a>
+        quiz && (
+          <p class="note" style="margin: 0 auto 12px">
+            While you wait, take the latest Prelims quiz — {quiz.questions.length} questions from the
+            last week of briefs.
           </p>
         )
       }
+      <p class="pending-actions">
+        {quiz && (
+          <a class="btn primary" href={`/quiz/${quiz.date}/`}>
+            Take the {formatDateLong(quiz.date)} quiz
+          </a>
+        )}
+        {edition && (
+          <a class="btn" href={`/editions/${edition.date}/`}>
+            Read the {formatDateLong(edition.date)} edition
+          </a>
+        )}
+        <a class="btn" href="/quiz/">All quizzes</a>
+      </p>
     </div>
   </div>
 </BaseLayout>

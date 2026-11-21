@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getAllQuizzes } from "../../lib/quizzes";
+import { formatDateLong, formatDateShort } from "../../lib/format";
+
+const quizzes = getAllQuizzes();
+---
+
+<BaseLayout
+  title="Quizzes — Leap of Faith"
+  description="A quiz for every edition — UPSC Prelims-style questions drawn from the briefs and mapped to the answers."
+  dateline="UPSC Prelims practice"
+>
+  <div class="wrap">
+    <div class="section-head">
+      <h1 class="section-title">Quizzes</h1>
+      <p class="section-sub">A quiz for every edition — UPSC Prelims-style questions drawn from the briefs and mapped to the answers.</p>
+    </div>
+
+    {
+      quizzes.length ? (
+        <div class="quiz-list">
+          {quizzes.map((quiz) => (
+            <article class="quiz-card">
+              <div class="quiz-card-head">
+                <h2 class="quiz-card-title">
+                  <a href={`/quiz/${quiz.date}/`}>{quiz.title}</a>
+                </h2>
+                <p class="quiz-card-meta">
+                  {quiz.questions.length} questions · {formatDateShort(quiz.windowStart)} – {formatDateShort(quiz.windowEnd)}
+                </p>
+              </div>
+              <p class="quiz-card-date">{formatDateLong(quiz.date)}</p>
+              <p class="quiz-card-actions">
+                <a class="btn primary" href={`/quiz/${quiz.date}/`}>Take quiz</a>
+                <a class="btn" href={`/editions/${quiz.date}/`}>Read the edition</a>
+              </p>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div class="empty">
+          <p>No quizzes yet.</p>
+          <p>Quizzes appear when the generator runs with an LLM configured for the full brief.</p>
+        </div>
+      )
+    }
+  </div>
+</BaseLayout>

@@ -121,6 +121,20 @@ the count of in-window articles it contributed. That justifies the "N articles"
 number, gives the reader the links, and costs ~5 KB per edition. The site-wide
 `/sources/` page is the directory of publications (icon, name, homepage, RSS).
 
+## Quiz storage
+
+`src/content/quizzes/<date>.json` is generated alongside the edition and committed
+the same way. It is small: 10 questions with options and 1–3 sentence
+explanations, roughly **6–10 KB per day** (~3 MB/year at retention). It also adds
+one built page per quiz (`/quiz/<date>/`, ~40 KB) plus the `/quiz/` index.
+
+Quizzes are **not** pruned by the edition `KEEP = 400` knob — add a matching
+retention step if the count ever matters. At 10 KB/day the repo impact is minor
+compared with editions (~255 KB/day), so there is no urgency.
+
+Scores are never stored. The quiz page keeps answers in browser memory only, so
+the JSON holds nothing but the question bank and the answer key.
+
 ## Scaling plan
 
 In rough order of when we would need them:

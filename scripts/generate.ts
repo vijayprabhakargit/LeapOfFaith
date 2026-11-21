@@ -33,6 +33,7 @@ import { fetchFeeds, fetchGoogleNewsArticles } from "./lib/fetchFeeds";
 import { clusterArticles, enrichStory, buildHeuristicStories, buildFallbackStory, findPlaceholderStory, shortlistPerSource, preselectByHeadlines, assignSignals, buildExtras, clusterScore, buildFeedStats, CORE_PAPERS, type ClusterSpec } from "./lib/enrich";
 import { fetchOnThisDay } from "./lib/onthisday";
 import { llmConfigured, describeLlm } from "./lib/llm";
+import { generateQuiz } from "./lib/quiz";
 
 interface Args {
   day?: string;
@@ -294,7 +295,31 @@ async function main() {
   console.log(`\n✔ Wrote ${outFile}`);
   console.log(`   ${stories.length} stories · ${onThisDay.length} on-this-day entries\n`);
 
-  // 6. Prune very old editions (keep last 400).
+  // 6. Quiz ------------------------------------------------------------------
+  // Generated from the last N days of editions (including today's). Optional:
+  // a quiz failure never blocks the edition. Dry-run skips it entirely.
+  if (canLlm) {
+    console.log("→ Generating the daily quiz…");
+    try {
+      const quiz = await generateQuiz({
+        date,
+        editionsDir: outDir,
+        quizzesDir: join(root, "src", "content", "quizzes"),
+      });
+      if (quiz) {
+        const quizDir = join(root, "src", "content", "quizzes");
+        await mkdir(quizDir, { recursive: true });
+        await writeFile(join(quizDir, `${date}.json`), JSON.stringify(quiz, null, 2), "utf8");
+        console.log(`   ✔ ${quiz.questions.length} questions written to src/content/quizzes/${date}.json`);
+      } else {
+        console.warn("   ⚠ quiz generation produced no usable questions; skipping");
+      }
+    } catch (err) {
+      console.warn(`   ⚠ quiz generation failed: ${err instanceof Error ? err.message : err}`);
+    }
+  }
+
+  // 7. Prune very old editions (keep last 400).
   try {
     const files = (await readdir(outDir)).filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f)).sort();
     if (files.length > 400) {
