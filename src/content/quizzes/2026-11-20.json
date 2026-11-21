@@ -1,0 +1,204 @@
+{
+  "date": "2026-11-20",
+  "generatedAt": "2026-11-21T15:08:20.874Z",
+  "title": "Daily Prelims Quiz",
+  "windowStart": "2026-11-14",
+  "windowEnd": "2026-11-20",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Consider the following statements regarding the revision of electoral rolls in India:\n1. Article 324 of the Constitution vests the superintendence, direction and control of the preparation of electoral rolls in the Election Commission of India.\n2. Electoral rolls are prepared and revised under the Representation of the People Act, 1951.\n3. Interrogatories are written questions served on a party to a proceeding, which that party is ordinarily required to answer on oath.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 1,
+      "explanation": "Statement 2 is the trap: electoral rolls are prepared under the Representation of the People Act, 1950 (with the Registration of Electors Rules, 1960), while the 1951 Act governs the conduct of elections and election petitions. Statements 1 and 3 are correct and form the backdrop to the INDIA bloc's plea over the Election Commission's Special Intensive Revision (SIR) of electoral rolls.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 2,
+      "question": "With reference to the Reserve Bank of India's Scale Based Regulation (SBR) framework for non-banking financial companies, consider the following statements:\n1. The framework places NBFCs in three layers — Base, Middle and Top.\n2. NBFCs placed in the upper layer under the framework are required to be listed on stock exchanges.\n3. A Core Investment Company is an NBFC whose assets are predominantly investments in group companies.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 2,
+      "explanation": "The SBR framework (2021) places NBFCs in four layers — Base, Middle, Upper and Top — and not three, so statement 1 is incorrect. Upper-layer NBFCs face mandatory listing, which is why the RBI has reiterated its demand that Tata Sons, a Core Investment Company, be listed.",
+      "topic": "Economy"
+    },
+    {
+      "id": 3,
+      "question": "Consider the following statements regarding COP31:\n1. COP31 is being held in Antalya, Türkiye.\n2. The Loss and Damage Fund was operationalised at COP31.\n3. The '35 by 35' target retained in the COP31 cover decision draft relates to the phaseout of fossil fuels.\nHow many of the above statements are correct?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Only statement 1 is correct. The Loss and Damage Fund was operationalised at COP28 in 2023, and the '35 by 35' figure retained in the COP31 draft is an electrification target, not a fossil-fuel phaseout target — the draft in fact dropped phaseout language.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 4,
+      "question": "Bab-el-Mandeb, a chokepoint frequently in the news in the context of attacks on shipping, connects which one of the following?",
+      "options": [
+        "The Persian Gulf with the Gulf of Oman",
+        "The Mediterranean Sea with the Red Sea",
+        "The Black Sea with the Sea of Marmara",
+        "The Red Sea with the Gulf of Aden"
+      ],
+      "answer": 3,
+      "explanation": "Bab-el-Mandeb, off Yemen, is the southern chokepoint linking the Red Sea to the Gulf of Aden and the Suez shipping route; the Strait of Hormuz links the Persian Gulf to the Gulf of Oman, and the Suez Canal links the Mediterranean with the Red Sea.",
+      "topic": "Geography"
+    },
+    {
+      "id": 5,
+      "question": "Consider the following pairs related to the Naga peace process:\n1. Shillong Accord — 1975\n2. Attainment of Statehood by Nagaland — 1963\n3. Framework Agreement between the Government of India and the NSCN-IM — 2010\nHow many of the above pairs are correctly matched?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "Pairs 1 and 2 are correctly matched; the Shillong Accord was signed in 1975 and Nagaland became a State in 1963. The Framework Agreement with the NSCN-IM was signed in 2015, not 2010, making pair 3 incorrect.",
+      "topic": "History & Culture"
+    },
+    {
+      "id": 6,
+      "question": "Statement-I: The United States and Russia are in a position to prevent the launching of formal negotiations on legally binding limits on autonomous weapons without a formal vote being taken.\nStatement-II: Decisions under the Convention on Certain Conventional Weapons (CCW) are taken by consensus, and a Group of Governmental Experts on Lethal Autonomous Weapons Systems was established under it in 2016.\nWhich one of the following is correct in respect of the above statements?",
+      "options": [
+        "Both Statement-I and Statement-II are correct and Statement-II explains Statement-I",
+        "Both Statement-I and Statement-II are correct but Statement-II does not explain Statement-I",
+        "Statement-I is correct but Statement-II is incorrect",
+        "Statement-I is incorrect but Statement-II is correct"
+      ],
+      "answer": 0,
+      "explanation": "The CCW (concluded 1980, in force 1983) works by consensus, so a single state — here the US or Russia — can block a negotiating mandate without a vote; the Group of Governmental Experts on LAWS was set up in 2016. Statement-II therefore explains why Statement-I is possible, unlike the non-binding 2023 Political Declaration on Responsible Military Use of AI.",
+      "topic": "Science & Technology"
+    },
+    {
+      "id": 7,
+      "question": "The International Court of Justice, which has recently held Myanmar responsible for genocide against the Rohingya, is best described as:",
+      "options": [
+        "A subsidiary body of the UN Security Council that tries individuals for international crimes",
+        "A principal organ of the United Nations that settles disputes between States and gives advisory opinions",
+        "An arbitral tribunal created by the UN General Assembly to settle international trade disputes",
+        "A charter-based human rights body of the UN Human Rights Council located at Geneva"
+      ],
+      "answer": 1,
+      "explanation": "The ICJ, seated at The Hague, is the principal judicial organ of the UN; it decides inter-State disputes and renders advisory opinions, and its judgments are binding but not self-enforcing, with enforcement resting with the UN Security Council under Article 94. Individual criminal trials are conducted by the ICC, not the ICJ.",
+      "topic": "International Relations"
+    },
+    {
+      "id": 8,
+      "question": "With reference to the Scheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act, 2006, consider the following statements:\n1. Forest rights are determined at the first instance by the Gram Sabha, with verification by the Sub-Divisional Level Committee and then the District Level Committee.\n2. Relocation of people from a Critical Wildlife Habitat notified under the Act requires the free and informed consent of the concerned Gram Sabha.\n3. Community Forest Resource rights under the Act are available only to individual forest dwellers and not to Gram Sabhas.\nWhich of the statements given above is/are NOT correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 2,
+      "explanation": "Only statement 3 is not correct: Community Forest Resource rights under Section 3(1)(i) vest in the Gram Sabha, which may protect, regenerate, conserve and manage community forest resources. Statements 1 and 2 correctly reflect the Act's three-tier verification and the Section 4 consent requirement, whose weak implementation was flagged on the Act's twentieth anniversary.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 9,
+      "question": "A State Government proposes to grant a bauxite mining lease over a tract falling in a Scheduled Area notified under the Fifth Schedule. In the light of the constitutional scheme and judicial pronouncements, which one of the following is correct?",
+      "options": [
+        "Scheduled Areas fall under the Sixth Schedule and are administered by Autonomous District Councils, whose approval alone is sufficient",
+        "PESA, 1996 applies uniformly to all States and Union Territories of India",
+        "The Governor has no special role in the administration of Scheduled Areas",
+        "Scheduled Areas are administered under Article 244(1), and the Supreme Court has held the free and informed consent of the Gram Sabha to be a mandatory precondition for such acquisition and diversion"
+      ],
+      "answer": 3,
+      "explanation": "The Fifth Schedule (Article 244(1)) governs Scheduled Areas, and PESA, 1996 extends Part IX to them, empowering the Gram Sabha; the Supreme Court has now made Gram Sabha consent a mandatory precondition for mining-related acquisition in tribal areas, consistent with Samatha (1997) and the Niyamgiri ruling (2013). PESA applies only to Fifth Schedule States, and the Governor has special responsibilities under the Schedule.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 10,
+      "question": "CERT-In, which coordinates responses to cyber-security incidents in India, functions under which one of the following?",
+      "options": [
+        "Ministry of Electronics and Information Technology",
+        "Ministry of Home Affairs",
+        "Department of Telecommunications",
+        "National Security Council Secretariat"
+      ],
+      "answer": 0,
+      "explanation": "CERT-In is India's national nodal agency for cyber-incident response and functions under MeitY; the NCIIPC (under the NTRO) protects critical information infrastructure, while the I4C works under the MHA. The Microsoft 365 outage of November 2026 underlined the importance of such cyber-resilience arrangements.",
+      "topic": "Science & Technology"
+    },
+    {
+      "id": 11,
+      "question": "Consider the following statements regarding pardoning powers in India:\n1. Article 72 vests the pardoning power in the President, and Article 161 vests it in the Governor.\n2. The exercise of the pardoning power is subject to judicial review.\n3. The Governor's pardoning power under Article 161 extends to sentences of death.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 0,
+      "explanation": "Statements 1 and 2 are correct: the pardoning power is subject to judicial review on limited grounds. Statement 3 is wrong — the Governor's power under Article 161 does not extend to death sentences or court-martial punishments, which fall within the President's power under Article 72.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 12,
+      "question": "Consider the following statements:\n1. The Reserve Bank of India's flexible inflation targeting framework sets CPI inflation at 4 per cent, with a tolerance band of 2 to 6 per cent.\n2. The Chief Economic Adviser has argued that raising policy rates may not tame supply-led inflation.\n3. India's crude oil imports are substantially routed through the Strait of Hormuz, which makes West Asian tensions a direct energy-security risk.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 3,
+      "explanation": "All three statements are correct. The MPC's target is 4 per cent CPI within a 2–6 per cent band; the CEA's point about supply-led inflation explains why rate hikes may be ineffective against food and fuel-driven price pressure; and India's crude import dependence on West Asian suppliers routed via Hormuz links geopolitics directly to energy security.",
+      "topic": "Economy"
+    },
+    {
+      "id": 13,
+      "question": "Consider the following statements:\n1. The Quad is a mutual-defence alliance of India, the United States, Japan and Australia, whose members are bound by a collective-defence clause.\n2. The East Asia Summit is an ASEAN-led forum of 18 members, comprising the ten ASEAN States and eight dialogue partners.\n3. India's dialogue partnership with ASEAN dates to 1992, and summit-level engagement began in 2002.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 1,
+      "explanation": "Statement 1 is incorrect: the Quad is a consultative grouping without a mutual-defence treaty or collective-defence clause. Statements 2 and 3 are correct, and the Manila Quad and East Asia Summit meetings in November 2026 saw India propose a seafarers' safety initiative.",
+      "topic": "International Relations"
+    },
+    {
+      "id": 14,
+      "question": "Consider the following statements:\n1. El Niño refers to the periodic cooling of the central and eastern equatorial Pacific Ocean.\n2. El Niño conditions are generally associated with above-normal rainfall over the Indian summer monsoon.\n3. INCOIS has indicated an 80–100 per cent probability that the current El Niño phase will persist.\nHow many of the above statements are correct?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Only statement 3 is correct. El Niño is the anomalous warming (not cooling) of the central and eastern equatorial Pacific, and it is generally associated with weaker-than-normal Indian monsoon rainfall — so both reversals in statements 1 and 2 are traps.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 15,
+      "question": "Under a preferential trade agreement, which one of the following determines whether a good qualifies for the preferential tariff?",
+      "options": [
+        "The Most-Favoured-Nation principle",
+        "The Enabling Clause of the WTO",
+        "The rules of origin of the agreement",
+        "The Generalized System of Preferences"
+      ],
+      "answer": 2,
+      "explanation": "Rules of origin decide whether a good qualifies for a preferential tariff under a trade agreement and are a key technical issue in any India–US deal. MFN is the WTO's non-discrimination principle, while FTAs are permitted as an exception through GATT Article XXIV and the Enabling Clause; the US withdrew India from GSP in 2019.",
+      "topic": "Economy"
+    }
+  ]
+}
