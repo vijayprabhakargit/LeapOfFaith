@@ -84,19 +84,50 @@ const refIndex = buildReferenceIndex(stories);
 </div>
 
 <script>
-  // When arriving via a deep link like #story-<slug>, make sure the story is
-  // revealed and briefly flash it so it's obvious which tile you landed on.
-  function highlightStory() {
-    const hash = decodeURIComponent(location.hash || "");
-    if (!hash.startsWith("#story-")) return;
-    const el = document.getElementById(hash.slice(1));
-    if (!el) return;
-    el.classList.add("reveal");
-    el.classList.remove("story-target");
-    void (el as HTMLElement).offsetWidth; // restart the animation
-    el.classList.add("story-target");
-    window.setTimeout(() => el.classList.remove("story-target"), 2400);
+  // When arriving via a deep link, reveal what the link points at and briefly
+  // flash it so it's obvious where you landed. Two kinds of links exist:
+  //   #story-<slug>  a story card
+  //   #cite-...      a reference superscript inside a collapsed static panel,
+  //                  reached from the References section's "↩" backlinks
+  function flash(el: HTMLElement, cls: string) {
+    el.classList.remove(cls);
+    void el.offsetWidth; // restart the animation
+    el.classList.add(cls);
+    window.setTimeout(() => el.classList.remove(cls), 2400);
   }
-  highlightStory();
-  addEventListener("hashchange", highlightStory);
+
+  function highlightTarget() {
+    const hash = decodeURIComponent(location.hash || "");
+    if (!hash) return;
+
+    if (hash.startsWith("#story-")) {
+      const el = document.getElementById(hash.slice(1));
+      if (!el) return;
+      el.classList.add("reveal");
+      flash(el, "story-target");
+      return;
+    }
+
+    if (hash.startsWith("#cite-")) {
+      const cite = document.getElementById(hash.slice(1));
+      if (!cite) return;
+      const story = cite.closest<HTMLElement>(".story");
+      const panel = cite.closest<HTMLElement>(".static-card");
+      // The static panel lives in a collapsed <details>; open it so the cited
+      // section is visible once we land.
+      const details = cite.closest("details");
+      if (details instanceof HTMLDetailsElement) details.open = true;
+      if (story) {
+        story.classList.add("reveal");
+        flash(story, "story-target");
+      }
+      if (panel) flash(panel, "cite-target");
+      // Land on the story so the headline tells you which article this is.
+      // The open static panel below carries the highlighted citation.
+      (story ?? cite).scrollIntoView({ block: "start" });
+    }
+  }
+
+  highlightTarget();
+  addEventListener("hashchange", highlightTarget);
 </script>

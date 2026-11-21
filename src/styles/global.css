@@ -806,6 +806,13 @@ details.static[open] > summary {
   background: var(--paper-2);
   padding: 16px 18px;
   margin-bottom: 12px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Brief highlight when you land on a static panel via a reference "↩" backlink. */
+.cite-target {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent);
 }
 
 .static-card h4 {
@@ -2536,7 +2543,8 @@ a.feed-name:hover {
 /* Land targets clear the sticky controls bar. */
 #references,
 .ref-entry,
-.cite-anchor {
+.cite-anchor,
+.static-card {
   scroll-margin-top: 80px;
 }
 
