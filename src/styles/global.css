@@ -2039,6 +2039,17 @@ a.feed-name:hover {
   margin: 8px 0 0;
 }
 
+.quiz-more-row {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  margin: 4px 0 0;
+}
+
+.quiz-more-row[hidden] {
+  display: none;
+}
+
 .quiz-page {
   max-width: 780px;
   margin: 0 auto;

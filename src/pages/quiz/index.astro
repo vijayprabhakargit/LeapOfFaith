@@ -3,7 +3,23 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getAllQuizzes } from "../../lib/quizzes";
 import { formatDateLong, formatDateShort } from "../../lib/format";
 
+// Render the newest page of quizzes server-side; the rest ship as a small
+// metadata payload and are appended on demand so the page stays light as the
+// archive grows.
+const PAGE_SIZE = 15;
+
 const quizzes = getAllQuizzes();
+const initial = quizzes.slice(0, PAGE_SIZE);
+const rest = quizzes.slice(PAGE_SIZE).map((quiz) => ({
+  date: quiz.date,
+  title: quiz.title,
+  meta: `${questionCount(quiz.questions.length)} · ${formatDateShort(quiz.windowStart)} – ${formatDateShort(quiz.windowEnd)}`,
+  dateLabel: formatDateLong(quiz.date),
+}));
+
+function questionCount(n: number): string {
+  return `${n} question${n === 1 ? "" : "s"}`;
+}
 ---
 
 <BaseLayout
@@ -19,25 +35,30 @@ const quizzes = getAllQuizzes();
 
     {
       quizzes.length ? (
-        <div class="quiz-list">
-          {quizzes.map((quiz) => (
-            <article class="quiz-card">
-              <div class="quiz-card-head">
-                <h2 class="quiz-card-title">
-                  <a href={`/quiz/${quiz.date}/`}>{quiz.title}</a>
-                </h2>
-                <p class="quiz-card-meta">
-                  {quiz.questions.length} questions · {formatDateShort(quiz.windowStart)} – {formatDateShort(quiz.windowEnd)}
+        <>
+          <div class="quiz-list" id="quiz-list">
+            {initial.map((quiz) => (
+              <article class="quiz-card">
+                <div class="quiz-card-head">
+                  <h2 class="quiz-card-title">
+                    <a href={`/quiz/${quiz.date}/`}>{quiz.title}</a>
+                  </h2>
+                  <p class="quiz-card-meta">
+                    {questionCount(quiz.questions.length)} · {formatDateShort(quiz.windowStart)} – {formatDateShort(quiz.windowEnd)}
+                  </p>
+                </div>
+                <p class="quiz-card-date">{formatDateLong(quiz.date)}</p>
+                <p class="quiz-card-actions">
+                  <a class="btn primary" href={`/quiz/${quiz.date}/`}>Take quiz</a>
+                  <a class="btn" href={`/editions/${quiz.date}/`}>Read the edition</a>
                 </p>
-              </div>
-              <p class="quiz-card-date">{formatDateLong(quiz.date)}</p>
-              <p class="quiz-card-actions">
-                <a class="btn primary" href={`/quiz/${quiz.date}/`}>Take quiz</a>
-                <a class="btn" href={`/editions/${quiz.date}/`}>Read the edition</a>
-              </p>
-            </article>
-          ))}
-        </div>
+              </article>
+            ))}
+            <p class="quiz-more-row" id="quiz-more-row" hidden>
+              <button class="btn" id="quiz-more" type="button"></button>
+            </p>
+          </div>
+        </>
       ) : (
         <div class="empty">
           <p>No quizzes yet.</p>
@@ -46,4 +67,84 @@ const quizzes = getAllQuizzes();
       )
     }
   </div>
+
+  <script type="application/json" id="quiz-rest" is:inline set:html={JSON.stringify(rest)}></script>
+
+  <script>
+    type QuizMeta = { date: string; title: string; meta: string; dateLabel: string };
+
+    const PAGE_SIZE = 15;
+    const listEl = document.getElementById("quiz-list");
+    const moreRow = document.getElementById("quiz-more-row");
+    const moreEl = document.getElementById("quiz-more") as HTMLButtonElement | null;
+    const restEl = document.getElementById("quiz-rest");
+
+    let rest: QuizMeta[] = [];
+    try {
+      rest = JSON.parse(restEl?.textContent || "[]");
+    } catch {
+      rest = [];
+    }
+
+    let shown = 0;
+
+    function card(q: QuizMeta): HTMLElement {
+      const article = document.createElement("article");
+      article.className = "quiz-card";
+
+      const head = document.createElement("div");
+      head.className = "quiz-card-head";
+      const title = document.createElement("h2");
+      title.className = "quiz-card-title";
+      const link = document.createElement("a");
+      link.href = `/quiz/${q.date}/`;
+      link.textContent = q.title;
+      title.appendChild(link);
+      const meta = document.createElement("p");
+      meta.className = "quiz-card-meta";
+      meta.textContent = q.meta;
+      head.append(title, meta);
+
+      const date = document.createElement("p");
+      date.className = "quiz-card-date";
+      date.textContent = q.dateLabel;
+
+      const actions = document.createElement("p");
+      actions.className = "quiz-card-actions";
+      const take = document.createElement("a");
+      take.className = "btn primary";
+      take.href = `/quiz/${q.date}/`;
+      take.textContent = "Take quiz";
+      const read = document.createElement("a");
+      read.className = "btn";
+      read.href = `/editions/${q.date}/`;
+      read.textContent = "Read the edition";
+      actions.append(take, read);
+
+      article.append(head, date, actions);
+      return article;
+    }
+
+    function updateMore() {
+      if (!moreEl || !moreRow) return;
+      const remaining = rest.length - shown;
+      if (remaining <= 0) {
+        moreRow.hidden = true;
+        return;
+      }
+      moreRow.hidden = false;
+      const batch = Math.min(PAGE_SIZE, remaining);
+      moreEl.textContent = `Load ${batch} more quiz${batch === 1 ? "" : "zes"} (${remaining} left)`;
+    }
+
+    moreEl?.addEventListener("click", () => {
+      if (!listEl) return;
+      const batch = rest.slice(shown, shown + PAGE_SIZE);
+      for (const q of batch) listEl.appendChild(card(q));
+      shown += batch.length;
+      updateMore();
+    });
+
+    updateMore();
+  </script>
 </BaseLayout>
