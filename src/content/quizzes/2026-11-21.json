@@ -1,13 +1,13 @@
 {
   "date": "2026-11-21",
-  "generatedAt": "2026-11-21T14:35:25.695Z",
+  "generatedAt": "2026-11-21T17:17:51.258Z",
   "title": "Daily Prelims Quiz",
   "windowStart": "2026-11-15",
   "windowEnd": "2026-11-21",
   "questions": [
     {
       "id": 1,
-      "question": "Consider the following statements regarding the preparation and revision of electoral rolls in India:\n1. Article 324 of the Constitution vests the superintendence, direction and control of the preparation of electoral rolls in the Election Commission of India.\n2. Electoral rolls are prepared and revised under the Representation of the People Act, 1950 and the Registration of Electors Rules, 1960.\n3. The Special Intensive Revision (SIR) of electoral rolls is a mechanism expressly provided for in the Representation of the People Act, 1951.\nWhich of the statements given above is/are correct?",
+      "question": "Consider the following statements:\n1. 'Continuing mandamus' refers to the practice of a court keeping a matter pending before it and monitoring compliance with its directions over time.\n2. The Supreme Court has employed this device in matters of environmental governance, including the cleaning of rivers.\n3. The National Green Tribunal was established under the Environment (Protection) Act, 1986.\nWhich of the statements given above is/are correct?",
       "options": [
         "1 and 2 only",
         "2 and 3 only",
@@ -15,129 +15,129 @@
         "1, 2 and 3"
       ],
       "answer": 0,
-      "explanation": "Statements 1 and 2 are correct. The SIR is an administrative revision exercise carried out by the ECI under the RP Act, 1950 and the Registration of Electors Rules, 1960; the RP Act, 1951 governs the conduct of elections and election disputes, not the preparation of rolls. The trap is the swap between the 1950 and 1951 statutes, relevant to the ongoing SIR controversy.",
+      "explanation": "Continuing mandamus is a judicially evolved device by which the Supreme Court keeps a matter pending and supervises compliance over time, and it has been used extensively in river-pollution cases such as the Yamuna. Statement 3 is the trap: the NGT was set up under the National Green Tribunal Act, 2010, not the Environment (Protection) Act, 1986.",
       "topic": "Polity & Governance"
     },
     {
       "id": 2,
-      "question": "Consider the following statements regarding India's external trade and tariff treatment:\n1. Most-Favoured-Nation treatment is a core non-discrimination principle of the WTO, but preferential tariffs under free trade agreements are permitted through exceptions such as GATT Article XXIV and the Enabling Clause.\n2. The United States withdrew India from its Generalized System of Preferences (GSP) programme in 2019.\n3. Rules of origin determine whether a good qualifies for a preferential tariff under a trade agreement.\nWhich of the statements given above is/are correct?",
+      "question": "Consider the following statements:\n1. Microfinance loans are collateral-free, small-ticket loans extended only by commercial banks in India.\n2. The Reserve Bank of India has flagged rising costs in the microfinance segment and urged lenders to keep interest rates fair and competitive.\n3. The Reserve Bank of India has indicated that the income threshold used to classify microfinance borrowers could be reviewed.\nWhich of the statements given above is/are correct?",
       "options": [
         "1 and 2 only",
         "2 and 3 only",
         "1 and 3 only",
         "1, 2 and 3"
       ],
-      "answer": 3,
-      "explanation": "All three statements are correct. GSP is a non-reciprocal preferential scheme for developing-country exports, and the US withdrew India from it in 2019. Rules of origin are a key technical issue in the proposed India–US trade deal, under which Washington has assured Indian exporters a tariff advantage over rival suppliers.",
+      "answer": 1,
+      "explanation": "Microfinance loans are small-ticket, collateral-free loans regulated by the RBI under its harmonised framework, but they are extended by NBFC-MFIs, banks and other regulated entities — not by commercial banks alone, so statement 1 is wrong. The RBI has flagged rising microloan costs and indicated that the borrower income threshold could be reviewed.",
       "topic": "Economy"
     },
     {
       "id": 3,
-      "question": "Consider the following statements regarding the COP31 climate summit:\n1. COP31 is being held in Antalya, Türkiye.\n2. The revised 'cover decision' draft retained a '35 by 35' electrification target, that is, raising electricity's share of total final energy use to 35 per cent by 2035.\n3. The revised draft retained an explicit commitment to phase out fossil fuels and to set net-zero dates.\nHow many of the above statements are correct?",
+      "question": "Consider the following statements:\n1. Delhi's air quality on 14 November 2026 was in the 'very poor' category, corresponding to an AQI between 301 and 400 on the National AQI scale.\n2. The Delhi government has been in talks with the World Bank to adopt an airshed-based approach coordinating pollution control with neighbouring States.\n3. The Graded Response Action Plan (GRAP) is a graded set of emergency measures invoked in the Delhi-NCR region as air quality deteriorates.\nHow many of the above statements are correct?",
       "options": [
         "Only one",
         "Only two",
         "All three",
         "None"
       ],
-      "answer": 1,
-      "explanation": "Statements 1 and 2 are correct. The revised cover decision draft dropped references to phasing out fossil fuels and to net-zero dates, while retaining the '35 by 35' electrification goal — so only two statements are correct.",
+      "answer": 2,
+      "explanation": "All three are correct. Delhi's AQI on 14 November 2026 was in the 'very poor' band (301–400); the city government has approached the World Bank for an airshed-based regional strategy; and GRAP is a graded emergency-response framework for Delhi-NCR rather than a single statutory enactment.",
       "topic": "Environment & Ecology"
     },
     {
       "id": 4,
-      "question": "Bab-el-Mandeb, a chokepoint frequently in the news, connects which one of the following pairs of water bodies?",
+      "question": "The Crimean Bridge, which was recently damaged in an attack, spans which one of the following?",
       "options": [
-        "Black Sea and the Sea of Azov",
-        "Red Sea and the Gulf of Aden",
-        "Persian Gulf and the Gulf of Oman",
-        "Mediterranean Sea and the Red Sea"
+        "Bosphorus Strait",
+        "Strait of Hormuz",
+        "Bab-el-Mandeb",
+        "Kerch Strait"
       ],
-      "answer": 1,
-      "explanation": "Bab-el-Mandeb, off Yemen, links the Red Sea to the Gulf of Aden and lies on the Suez shipping route, which is why Houthi gains near the strait matter for India's maritime trade security. The Black Sea–Sea of Azov link is the Kerch Strait, the Persian Gulf–Gulf of Oman link is the Strait of Hormuz, and the Mediterranean–Red Sea link is the Suez Canal.",
+      "answer": 3,
+      "explanation": "The Crimean Bridge, damaged in a seven-stage Ukrainian missile and drone attack, spans the Kerch Strait, linking the Russian mainland to the Crimean peninsula and separating the Black Sea from the Sea of Azov. The Bosphorus, Hormuz and Bab-el-Mandeb are unrelated chokepoints.",
       "topic": "Geography"
     },
     {
       "id": 5,
-      "question": "Consider the following pairs:\n1. Indian Councils Act, 1909 — Introduction of separate electorates for Muslims\n2. Government of India Act, 1919 — Introduction of dyarchy in the provinces\n3. Government of India Act, 1935 — Introduction of universal adult franchise\nHow many of the above pairs are correctly matched?",
+      "question": "Consider the following pairs of tribal communities and the regions with which they are traditionally associated:\n1. Bhil — Madhya Pradesh\n2. Toda — Nilgiri Hills of Tamil Nadu\n3. Jarawa — Lakshadweep\nHow many of the above pairs are correctly matched?",
       "options": [
         "Only one",
         "Only two",
         "All three",
         "None"
       ],
-      "answer": 1,
-      "explanation": "Pairs 1 and 2 are correctly matched. The Government of India Act, 1935 introduced provincial autonomy and abolished dyarchy in the provinces; universal adult franchise came only with the Constitution of India, so pair 3 is wrongly matched.",
+      "answer": 2,
+      "explanation": "The Bhils are concentrated in Madhya Pradesh, Rajasthan, Gujarat and Maharashtra, and the Toda are associated with the Nilgiri Hills of Tamil Nadu. The Jarawa are a Particularly Vulnerable Tribal Group of the Andaman and Nicobar Islands, not Lakshadweep — but since the question asks how many pairs are correctly matched, the Jarawa pair is the only incorrect one, making 'Only two' the answer.",
       "topic": "History & Culture"
     },
     {
       "id": 6,
-      "question": "Statement-I: The nationwide ground stop ordered by the US Federal Aviation Administration in November 2026 was triggered by a hostile cyber-attack on the country's air traffic control systems.\nStatement-II: The failure was attributed to the FAA's ageing infrastructure, including a copper-wire upgrade and a single faulty router.\nWhich one of the following is correct in respect of the above statements?",
+      "question": "Statement-I: The recovery of the Starship booster by mechanical arms on its launch tower was described as a first for a super-heavy launch system.\nStatement-II: SpaceX plans to conduct Starship launches from Florida's Kennedy Space Center in the coming months.\nWhich one of the following is correct in respect of the above statements?",
       "options": [
         "Both Statement-I and Statement-II are correct and Statement-II explains Statement-I",
         "Both Statement-I and Statement-II are correct but Statement-II does not explain Statement-I",
         "Statement-I is correct but Statement-II is incorrect",
         "Statement-I is incorrect but Statement-II is correct"
       ],
-      "answer": 3,
-      "explanation": "Reporting attributed the 13 November 2026 ground stop to ageing infrastructure — a copper-wire upgrade cited by the US transport secretary and a single L3Harris router — and not to any cyber-attack. Statement-II is therefore correct while Statement-I is not, which is the classic 'headline attribution' trap.",
+      "answer": 1,
+      "explanation": "Both statements are factually correct: the booster catch by the launch-tower arms nicknamed 'chopsticks' was reported as a first, and SpaceX does plan Florida launches. However, a plan for future launches from Kennedy Space Center does not explain why the booster catch was significant, so option (b) is correct.",
       "topic": "Science & Technology"
     },
     {
       "id": 7,
-      "question": "The East Asia Summit is an ASEAN-led forum. What is the present strength of its membership?",
+      "question": "Bangladesh, which has recently witnessed widespread political unrest, is a founding member of an organisation whose permanent secretariat is located in Dhaka. That organisation is:",
       "options": [
-        "10",
-        "16",
-        "18",
-        "20"
+        "BIMSTEC",
+        "SAARC",
+        "ASEAN",
+        "Indian Ocean Rim Association (IORA)"
       ],
-      "answer": 2,
-      "explanation": "The East Asia Summit has 18 members — the 10 ASEAN states plus eight dialogue partners: Australia, China, India, Japan, New Zealand, the Republic of Korea, Russia and the United States. The Quad, by contrast, is a four-member consultative grouping with no mutual-defence treaty.",
+      "answer": 0,
+      "explanation": "BIMSTEC's permanent secretariat is in Dhaka and Bangladesh is a founding member. SAARC's secretariat is in Kathmandu, ASEAN's in Jakarta and IORA's in Mauritius, so the other options are entity swaps.",
       "topic": "International Relations"
     },
     {
       "id": 8,
-      "question": "Consider the following statements:\n1. India is heavily import-dependent for crude oil and for many critical minerals such as lithium, cobalt and rare earths.\n2. The National Critical Mineral Mission is a five-year programme covering exploration, mining and processing of critical minerals.\n3. India's crude oil production is projected to rise by about 20 per cent over the next decade.\nWhich of the statements given above is/are NOT correct?",
+      "question": "Consider the following statements:\n1. The Supreme Court has recently dismissed Tamil Nadu's applications seeking additional Cauvery water.\n2. The Cauvery is a rain-fed peninsular river shared by Karnataka, Tamil Nadu, Kerala and Puducherry.\n3. The Cauvery Water Management Authority was constituted by the Supreme Court in its 2018 judgment.\nWhich of the statements given above is/are NOT correct?",
       "options": [
-        "1 only",
         "1 and 2 only",
-        "3 only",
-        "2 and 3 only"
+        "2 and 3 only",
+        "1 and 3 only",
+        "3 only"
       ],
       "answer": 3,
-      "explanation": "Statements 2 and 3 are not correct. The National Critical Mineral Mission is a seven-year programme, and India's crude oil production is projected to decline by about 20 per cent over the next decade even as demand rises — the opposite of statement 3.",
-      "topic": "Economy"
+      "explanation": "Statements 1 and 2 are correct. Statement 3 is the trap: the Cauvery Water Management Authority was constituted by the Central Government in 2018 in compliance with the Supreme Court's judgment, not by the Court itself.",
+      "topic": "Polity & Governance"
     },
     {
       "id": 9,
-      "question": "A large non-banking financial company in India holds predominantly investments in its group companies and has been placed in the 'Upper Layer' under the RBI's Scale Based Regulation framework. Which one of the following consequences is most likely to follow?",
+      "question": "A developing country negotiating a bilateral trade agreement with the United States has been assured that its exports will enjoy a tariff advantage over competing suppliers. Which one of the following best explains how such a preferential tariff arrangement is consistent with the rules of the World Trade Organization?",
       "options": [
-        "It becomes exempt from the RBI's prudential norms",
-        "It must convert itself into a universal bank within three years",
-        "It is required to list on stock exchanges",
-        "It must cease all lending activity"
+        "Preferential tariffs are permitted through exceptions to the MFN principle, such as GATT Article XXIV for free trade areas and the Enabling Clause for developing countries",
+        "The MFN principle requires a WTO member to extend identical tariff treatment to all trading partners in every circumstance",
+        "Tariff preferences may be granted only to least-developed countries and to no other category of trading partner",
+        "Preferential tariff arrangements require prior authorisation by the UN Security Council"
       ],
-      "answer": 2,
-      "explanation": "Under the RBI's Scale Based Regulation framework (2021), NBFCs are placed in Base, Middle, Upper and Top layers, and upper-layer NBFCs must list on stock exchanges. This is the requirement the RBI has reiterated for Tata Sons, a Core Investment Company whose assets are predominantly investments in group companies.",
+      "answer": 0,
+      "explanation": "MFN is a core WTO non-discrimination principle, but it is not absolute: preferential tariffs are permitted under exceptions such as GATT Article XXIV (FTAs and customs unions) and the Enabling Clause (developing-country preferences). Option (b) is the standard trap because it treats MFN as an absolute rule.",
       "topic": "Economy"
     },
     {
       "id": 10,
-      "question": "Which one of the following best describes the judicial practice known as 'continuing mandamus'?",
+      "question": "The Supreme Court's power to pass 'such decree or order as is necessary for doing complete justice in any cause or matter pending before it' is conferred by which one of the following Articles of the Constitution?",
       "options": [
-        "A court keeping a matter under continuous supervision and issuing directions from time to time until compliance is achieved",
-        "A writ issued by a higher court transferring a pending case from a lower court",
-        "An interim order restraining a public authority from acting until further orders",
-        "A direction to the legislature to enact a law within a fixed period"
+        "Article 136",
+        "Article 141",
+        "Article 142",
+        "Article 144"
       ],
-      "answer": 0,
-      "explanation": "Continuing mandamus is a device by which the court retains a matter on its docket and monitors compliance through successive directions, typically in environmental and public-interest litigation — as in the Supreme Court's long-running supervision of Yamuna cleaning under Articles 32 and 142. It is neither a transfer of a case nor a direction to legislate.",
+      "answer": 2,
+      "explanation": "Article 142 confers this residuary power of complete justice, which the Court has invoked in its continuing supervision of environmental matters such as Yamuna pollution. Article 136 deals with special leave to appeal, Article 141 with the binding force of Supreme Court law, and Article 144 with authorities acting in aid of the Court.",
       "topic": "Polity & Governance"
     },
     {
       "id": 11,
-      "question": "Consider the following statements regarding inter-state river water disputes in India:\n1. The Cauvery basin covers Karnataka, Tamil Nadu, Kerala and Puducherry.\n2. Under Article 262 of the Constitution, Parliament may provide that neither the Supreme Court nor any other court shall exercise jurisdiction in respect of any inter-state river water dispute.\n3. The Cauvery Water Management Authority was constituted by the Supreme Court in its 2018 judgment.\nWhich of the statements given above is/are correct?",
+      "question": "Consider the following statements:\n1. Article 32 of the Constitution empowers the Supreme Court to issue writs for the enforcement of Fundamental Rights.\n2. Article 226 empowers the High Courts to issue writs for the enforcement of Fundamental Rights as well as for any other legal right.\n3. The Supreme Court's power under Article 32 is wider than that of the High Courts under Article 226 in respect of the rights for which writs may be issued.\nWhich of the statements given above is/are correct?",
       "options": [
         "1 and 2 only",
         "2 and 3 only",
@@ -145,25 +145,12 @@
         "1, 2 and 3"
       ],
       "answer": 0,
-      "explanation": "Statements 1 and 2 are correct. The Cauvery Water Management Authority was constituted by the Central Government in 2018 pursuant to the Supreme Court's judgment, not by the Court itself — an entity-swap trap, relevant to the recent dismissal of Tamil Nadu's plea for additional Cauvery water.",
+      "explanation": "Article 32 is confined to Fundamental Rights, whereas Article 226 is wider and covers both Fundamental Rights and other legal rights. Statement 3 reverses this relationship and is therefore incorrect.",
       "topic": "Polity & Governance"
     },
     {
       "id": 12,
-      "question": "Consider the following statements:\n1. The Periodic Labour Force Survey is conducted by the National Statistical Office under the Ministry of Statistics and Programme Implementation.\n2. The Competition Commission of India is a constitutional body established under Article 148 of the Constitution.\n3. Q2 of a financial year corresponds to the period July–September.\nWhich of the statements given above is/are correct?",
-      "options": [
-        "1 and 2 only",
-        "2 and 3 only",
-        "1 and 3 only",
-        "1, 2 and 3"
-      ],
-      "answer": 2,
-      "explanation": "Statements 1 and 3 are correct. The Competition Commission of India is a statutory body established under the Competition Act, 2002 and became operational in 2009 — not a constitutional body, which is the constitutional-versus-statutory trap.",
-      "topic": "Economy"
-    },
-    {
-      "id": 13,
-      "question": "Consider the following statements regarding climate finance at COP31:\n1. The $1.3 trillion climate finance goal is the negotiated core public-finance commitment under the UNFCCC.\n2. COP31 is the 31st session of the Conference of the Parties to the UNFCCC.\n3. At COP31, Canada and the United Kingdom reaffirmed the $1.3 trillion climate finance goal and announced fresh commitments.\nWhich of the statements given above is/are correct?",
+      "question": "Consider the following statements:\n1. China's October 2026 data showed factory output accelerating and household consumption strengthening.\n2. China remains the world's largest exporter of goods.\n3. China's sugar imports are set to fall to a ten-year low, driven by higher domestic production and changing consumer preferences.\nWhich of the statements given above is/are correct?",
       "options": [
         "1 and 2 only",
         "2 and 3 only",
@@ -171,25 +158,12 @@
         "1, 2 and 3"
       ],
       "answer": 1,
-      "explanation": "Statements 2 and 3 are correct. The $1.3 trillion figure is a broad, all-actors annual target, distinct from the smaller negotiated core public-finance commitment, so statement 1 mischaracterises it — a partial-truth trap in the COP31 finance debate.",
-      "topic": "Environment & Ecology"
+      "explanation": "China's October data pointed to slowing factory output and weak household consumption amid a prolonged property downturn, so statement 1 is incorrect. China remains the world's largest goods exporter, and its sugar imports are set to fall to a ten-year low — a development with implications for international sugar prices.",
+      "topic": "Economy"
     },
     {
-      "id": 14,
-      "question": "In November 2026, the International Court of Justice ruled that Myanmar had committed genocide against the Rohingya. Which country instituted the case before the Court?",
-      "options": [
-        "Bangladesh",
-        "Indonesia",
-        "The Gambia",
-        "Maldives"
-      ],
-      "answer": 2,
-      "explanation": "The case, The Gambia v Myanmar, was brought by The Gambia under the 1948 Genocide Convention. The ICJ is the principal judicial organ of the UN at The Hague; its judgments are binding but enforcement may be referred to the UN Security Council under Article 94 of the Charter.",
-      "topic": "International Relations"
-    },
-    {
-      "id": 15,
-      "question": "Consider the following statements regarding the Scheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act, 2006:\n1. The Gram Sabha determines forest rights at the first instance, with verification by the Sub-Divisional Level Committee and then the District Level Committee.\n2. Community Forest Resource rights under Section 3(1)(i) empower Gram Sabhas to protect, regenerate, conserve and manage community forest resources.\n3. Relocation from a Critical Wildlife Habitat notified under Section 4 requires the free and informed consent of the concerned Gram Sabha.\nWhich of the statements given above is/are correct?",
+      "id": 13,
+      "question": "Consider the following statements:\n1. Microplastics are plastic particles smaller than five millimetres in size.\n2. Microplastics can adsorb toxic chemicals and thereby enter aquatic food chains.\n3. The Yamuna is the longest tributary of the Ganga and joins it at Prayagraj.\nWhich of the statements given above is/are correct?",
       "options": [
         "1 and 2 only",
         "2 and 3 only",
@@ -197,8 +171,34 @@
         "1, 2 and 3"
       ],
       "answer": 3,
-      "explanation": "All three statements correctly describe the FRA, 2006 architecture. Twenty years after the Act was passed, Adivasi communities in Madhya Pradesh have alleged widespread implementation violations, particularly in the recognition of community forest resource rights.",
+      "explanation": "All three are correct. Microplastics are defined as plastic particles under 5 mm, they can adsorb toxic chemicals and enter aquatic food chains, and the Yamuna — the longest tributary of the Ganga — joins it at Prayagraj. The recent Delhi University study on Yamuna microplastics carrying a 'toxic cocktail' underlines the health risk.",
       "topic": "Environment & Ecology"
+    },
+    {
+      "id": 14,
+      "question": "Consider the following statements regarding the Global Stocktake under the Paris Agreement:\n1. It is a periodic assessment of collective progress towards the long-term goals of the Paris Agreement.\n2. The first Global Stocktake was completed in 2015, the year the Paris Agreement was adopted.\n3. The second Global Stocktake is being held in conjunction with COP31.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 2,
+      "explanation": "The Global Stocktake is the Paris Agreement's periodic reality check on collective progress, and the second one (GST2) is being held alongside COP31. Statement 2 is the trap: the first Global Stocktake was completed in 2023, not in 2015 when the Agreement was adopted.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 15,
+      "question": "The Donbas region, frequently in the news in the context of the Russia–Ukraine conflict, comprises which one of the following pairs of oblasts?",
+      "options": [
+        "Kharkiv and Sumy",
+        "Zaporizhzhia and Kherson",
+        "Odesa and Mykolaiv",
+        "Donetsk and Luhansk"
+      ],
+      "answer": 3,
+      "explanation": "The Donbas refers to Ukraine's eastern Donetsk and Luhansk oblasts, which border Russia and were the subject of the Minsk Protocol (2014) and Minsk II (2015). Reports that the United States floated a Donbas withdrawal in exchange for NATO membership make this a live geography question.",
+      "topic": "Geography"
     }
   ]
 }
