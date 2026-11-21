@@ -2371,13 +2371,39 @@ a.feed-name:hover {
   margin: 0 0 16px;
 }
 
+/* Scrolls like the Extras reading list: fixed height, thin scrollbar. */
 .references-list {
   list-style: none;
-  margin: 0;
+  margin: 0 0 60px;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0;
+  max-height: 440px;
+  overflow-y: auto;
+  border: 1px solid var(--rule);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule-strong) transparent;
+}
+
+.references-list::-webkit-scrollbar {
+  width: 12px;
+}
+
+.references-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.references-list::-webkit-scrollbar-thumb {
+  background: var(--rule-strong);
+  border: 4px solid var(--card);
+  border-radius: 999px;
+}
+
+.references-list::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }
 
 .ref-entry {
@@ -2386,7 +2412,7 @@ a.feed-name:hover {
   gap: 10px;
   font-size: 13.5px;
   line-height: 1.5;
-  padding: 7px 4px;
+  padding: 10px 14px;
   border-bottom: 1px dotted var(--rule);
 }
 

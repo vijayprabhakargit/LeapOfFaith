@@ -2,8 +2,10 @@
 //
 // The static panels are the "go deeper" section of a story, so each one cites
 // its sources. References are curated per knowledge card (config/syllabus.ts)
-// or fall back to a Wikipedia search URL we build ourselves — the LLM never
-// emits a URL, so every href here is real.
+// and are only ever specific articles, books or official pages — never search
+// results. A static topic that matches no curated card gets no citation at all,
+// rather than a low-value search link. The LLM never emits a URL, so every href
+// here is real.
 //
 // Numbering is computed at render time in document order, deduped by href, so
 // the superscripts and the References section are generated from one pass and
@@ -44,23 +46,13 @@ export function citationAnchor(storyIndex: number, staticIdx: number, n: number)
   return `cite-${storyIndex}-${staticIdx}-${n}`;
 }
 
-// A Wikipedia search URL is always valid and never fabricated, so it is the
-// safe fallback when a static topic matches no curated knowledge card.
-export function wikipediaSearch(topic: string): Reference {
-  return {
-    label: `Wikipedia search: ${topic}`,
-    href: `https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(topic)}`,
-    kind: "search",
-  };
-}
-
 // Match the static link to its best knowledge card. The topic + syllabus node
 // are precise enough to identify the card; the long body is deliberately not
-// used, so a stray keyword in prose cannot pull in an unrelated card.
+// used, so a stray keyword in prose cannot pull in an unrelated card. Returns
+// an empty list when nothing matches — a search URL is not a reference.
 export function referencesForStaticLink(link: StaticLink): Reference[] {
   const [card] = matchKnowledgeCards(`${link.topic} ${link.syllabusNode}`, 1);
-  const curated = card ? referencesForCard(card.id) : [];
-  return curated.length > 0 ? curated : [wikipediaSearch(link.topic)];
+  return card ? referencesForCard(card.id) : [];
 }
 
 export function buildReferenceIndex(stories: Story[]): ReferenceIndex {

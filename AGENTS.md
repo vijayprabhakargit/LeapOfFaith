@@ -19,6 +19,9 @@ renders JSON editions produced by a Node/TS generator. Deployed to Cloudflare Pa
    Regenerate them with the generator; do not hand-edit except for the sample edition.
 4. **Static-linking must stay accurate.** The LLM is grounded with cards from `config/syllabus.ts`.
    When adding a claim-worthy theme, add a knowledge card there rather than trusting the model.
+   Curated "further reading" lives in `CARD_REFERENCES` (same file) and is cited as edition-level
+   superscripts. References must be specific articles, books or official pages — never search-result
+   links — and a static topic that matches no card gets no citation rather than a search fallback.
 5. **Provider-agnostic LLM.** All model calls go through `scripts/lib/llm.ts`. Do not hard-code a
    provider. New providers are added by extending `resolveConfig()` / the call functions.
 

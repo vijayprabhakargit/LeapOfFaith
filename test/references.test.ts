@@ -6,7 +6,6 @@ import {
   citationAnchor,
   referenceAnchor,
   referencesForStaticLink,
-  wikipediaSearch,
 } from "../src/lib/references";
 import { CARD_REFERENCES, KNOWLEDGE_CARDS } from "../config/syllabus";
 
@@ -43,41 +42,40 @@ function story(slug: string, headline: string, links: StaticLink[]): Story {
   };
 }
 
+const RBI = "rbi-monetary-policy";
+const RBI_LINK = staticLink("RBI & Monetary Policy", "Indian Economy — Banking & Monetary Policy");
+const RBI_COUNT = CARD_REFERENCES[RBI].length;
+
 test("referencesForStaticLink uses curated refs for a matching card", () => {
-  const refs = referencesForStaticLink(staticLink("RBI & Monetary Policy", "Indian Economy — Banking & Monetary Policy"));
+  const refs = referencesForStaticLink(RBI_LINK);
   assert.ok(refs.length >= 2);
   assert.ok(refs.some((r) => r.href === "https://www.rbi.org.in/"));
-  assert.ok(refs.every((r) => r.kind !== "search"));
 });
 
-test("referencesForStaticLink falls back to a Wikipedia search for an unmatched topic", () => {
+test("referencesForStaticLink returns no references for an unmatched topic", () => {
   const refs = referencesForStaticLink(staticLink("Quantum Widgets", "Miscellaneous"));
-  assert.equal(refs.length, 1);
-  assert.equal(refs[0].kind, "search");
-  assert.equal(refs[0].href, wikipediaSearch("Quantum Widgets").href);
-  assert.ok(refs[0].href.startsWith("https://en.wikipedia.org/w/index.php?search="));
+  assert.deepEqual(refs, []);
 });
 
 test("buildReferenceIndex numbers by first appearance and dedupes by href", () => {
   const stories = [
-    story("a", "Story A", [staticLink("RBI & Monetary Policy", "Indian Economy — Banking & Monetary Policy")]),
+    story("a", "Story A", [RBI_LINK]),
     story("b", "Story B", [staticLink("Quantum Widgets", "Miscellaneous")]),
   ];
   const index = buildReferenceIndex(stories);
-  // Three curated RBI refs, then one search fallback.
-  assert.equal(index.entries.length, 4);
+  assert.equal(index.entries.length, RBI_COUNT);
   assert.deepEqual(
     index.entries.map((e) => e.n),
-    [1, 2, 3, 4],
+    Array.from({ length: RBI_COUNT }, (_, i) => i + 1),
   );
-  assert.deepEqual(index.byStoryIndex.get(0), [[1, 2, 3]]);
-  assert.deepEqual(index.byStoryIndex.get(1), [[4]]);
+  assert.deepEqual(index.byStoryIndex.get(0), [Array.from({ length: RBI_COUNT }, (_, i) => i + 1)]);
+  // The unmatched static link cites nothing rather than a search result.
+  assert.deepEqual(index.byStoryIndex.get(1), [[]]);
 });
 
 test("a reference cited by two stories keeps one number and gains two citations", () => {
-  const link = staticLink("RBI & Monetary Policy", "Indian Economy — Banking & Monetary Policy");
-  const index = buildReferenceIndex([story("a", "Story A", [link]), story("b", "Story B", [link])]);
-  assert.equal(index.entries.length, 3);
+  const index = buildReferenceIndex([story("a", "Story A", [RBI_LINK]), story("b", "Story B", [RBI_LINK])]);
+  assert.equal(index.entries.length, RBI_COUNT);
   for (const entry of index.entries) {
     assert.equal(entry.citations.length, 2);
     assert.equal(new Set(entry.citations.map((c) => c.anchor)).size, 2);
@@ -87,13 +85,10 @@ test("a reference cited by two stories keeps one number and gains two citations"
 });
 
 test("the same reference cited twice inside one story does not duplicate its number", () => {
-  const link = staticLink("RBI & Monetary Policy", "Indian Economy — Banking & Monetary Policy");
-  const index = buildReferenceIndex([story("a", "Story A", [link, link])]);
-  assert.equal(index.entries.length, 3);
-  assert.deepEqual(index.byStoryIndex.get(0), [
-    [1, 2, 3],
-    [1, 2, 3],
-  ]);
+  const index = buildReferenceIndex([story("a", "Story A", [RBI_LINK, RBI_LINK])]);
+  assert.equal(index.entries.length, RBI_COUNT);
+  const numbers = Array.from({ length: RBI_COUNT }, (_, i) => i + 1);
+  assert.deepEqual(index.byStoryIndex.get(0), [numbers, numbers]);
   for (const entry of index.entries) {
     assert.equal(entry.citations.length, 2);
   }
@@ -122,7 +117,7 @@ test("every curated reference card id exists in KNOWLEDGE_CARDS", () => {
 });
 
 test("every curated reference has a non-empty label, https href and known kind", () => {
-  const kinds = new Set(["official", "wiki", "report", "book", "search"]);
+  const kinds = new Set(["official", "wiki", "report", "book"]);
   for (const [id, refs] of Object.entries(CARD_REFERENCES)) {
     assert.ok(refs.length > 0, `${id} has no references`);
     for (const ref of refs) {
@@ -130,5 +125,23 @@ test("every curated reference has a non-empty label, https href and known kind",
       assert.ok(ref.href.startsWith("https://"), `${id} has a non-https href: ${ref.href}`);
       assert.ok(kinds.has(ref.kind), `${id} has an unknown kind: ${ref.kind}`);
     }
+  }
+});
+
+test("no curated reference points at a search-results page", () => {
+  for (const [id, refs] of Object.entries(CARD_REFERENCES)) {
+    for (const ref of refs) {
+      assert.ok(!/\/w\/index\.php\?search=/.test(ref.href), `${id} has a search href: ${ref.href}`);
+      assert.ok(!/google\.[^/]+\/search/.test(ref.href), `${id} has a search href: ${ref.href}`);
+    }
+  }
+});
+
+test("book references are present and point at Wikipedia article pages", () => {
+  const books = Object.values(CARD_REFERENCES).flat().filter((r) => r.kind === "book");
+  assert.ok(books.length > 0, "expected at least one book reference");
+  for (const book of books) {
+    assert.ok(book.href.startsWith("https://en.wikipedia.org/wiki/"), `book href is not a Wikipedia article: ${book.href}`);
+    assert.ok(!book.href.includes("(disambiguation)"), `book href is a disambiguation page: ${book.href}`);
   }
 });
