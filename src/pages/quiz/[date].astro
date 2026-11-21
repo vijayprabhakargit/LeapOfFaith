@@ -39,8 +39,8 @@ const letters = ["A", "B", "C", "D"];
               <fieldset class="quiz-question" data-answer={q.answer} data-index={qi}>
                 <legend class="quiz-legend">
                   <span class="quiz-qnum">Q{qi + 1}.</span>
-                  <span class="quiz-qtext">{q.question}</span>
                 </legend>
+                <p class="quiz-qtext">{q.question}</p>
                 <div class="quiz-options">
                   {q.options.map((opt, oi) => (
                     <label class="quiz-option">
@@ -52,7 +52,7 @@ const letters = ["A", "B", "C", "D"];
                 </div>
                 <div class="quiz-explanation" hidden>
                   <p>
-                    <strong>Answer: {letters[q.answer]}.</strong> {q.explanation}
+                    <strong>Answer: {letters[q.answer]}.</strong>{" "}{q.explanation}
                   </p>
                 </div>
                 <p class="quiz-topic">Topic: {q.topic}</p>

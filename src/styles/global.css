@@ -2095,22 +2095,29 @@ a.feed-name:hover {
 }
 
 .quiz-legend {
-  font-family: var(--serif);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.45;
-  padding: 0;
-  margin: 0 0 12px;
-  display: flex;
-  gap: 8px;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0 6px;
+  margin: 0;
 }
 
 .quiz-qnum {
   color: var(--accent);
-  font-family: var(--mono);
-  font-size: 14px;
-  font-weight: 700;
-  flex: none;
+}
+
+/* The question sits in the card body, not the legend: a long legend renders in
+   the fieldset's border notch and does not grow the fieldset, so multi-line
+   questions spilled over the card and behind the options. */
+.quiz-qtext {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.45;
+  margin: 0 0 12px;
+  overflow-wrap: break-word;
+  white-space: pre-line;
 }
 
 .quiz-options {
@@ -2275,7 +2282,7 @@ a.feed-name:hover {
     font-size: 27px;
   }
 
-  .quiz-legend {
+  .quiz-qtext {
     font-size: 16px;
   }
 
