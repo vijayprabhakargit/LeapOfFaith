@@ -1,10 +1,12 @@
 ---
 import type { Edition } from "../lib/types";
 import { formatDateLong } from "../lib/format";
+import { buildReferenceIndex } from "../lib/references";
 import Controls from "./Controls.astro";
 import StoryCard from "./StoryCard.astro";
 import OnThisDay from "./OnThisDay.astro";
 import Extras from "./Extras.astro";
+import References from "./References.astro";
 
 interface Props {
   edition: Edition;
@@ -13,6 +15,9 @@ interface Props {
 }
 const { edition, prevDate, nextDate } = Astro.props;
 const stories = edition.stories;
+// One numbering pass for the whole edition: superscripts and the References
+// section are generated from the same index, so they cannot disagree.
+const refIndex = buildReferenceIndex(stories);
 ---
 <section class="edition-bar">
   <div class="wrap edition-bar-inner">
@@ -61,13 +66,16 @@ const stories = edition.stories;
     Showing <span id="visibleCount">{stories.length}</span> of {stories.length} stories
   </div>
   <div class="stories" id="stories">
-    {stories.map((s, i) => <StoryCard story={s} lead={i === 0} />)}
+    {stories.map((s, i) => (
+      <StoryCard story={s} lead={i === 0} storyIndex={i} refNumbers={refIndex.byStoryIndex.get(i)} />
+    ))}
   </div>
   <p class="no-results" id="noResults" hidden>
     No stories match that. Try another section, or clear the search.
   </p>
   <OnThisDay items={edition.onThisDay} date={edition.date} />
   <Extras items={edition.extras ?? []} />
+  <References entries={refIndex.entries} />
 </div>
 
 <script>

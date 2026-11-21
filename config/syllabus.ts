@@ -5,6 +5,8 @@
 // Edit freely — add policies, institutions, geography facts and history you
 // find yourself revising, and they will show up in the brief.
 
+import type { Reference } from "../src/lib/types";
+
 export interface KnowledgeCard {
   id: string;
   title: string;
@@ -355,4 +357,105 @@ export function matchKnowledgeCards(text: string, limit = 4): KnowledgeCard[] {
     .filter((s) => s.score > 0)
     .sort((a, b) => b.score - a.score);
   return scored.slice(0, limit).map((s) => s.card);
+}
+
+// ---- Curated "further reading" ---------------------------------------------
+// Keyed by KnowledgeCard id. Every href here was HEAD-checked and returns 2xx
+// (or a redirect to one). These are rendered as an edition's References section
+// and linked from superscripts in the static panels, so they must stay real:
+// never populate this from LLM output. A topic that matches no card falls back
+// to a Wikipedia search URL built in src/lib/references.ts.
+export const CARD_REFERENCES: Record<string, Reference[]> = {
+  "rbi-monetary-policy": [
+    { label: "Reserve Bank of India", href: "https://www.rbi.org.in/", kind: "official" },
+    { label: "RBI publications", href: "https://www.rbi.org.in/Scripts/Publications.aspx", kind: "official" },
+    { label: "Monetary Policy Committee (India)", href: "https://en.wikipedia.org/wiki/Monetary_Policy_Committee_(India)", kind: "wiki" },
+  ],
+  "fiscal-policy": [
+    { label: "Union Budget", href: "https://www.indiabudget.gov.in/", kind: "official" },
+    { label: "Finance Commission", href: "https://fincomindia.nic.in/", kind: "official" },
+    { label: "FRBM Act, 2003", href: "https://en.wikipedia.org/wiki/Fiscal_Responsibility_and_Budget_Management_Act,_2003", kind: "wiki" },
+  ],
+  "parliament-legislation": [
+    { label: "Parliament of India", href: "https://en.wikipedia.org/wiki/Parliament_of_India", kind: "wiki" },
+    { label: "PRS Legislative Research", href: "https://prsindia.org/", kind: "report" },
+    { label: "Sansad", href: "https://sansad.in/", kind: "official" },
+  ],
+  judiciary: [
+    { label: "Supreme Court of India", href: "https://www.sci.gov.in/", kind: "official" },
+    { label: "Basic structure doctrine", href: "https://en.wikipedia.org/wiki/Basic_structure_doctrine", kind: "wiki" },
+    { label: "Constitution of India", href: "https://legislative.gov.in/constitution-of-india/", kind: "official" },
+  ],
+  federalism: [
+    { label: "Federalism in India", href: "https://en.wikipedia.org/wiki/Federalism_in_India", kind: "wiki" },
+    { label: "Sarkaria Commission", href: "https://en.wikipedia.org/wiki/Sarkaria_Commission", kind: "wiki" },
+  ],
+  "un-reform": [
+    { label: "United Nations", href: "https://www.un.org/", kind: "official" },
+    { label: "UN Security Council", href: "https://en.wikipedia.org/wiki/United_Nations_Security_Council", kind: "wiki" },
+    { label: "Ministry of External Affairs", href: "https://www.mea.gov.in/", kind: "official" },
+  ],
+  "india-foreign-policy": [
+    { label: "Foreign relations of India", href: "https://en.wikipedia.org/wiki/Foreign_relations_of_India", kind: "wiki" },
+    { label: "Quadrilateral Security Dialogue", href: "https://en.wikipedia.org/wiki/Quadrilateral_Security_Dialogue", kind: "wiki" },
+    { label: "Ministry of External Affairs", href: "https://www.mea.gov.in/", kind: "official" },
+  ],
+  "climate-regime": [
+    { label: "UNFCCC", href: "https://unfccc.int/", kind: "official" },
+    { label: "Paris Agreement", href: "https://en.wikipedia.org/wiki/Paris_Agreement", kind: "wiki" },
+    { label: "Ministry of Environment, Forest and Climate Change", href: "https://moef.gov.in/", kind: "official" },
+  ],
+  biodiversity: [
+    { label: "Convention on Biological Diversity", href: "https://www.cbd.int/", kind: "official" },
+    { label: "Ramsar Convention", href: "https://en.wikipedia.org/wiki/Ramsar_Convention", kind: "wiki" },
+  ],
+  "monsoon-geography": [
+    { label: "India Meteorological Department", href: "https://mausam.imd.gov.in/", kind: "official" },
+    { label: "Monsoon in India", href: "https://en.wikipedia.org/wiki/Monsoon_in_India", kind: "wiki" },
+  ],
+  "agriculture-msp": [
+    { label: "Ministry of Agriculture & Farmers Welfare", href: "https://agriwelfare.gov.in/", kind: "official" },
+    { label: "Minimum support price", href: "https://en.wikipedia.org/wiki/Minimum_support_price", kind: "wiki" },
+  ],
+  "urban-local-gov": [
+    { label: "Ministry of Panchayati Raj", href: "https://panchayat.gov.in/", kind: "official" },
+    { label: "Panchayati raj in India", href: "https://en.wikipedia.org/wiki/Panchayati_raj_in_India", kind: "wiki" },
+    { label: "74th Amendment", href: "https://en.wikipedia.org/wiki/Seventy-fourth_Amendment_of_the_Constitution_of_India", kind: "wiki" },
+  ],
+  "space-programme": [
+    { label: "ISRO", href: "https://www.isro.gov.in/", kind: "official" },
+    { label: "Indian Space Research Organisation", href: "https://en.wikipedia.org/wiki/Indian_Space_Research_Organisation", kind: "wiki" },
+  ],
+  "digital-india": [
+    { label: "India Stack", href: "https://indiastack.org/", kind: "official" },
+    { label: "Aadhaar", href: "https://en.wikipedia.org/wiki/Aadhaar", kind: "wiki" },
+    { label: "Ministry of Electronics and IT", href: "https://www.meity.gov.in/", kind: "official" },
+  ],
+  "welfare-schemes": [
+    { label: "Press Information Bureau", href: "https://www.pib.gov.in/", kind: "official" },
+    { label: "NITI Aayog", href: "https://niti.gov.in/", kind: "official" },
+  ],
+  "internal-security": [
+    { label: "Ministry of Home Affairs", href: "https://www.mha.gov.in/", kind: "official" },
+    { label: "National Investigation Agency", href: "https://en.wikipedia.org/wiki/National_Investigation_Agency", kind: "wiki" },
+    { label: "CERT-In", href: "https://www.cert-in.org.in/", kind: "official" },
+  ],
+  "poverty-inequality": [
+    { label: "NITI Aayog", href: "https://niti.gov.in/", kind: "official" },
+    { label: "International Labour Organization", href: "https://www.ilo.org/", kind: "official" },
+  ],
+  "indian-history-freedom": [
+    { label: "Indian independence movement", href: "https://en.wikipedia.org/wiki/Indian_independence_movement", kind: "wiki" },
+    { label: "National Archives of India", href: "https://nationalarchives.nic.in/", kind: "official" },
+    { label: "Mahatma Gandhi", href: "https://en.wikipedia.org/wiki/Mahatma_Gandhi", kind: "wiki" },
+  ],
+  "art-culture": [
+    { label: "Archaeological Survey of India", href: "https://asi.nic.in/", kind: "official" },
+    { label: "World Heritage Sites in India", href: "https://en.wikipedia.org/wiki/List_of_World_Heritage_Sites_in_India", kind: "wiki" },
+    { label: "Culture of India", href: "https://en.wikipedia.org/wiki/Culture_of_India", kind: "wiki" },
+  ],
+};
+
+export function referencesForCard(cardId: string): Reference[] {
+  return CARD_REFERENCES[cardId] ?? [];
 }

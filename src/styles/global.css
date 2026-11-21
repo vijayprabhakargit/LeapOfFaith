@@ -2329,3 +2329,140 @@ a.feed-name:hover {
     font-size: 15px;
   }
 }
+
+/* ---- References ---------------------------------------------------------- */
+/* Wikipedia-style superscripts in the static panels, jumping to the edition's
+   deduped reference list at the bottom. Numbering is computed at build time. */
+
+.cite {
+  font-size: 0.62em;
+  font-weight: 600;
+  letter-spacing: 0;
+  margin-left: 4px;
+  vertical-align: super;
+  line-height: 0;
+}
+
+.cite-anchor {
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: 2px;
+  padding: 0 1px;
+}
+
+.cite-anchor:hover {
+  text-decoration: underline;
+}
+
+.references {
+  margin-top: 44px;
+  padding-top: 22px;
+  border-top: 2px solid var(--rule);
+}
+
+.references h2 {
+  font-size: 20px;
+  margin: 0 0 4px;
+}
+
+.references-note {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.references-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ref-entry {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  padding: 7px 4px;
+  border-bottom: 1px dotted var(--rule);
+}
+
+.ref-entry:last-child {
+  border-bottom: none;
+}
+
+.ref-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent);
+  flex: none;
+  min-width: 26px;
+}
+
+.ref-link {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--rule);
+  overflow-wrap: anywhere;
+}
+
+.ref-link:hover {
+  border-bottom-color: var(--accent);
+}
+
+.ref-kind {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  padding: 1px 5px;
+  border-radius: 2px;
+  flex: none;
+}
+
+.ref-back {
+  margin-left: auto;
+  flex: none;
+  display: flex;
+  gap: 4px;
+}
+
+.ref-back-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  padding: 0 2px;
+}
+
+.ref-back-link:hover {
+  text-decoration: underline;
+}
+
+/* Land targets clear the sticky controls bar. */
+#references,
+.ref-entry,
+.cite-anchor {
+  scroll-margin-top: 80px;
+}
+
+/* Briefly mark the jumped-to target so the reader sees where they landed. */
+.ref-entry:target,
+.cite-anchor:target {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border-radius: 2px;
+}
+
+@media (max-width: 620px) {
+  .ref-entry {
+    flex-wrap: wrap;
+  }
+
+  .ref-back {
+    margin-left: 0;
+  }
+}

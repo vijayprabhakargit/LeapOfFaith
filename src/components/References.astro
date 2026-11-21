@@ -1,0 +1,50 @@
+---
+import type { ReferenceEntry } from "../lib/references";
+import { referenceAnchor } from "../lib/references";
+
+interface Props {
+  entries: ReferenceEntry[];
+}
+const { entries } = Astro.props;
+
+const KIND_LABEL: Record<string, string> = {
+  official: "Official",
+  wiki: "Wiki",
+  report: "Report",
+  book: "Book",
+  search: "Search",
+};
+---
+{
+  entries.length > 0 && (
+    <section class="references" id="references" aria-labelledby="references-heading">
+      <h2 id="references-heading">References</h2>
+      <p class="references-note">
+        Sources for the static-syllabus panels above. Numbers match the superscripts.
+      </p>
+      <ol class="references-list">
+        {entries.map((e) => (
+          <li class="ref-entry" id={referenceAnchor(e.n)}>
+            <span class="ref-num">[{e.n}]</span>
+            <a class="ref-link" href={e.href} target="_blank" rel="noopener noreferrer">
+              {e.label}
+            </a>
+            <span class="ref-kind">{KIND_LABEL[e.kind] ?? e.kind}</span>
+            <span class="ref-back">
+              {e.citations.map((c) => (
+                <a
+                  class="ref-back-link"
+                  href={`#${c.anchor}`}
+                  title={`Back to: ${c.storyHeadline} — ${c.topic}`}
+                  aria-label={`Back to ${c.storyHeadline}, ${c.topic}`}
+                >
+                  ↩
+                </a>
+              ))}
+            </span>
+          </li>
+        ))}
+      </ol>
+    </section>
+  )
+}

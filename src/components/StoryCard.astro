@@ -2,13 +2,19 @@
 import type { Story } from "../lib/types";
 import { CATEGORY_BY_KEY } from "../../config/syllabus";
 import { relTime } from "../lib/format";
+import { citationAnchor, referenceAnchor } from "../lib/references";
 
 interface Props {
   story: Story;
   lead?: boolean;
-  index?: number;
+  // Position in the edition, used to build unique citation anchors.
+  storyIndex: number;
+  // Reference numbers per static link, aligned with story.static. Built once per
+  // edition by buildReferenceIndex so the superscripts and the References
+  // section share one numbering.
+  refNumbers?: number[][];
 }
-const { story, lead = false } = Astro.props;
+const { story, lead = false, storyIndex, refNumbers } = Astro.props;
 const cat = CATEGORY_BY_KEY[story.category]?.label ?? story.category;
 const primary = story.articles[0];
 const signalLabel = story.signal === "must-read" ? "Must read" : story.signal === "recommended" ? "Recommended" : "Brief";
@@ -113,9 +119,25 @@ const searchBlob = [
     story.static.length > 0 && (
       <details class="static">
         <summary>The static syllabus behind this story</summary>
-        {story.static.map((s) => (
+        {story.static.map((s, si) => (
           <div class="static-card">
-            <h4>{s.topic}</h4>
+            <h4>
+              {s.topic}
+              {refNumbers?.[si]?.length ? (
+                <sup class="cite">
+                  {refNumbers[si].map((n) => (
+                    <a
+                      class="cite-anchor"
+                      id={citationAnchor(storyIndex, si, n)}
+                      href={`#${referenceAnchor(n)}`}
+                      aria-label={`Reference ${n}`}
+                    >
+                      [{n}]
+                    </a>
+                  ))}
+                </sup>
+              ) : null}
+            </h4>
             <div class="static-paper">
               {s.paper} · {s.syllabusNode}
             </div>
