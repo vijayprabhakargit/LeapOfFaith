@@ -144,8 +144,8 @@ the JSON holds nothing but the question bank and the answer key.
 day's edition HTML, so it does not add a separate deployed file; `/static/<date>/`
 is one extra built page per lesson (~50–80 KB), plus the `/static/` index.
 
-The series is bounded by the curriculum: 171 planned lessons today, so a full pass
-is roughly **3–6 MB of repo JSON** and about 171 extra built pages — well inside
+The series is bounded by the curriculum: 347 planned lessons today, so a full pass
+is roughly **6–12 MB of repo JSON** and about 347 extra built pages — well inside
 the Cloudflare Pages file-count and size limits. Unlike editions, static lessons are
 **not pruned** by `KEEP = 400`; they are the permanent course archive. If the plan
 grows to thousands of lessons, apply the same retention or object-storage approach

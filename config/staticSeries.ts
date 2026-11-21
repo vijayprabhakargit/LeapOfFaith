@@ -17,6 +17,7 @@
 // progress refers to them.
 
 import type { Reference, StaticLessonSubjectKey } from "../src/lib/types";
+import { EXPANSION_UNITS } from "./staticSeriesExpansion";
 
 export interface SeriesLesson {
   id: string;
@@ -281,7 +282,7 @@ export const SERIES_SUBJECTS: SeriesSubject[] = [
   },
 ];
 
-export const CURRICULUM: SeriesUnit[] = [
+const BASE_CURRICULUM: SeriesUnit[] = [
   // ==========================================================================
   // GEOGRAPHY — the first subject. A deliberate walk from the whole Earth to
   // India, then out to the world.
@@ -3865,3 +3866,11 @@ export const CURRICULUM: SeriesUnit[] = [
     ],
   },
 ];
+
+// The published curriculum interleaves each subject's first-pass units with its
+// expansion units, so the series stays subject-by-subject instead of jumping
+// across the syllabus twice.
+export const CURRICULUM: SeriesUnit[] = SERIES_SUBJECTS.flatMap((subject) => [
+  ...BASE_CURRICULUM.filter((unit) => unit.subjectKey === subject.key),
+  ...(EXPANSION_UNITS[subject.key] ?? []),
+]);

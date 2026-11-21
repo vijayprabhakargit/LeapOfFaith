@@ -79,7 +79,7 @@ const latest = lessons[0] ?? null;
             ? Math.round((doneInSubject / lessonsInSubject.length) * 100)
             : 0;
           return (
-            <div class="se-subject-card">
+            <a class="se-subject-card" href={`#subject-${subject.key}`}>
               <div class="se-subject-top">
                 <h3>{subject.title}</h3>
                 <span class="se-subject-count">
@@ -91,7 +91,7 @@ const latest = lessons[0] ?? null;
                 <span style={`width:${subjectPct}%`}></span>
               </div>
               <p class="se-subject-papers">{subject.papers.join(' · ')}</p>
-            </div>
+            </a>
           );
         })}
       </div>
@@ -107,7 +107,7 @@ const latest = lessons[0] ?? null;
           const units = CURRICULUM.filter((u) => u.subjectKey === subject.key);
           if (!units.length) return null;
           return (
-            <div class="se-subject-block">
+            <div class="se-subject-block" id={`subject-${subject.key}`}>
               <h3 class="se-subject-name">{subject.title}</h3>
               {units.map((unit) => {
                 const unitDone = unit.lessons.filter((l) => done.has(l.id)).length;

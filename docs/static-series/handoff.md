@@ -4,7 +4,7 @@
 > it is the context the next day's teacher reads first.
 
 Last updated: 2026-11-21T18:30:00.000Z
-Progress: 1 of 171 lessons complete.
+Progress: 1 of 347 lessons complete.
 
 ## Last lesson
 

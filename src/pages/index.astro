@@ -86,7 +86,7 @@ const quiz = getLatestQuiz();
             <ul class="pending-latest-list">
               {edition.stories.slice(0, 3).map((story) => (
                 <li>
-                  <a href={`/editions/${edition.date}/`}>{story.headline}</a>
+                  <a href={`/editions/${edition.date}/#story-${story.slug}`}>{story.headline}</a>
                 </li>
               ))}
             </ul>

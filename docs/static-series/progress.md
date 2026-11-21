@@ -3,22 +3,22 @@
 > Generated from `config/staticSeries.ts` and `data/static-series/progress.json`.
 > The plan is the source of truth; this page is a reading aid.
 
-**Progress:** 1 / 171 lessons complete.
+**Progress:** 1 / 347 lessons complete.
 **Next up:** The Grid We Live By: Latitude, Longitude and Time (`geo-foundations-2`) — Geography, lesson 2 of 5.
 
 ## Subjects
 
-- **Geography** — 1/44 lessons (11 units)
-- **Polity, Constitution & Governance** — 0/24 lessons (9 units)
-- **Economy & Development** — 0/22 lessons (8 units)
-- **History, Freedom Struggle & World History** — 0/19 lessons (5 units)
-- **Environment, Ecology & Climate** — 0/12 lessons (4 units)
-- **Science & Technology** — 0/12 lessons (4 units)
-- **Art, Culture & Heritage** — 0/9 lessons (3 units)
-- **Indian Society & Social Justice** — 0/9 lessons (3 units)
-- **International Relations** — 0/6 lessons (2 units)
-- **Ethics, Integrity & Aptitude** — 0/6 lessons (2 units)
-- **Internal Security & Disaster Management** — 0/8 lessons (3 units)
+- **Geography** — 1/60 lessons (15 units)
+- **Polity, Constitution & Governance** — 0/40 lessons (13 units)
+- **Economy & Development** — 0/38 lessons (12 units)
+- **History, Freedom Struggle & World History** — 0/35 lessons (9 units)
+- **Environment, Ecology & Climate** — 0/28 lessons (8 units)
+- **Science & Technology** — 0/28 lessons (8 units)
+- **Art, Culture & Heritage** — 0/25 lessons (7 units)
+- **Indian Society & Social Justice** — 0/25 lessons (7 units)
+- **International Relations** — 0/22 lessons (6 units)
+- **Ethics, Integrity & Aptitude** — 0/22 lessons (6 units)
+- **Internal Security & Disaster Management** — 0/24 lessons (7 units)
 
 ## Geography
 
@@ -121,6 +121,42 @@ _Geography — World physical geography, resources and map reading_
 - [ ] Resources and the Location of Industry (`geo-world-3`)
 - [ ] Map Reading and Atlas Practice (`geo-world-4`)
 
+### The Climate Machine: Energy, Winds and Teleconnections — 0/4 · not started
+
+_Geography — Atmosphere, climate systems and global teleconnections_
+
+- [ ] Insolation and the Heat Budget (`geo-climate-1`)
+- [ ] Pressure Belts, Winds and the General Circulation (`geo-climate-2`)
+- [ ] Jet Streams and the Upper-Air Steering (`geo-climate-3`)
+- [ ] ENSO, the Indian Ocean Dipole and Teleconnections (`geo-climate-4`)
+
+### The Ocean's Hidden Architecture — 0/4 · not started
+
+_Geography — Ocean relief, temperature, salinity, tides and marine resources_
+
+- [ ] Ocean Relief and the Tectonic Floor (`geo-ocean-1`)
+- [ ] Temperature, Salinity and the Great Conveyor (`geo-ocean-2`)
+- [ ] Waves, Tides and Coastal Processes (`geo-ocean-3`)
+- [ ] Coral Reefs, Fisheries and the Blue Economy (`geo-ocean-4`)
+
+### Life on the Land: Biomes, Soils and Cycles — 0/4 · not started
+
+_Geography — Biomes, soils, biogeochemical cycles and biodiversity_
+
+- [ ] Biomes and the Biosphere (`geo-bio-1`)
+- [ ] Soils and Biogeochemical Cycles (`geo-bio-2`)
+- [ ] Biodiversity and Protected Areas (`geo-bio-3`)
+- [ ] Forests, Grasslands and Land Use (`geo-bio-4`)
+
+### The Human World: People, Fields and Cities — 0/4 · not started
+
+_Geography — Population, migration, agriculture, industry and urbanisation_
+
+- [ ] Population, Density and the Demographic Transition (`geo-human-1`)
+- [ ] Migration and the Making of Places (`geo-human-2`)
+- [ ] Agriculture and the Shape of the Land (`geo-human-3`)
+- [ ] Industry, Transport and the Urban World (`geo-human-4`)
+
 ## Polity, Constitution & Governance
 
 ### The Republic's Blueprint — 0/3 · not started
@@ -192,6 +228,42 @@ _Governance — Transparency, accountability, e-governance and civil services_
 - [ ] E-Governance and Digital Service Delivery (`pol-gov-2`)
 - [ ] Civil Services, Pressure Groups and the Policy Process (`pol-gov-3`)
 
+### The Constitution's Deep Structure — 0/4 · not started
+
+_Polity — Constituent Assembly, borrowed features, constitutional morality and the basic structure_
+
+- [ ] The Constituent Assembly and the Art of Compromise (`pol-const-1`)
+- [ ] Borrowed Features and Indian Adaptations (`pol-const-2`)
+- [ ] Constitutional Morality and the Preamble (`pol-const-3`)
+- [ ] Amendment, Basic Structure and Constitutional Change (`pol-const-4`)
+
+### Parliament in Practice — 0/4 · not started
+
+_Polity — Parliamentary procedure, financial control and committees_
+
+- [ ] Lawmaking: From Bill to Act (`pol-parl-1`)
+- [ ] Money, Budget and Financial Control (`pol-parl-2`)
+- [ ] Committees and the Real Work of Scrutiny (`pol-parl-3`)
+- [ ] Privileges, Motions and Confidence (`pol-parl-4`)
+
+### The Federal Bargain — 0/4 · not started
+
+_Polity — Centre-State relations, fiscal federalism and asymmetric federalism_
+
+- [ ] Legislative and Administrative Relations (`pol-fed-1`)
+- [ ] Fiscal Federalism and the Finance Commission (`pol-fed-2`)
+- [ ] Inter-State Councils and River Disputes (`pol-fed-3`)
+- [ ] Asymmetry: Special Provisions and Union Territories (`pol-fed-4`)
+
+### Governance and Accountability — 0/4 · not started
+
+_Polity — Civil services, transparency, e-governance and local government_
+
+- [ ] Civil Services and the Administrative State (`pol-govd-1`)
+- [ ] RTI, Transparency and Social Audit (`pol-govd-2`)
+- [ ] E-Governance and Digital Public Services (`pol-govd-3`)
+- [ ] Local Government: Panchayats and Municipalities (`pol-govd-4`)
+
 ## Economy & Development
 
 ### The Economy's Big Picture — 0/3 · not started
@@ -256,6 +328,42 @@ _Economy — Planning, sustainable development and economic reform_
 - [ ] Five Year Plans to NITI Aayog (`eco-plan-1`)
 - [ ] Sustainable Development and the 1991 Reform Legacy (`eco-plan-2`)
 
+### Microeconomics for Policy — 0/4 · not started
+
+_Economy — Microeconomic foundations, markets and market failure_
+
+- [ ] Demand, Supply and Elasticity (`eco-micro-1`)
+- [ ] Consumer Choice and Producer Behaviour (`eco-micro-2`)
+- [ ] Market Structures and Competition (`eco-micro-3`)
+- [ ] Market Failure, Externalities and Public Goods (`eco-micro-4`)
+
+### Macroeconomic Foundations — 0/4 · not started
+
+_Economy — National income, inflation, unemployment and growth_
+
+- [ ] National Income and the Circular Flow (`eco-macro-1`)
+- [ ] Inflation, Unemployment and the Phillips Curve (`eco-macro-2`)
+- [ ] Business Cycles and Stabilisation (`eco-macro-3`)
+- [ ] Growth, Productivity and Structural Change (`eco-macro-4`)
+
+### Money, Banking and Markets — 0/4 · not started
+
+_Economy — Money, banking, financial markets and inclusion_
+
+- [ ] The RBI and Monetary Policy (`eco-fin-1`)
+- [ ] Banks, NPAs and Financial Stability (`eco-fin-2`)
+- [ ] Stock Markets, Bonds and Derivatives (`eco-fin-3`)
+- [ ] Fintech, Digital Payments and Financial Inclusion (`eco-fin-4`)
+
+### Taxation and Public Finance — 0/4 · not started
+
+_Economy — Taxation, subsidies, deficits and fiscal consolidation_
+
+- [ ] Taxation: Principles and Incidence (`eco-pf-1`)
+- [ ] GST and Indirect Taxes (`eco-pf-2`)
+- [ ] Subsidies, Expenditure and Deficit Financing (`eco-pf-3`)
+- [ ] FRBM, Fiscal Consolidation and Debt (`eco-pf-4`)
+
 ## History, Freedom Struggle & World History
 
 ### The First Civilisations — 0/4 · not started
@@ -302,6 +410,42 @@ _History — World history from the 18th century_
 - [ ] World Wars and the Making of the 20th Century (`his-world-3`)
 - [ ] The Contemporary World (`his-world-4`)
 
+### Ancient India in Depth — 0/4 · not started
+
+_History — Ancient India: prehistory, Harappa, Vedic age, Mauryas and the classical age_
+
+- [ ] Prehistory, Harappa and the First Cities (`his-anc-1`)
+- [ ] The Vedic Age and the Rise of Kingdoms (`his-anc-2`)
+- [ ] Mauryan Empire and the Art of Administration (`his-anc-3`)
+- [ ] Post-Mauryan, Gupta and the Classical Age (`his-anc-4`)
+
+### Medieval India: Sultans, Sultans and Syncretism — 0/4 · not started
+
+_History — Medieval India: Delhi Sultanate, Vijayanagara, Mughals and composite culture_
+
+- [ ] The Delhi Sultanate (`his-med-1`)
+- [ ] Vijayanagara, Bahmani and the Deccan (`his-med-2`)
+- [ ] The Mughal Empire and Its Administration (`his-med-3`)
+- [ ] Bhakti, Sufi and the Making of Composite Culture (`his-med-4`)
+
+### Colonial India: Economy and Society — 0/4 · not started
+
+_History — Colonial India: conquest, economy, society and reform_
+
+- [ ] European Expansion and the British Conquest (`his-col-1`)
+- [ ] Land, Revenue and the Agrarian Economy (`his-col-2`)
+- [ ] Deindustrialisation and the Colonial Economy (`his-col-3`)
+- [ ] Education, Social Reform and the Public Sphere (`his-col-4`)
+
+### The Modern World in Depth — 0/4 · not started
+
+_History — World history: Renaissance to the Cold War_
+
+- [ ] Renaissance, Reformation and the Enlightenment (`his-worldd-1`)
+- [ ] Revolutions: France and Industrial Britain (`his-worldd-2`)
+- [ ] World Wars and the Interwar Crisis (`his-worldd-3`)
+- [ ] Decolonisation and the Cold War (`his-worldd-4`)
+
 ## Environment, Ecology & Climate
 
 ### The Web of Life — 0/3 · not started
@@ -335,6 +479,42 @@ _Environment — Pollution, waste, EIA and environmental governance_
 - [ ] Air and Water Pollution (`env-poll-1`)
 - [ ] Solid Waste, Plastics and the Circular Economy (`env-poll-2`)
 - [ ] Environmental Impact Assessment and Governance (`env-poll-3`)
+
+### Ecology in Depth — 0/4 · not started
+
+_Environment — Ecosystems, energy flow, nutrient cycles and resilience_
+
+- [ ] Ecosystems, Energy Flow and Trophic Cascades (`env-ecod-1`)
+- [ ] Nutrient Cycles and Biogeochemistry (`env-ecod-2`)
+- [ ] Succession, Resilience and Tipping Points (`env-ecod-3`)
+- [ ] Ecosystem Services and Natural Capital (`env-ecod-4`)
+
+### Conserving Life — 0/4 · not started
+
+_Environment — Biodiversity conservation, protected areas and restoration_
+
+- [ ] Biodiversity: Genes, Species and Ecosystems (`env-bio-1`)
+- [ ] Protected Areas and Wildlife Law (`env-bio-2`)
+- [ ] Species Programmes and Human-Wildlife Conflict (`env-bio-3`)
+- [ ] Invasive Species and Restoration Ecology (`env-bio-4`)
+
+### Climate Change in Depth — 0/4 · not started
+
+_Environment — Climate change science, mitigation, adaptation and finance_
+
+- [ ] The Greenhouse Effect and the Carbon Budget (`env-clim-1`)
+- [ ] Mitigation: Energy, Industry and Land (`env-clim-2`)
+- [ ] Adaptation, Loss and Damage (`env-clim-3`)
+- [ ] Carbon Markets and Climate Finance (`env-clim-4`)
+
+### Environmental Law and Governance — 0/4 · not started
+
+_Environment — Environmental law, institutions, movements and justice_
+
+- [ ] EIA, Pollution Control and the Courts (`env-gov-1`)
+- [ ] Forest Rights and Community Conservation (`env-gov-2`)
+- [ ] International Environmental Regimes (`env-gov-3`)
+- [ ] Environmental Movements and Justice (`env-gov-4`)
 
 ## Science & Technology
 
@@ -370,6 +550,42 @@ _Science & Technology — Energy, nuclear technology, materials and health_
 - [ ] Renewable Energy and Storage (`sci-energy-2`)
 - [ ] Materials, Nanotechnology and Health Technology (`sci-energy-3`)
 
+### Space and India — 0/4 · not started
+
+_Science — Space technology, satellites, missions and the space economy_
+
+- [ ] Launch Vehicles and Orbits (`sci-spaced-1`)
+- [ ] Satellites and Applications (`sci-spaced-2`)
+- [ ] India's Space Missions (`sci-spaced-3`)
+- [ ] The Space Economy and Private Space (`sci-spaced-4`)
+
+### Biotechnology in Depth — 0/4 · not started
+
+_Science — Biotechnology, genomics, vaccines and bioethics_
+
+- [ ] Genes, Genomes and Gene Editing (`sci-bio-1`)
+- [ ] Vaccines and the Immune System (`sci-bio-2`)
+- [ ] Agricultural Biotechnology (`sci-bio-3`)
+- [ ] Bioethics and Regulation (`sci-bio-4`)
+
+### Computing, AI and the Digital Frontier — 0/4 · not started
+
+_Science — Computing, artificial intelligence, quantum technology and cybersecurity_
+
+- [ ] Semiconductors and Computing (`sci-dig-1`)
+- [ ] Artificial Intelligence and Machine Learning (`sci-dig-2`)
+- [ ] Quantum Technology (`sci-dig-3`)
+- [ ] Cybersecurity and Digital Public Infrastructure (`sci-dig-4`)
+
+### Energy Transitions — 0/4 · not started
+
+_Science — Energy systems, renewables, nuclear and the energy transition_
+
+- [ ] Fossil Fuels and the Grid (`sci-energyd-1`)
+- [ ] Solar, Wind and Storage (`sci-energyd-2`)
+- [ ] Nuclear and Hydrogen (`sci-energyd-3`)
+- [ ] The Just Transition (`sci-energyd-4`)
+
 ## Art, Culture & Heritage
 
 ### The First Imaginings — 0/3 · not started
@@ -395,6 +611,42 @@ _Art & Culture — Performing arts, festivals, crafts and living traditions_
 - [ ] Classical Dance and Music (`art-perf-1`)
 - [ ] Folk Arts, Theatre and Festivals (`art-perf-2`)
 - [ ] Crafts, GI Tags and Cultural Economies (`art-perf-3`)
+
+### Ancient and Classical Art — 0/4 · not started
+
+_Art & Culture — Ancient art, Buddhist and Jain art, temple architecture and classical aesthetics_
+
+- [ ] Rock Art and Harappan Craft (`art-anc-1`)
+- [ ] Buddhist and Jain Art (`art-anc-2`)
+- [ ] Temple Architecture: Nagara, Dravida and Vesara (`art-anc-3`)
+- [ ] Gupta Art and Classical Aesthetics (`art-anc-4`)
+
+### Architecture Through the Ages — 0/4 · not started
+
+_Art & Culture — Indo-Islamic, colonial, modern architecture and heritage conservation_
+
+- [ ] Indo-Islamic Architecture (`art-arc-1`)
+- [ ] Colonial and Modern Architecture (`art-arc-2`)
+- [ ] Forts, Palaces and Civic Buildings (`art-arc-3`)
+- [ ] Heritage Conservation and UNESCO (`art-arc-4`)
+
+### The Performing Arts — 0/4 · not started
+
+_Art & Culture — Classical dance, music, theatre, crafts and living traditions_
+
+- [ ] Classical Dance Traditions (`art-perf2-1`)
+- [ ] Music: Hindustani and Carnatic (`art-perf2-2`)
+- [ ] Theatre, Puppetry and Folk Performance (`art-perf2-3`)
+- [ ] Crafts, GI Tags and Cultural Economies (`art-perf2-4`)
+
+### Literature and Language — 0/4 · not started
+
+_Art & Culture — Literature, languages, translation and the literary public sphere_
+
+- [ ] Ancient and Classical Literature (`art-lit-1`)
+- [ ] Medieval and Bhakti Literature (`art-lit-2`)
+- [ ] Modern Indian Literature (`art-lit-3`)
+- [ ] Languages, Scripts and Translation (`art-lit-4`)
 
 ## Indian Society & Social Justice
 
@@ -422,6 +674,42 @@ _Society — Globalisation, communalism, regionalism and secularism_
 - [ ] Communalism, Regionalism and Secularism (`soc-change-2`)
 - [ ] Social Change, Education and the Media (`soc-change-3`)
 
+### The Fabric of Diversity — 0/4 · not started
+
+_Society — Diversity, religion, language, ethnicity, caste and class_
+
+- [ ] Religion, Region and Language (`soc-divd-1`)
+- [ ] Ethnicity, Tribe and Identity (`soc-divd-2`)
+- [ ] Caste and Social Stratification (`soc-divd-3`)
+- [ ] Class, Mobility and Aspiration (`soc-divd-4`)
+
+### Gender and Society — 0/4 · not started
+
+_Society — Gender, patriarchy, women's movement, work and violence_
+
+- [ ] Gender Roles and Patriarchy (`soc-gender-1`)
+- [ ] Women's Movement and Law (`soc-gender-2`)
+- [ ] Work, Care and the Economy (`soc-gender-3`)
+- [ ] Violence, Safety and Representation (`soc-gender-4`)
+
+### Urban India — 0/4 · not started
+
+_Society — Urbanisation, migration, housing, urban governance and sustainable cities_
+
+- [ ] Urbanisation and Migration (`soc-urban-1`)
+- [ ] Slums, Housing and Basic Services (`soc-urban-2`)
+- [ ] Urban Governance and Finance (`soc-urban-3`)
+- [ ] Smart Cities and Sustainable Urbanism (`soc-urban-4`)
+
+### Social Justice in Practice — 0/4 · not started
+
+_Society — Social justice, affirmative action, vulnerable groups and social movements_
+
+- [ ] Affirmative Action and Reservation (`soc-justice-1`)
+- [ ] Poverty, Hunger and Welfare (`soc-justice-2`)
+- [ ] Vulnerable Groups: Children, Elderly, Disabled (`soc-justice-3`)
+- [ ] Social Movements and the State (`soc-justice-4`)
+
 ## International Relations
 
 ### India in the World — 0/3 · not started
@@ -440,6 +728,42 @@ _IR — Global governance, groupings and the Global South_
 - [ ] Groupings of the Global South (`ir-global-2`)
 - [ ] Global Governance: Trade, Climate, Health and Security (`ir-global-3`)
 
+### India's Foreign Policy in Depth — 0/4 · not started
+
+_IR — India's foreign policy, strategic autonomy, nuclear doctrine and soft power_
+
+- [ ] Non-Alignment to Strategic Autonomy (`ir-doc-1`)
+- [ ] Instruments of Foreign Policy (`ir-doc-2`)
+- [ ] Nuclear Doctrine and Strategic Culture (`ir-doc-3`)
+- [ ] Diaspora and Soft Power (`ir-doc-4`)
+
+### The Neighbourhood — 0/4 · not started
+
+_IR — India's neighbourhood, bilateral relations and regional security_
+
+- [ ] Pakistan and the Western Frontier (`ir-neigh-1`)
+- [ ] China and the Himalayan Frontier (`ir-neigh-2`)
+- [ ] Bangladesh, Nepal and Bhutan (`ir-neigh-3`)
+- [ ] Sri Lanka, Myanmar and the Indian Ocean (`ir-neigh-4`)
+
+### The Great Powers — 0/4 · not started
+
+_IR — Great powers, Indo-Pacific, Europe and the Quad_
+
+- [ ] The United States and the Indo-Pacific (`ir-gp-1`)
+- [ ] Russia and the Eurasian Space (`ir-gp-2`)
+- [ ] China's Belt and Road and the Regional Order (`ir-gp-3`)
+- [ ] Europe, Japan and the Quad (`ir-gp-4`)
+
+### Multilateral Institutions — 0/4 · not started
+
+_IR — United Nations, Bretton Woods institutions, G20, BRICS and regional organisations_
+
+- [ ] The United Nations and UNSC Reform (`ir-multi-1`)
+- [ ] IMF, World Bank and WTO (`ir-multi-2`)
+- [ ] G20, BRICS and the Global South (`ir-multi-3`)
+- [ ] Regional Organisations (`ir-multi-4`)
+
 ## Ethics, Integrity & Aptitude
 
 ### The Inner Compass — 0/3 · not started
@@ -457,6 +781,42 @@ _Ethics — Probity in governance, accountability and case studies_
 - [ ] Probity, Accountability and Anti-Corruption (`eth-gov-1`)
 - [ ] Ethical Dilemmas in Administration (`eth-gov-2`)
 - [ ] Case Studies: Method and Practice (`eth-gov-3`)
+
+### Ethical Thought — 0/4 · not started
+
+_Ethics — Ethical theory, consequentialism, deontology, virtue ethics and Indian traditions_
+
+- [ ] Consequentialism and Utilitarianism (`eth-th-1`)
+- [ ] Deontology and Kant (`eth-th-2`)
+- [ ] Virtue Ethics and Character (`eth-th-3`)
+- [ ] Indian Ethical Traditions (`eth-th-4`)
+
+### Values and Attitude — 0/4 · not started
+
+_Ethics — Values, attitude, emotional intelligence and integrity_
+
+- [ ] Values and Beliefs (`eth-val-1`)
+- [ ] Attitude and Behaviour (`eth-val-2`)
+- [ ] Emotional Intelligence and Empathy (`eth-val-3`)
+- [ ] Integrity and Moral Courage (`eth-val-4`)
+
+### Ethics in Public Service — 0/4 · not started
+
+_Ethics — Civil service values, accountability, conflict of interest and probity_
+
+- [ ] Civil Service Values and Code of Conduct (`eth-pub-1`)
+- [ ] Accountability and Responsiveness (`eth-pub-2`)
+- [ ] Conflict of Interest and Gifts (`eth-pub-3`)
+- [ ] Probity, Anti-Corruption and Whistleblowing (`eth-pub-4`)
+
+### Case Studies and Dilemmas — 0/4 · not started
+
+_Ethics — Case studies in administration, business, environment and technology_
+
+- [ ] Administrative Dilemmas (`eth-case-1`)
+- [ ] Corporate Governance and Business Ethics (`eth-case-2`)
+- [ ] Environmental Ethics (`eth-case-3`)
+- [ ] Technology and Bioethics (`eth-case-4`)
 
 ## Internal Security & Disaster Management
 
@@ -482,3 +842,39 @@ _Disaster Management — Types, institutions, preparedness and climate risk_
 - [ ] Disaster Types and the Hazard Cycle (`sec-dis-1`)
 - [ ] Institutions and Governance (`sec-dis-2`)
 - [ ] Climate Change and Disaster Risk (`sec-dis-3`)
+
+### The Long War Within: Extremism and Insurgency — 0/4 · not started
+
+_Security — Extremism, insurgency, left-wing extremism and communal violence_
+
+- [ ] Left-Wing Extremism: Geography and Grievance (`sec-ext-1`)
+- [ ] Insurgencies of the Northeast (`sec-ext-2`)
+- [ ] Terrorism and Communal Violence (`sec-ext-3`)
+- [ ] What Actually Reduces Violence? (`sec-ext-4`)
+
+### Follow the Money: Crime, Finance and Terror — 0/4 · not started
+
+_Security — Money laundering, organised crime, terror finance and drug trafficking_
+
+- [ ] Money Laundering and Terror Finance (`sec-fin-1`)
+- [ ] Organised Crime and the Illegal Economy (`sec-fin-2`)
+- [ ] Drug Trafficking and Human Trafficking (`sec-fin-3`)
+- [ ] Institutions and the Financial War (`sec-fin-4`)
+
+### Borders, Coasts and the Blue Frontier — 0/4 · not started
+
+_Security — Border management, coastal security and immigration_
+
+- [ ] Land Borders: Lines, Fences and Lives (`sec-bor-1`)
+- [ ] Coastal Security and the Sea Frontier (`sec-bor-2`)
+- [ ] Immigration, Refugees and Citizenship (`sec-bor-3`)
+- [ ] Border Infrastructure and Strategy (`sec-bor-4`)
+
+### Defence, Deterrence and the Nuclear Question — 0/4 · not started
+
+_Security — Defence, deterrence, nuclear doctrine and civil-military relations_
+
+- [ ] The Armed Forces and Civil-Military Relations (`sec-def-1`)
+- [ ] Nuclear Doctrine and Deterrence (`sec-def-2`)
+- [ ] Defence Procurement and Indigenisation (`sec-def-3`)
+- [ ] Strategic Culture and the Future of War (`sec-def-4`)

@@ -81,6 +81,7 @@ attributed. The series is copyright-safe: it teaches, it does not republish.
 | --- | --- | --- |
 | Official syllabus | `docs/upsc-syllabus.md` | Human |
 | Curriculum plan (units, lessons, scope, sources, references) | `config/staticSeries.ts` | Human |
+| Expanded lesson bank (extra lessons merged into the plan) | `config/staticSeriesExpansion.ts` | Human |
 | Progress state | `data/static-series/progress.json` | Generator |
 | Daily lessons | `src/content/static-lessons/<YYYY-MM-DD>.json` | Generator |
 | Hand-off for the next day | `docs/static-series/handoff.md` | Generator |
@@ -175,9 +176,12 @@ it in the plan rather than compressing it into a summary.
 ## Adding or changing the plan
 
 - **Add a lesson:** append an `L("unique-id", "Title", "Scope", [figure ideas], [key questions])`
-  entry to the right unit in `config/staticSeries.ts`.
+  entry to the right unit in `config/staticSeries.ts`, or to the matching unit in
+  `config/staticSeriesExpansion.ts` (merged into `CURRICULUM` at load time, so the base plan stays
+  compact).
 - **Add a unit:** append a unit object to `CURRICULUM` with the same shape. Put it in the right subject
-  and in the intended order.
+  and in the intended order. To extend an existing unit without rewriting the base file, add a unit
+  with the same `id` to `config/staticSeriesExpansion.ts`; its lessons are appended in order.
 - **Change a scope:** edit the `scope` text. Do not change an ID that has already been used; progress
   depends on it.
 - **Add references:** add curated `Reference` objects to the unit's `references` array. Verify the URL
