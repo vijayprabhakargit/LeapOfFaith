@@ -6,6 +6,7 @@ import Controls from "./Controls.astro";
 import StoryCard from "./StoryCard.astro";
 import OnThisDay from "./OnThisDay.astro";
 import Extras from "./Extras.astro";
+import QuizLink from "./QuizLink.astro";
 import References from "./References.astro";
 
 interface Props {
@@ -59,6 +60,10 @@ const refIndex = buildReferenceIndex(stories);
     </div>
   )
 }
+
+<div class="wrap">
+  <QuizLink date={edition.date} />
+</div>
 
 <div class="wrap">
   <Controls edition={edition} />

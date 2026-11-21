@@ -1,0 +1,26 @@
+---
+import { getQuiz } from "../lib/quizzes";
+
+interface Props {
+  date: string;
+}
+
+const { date } = Astro.props;
+const quiz = getQuiz(date);
+const count = quiz?.questions.length ?? 0;
+// Topics in first-appearance order, deduped. Three keep the tile to one line.
+const topics = quiz ? [...new Set(quiz.questions.map((q) => q.topic))].slice(0, 3) : [];
+---
+
+{
+  quiz && (
+    <a class="quiz-tile" href={`/quiz/${quiz.date}/`}>
+      <span class="quiz-tile-kicker">Daily quiz</span>
+      <span class="quiz-tile-title">Test yourself on today's brief</span>
+      <span class="quiz-tile-meta">
+        {count} questions{topics.length > 0 && ` · ${topics.join(" · ")}`}
+      </span>
+      <span class="quiz-tile-cta">Take the quiz →</span>
+    </a>
+  )
+}

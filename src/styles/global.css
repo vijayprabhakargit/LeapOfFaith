@@ -337,6 +337,70 @@ a.eb-stat:hover {
   color: var(--ink-soft);
 }
 
+/* ---- Quiz tile ---------------------------------------------------------- */
+/* One-line link to the day's quiz, sitting just under the brief. */
+.quiz-tile {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  row-gap: 4px;
+  column-gap: 14px;
+  margin: 0 0 26px;
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--teal);
+  background: var(--card);
+  padding: 14px 20px;
+  box-shadow: var(--shadow);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.quiz-tile:hover {
+  border-color: var(--rule-strong);
+  border-left-color: var(--accent);
+  background: var(--paper-2);
+}
+
+.quiz-tile-kicker {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--teal);
+  flex: none;
+}
+
+.quiz-tile-title {
+  font-family: var(--display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.quiz-tile:hover .quiz-tile-title {
+  color: var(--accent);
+}
+
+.quiz-tile-meta {
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.quiz-tile-cta {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+@media (max-width: 620px) {
+  .quiz-tile-cta {
+    margin-left: 0;
+  }
+}
 /* ---- Controls ----------------------------------------------------------- */
 .controls {
   position: sticky;
