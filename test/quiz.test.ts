@@ -11,7 +11,10 @@ import {
   buildQuizContext,
   readRecentEditions,
   readPreviousQuestions,
+  resolveQuizCount,
+  QUIZ_MIN_QUESTIONS,
   QUIZ_MAX_QUESTIONS,
+  QUIZ_DEFAULT_QUESTIONS,
 } from "../scripts/lib/quiz";
 import type { Edition, Quiz, QuizQuestion } from "../src/lib/types";
 
@@ -117,6 +120,18 @@ test("coerceAnswer rejects out-of-range and non-numeric values", () => {
   assert.equal(coerceAnswer(1.5), null);
 });
 
+test("coerceAnswer accepts labelled option forms", () => {
+  assert.equal(coerceAnswer("Option A"), 0);
+  assert.equal(coerceAnswer("(b)"), 1);
+  assert.equal(coerceAnswer("C."), 2);
+  assert.equal(coerceAnswer("d)"), 3);
+  assert.equal(coerceAnswer("Option D:"), 3);
+});
+
+test("coerceAnswer does not treat statement text as an option label", () => {
+  assert.equal(coerceAnswer("1 and 2 only"), null);
+});
+
 // --- dedupeQuestions ------------------------------------------------------
 
 test("dedupeQuestions drops questions already in the avoid list", () => {
@@ -210,11 +225,95 @@ test("normalizeQuiz defaults a missing topic to Current Affairs", () => {
   assert.equal(quiz!.questions[0].topic, "Current Affairs");
 });
 
-test("normalizeQuiz caps at the default maximum", () => {
-  const questions = Array.from({ length: QUIZ_MAX_QUESTIONS + 5 }, (_, i) => makeQuestion({ question: `Q${i}?` }));
+test("normalizeQuiz caps at the default count", () => {
+  const questions = Array.from({ length: QUIZ_DEFAULT_QUESTIONS + 5 }, (_, i) => makeQuestion({ question: `Q${i}?` }));
   const quiz = normalizeQuiz({ questions }, { date: "2026-11-21", windowStart: "2026-11-15", windowEnd: "2026-11-21" });
   assert.ok(quiz);
-  assert.equal(quiz!.questions.length, QUIZ_MAX_QUESTIONS);
+  assert.equal(quiz!.questions.length, QUIZ_DEFAULT_QUESTIONS);
+});
+
+// --- resolveQuizCount -----------------------------------------------------
+
+test("resolveQuizCount defaults to 15 when unset or blank", () => {
+  assert.equal(resolveQuizCount(undefined), 15);
+  assert.equal(resolveQuizCount(""), 15);
+  assert.equal(resolveQuizCount("   "), 15);
+});
+
+test("resolveQuizCount clamps to the 10-15 band", () => {
+  assert.equal(resolveQuizCount("10"), QUIZ_MIN_QUESTIONS);
+  assert.equal(resolveQuizCount("15"), QUIZ_MAX_QUESTIONS);
+  assert.equal(resolveQuizCount("12"), 12);
+  assert.equal(resolveQuizCount("5"), QUIZ_MIN_QUESTIONS);
+  assert.equal(resolveQuizCount("40"), QUIZ_MAX_QUESTIONS);
+});
+
+test("resolveQuizCount ignores non-numeric values", () => {
+  assert.equal(resolveQuizCount("lots"), QUIZ_DEFAULT_QUESTIONS);
+  assert.equal(resolveQuizCount("12.5"), QUIZ_DEFAULT_QUESTIONS);
+});
+
+test("normalizeQuiz resolves an answer given as the option text", () => {
+  const quiz = normalizeQuiz(
+    {
+      questions: [
+        {
+          question: "Which statements are correct?",
+          options: ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
+          answer: "2 and 3 only",
+        },
+      ],
+    },
+    { date: "2026-11-21", windowStart: "2026-11-15", windowEnd: "2026-11-21" },
+  );
+  assert.ok(quiz);
+  assert.equal(quiz!.questions[0].answer, 1);
+});
+
+test("normalizeQuiz accepts options keyed A-D", () => {
+  const quiz = normalizeQuiz(
+    {
+      questions: [
+        {
+          question: "Capital of Australia?",
+          options: { A: "Sydney", B: "Canberra", C: "Melbourne", D: "Perth" },
+          answer: "B",
+        },
+      ],
+    },
+    { date: "2026-11-21", windowStart: "2026-11-15", windowEnd: "2026-11-21" },
+  );
+  assert.ok(quiz);
+  assert.deepEqual(quiz!.questions[0].options, ["Sydney", "Canberra", "Melbourne", "Perth"]);
+  assert.equal(quiz!.questions[0].answer, 1);
+});
+
+test("normalizeQuiz accepts a bare array and a nested {quiz:{questions}} payload", () => {
+  const opts = { date: "2026-11-21", windowStart: "2026-11-15", windowEnd: "2026-11-21" };
+  const fromArray = normalizeQuiz([makeQuestion({ question: "Array?" })], opts);
+  assert.ok(fromArray);
+  assert.equal(fromArray!.questions[0].question, "Array?");
+
+  const fromNested = normalizeQuiz({ quiz: { questions: [makeQuestion({ question: "Nested?" })] } }, opts);
+  assert.ok(fromNested);
+  assert.equal(fromNested!.questions[0].question, "Nested?");
+});
+
+test("normalizeQuiz strips option letter markers without touching statement text", () => {
+  const quiz = normalizeQuiz(
+    {
+      questions: [
+        {
+          question: "Q?",
+          options: ["A) 1 and 2 only", "B) 2 and 3 only", "C) 1 and 3 only", "D) 1, 2 and 3"],
+          answer: "A",
+        },
+      ],
+    },
+    { date: "2026-11-21", windowStart: "2026-11-15", windowEnd: "2026-11-21" },
+  );
+  assert.ok(quiz);
+  assert.deepEqual(quiz!.questions[0].options, ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"]);
 });
 
 // --- buildQuizContext -----------------------------------------------------

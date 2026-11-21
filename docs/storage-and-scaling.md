@@ -124,7 +124,7 @@ number, gives the reader the links, and costs ~5 KB per edition. The site-wide
 ## Quiz storage
 
 `src/content/quizzes/<date>.json` is generated alongside the edition and committed
-the same way. It is small: 10 questions with options and 1–3 sentence
+the same way. It is small: 10–15 questions with options and 1–3 sentence
 explanations, roughly **6–10 KB per day** (~3 MB/year at retention). It also adds
 one built page per quiz (`/quiz/<date>/`, ~40 KB) plus the `/quiz/` index.
 

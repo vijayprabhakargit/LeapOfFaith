@@ -44,10 +44,11 @@ const quiz = getLatestQuiz();
           <div class="empty">
             <h2>No edition yet</h2>
             <p class="note" style="margin: 12px auto 18px">
-              Generate your first brief. Add an LLM key to <code>.env</code> and run the generator.
+              The first brief hasn't been published yet. Editions usually land around 07:00 IST, though the
+              first run can take a little longer — check back soon.
             </p>
             <p>
-              <code>npm run generate</code>
+              <a class="btn" href="/sources/">Browse the sources</a>
             </p>
           </div>
         </div>
@@ -59,7 +60,8 @@ const quiz = getLatestQuiz();
     <div class="empty">
       <h2>Today's edition is on the way</h2>
       <p class="note" style="margin: 12px auto 18px">
-        This morning's brief hasn't been published yet — it usually lands by 07:00 IST.
+        This morning's brief usually lands around 07:00 IST. It can run a little late — but it's still
+        coming today.
       </p>
       {
         quiz && (
@@ -75,13 +77,27 @@ const quiz = getLatestQuiz();
             Take the {formatDateLong(quiz.date)} quiz
           </a>
         )}
-        {edition && (
-          <a class="btn" href={`/editions/${edition.date}/`}>
-            Read the {formatDateLong(edition.date)} edition
-          </a>
-        )}
-        <a class="btn" href="/quiz/">All quizzes</a>
+        {quiz && <a class="btn" href="/quiz/">All quizzes</a>}
       </p>
+      {
+        edition && (
+          <div class="pending-latest">
+            <p class="pending-latest-head">Catch up on the latest edition · {formatDateLong(edition.date)}</p>
+            <ul class="pending-latest-list">
+              {edition.stories.slice(0, 3).map((story) => (
+                <li>
+                  <a href={`/editions/${edition.date}/`}>{story.headline}</a>
+                </li>
+              ))}
+            </ul>
+            <p style="margin: 12px 0 0">
+              <a class="btn" href={`/editions/${edition.date}/`}>
+                Read the full edition
+              </a>
+            </p>
+          </div>
+        )
+      }
     </div>
   </div>
 </BaseLayout>

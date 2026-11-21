@@ -14,7 +14,18 @@ import type { Edition, Quiz, QuizQuestion } from "../../src/lib/types";
 import { chatJson, type ChatMessage } from "./llm";
 
 export const QUIZ_WINDOW_DAYS = 7;
-export const QUIZ_MAX_QUESTIONS = 10;
+export const QUIZ_MIN_QUESTIONS = 10;
+export const QUIZ_MAX_QUESTIONS = 15;
+export const QUIZ_DEFAULT_QUESTIONS = 15;
+
+// Daily quiz length. Configurable via QUIZ_QUESTIONS (clamped to 10-15).
+export function resolveQuizCount(value: string | undefined = process.env.QUIZ_QUESTIONS): number {
+  const raw = value?.trim();
+  if (!raw) return QUIZ_DEFAULT_QUESTIONS;
+  const n = Number(raw);
+  if (!Number.isInteger(n)) return QUIZ_DEFAULT_QUESTIONS;
+  return Math.min(QUIZ_MAX_QUESTIONS, Math.max(QUIZ_MIN_QUESTIONS, n));
+}
 
 const SYSTEM_PROMPT = `You are a UPSC Civil Services Prelims examiner with 20 years of experience.
 You write exam-realistic GS Paper I multiple-choice questions grounded strictly in the supplied news briefs.
@@ -24,11 +35,11 @@ and the rest are matching, assertion-reason, how-many and scenario questions. Po
 about 45% of the paper. Absolute words ("always", "only", "never"), entity swaps, partial truths and
 constitutional-vs-statutory confusion are the standard traps.`;
 
-function userPrompt(context: string, avoid: string[]): string {
+function userPrompt(context: string, avoid: string[], count: number): string {
   const avoidBlock = avoid.length
     ? `\n\nAVOID — already asked in the last ${QUIZ_WINDOW_DAYS} days. Do not repeat or closely paraphrase:\n${avoid.map((q) => `- ${q}`).join("\n")}`
     : "";
-  return `Write a ${QUIZ_MAX_QUESTIONS}-question UPSC Prelims GS Paper I quiz from the briefs below.
+  return `Write a ${count}-question UPSC Prelims GS Paper I quiz from the briefs below.
 
 QUESTION BLUEPRINT (follow it closely; substitute the nearest available subject if a brief is thin):
 1. Polity — statement-based "Which of the following statements is/are correct?" with 3 statements and combination options.
@@ -41,6 +52,8 @@ QUESTION BLUEPRINT (follow it closely; substitute the nearest available subject 
 8. Polity or Economy — "Which of the following statements is/are NOT correct?" with 3 statements.
 9. Current affairs + static link — a scenario or applied question.
 10. Mixed — direct factual or conceptual.
+
+If the requested count exceeds 10, repeat the highest-weight areas in this order — Polity, Economy, current affairs, Environment, then mixed/static — until you reach the count. Keep every question distinct; do not reword the same question.
 
 FORMAT RULES
 - Statement-based: 2-4 numbered statements; options are combinations such as "1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3". Use "Select the correct answer using the code given below".
@@ -165,27 +178,116 @@ export function dedupeQuestions(questions: QuizQuestion[], avoid: string[]): Qui
   return out;
 }
 
-// Accepts "A"/"B"/"C"/"D", "0".."3", and integer 0..3. Returns null otherwise.
+const LETTER_INDEX: Record<string, number> = { A: 0, B: 1, C: 2, D: 3 };
+const OPTION_KEYS = ["A", "B", "C", "D"] as const;
+
+// Accepts "A".."D", "Option A", "(a)", "A.", "0".."3", and integer 0..3.
+// Returns null otherwise. Option text is handled separately by resolveAnswer.
 export function coerceAnswer(value: unknown): number | null {
   if (typeof value === "number" && Number.isInteger(value) && value >= 0 && value <= 3) return value;
   if (typeof value === "string") {
     const trimmed = value.trim().toUpperCase();
-    const letter = { A: 0, B: 1, C: 2, D: 3 }[trimmed as "A" | "B" | "C" | "D"];
+    const letter = LETTER_INDEX[trimmed];
     if (letter !== undefined) return letter;
+    const labelled = trimmed.match(/^(?:OPTION\s*)?\(?([A-D])\)?[.):]?$/);
+    if (labelled) return LETTER_INDEX[labelled[1]];
     const n = Number(trimmed);
     if (Number.isInteger(n) && n >= 0 && n <= 3) return n;
   }
   return null;
 }
 
+// Strip a leading "A)", "(a)", "A." or "Option A:" marker without touching
+// statement text such as "1 and 2 only".
+function stripOptionMarker(text: string): string {
+  const m = text.match(/^\s*(?:option\s*)?(?:\(([A-Da-d])\)|([A-Da-d])[.):])\s*(.+)$/i);
+  return m ? (m[3] ?? "").trim() : text.trim();
+}
+
+function optionText(value: unknown): string {
+  if (typeof value === "string") return stripOptionMarker(value);
+  if (value && typeof value === "object") {
+    const o = value as Record<string, unknown>;
+    for (const k of ["text", "label", "option", "value"]) {
+      if (typeof o[k] === "string") return stripOptionMarker(o[k] as string);
+    }
+  }
+  return "";
+}
+
+// Accepts an array of four strings (or {text|label} objects) or an object keyed
+// A-D. Returns exactly four options or null.
 function cleanOptions(value: unknown): string[] | null {
-  if (!Array.isArray(value)) return null;
-  const options = value
-    .filter((o): o is string => typeof o === "string")
-    .map((o) => o.trim())
-    .filter(Boolean);
-  if (options.length !== 4) return null;
-  return options;
+  if (Array.isArray(value)) {
+    const options = value.map(optionText).filter(Boolean);
+    if (options.length === 4) return options;
+    return null;
+  }
+  if (value && typeof value === "object") {
+    const o = value as Record<string, unknown>;
+    const options = OPTION_KEYS.map((k) => optionText(o[k] ?? o[k.toLowerCase()]));
+    if (options.every(Boolean)) return options;
+  }
+  return null;
+}
+
+// Resolve the answer to a 0-based index. Falls back to matching the option text
+// when the model returns the correct option verbatim instead of a letter/index.
+function resolveAnswer(value: unknown, options: string[]): number | null {
+  const direct = coerceAnswer(value);
+  if (direct !== null) return direct;
+  if (typeof value === "string") {
+    const key = normalizeQuestionText(value);
+    if (!key) return null;
+    const idx = options.findIndex((o) => normalizeQuestionText(o) === key);
+    if (idx !== -1) return idx;
+  }
+  return null;
+}
+
+// Pull the question array out of the common payload shapes models produce:
+// a bare array, {questions}, {quiz:{questions}}, {data|items|mcqs|results}, or a
+// double-encoded JSON string.
+function asArray(value: unknown): unknown[] | null {
+  if (Array.isArray(value)) return value;
+  if (typeof value === "string") {
+    try {
+      const parsed = JSON.parse(value);
+      return Array.isArray(parsed) ? parsed : null;
+    } catch {
+      return null;
+    }
+  }
+  return null;
+}
+
+function extractQuestions(raw: unknown): unknown[] | null {
+  const direct = asArray(raw);
+  if (direct) return direct;
+  if (!raw || typeof raw !== "object") return null;
+  const o = raw as Record<string, unknown>;
+  for (const key of ["questions", "mcqs", "items", "data", "quiz", "results"]) {
+    const v = o[key];
+    const arr = asArray(v);
+    if (arr) return arr;
+    if (v && typeof v === "object") {
+      const nested = asArray((v as Record<string, unknown>).questions);
+      if (nested) return nested;
+    }
+  }
+  return null;
+}
+
+// Short, non-sensitive description of a rejected payload for logs.
+function describePayload(raw: unknown): string {
+  if (Array.isArray(raw)) return `array(${raw.length})`;
+  if (raw && typeof raw === "object") {
+    const o = raw as Record<string, unknown>;
+    const keys = Object.keys(o).slice(0, 6).join(",");
+    const q = o.questions;
+    return `object{${keys}}${Array.isArray(q) ? ` questions=${q.length}` : ""}`;
+  }
+  return typeof raw;
 }
 
 export interface NormalizeQuizOptions {
@@ -199,9 +301,8 @@ export interface NormalizeQuizOptions {
 // Validate the model's payload. Invalid questions are dropped rather than
 // failing the whole quiz; if nothing usable remains, returns null.
 export function normalizeQuiz(raw: unknown, opts: NormalizeQuizOptions): Quiz | null {
-  if (!raw || typeof raw !== "object" || Array.isArray(raw)) return null;
-  const list = (raw as { questions?: unknown }).questions;
-  if (!Array.isArray(list)) return null;
+  const list = extractQuestions(raw);
+  if (!list) return null;
 
   const questions: QuizQuestion[] = [];
   for (const item of list) {
@@ -209,8 +310,9 @@ export function normalizeQuiz(raw: unknown, opts: NormalizeQuizOptions): Quiz | 
     const r = item as Record<string, unknown>;
     const question = typeof r.question === "string" ? r.question.trim() : "";
     const options = cleanOptions(r.options);
-    const answer = coerceAnswer(r.answer);
-    if (!question || !options || answer === null) continue;
+    if (!question || !options) continue;
+    const answer = resolveAnswer(r.answer, options);
+    if (answer === null) continue;
     const explanation = typeof r.explanation === "string" ? r.explanation.trim() : "";
     const topic = typeof r.topic === "string" && r.topic.trim() ? r.topic.trim() : "Current Affairs";
     questions.push({
@@ -224,7 +326,7 @@ export function normalizeQuiz(raw: unknown, opts: NormalizeQuizOptions): Quiz | 
   }
 
   const deduped = dedupeQuestions(questions, opts.avoid ?? []);
-  const capped = deduped.slice(0, opts.maxQuestions ?? QUIZ_MAX_QUESTIONS);
+  const capped = deduped.slice(0, opts.maxQuestions ?? QUIZ_DEFAULT_QUESTIONS);
   if (!capped.length) return null;
   // Re-number after dedupe/cap so ids stay contiguous.
   capped.forEach((q, i) => {
@@ -257,18 +359,42 @@ export async function generateQuiz(opts: GenerateQuizOptions): Promise<Quiz | nu
   if (!editions.length) return null;
 
   const avoid = readPreviousQuestions(opts.quizzesDir, opts.date, days);
+  const count = opts.maxQuestions ?? resolveQuizCount();
   const context = buildQuizContext(editions);
-  const messages: ChatMessage[] = [
-    { role: "system", content: SYSTEM_PROMPT },
-    { role: "user", content: userPrompt(context, avoid) },
-  ];
-
-  const raw = await chatJson<unknown>(messages);
-  return normalizeQuiz(raw, {
+  const normalizeOpts: NormalizeQuizOptions = {
     date: opts.date,
     windowStart: editions[0].date,
     windowEnd: editions[editions.length - 1].date,
     avoid,
-    maxQuestions: opts.maxQuestions ?? QUIZ_MAX_QUESTIONS,
-  });
+    maxQuestions: count,
+  };
+  const messages: ChatMessage[] = [
+    { role: "system", content: SYSTEM_PROMPT },
+    { role: "user", content: userPrompt(context, avoid, count) },
+  ];
+
+  const raw = await chatJson<unknown>(messages);
+  const quiz = normalizeQuiz(raw, normalizeOpts);
+  if (quiz) return quiz;
+
+  // One repair attempt. Models occasionally answer with a different shape
+  // (option text as the answer, options keyed A-D, questions nested under
+  // another key). Echo the rejected payload back with an explicit schema.
+  console.warn(`   ⚠ quiz payload unusable (${describePayload(raw)}); retrying with a stricter schema…`);
+  const echoed = typeof raw === "string" ? raw : JSON.stringify(raw);
+  const repair: ChatMessage[] = [
+    ...messages,
+    { role: "assistant", content: echoed.slice(0, 4000) },
+    {
+      role: "user",
+      content:
+        'That reply was not usable. Reply with ONLY a JSON object: {"questions":[{"question":"...","options":["...","...","...","..."],"answer":0,"explanation":"...","topic":"..."}]}. "options" must be exactly four strings; "answer" must be the 0-based index (0-3) of the correct option. No prose or markdown fences.',
+    },
+  ];
+  const retried = await chatJson<unknown>(repair);
+  const quiz2 = normalizeQuiz(retried, normalizeOpts);
+  if (!quiz2) {
+    console.warn(`   ⚠ quiz payload still unusable (${describePayload(retried)}); skipping`);
+  }
+  return quiz2;
 }
