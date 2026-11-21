@@ -34,22 +34,25 @@ import { clusterArticles, enrichStory, buildHeuristicStories, buildFallbackStory
 import { fetchOnThisDay } from "./lib/onthisday";
 import { llmConfigured, describeLlm } from "./lib/llm";
 import { generateQuiz } from "./lib/quiz";
+import { generateStaticLesson } from "./lib/staticSeries";
 
 interface Args {
   day?: string;
   hours: number;
   dryRun: boolean;
   noRegional: boolean;
+  noStatic: boolean;
 }
 
 function parseArgs(argv: string[]): Args {
-  const args: Args = { hours: 24, dryRun: false, noRegional: false };
+  const args: Args = { hours: 24, dryRun: false, noRegional: false, noStatic: false };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--day") args.day = argv[++i];
     else if (a === "--hours") args.hours = Number(argv[++i]) || 24;
     else if (a === "--dry-run") args.dryRun = true;
     else if (a === "--no-regional") args.noRegional = true;
+    else if (a === "--no-static") args.noStatic = true;
   }
   return args;
 }
@@ -295,7 +298,28 @@ async function main() {
   console.log(`\n✔ Wrote ${outFile}`);
   console.log(`   ${stories.length} stories · ${onThisDay.length} on-this-day entries\n`);
 
-  // 6. Quiz ------------------------------------------------------------------
+  // 6. Static Editorial --------------------------------------------------------
+  // One long-form lesson from the common GS static syllabus, continuing the
+  // series from where the previous day stopped. This is deliberately after the
+  // edition is safely on disk: a lesson failure never loses the news edition.
+  if (canLlm && !args.noStatic) {
+    console.log("→ Writing today's Static Editorial lesson…");
+    try {
+      const lesson = await generateStaticLesson({ root, date });
+      if (lesson) {
+        console.log(
+          `   ✔ ${lesson.series.subject} · ${lesson.title} (${lesson.readMinutes} min read) written to src/content/static-lessons/${date}.json`,
+        );
+        console.log(`   next: ${lesson.handoff.next}`);
+      } else {
+        console.log("   · no new static lesson (already generated for this date, or the plan is complete)");
+      }
+    } catch (err) {
+      console.warn(`   ⚠ static lesson generation failed: ${err instanceof Error ? err.message : err}`);
+    }
+  }
+
+  // 7. Quiz ------------------------------------------------------------------
   // Generated from the last N days of editions (including today's). Optional:
   // a quiz failure never blocks the edition. Dry-run skips it entirely.
   if (canLlm) {
@@ -319,7 +343,7 @@ async function main() {
     }
   }
 
-  // 7. Prune very old editions (keep last 400).
+  // 8. Prune very old editions (keep last 400).
   try {
     const files = (await readdir(outDir)).filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f)).sort();
     if (files.length > 400) {

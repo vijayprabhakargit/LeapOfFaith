@@ -1,0 +1,158 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getAllStaticLessons, getStaticProgress } from "../../lib/staticLessons";
+import { CURRICULUM, SERIES_SUBJECTS } from "../../../config/staticSeries";
+import { formatDateLong, formatDateShort } from "../../lib/format";
+
+const lessons = getAllStaticLessons();
+const progress = getStaticProgress();
+const done = new Set(progress.completed.map((c) => c.lessonId));
+const lessonByPlanId = new Map(lessons.map((l) => [l.series.lessonId, l]));
+const flat = CURRICULUM.flatMap((unit) =>
+  unit.lessons.map((lesson, i) => ({ unit, lesson, lessonNumber: i + 1 })),
+);
+const next = flat.find((item) => !done.has(item.lesson.id)) ?? null;
+const total = flat.length;
+const completed = flat.filter((item) => done.has(item.lesson.id)).length;
+const pct = total ? Math.round((completed / total) * 100) : 0;
+const latest = lessons[0] ?? null;
+---
+
+<BaseLayout
+  title="Static Editorial — the UPSC static syllabus, taught one day at a time"
+  description="A sequential, teacher-narrated walk through the common UPSC General Studies syllabus — geography first, one long-form lesson a day."
+  dateline={latest ? formatDateLong(latest.date) : ""}
+>
+  <section class="hero se-hero">
+    <div class="wrap">
+      <p class="eyebrow">The Long Syllabus</p>
+      <h1>Static Editorial</h1>
+      <p class="se-hero-dek">
+        One lesson a day, in order, from the common UPSC General Studies syllabus. Geography first, then polity,
+        economy, history and the rest — taught like a story, with maps, diagrams, anecdotes and exam focus.
+      </p>
+      <div class="se-hero-stats">
+        <span><b>{completed}</b> of {total} lessons</span>
+        <span class="se-dot">·</span>
+        <span><b>{pct}%</b> of the planned walk</span>
+        {latest && (
+          <>
+            <span class="se-dot">·</span>
+            <span>latest: <a href={`/static/${latest.date}/`}>{formatDateShort(latest.date)}</a></span>
+          </>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    {
+      next && (
+        <section class="se-next-card">
+          <span class="se-next-label">Next lesson</span>
+          <h2>{next.lesson.title}</h2>
+          <p class="se-next-meta">
+            {next.unit.subject} · {next.unit.paper} · lesson {next.lessonNumber} of {next.unit.lessons.length} in{' '}
+            {next.unit.title}
+          </p>
+          <p>{next.lesson.scope}</p>
+          {lessonByPlanId.get(next.lesson.id) ? (
+            <a class="btn primary" href={`/static/${lessonByPlanId.get(next.lesson.id)!.date}/`}>Read the lesson</a>
+          ) : (
+            <span class="note">It will appear with the next edition.</span>
+          )}
+        </section>
+      )
+    }
+
+    <section class="se-progress-section">
+      <div class="section-head">
+        <h2>The plan, subject by subject</h2>
+        <span class="sub">Common GS only · no CSAT, no optionals</span>
+      </div>
+      <div class="se-subject-grid">
+        {SERIES_SUBJECTS.map((subject) => {
+          const units = CURRICULUM.filter((u) => u.subjectKey === subject.key);
+          const lessonsInSubject = units.flatMap((u) => u.lessons);
+          const doneInSubject = lessonsInSubject.filter((l) => done.has(l.id)).length;
+          const subjectPct = lessonsInSubject.length
+            ? Math.round((doneInSubject / lessonsInSubject.length) * 100)
+            : 0;
+          return (
+            <div class="se-subject-card">
+              <div class="se-subject-top">
+                <h3>{subject.title}</h3>
+                <span class="se-subject-count">
+                  {doneInSubject}/{lessonsInSubject.length}
+                </span>
+              </div>
+              <p class="se-subject-blurb">{subject.blurb}</p>
+              <div class="se-bar" aria-hidden="true">
+                <span style={`width:${subjectPct}%`}></span>
+              </div>
+              <p class="se-subject-papers">{subject.papers.join(' · ')}</p>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+
+    <section class="se-syllabus-list">
+      <div class="section-head">
+        <h2>Every lesson in order</h2>
+        <span class="sub">{completed} done · {total - completed} to go</span>
+      </div>
+      {
+        SERIES_SUBJECTS.map((subject) => {
+          const units = CURRICULUM.filter((u) => u.subjectKey === subject.key);
+          if (!units.length) return null;
+          return (
+            <div class="se-subject-block">
+              <h3 class="se-subject-name">{subject.title}</h3>
+              {units.map((unit) => {
+                const unitDone = unit.lessons.filter((l) => done.has(l.id)).length;
+                return (
+                  <div class="se-unit-block">
+                    <div class="se-unit-head">
+                      <h4>{unit.title}</h4>
+                      <span>{unitDone}/{unit.lessons.length}</span>
+                    </div>
+                    <p class="se-unit-node">{unit.syllabusNode}</p>
+                    <ol class="se-lesson-list">
+                      {unit.lessons.map((lesson) => {
+                        const entry = progress.completed.find((c) => c.lessonId === lesson.id);
+                        const lessonDate = lessonByPlanId.get(lesson.id)?.date ?? entry?.date ?? null;
+                        const isNext = next?.lesson.id === lesson.id;
+                        return (
+                          <li
+                            class:list={[
+                              'se-lesson-row',
+                              entry && 'is-done',
+                              isNext && 'is-next',
+                            ]}
+                          >
+                            <span class="se-check" aria-hidden="true">{entry ? '✓' : isNext ? '→' : '·'}</span>
+                            <span class="se-lesson-title">
+                              {lessonDate && entry ? (
+                                <a href={`/static/${lessonDate}/`}>{lesson.title}</a>
+                              ) : (
+                                lesson.title
+                              )}
+                            </span>
+                            <span class="se-lesson-status">
+                              {entry ? formatDateShort(entry.date) : isNext ? 'next' : 'planned'}
+                            </span>
+                          </li>
+                        );
+                      })}
+                    </ol>
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })
+      }
+    </section>
+  </div>
+</BaseLayout>

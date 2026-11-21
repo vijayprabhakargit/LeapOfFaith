@@ -24,6 +24,10 @@ Each edition (last 24 hours of news) is one newspaper page with:
   (when it came, by whom), geography, socio-economic context, key terms, prelims pointers and a mains angle.
 - **Prelims — remember this** and **Mains practice** — ready-made revision pointers and a question.
 - **On this day** — history from the Wikimedia "On this day" feed, curated for syllabus relevance.
+- **Static Editorial** — one long-form, teacher-narrated lesson per day from the common GS static
+  syllabus, continuing a numbered series (geography first). Each lesson carries its syllabus node,
+  standard sources, original diagrams, an anecdote, Prelims pointers, Mains angles and a hand-off for
+  the next day. Browse the whole course at `/static/`.
 - **Tags** — every story is tagged; browse them in a **client-side tag cloud** (`/tags/`) with a time
   filter (all time / 1–12 months / custom range). Clicking a tag lists its stories in place, and the
   state lives in the URL (`/tags/?tag=iran&range=6m`) so it's shareable.
@@ -60,6 +64,7 @@ before your first run. Delete it whenever you like.
 | `npm run generate:day -- --day 2026-11-01` | Generate a specific date |
 | `npm run generate:dry` | No LLM — heuristic run, validates feeds only |
 | `npm run generate -- --no-regional` | Skip the dynamic country-perspective lookups |
+| `npm run generate -- --no-static` | Skip the once-a-day Static Editorial lesson |
 | `npm run dev` | Local preview |
 | `npm run build` | Production build to `dist/` |
 | `npm run check` | Type-check |
@@ -76,8 +81,9 @@ npm test
 
 The unit tests run on Node's built-in test runner (via `tsx`) and need no network. They cover the
 pure logic: `slugify`, knowledge-card matching, Google-News URL building and locale fallback,
-IST date formatting, edition loading / archive grouping, loose JSON parsing, and article-id
-sanitising. Add new tests under `test/` and list the file in the `test` script in `package.json`.
+IST date formatting, edition loading / archive grouping, loose JSON parsing, article-id
+sanitising, and the static-series plan/progress/validation logic. Add new tests under `test/` and
+list the file in the `test` script in `package.json`.
 
 ---
 
@@ -189,6 +195,9 @@ Scheduler and open `dist/index.html`.
 config/
   sources.ts        # curated feeds + Google-News locale patterns
   syllabus.ts       # UPSC syllabus map + static knowledge cards
+  staticSeries.ts   # the Static Editorial curriculum plan (units → lessons)
+data/
+  static-series/    # progress.json — where the series has reached
 scripts/
   generate.ts       # the daily pipeline entrypoint
   lib/
@@ -196,15 +205,18 @@ scripts/
     enrich.ts       # clustering + story stitching + static linking
     llm.ts          # provider-agnostic JSON chat (openai/anthropic/gemini/…)
     onthisday.ts    # Wikimedia "On this day" + curation
+    quiz.ts         # daily Prelims quiz
+    staticSeries.ts # Static Editorial selection, validation, hand-off
 src/
   content/editions/ # generated editions (one JSON per day)
-  components/       # StoryCard, Controls, OnThisDay, EditionView
+  content/static-lessons/ # generated long-form lessons (one JSON per day)
+  components/       # StoryCard, Controls, OnThisDay, StaticEditorial, EditionView
   layouts/          # BaseLayout (masthead, theme, progress)
-  pages/            # index, editions/[date] (+ /articles), sources, archive, tags, rss.xml, latest.json
-  lib/              # types, edition loader, formatters
+  pages/            # index, editions/[date] (+ /articles), static/, sources, archive, tags, rss.xml
+  lib/              # types, edition/lesson loaders, formatters
   styles/global.css # the newsprint design system
 test/               # unit tests (node --test via tsx)
-docs/               # storage/scaling + selection-tuning notes
+docs/               # syllabus, static-series charter, storage/scaling + selection notes
 ```
 
 ## Feeds & outputs
@@ -216,6 +228,8 @@ docs/               # storage/scaling + selection-tuning notes
   "N articles" stat
 - `/sources/` — the publications we read, with homepage and RSS links
 - `/archive/` — every edition
+- `/static/` — the Static Editorial course index and plan
+- `/static/<date>/` — one standalone lesson
 
 ---
 

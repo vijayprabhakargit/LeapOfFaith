@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import StaticEditorial from "../../components/StaticEditorial.astro";
+import { getAllStaticLessons, getStaticLesson } from "../../lib/staticLessons";
+import { formatDateLong } from "../../lib/format";
+
+export function getStaticPaths() {
+  const dates = getAllStaticLessons().map((l) => l.date); // newest first
+  return dates.map((date, i) => ({
+    params: { date },
+    props: {
+      prevDate: i < dates.length - 1 ? dates[i + 1] : null,
+      nextDate: i > 0 ? dates[i - 1] : null,
+    },
+  }));
+}
+
+const { date } = Astro.params;
+const { prevDate, nextDate } = Astro.props as { prevDate: string | null; nextDate: string | null };
+const lesson = getStaticLesson(date!);
+---
+
+{
+  lesson ? (
+    <BaseLayout
+      title={`${lesson.title} — Static Editorial`}
+      description={lesson.subtitle}
+      dateline={formatDateLong(lesson.date)}
+    >
+      <div class="wrap se-standalone-wrap">
+        <p class="se-breadcrumb">
+          <a href="/static/">Static Editorial</a> <span>›</span> {lesson.series.subject}
+        </p>
+        <StaticEditorial lesson={lesson} standalone={true} prevDate={prevDate} nextDate={nextDate} />
+      </div>
+    </BaseLayout>
+  ) : (
+    <BaseLayout title="Lesson not found">
+      <div class="wrap">
+        <div class="empty">
+          <h2>Lesson not found</h2>
+          <p><a href="/static/">Back to the series ›</a></p>
+        </div>
+      </div>
+    </BaseLayout>
+  )
+}

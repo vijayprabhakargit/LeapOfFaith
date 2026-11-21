@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "startedOn": "2026-11-21",
+  "updatedAt": "2026-11-21T18:30:00.000Z",
+  "completed": [
+    {
+      "lessonId": "geo-foundations-1",
+      "unitId": "geo-foundations",
+      "date": "2026-11-21"
+    }
+  ],
+  "current": {
+    "unitId": "geo-foundations",
+    "lessonId": "geo-foundations-2"
+  },
+  "lastHandoff": {
+    "date": "2026-11-21",
+    "lessonId": "geo-foundations-1",
+    "covered": [
+      "Geography as a spatial, systems science with physical and human parents.",
+      "Earth's place in the solar system and the conditions that make the surface habitable.",
+      "The Earth's oblate-spheroid shape, size, gravity variation and the geoid.",
+      "Eratosthenes' shadow experiment and the logic of measuring the Earth.",
+      "Why the UPSC syllabus begins with the Earth's frame, and why maps are arguments."
+    ],
+    "next": "Lesson 2: The Grid We Live By — latitude, longitude, time zones and the International Date Line. Open by recalling that Eratosthenes measured an arc on a sphere; now we need a coordinate system to describe any point on it.",
+    "notes": "The student now has the shape, size and a first model of measurement. Do not repeat the solar-system material. Reuse the Eratosthenes logic when explaining longitude and time: 15° of longitude equals one hour. Make the arithmetic concrete with a Delhi–New York flight and with India's single standard meridian at 82°30′E. Keep the critical map-reading stance from the final section; it will return in the projection lesson."
+  }
+}

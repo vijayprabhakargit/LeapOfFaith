@@ -135,6 +135,26 @@ compared with editions (~255 KB/day), so there is no urgency.
 Scores are never stored. The quiz page keeps answers in browser memory only, so
 the JSON holds nothing but the question bank and the answer key.
 
+## Static Editorial storage
+
+`src/content/static-lessons/<date>.json` holds one long-form lesson per day: roughly
+1,800–2,600 words plus 1–3 inline SVG figures and a small reference list. Expect
+**15–35 KB per day** (larger when a lesson carries several diagrams), about
+**6–10 MB/year** at the current pace. The generated article is also baked into that
+day's edition HTML, so it does not add a separate deployed file; `/static/<date>/`
+is one extra built page per lesson (~50–80 KB), plus the `/static/` index.
+
+The series is bounded by the curriculum: 171 planned lessons today, so a full pass
+is roughly **3–6 MB of repo JSON** and about 171 extra built pages — well inside
+the Cloudflare Pages file-count and size limits. Unlike editions, static lessons are
+**not pruned** by `KEEP = 400`; they are the permanent course archive. If the plan
+grows to thousands of lessons, apply the same retention or object-storage approach
+discussed above.
+
+The progress file (`data/static-series/progress.json`) and the two generated docs
+(`docs/static-series/handoff.md`, `docs/static-series/progress.md`) are tiny and
+committed with the lesson so the next run knows exactly where the series stopped.
+
 ## Scaling plan
 
 In rough order of when we would need them:

@@ -1,0 +1,228 @@
+---
+import type { StaticLesson } from "../lib/types";
+import { formatDateLong } from "../lib/format";
+
+interface Props {
+  lesson: StaticLesson;
+  standalone?: boolean;
+  prevDate?: string | null;
+  nextDate?: string | null;
+}
+const { lesson, standalone = false, prevDate = null, nextDate = null } = Astro.props;
+const { series } = lesson;
+const figureById = new Map(lesson.figures.map((f) => [f.id, f]));
+const figureNumber = new Map(lesson.figures.map((f, i) => [f.id, i + 1]));
+const kindLabel: Record<string, string> = {
+  map: "Map",
+  diagram: "Diagram",
+  timeline: "Timeline",
+  chart: "Chart",
+};
+const refKind: Record<string, string> = { official: "Official", wiki: "Wiki", report: "Report", book: "Book" };
+const sectionAnchor = (i: number) => `static-section-${i + 1}`;
+---
+
+<section
+  class:list={["static-editorial", standalone && "standalone"]}
+  id="static-editorial"
+  aria-labelledby="static-editorial-title"
+  data-subject={series.subjectKey}
+>
+  <div class="se-rule">
+    <span class="se-kicker">Static Editorial</span>
+    <span class="se-dot">·</span>
+    <span class="se-kicker-sub">{series.subject}</span>
+    <span class="se-dot">·</span>
+    <span class="se-kicker-sub">{series.paper}</span>
+    <span class="se-flex"></span>
+    <span class="se-lesson-no">Lesson {series.seriesLessonNumber}</span>
+  </div>
+
+  <div class="se-head">
+    <div class="se-syllabus">
+      <span class="se-unit">{series.unitTitle}</span>
+      <span class="se-node">{series.syllabusNode}</span>
+    </div>
+    <h2 id="static-editorial-title" class="se-title">{lesson.title}</h2>
+    <p class="se-subtitle">{lesson.subtitle}</p>
+    <div class="se-byline">
+      <span>{formatDateLong(lesson.date)}</span>
+      <span class="se-dot">•</span>
+      <span>{lesson.readMinutes} min read</span>
+      <span class="se-dot">•</span>
+      <span>Lesson {series.lessonNumber} of {series.lessonCount} in this unit</span>
+    </div>
+  </div>
+
+  <div class="se-body">
+    <p class="se-hook">{lesson.hook}</p>
+
+    {
+      lesson.sections.map((section, i) => (
+        <section class="se-section" id={sectionAnchor(i)}>
+          <h3 class="se-section-head">
+            <span class="se-section-no">{String(i + 1).padStart(2, "0")}</span>
+            {section.heading}
+            {section.refs?.length ? (
+              <sup class="se-cites">
+                {section.refs.map((n) => (
+                  <a class="se-cite" href={`#static-ref-${n}`} aria-label={`Reference ${n}`}>
+                    [{n}]
+                  </a>
+                ))}
+              </sup>
+            ) : null}
+          </h3>
+          {section.blocks.map((block) => {
+            if (block.type === "paragraph") return <p>{block.text}</p>;
+            if (block.type === "heading")
+              return block.level === 4 ? <h4 class="se-subhead">{block.text}</h4> : <h3 class="se-subhead">{block.text}</h3>;
+            if (block.type === "callout")
+              return (
+                <aside class:list={["se-callout", `tone-${block.tone ?? "note"}`]}>
+                  <b>{block.title}</b>
+                  <p>{block.text}</p>
+                </aside>
+              );
+            if (block.type === "list")
+              return block.ordered ? (
+                <ol class="se-list">
+                  {block.items.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ol>
+              ) : (
+                <ul class="se-list">
+                  {block.items.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              );
+            if (block.type === "quote")
+              return (
+                <blockquote class="se-quote">
+                  <p>{block.text}</p>
+                  {block.attribution && <cite>— {block.attribution}</cite>}
+                </blockquote>
+              );
+            if (block.type === "figure") {
+              const fig = figureById.get(block.figureId);
+              if (!fig) return null;
+              return (
+                <figure class="se-figure" id={`static-fig-${fig.id}`}>
+                  <div class="se-figure-frame">
+                    {fig.svg ? (
+                      <div class="se-figure-svg" set:html={fig.svg} />
+                    ) : (
+                      <div class="se-figure-fallback">{fig.alt ?? fig.title}</div>
+                    )}
+                  </div>
+                  <figcaption>
+                    <span class="se-fig-label">
+                      Fig. {figureNumber.get(fig.id)} · {kindLabel[fig.kind] ?? fig.kind}
+                    </span>
+                    <b>{fig.title}</b>
+                    {fig.caption && <span class="se-fig-caption">{fig.caption}</span>}
+                    {fig.credit && <span class="se-fig-credit">{fig.credit}</span>}
+                  </figcaption>
+                </figure>
+              );
+            }
+            return null;
+          })}
+        </section>
+      ))
+    }
+
+    {
+      lesson.anecdote && (
+        <aside class="se-anecdote">
+          <span class="se-anecdote-label">A teacher's aside</span>
+          <h4>{lesson.anecdote.title}</h4>
+          <p>{lesson.anecdote.body}</p>
+        </aside>
+      )
+    }
+
+    <div class="se-exam">
+      <div class="se-exam-block">
+        <h4>Prelims — keep these</h4>
+        <ul>
+          {lesson.exam.prelims.map((p) => (
+            <li>{p}</li>
+          ))}
+        </ul>
+      </div>
+      {lesson.exam.mains.length > 0 && (
+        <div class="se-exam-block">
+          <h4>Mains — think like this</h4>
+          <ul>
+            {lesson.exam.mains.map((m) => (
+              <li>{m}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {lesson.exam.keyTerms.length > 0 && (
+        <div class="se-exam-block se-terms">
+          <h4>Key terms</h4>
+          <dl>
+            {lesson.exam.keyTerms.map((t) => (
+              <>
+                <dt>{t.term}</dt>
+                <dd>{t.meaning}</dd>
+              </>
+            ))}
+          </dl>
+        </div>
+      )}
+    </div>
+
+    <div class="se-recap">
+      <h4>Before you turn the page</h4>
+      <ul>
+        {lesson.recap.map((r) => (
+          <li>{r}</li>
+        ))}
+      </ul>
+    </div>
+
+    <p class="se-next">
+      <b>Next time:</b> {lesson.nextUp}
+    </p>
+
+    {
+      lesson.references.length > 0 && (
+        <div class="se-references">
+          <h4>Sources and further reading</h4>
+          <ol>
+            {lesson.references.map((r, i) => (
+              <li id={`static-ref-${i + 1}`}>
+                <a href={r.href} target="_blank" rel="noopener noreferrer">
+                  {r.label}
+                </a>
+                <span class="se-ref-kind">{refKind[r.kind] ?? r.kind}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      )
+    }
+
+    <div class="se-footer">
+      {
+        prevDate || nextDate ? (
+          <span class="se-nav">
+            {prevDate && <a href={`/static/${prevDate}/`}>‹ previous lesson</a>}
+            {nextDate && <a href={`/static/${nextDate}/`}>next lesson ›</a>}
+          </span>
+        ) : (
+          <span class="se-nav">
+            <a href="/static/">All lessons in the series ›</a>
+          </span>
+        )
+      }
+      {standalone && <a class="se-edition-link" href={`/editions/${lesson.date}/`}>Read the full edition for this day ›</a>}
+    </div>
+  </div>
+</section>

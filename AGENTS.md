@@ -29,14 +29,15 @@ renders JSON editions produced by a Node/TS generator. Deployed to Cloudflare Pa
 
 Regenerate today's edition: `npm run generate`
 Validate feeds without spending tokens: `npm run generate:dry`
+Skip the Static Editorial lesson for a run: `npm run generate -- --no-static`
 Type-check: `npm run check`
 Run tests: `npm test`
 Build: `npm run build`
 
 There is no network-dependent test; `test/` covers the pure logic (slugify, knowledge-card
 matching, Google-News URL building, date formatting, edition loading, loose JSON parsing, article-id
-sanitising). Correctness is validated by `npm test`, `npm run check`, `npm run build`, and a
-`npm run generate:dry` feed check.
+sanitising, and the static-series plan/progress/validation logic). Correctness is validated by
+`npm test`, `npm run check`, `npm run build`, and a `npm run generate:dry` feed check.
 
 Design notes live in `docs/` — keep them current when you touch growth, retention, or selection:
 `docs/storage-and-scaling.md` (Cloudflare free-tier limits, per-day growth, scaling plan) and
@@ -62,6 +63,18 @@ how-many, assertion-reason, matching, direct factual), and dedupes against the p
 The quiz is **static**: `/quiz/` lists them and `/quiz/<date>/` renders one with client-side scoring only
 (no server, no stored scores; a reload clears answers). The generator skips the quiz on `--dry-run` and
 never blocks the edition if quiz generation fails. See "Quiz" in `docs/storage-and-scaling.md`.
+
+The **Static Editorial** is the long-form, sequential static-syllabus series. The authoritative
+syllabus is `docs/upsc-syllabus.md`; the teacher's charter and operating rules are
+`docs/static-series-plan.md`; the curriculum plan is `config/staticSeries.ts` (units → lessons, each
+with scope, standard sources, curated references and figure ideas). Progress is
+`data/static-series/progress.json`; daily lessons are `src/content/static-lessons/<date>.json`; the
+next-day context is `docs/static-series/handoff.md` and the human tracker is
+`docs/static-series/progress.md`. `scripts/lib/staticSeries.ts` picks the first incomplete lesson,
+writes/validates one lesson, advances progress, and rewrites the hand-off and tracker. It covers the
+**common GS papers only** — Prelims GS-I and Mains GS I–IV; no CSAT and no optionals. Geography is the
+first subject. The generator runs it after the edition is safely written and never blocks the edition;
+`--no-static` skips it. Keep lesson IDs stable: progress refers to them.
 
 Daily article selection is **two-lane** (`scripts/lib/enrich.ts`, wired in `scripts/generate.ts`):
 `shortlistPerSource` (top ~20% of each source by feed order) → `preselectByHeadlines` (cross-source

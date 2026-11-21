@@ -5,9 +5,11 @@ import { buildReferenceIndex } from "../lib/references";
 import Controls from "./Controls.astro";
 import StoryCard from "./StoryCard.astro";
 import OnThisDay from "./OnThisDay.astro";
+import StaticEditorial from "./StaticEditorial.astro";
 import Extras from "./Extras.astro";
 import QuizLink from "./QuizLink.astro";
 import References from "./References.astro";
+import { getStaticLesson } from "../lib/staticLessons";
 
 interface Props {
   edition: Edition;
@@ -16,6 +18,7 @@ interface Props {
 }
 const { edition, prevDate, nextDate } = Astro.props;
 const stories = edition.stories;
+const staticLesson = getStaticLesson(edition.date);
 // One numbering pass for the whole edition: superscripts and the References
 // section are generated from the same index, so they cannot disagree.
 const refIndex = buildReferenceIndex(stories);
@@ -79,6 +82,7 @@ const refIndex = buildReferenceIndex(stories);
     No stories match that. Try another section, or clear the search.
   </p>
   <OnThisDay items={edition.onThisDay} date={edition.date} />
+  {staticLesson && <StaticEditorial lesson={staticLesson} />}
   <Extras items={edition.extras ?? []} />
   <References entries={refIndex.entries} />
 </div>
