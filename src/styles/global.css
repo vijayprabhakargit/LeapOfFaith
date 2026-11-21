@@ -1983,24 +1983,35 @@ a.feed-name:hover {
   text-decoration: underline;
 }
 
+/* One quiz per row: title/meta on the left, actions on the right. */
 .quiz-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--rule);
   padding-bottom: 60px;
 }
 
 .quiz-card {
-  border: 1px solid var(--rule);
-  background: var(--card);
-  padding: 22px;
-  box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "head actions"
+    "date actions";
+  align-items: center;
+  gap: 4px 28px;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  background: transparent;
+  padding: 16px 4px;
+  box-shadow: none;
+}
+
+.quiz-card:hover {
+  background: var(--paper-2);
 }
 
 .quiz-card-head {
+  grid-area: head;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -2008,8 +2019,8 @@ a.feed-name:hover {
 
 .quiz-card-title {
   font-family: var(--display);
-  font-size: 22px;
-  line-height: 1.2;
+  font-size: 19px;
+  line-height: 1.25;
   margin: 0;
 }
 
@@ -2032,18 +2043,22 @@ a.feed-name:hover {
   margin: 0;
 }
 
+.quiz-card-date {
+  grid-area: date;
+}
+
 .quiz-card-actions {
+  grid-area: actions;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 8px 0 0;
+  margin: 0;
 }
 
 .quiz-more-row {
-  grid-column: 1 / -1;
   display: flex;
   justify-content: center;
-  margin: 4px 0 0;
+  margin: 16px 0 0;
 }
 
 .quiz-more-row[hidden] {
@@ -2289,6 +2304,19 @@ a.feed-name:hover {
 }
 
 @media (max-width: 620px) {
+  .quiz-card {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "head"
+      "date"
+      "actions";
+    gap: 6px;
+  }
+
+  .quiz-card-actions {
+    margin-top: 6px;
+  }
+
   .quiz-heading {
     font-size: 27px;
   }
