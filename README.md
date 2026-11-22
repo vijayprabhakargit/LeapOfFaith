@@ -300,4 +300,15 @@ Contributions are welcome, especially from fellow aspirants:
 Fork, make your change, then run `npm test`, `npm run check` and `npm run build` before opening a
 pull request. Bug reports and source suggestions via Issues are just as welcome.
 
+## Support the project
+
+Leap of Faith is **free and open source** — no subscription, no paywall, and no money is ever charged to
+read the paper. Everything here is built and maintained in personal time, so any support is genuinely
+appreciated and goes straight into keeping the daily editions coming.
+
+- **Buy me a coffee** — [buymeacoffee.com/leapoffaith](https://buymeacoffee.com/leapoffaith)
+- **UPI** — `odvprabhakar-1@okaxis`
+
+Support is entirely optional. Contributing code, reporting bugs or suggesting sources is just as valuable.
+
 Not affiliated with UPSC. Built for daily revision.
