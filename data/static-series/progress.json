@@ -1,29 +1,37 @@
 {
   "version": 1,
   "startedOn": "2026-11-21",
-  "updatedAt": "2026-11-21T18:30:00.000Z",
+  "updatedAt": "2026-11-22T04:09:01.367Z",
   "completed": [
     {
       "lessonId": "geo-foundations-1",
       "unitId": "geo-foundations",
       "date": "2026-11-21"
+    },
+    {
+      "lessonId": "geo-foundations-2",
+      "unitId": "geo-foundations",
+      "date": "2026-11-22"
     }
   ],
   "current": {
     "unitId": "geo-foundations",
-    "lessonId": "geo-foundations-2"
+    "lessonId": "geo-foundations-3"
   },
   "lastHandoff": {
-    "date": "2026-11-21",
-    "lessonId": "geo-foundations-1",
+    "date": "2026-11-22",
+    "lessonId": "geo-foundations-2",
     "covered": [
-      "Geography as a spatial, systems science with physical and human parents.",
-      "Earth's place in the solar system and the conditions that make the surface habitable.",
-      "The Earth's oblate-spheroid shape, size, gravity variation and the geoid.",
-      "Eratosthenes' shadow experiment and the logic of measuring the Earth.",
-      "Why the UPSC syllabus begins with the Earth's frame, and why maps are arguments."
+      "Latitude and longitude as angular coordinates, with the crucial asymmetry that latitude has a natural zero and longitude does not.",
+      "Parallels versus meridians, and the variation in the length of a degree of longitude from about 111 km at the Equator to about 56 km at 60°N.",
+      "Great circles and small circles, with the Equator as the only great-circle parallel.",
+      "The five major circles (Equator, tropics at 23½°, polar circles at 66½°) derived from the Earth's axial tilt, and their consequences for insolation, climate belts, Coriolis strength and day length.",
+      "Longitude as time: 15° = 1 hour, 1° = 4 minutes, 1′ of arc = 4 seconds, with Delhi's ~21-minute local lag behind IST as the worked Indian example.",
+      "Local versus standard time, the 1884 International Meridian Conference and the choice of Greenwich, and why time-zone boundaries are political rather than geometric.",
+      "India's standard meridian at 82°30′E (UTC+5:30), the arithmetic behind the half-hour offset, and the two-time-zone debate.",
+      "The International Date Line: its zig-zag, the Kiribati (1995) and Samoa (2011) adjustments, and the westward-add / eastward-subtract rule."
     ],
-    "next": "Lesson 2: The Grid We Live By — latitude, longitude, time zones and the International Date Line. Open by recalling that Eratosthenes measured an arc on a sphere; now we need a coordinate system to describe any point on it.",
-    "notes": "The student now has the shape, size and a first model of measurement. Do not repeat the solar-system material. Reuse the Eratosthenes logic when explaining longitude and time: 15° of longitude equals one hour. Make the arithmetic concrete with a Delhi–New York flight and with India's single standard meridian at 82°30′E. Keep the critical map-reading stance from the final section; it will return in the projection lesson."
+    "next": "Lesson 3: Reading the Earth — Maps, Scale and Projections. Map scale in statement, representative fraction and graphical forms; large versus small-scale maps; the necessity of distortion; Mercator, conic and azimuthal projections; topographic sheets, contours and conventional signs; remote sensing and GIS; and the closing argument that every map is an argument.",
+    "notes": "The Eratosthenes callback was reused deliberately in the opening of Section 1 (reference frames) and again in Section 3 (measuring an arc on a sphere; the longitude problem and Harrison's chronometers). Do not re-explain the oblate spheroid or the solar-system material. The Delhi–New York great-circle image was carried forward in Section 1 as a bridge to the projection lesson — pick it up again in Lesson 3 when discussing why Mercator's straight lines were a navigational triumph and a cartographic distortion. Figure 'latitude-belts' is reusable whenever climate belts, insolation angles or day length come up (monsoon, pressure belts, biomes). Figure 'time-strip' is reusable in the context of globalisation, markets and geopolitics. Figure 'india-meridian' is reusable in the two-time-zone debate and in any discussion of India's physiographic extent. The 'map as argument' stance from Lesson 1 was restated at the end of Section 5 and should be the hinge into Lesson 3."
   }
 }

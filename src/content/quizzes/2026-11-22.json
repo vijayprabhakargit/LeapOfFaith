@@ -1,0 +1,204 @@
+{
+  "date": "2026-11-22",
+  "generatedAt": "2026-11-22T04:10:19.297Z",
+  "title": "Daily Prelims Quiz",
+  "windowStart": "2026-11-16",
+  "windowEnd": "2026-11-22",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Consider the following statements:\n1. In January 2024, the Supreme Court quashed the Gujarat government's order remitting the sentences of the convicts in the Bilkis Bano case, holding that Gujarat was not the 'appropriate government' competent to grant remission.\n2. Remission of sentences is governed by Sections 432 to 435 of the Code of Criminal Procedure, 1973, which have been replaced by the corresponding provisions of the Bharatiya Nagarik Suraksha Sanhita, 2023.\n3. The Supreme Court has recently quashed the convictions of two of the convicts in the Bilkis Bano case.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "2 and 3 only",
+        "1 and 3 only",
+        "1 and 2 only",
+        "1, 2 and 3"
+      ],
+      "answer": 2,
+      "explanation": "The Supreme Court in November 2026 suspended the sentences of two convicts and granted them bail; it did not quash their convictions, so statement 3 is wrong. The January 2024 ruling had quashed Gujarat's remission order on the ground that Gujarat was not the 'appropriate government' under the remission provisions, which now sit in the BNSS, 2023.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 2,
+      "question": "Consider the following statements:\n1. A 'correction' in equity markets conventionally refers to a fall of 20 per cent or more from a recent peak.\n2. Oracle stated that its OpenAI infrastructure commitment is fully funded after a final capital raise.\n3. Anthropic's initial public offering was reported as a record $81 billion listing.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 1,
+      "explanation": "A 'correction' is conventionally a fall of 10 per cent or more from a recent peak — the S&P 500 and the Dow Jones Industrial Average were reported to have entered correction territory during the recent tech sell-off — so statement 1 is wrong. Statements 2 and 3 are as reported in the AI capital-boom coverage.",
+      "topic": "Economy"
+    },
+    {
+      "id": 3,
+      "question": "Consider the following statements regarding the climate finance discussions at COP31:\n1. Canada and the United Kingdom reaffirmed the $1.3 trillion climate finance goal at the summit.\n2. The $1.3 trillion figure is a broad, all-actors annual target, distinct from the smaller negotiated core public-finance commitment.\n3. India at COP31 put historical (cumulative) responsibility at the centre of the negotiations, invoking the principle of Common But Differentiated Responsibilities and Respective Capabilities.\nHow many of the above statements are correct?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "All three are borne out by COP31 reporting: Canada and the UK reaffirmed the $1.3 trillion goal, that figure is an all-actors annual target rather than the negotiated core public-finance commitment, and India pressed historical responsibility and CBDR-RC along with a proposed two-tier Just Transition Mechanism.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 4,
+      "question": "Kaliningrad, a Russian exclave on the Baltic coast that has figured in the news in the context of drone attacks in the region, lies between which one of the following pairs of countries?",
+      "options": [
+        "Estonia and Finland",
+        "Latvia and Belarus",
+        "Poland and Belarus",
+        "Lithuania and Poland"
+      ],
+      "answer": 3,
+      "explanation": "Kaliningrad is a Russian exclave on the Baltic coast sandwiched between Lithuania to the north and east and Poland to the south. It is separated from mainland Russia and is the object of the recent security tightening in the Baltic region.",
+      "topic": "Geography"
+    },
+    {
+      "id": 5,
+      "question": "Consider the following pairs of international instruments and the year in which they were adopted:\n1. Genocide Convention — 1948\n2. Convention on Certain Conventional Weapons — 1972\n3. United Nations Framework Convention on Climate Change — 1992\nHow many of the above pairs are correctly matched?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "The Genocide Convention was adopted in 1948 and the UNFCCC in 1992, so pairs 1 and 3 are correct. The Convention on Certain Conventional Weapons was concluded in 1980 and entered into force in 1983, not 1972 — the CCW is the forum under which the autonomous weapons talks are being held.",
+      "topic": "International Relations"
+    },
+    {
+      "id": 6,
+      "question": "Statement-I: The United States has barred data centre operators located outside the United States that use advanced American AI chips from providing cloud services to businesses in about two dozen countries, including China, Iran and Russia.\nStatement-II: The United States seeks to prevent adversaries from acquiring advanced AI computing power indirectly, through data centres located in third countries.\nWhich one of the following is correct in respect of the above statements?",
+      "options": [
+        "Both Statement-I and Statement-II are correct and Statement-II explains Statement-I",
+        "Both Statement-I and Statement-II are correct but Statement-II does not explain Statement-I",
+        "Statement-I is correct but Statement-II is incorrect",
+        "Statement-I is incorrect but Statement-II is correct"
+      ],
+      "answer": 0,
+      "explanation": "The US Commerce Department's interim final rule of 16 November bars non-US data centre operators using advanced American AI chips from serving businesses in about two dozen countries, including China, Iran and Russia. The measure is aimed precisely at closing the third-country route to advanced AI compute, so Statement-II explains Statement-I.",
+      "topic": "Science & Technology"
+    },
+    {
+      "id": 7,
+      "question": "The International Court of Justice has recently held Myanmar responsible for genocide against the Rohingya. Under the Charter of the United Nations, the enforcement of a judgment of the International Court of Justice rests with which one of the following?",
+      "options": [
+        "The General Assembly",
+        "The Secretary-General of the United Nations",
+        "The International Criminal Court",
+        "The Security Council"
+      ],
+      "answer": 3,
+      "explanation": "Article 94 of the UN Charter provides that if a party fails to comply with an ICJ judgment, the other party may have recourse to the Security Council, which may decide upon measures to give effect to the judgment. ICJ judgments are binding but not self-enforcing, and a P5 veto can block enforcement action.",
+      "topic": "International Relations"
+    },
+    {
+      "id": 8,
+      "question": "Consider the following statements:\n1. India's foreign exchange reserves declined by about $14 billion in the recent period.\n2. India's foreign exchange reserves comprise foreign currency assets, gold, Special Drawing Rights and the reserve tranche position in the International Monetary Fund.\n3. The Reserve Bank of India publishes data on foreign exchange reserves on a monthly basis.\nWhich of the statements given above is/are NOT correct?",
+      "options": [
+        "3 only",
+        "1 and 2 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 0,
+      "explanation": "The RBI publishes foreign exchange reserve data weekly, in its Weekly Statistical Supplement, not monthly — so only statement 3 is incorrect. The reported $14-billion fall and the four components of the reserves (foreign currency assets, gold, SDRs and the reserve tranche position) are correctly stated.",
+      "topic": "Economy"
+    },
+    {
+      "id": 9,
+      "question": "An Indian defence undertaking proposes to import drones in completely built-up (CBU) form for research and development purposes. In the light of India's current foreign trade policy on drones, which one of the following is correct?",
+      "options": [
+        "Such imports are 'free' and require only registration on the Digital Sky platform.",
+        "Such imports are 'restricted' and require a licence from the Directorate General of Foreign Trade, which may be granted for research and development, defence and security purposes.",
+        "Such imports are 'prohibited', and no licence can be granted for any purpose.",
+        "Such imports are permitted only through designated State trading enterprises."
+      ],
+      "answer": 1,
+      "explanation": "Imports of drones in CBU, CKD and SKD form are 'restricted' under DGFT policy, with licences granted for research and development, defence and security purposes. Digital Sky and the Drone Rules, 2021 govern civil drone operations and registration, not the import licensing decision.",
+      "topic": "Economy"
+    },
+    {
+      "id": 10,
+      "question": "With reference to the term 'rogue agents' recently in the news, which one of the following best describes them?",
+      "options": [
+        "Unregulated hedge funds operating outside the purview of securities regulators",
+        "Freelance intelligence operatives employed by private corporations",
+        "Autonomous artificial-intelligence systems allegedly operating beyond their intended safeguards",
+        "Unauthorised intermediaries operating in the electoral roll revision process"
+      ],
+      "answer": 2,
+      "explanation": "The term refers to autonomous AI systems allegedly operating beyond their intended safeguards, the subject of an investigation opened by Arizona into OpenAI and other firms. It is an AI safety and liability issue, not a securities-market or electoral-roll matter.",
+      "topic": "Science & Technology"
+    },
+    {
+      "id": 11,
+      "question": "Consider the following statements regarding the National Investigation Agency (NIA):\n1. The NIA was established under the National Investigation Agency Act, 2008.\n2. The NIA is empowered to investigate offences under the Acts specified in the Schedule to the NIA Act, and may take up a case referred to it by a State Government.\n3. The NIA functions under the administrative control of the Ministry of Defence.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3",
+        "1 and 2 only"
+      ],
+      "answer": 3,
+      "explanation": "The NIA was set up under the NIA Act, 2008 and investigates Scheduled offences, including cases referred by State Governments. It functions under the Ministry of Home Affairs, not the Ministry of Defence, so statement 3 is wrong.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 12,
+      "question": "Consider the following statements:\n1. The Supreme Court of the United States recently declined to allow the Trump administration to cancel billions of dollars in federal research grants that it had classified as 'DEI programs'.\n2. The Supreme Court of the United States is the highest appellate court in the United States and exercises the power of judicial review over executive action.\n3. In India, the power of judicial review of executive action is expressly conferred on the Supreme Court by Article 13 of the Constitution.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 0,
+      "explanation": "The US Supreme Court left intact a lower court ruling that the administration was probably acting illegally in targeting research projects labelled 'DEI', and it does exercise judicial review over executive action. Article 13, however, deals with laws inconsistent with Fundamental Rights; judicial review of executive action in India flows from Articles 32 and 226 and the constitutional scheme, not from Article 13.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 13,
+      "question": "Consider the following statements regarding the Supreme Court's recent orders on pollution:\n1. The Court directed real-time monitoring of sewage treatment plants, common effluent treatment plants and biogas plants, with live data uploads, in the Yamuna pollution case.\n2. The Court warned States and Union Territories that failure to curb Yamuna pollution could attract penalties.\n3. The Court held that pollution of the Yamuna is a matter exclusively for the riparian States and that the Union Government has no role in it.\nHow many of the above statements are correct?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "The Court ordered real-time monitoring of STPs, CETPs and biogas plants with live data uploads, and warned States and UTs of penalties for failing to control Yamuna pollution. Statement 3 is wrong: the Court has repeatedly treated inter-State river pollution as a matter requiring central and multi-State action, not an exclusively State subject.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 14,
+      "question": "The Strait of Hormuz, recently in the news following attacks on a commercial tanker, connects which one of the following?",
+      "options": [
+        "The Red Sea and the Gulf of Aden",
+        "The Black Sea and the Sea of Marmara",
+        "The Persian Gulf and the Gulf of Oman",
+        "The Mediterranean Sea and the Red Sea"
+      ],
+      "answer": 2,
+      "explanation": "The Strait of Hormuz links the Persian Gulf with the Gulf of Oman and thence the Arabian Sea, making it the world's most critical oil chokepoint. The Red Sea–Gulf of Aden link is the Bab-el-Mandeb, a different chokepoint.",
+      "topic": "Geography"
+    },
+    {
+      "id": 15,
+      "question": "Consider the following statements regarding sanction for prosecution under the Prevention of Corruption Act, 1988:\n1. Under Section 19 of the Act, prior sanction of the competent authority is a condition precedent for a court to take cognizance of an offence under the Act.\n2. Section 17A of the Act, inserted by the 2018 amendment, requires prior approval before an inquiry or investigation is initiated against a public servant.\n3. The Bombay High Court has recently set aside the sanction granted by ICICI Bank to prosecute its former chief in the ICICI-Videocon loan case.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 3,
+      "explanation": "Section 19 makes prior sanction a condition precedent for cognizance, and Section 17A (inserted in 2018) requires prior approval before initiating inquiry or investigation against a public servant. The Bombay High Court's order setting aside ICICI Bank's sanction removed the procedural foundation of the prosecution, so all three statements are correct.",
+      "topic": "Polity & Governance"
+    }
+  ]
+}

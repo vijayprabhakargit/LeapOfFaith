@@ -3,12 +3,12 @@
 > Generated from `config/staticSeries.ts` and `data/static-series/progress.json`.
 > The plan is the source of truth; this page is a reading aid.
 
-**Progress:** 1 / 347 lessons complete.
-**Next up:** The Grid We Live By: Latitude, Longitude and Time (`geo-foundations-2`) — Geography, lesson 2 of 5.
+**Progress:** 2 / 347 lessons complete.
+**Next up:** Reading the Earth: Maps, Scale and Projections (`geo-foundations-3`) — Geography, lesson 3 of 5.
 
 ## Subjects
 
-- **Geography** — 1/60 lessons (15 units)
+- **Geography** — 2/60 lessons (15 units)
 - **Polity, Constitution & Governance** — 0/40 lessons (13 units)
 - **Economy & Development** — 0/38 lessons (12 units)
 - **History, Freedom Struggle & World History** — 0/35 lessons (9 units)
@@ -22,13 +22,13 @@
 
 ## Geography
 
-### Foundations: How Geography Sees the World — 1/5 · in progress
+### Foundations: How Geography Sees the World — 2/5 · in progress
 
 _Geography — Foundations of the discipline; Earth in the solar system_
 
 - [x] The World Before the Map: Geography as a Way of Seeing (`geo-foundations-1`) — 2026-11-21
-- [ ] The Grid We Live By: Latitude, Longitude and Time (`geo-foundations-2`) — **next**
-- [ ] Reading the Earth: Maps, Scale and Projections (`geo-foundations-3`)
+- [x] The Grid We Live By: Latitude, Longitude and Time (`geo-foundations-2`) — 2026-11-22
+- [ ] Reading the Earth: Maps, Scale and Projections (`geo-foundations-3`) — **next**
 - [ ] The Earth in Motion: Rotation, Revolution and the Seasons (`geo-foundations-4`)
 - [ ] Inside the Earth: Layers, Seismic Waves and the Geoid (`geo-foundations-5`)
 
