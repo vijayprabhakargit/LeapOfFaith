@@ -102,16 +102,30 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://leapoffaith
             >
           </div>
           <div style="margin-top: 8px">Built for daily revision. Not affiliated with UPSC.</div>
-          <div style="margin-top: 12px">
-            <a class="bmc" href="https://buymeacoffee.com/leapoffaith" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 8h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8Z" />
-                <path d="M16 9h2a2 2 0 0 1 0 4h-2" />
-                <path d="M7 3v2M11 2v3M15 3v2" />
+          <details class="support">
+            <summary class="support-btn">
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20s-7-4.35-7-9a4 4 0 0 1 7-2.65A4 4 0 0 1 19 11c0 4.65-7 9-7 9Z" />
               </svg>
-              Buy me a coffee
-            </a>
-          </div>
+              Support this project
+            </summary>
+            <div class="support-pane">
+              <strong>Free and open source</strong>
+              <p>
+                Leap of Faith is free to read — no subscription, no paywall, no money charged. It is built and
+                maintained in personal time, so any support is genuinely appreciated.
+              </p>
+              <a class="bmc" href="https://buymeacoffee.com/leapoffaith" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 8h12v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8Z" />
+                  <path d="M16 9h2a2 2 0 0 1 0 4h-2" />
+                  <path d="M7 3v2M11 2v3M15 3v2" />
+                </svg>
+                Buy me a coffee
+              </a>
+              <p class="support-note">Support is optional — contributing code or reporting bugs is just as valuable.</p>
+            </div>
+          </details>
         </div>
       </div>
     </footer>
@@ -136,6 +150,15 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://leapoffaith
         const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
         localStorage.setItem("tdb-theme", next);
         apply(next);
+      });
+
+      document.querySelectorAll<HTMLDetailsElement>("details.support").forEach((pane) => {
+        document.addEventListener("click", (e) => {
+          if (pane.open && !pane.contains(e.target as Node)) pane.open = false;
+        });
+        pane.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") pane.open = false;
+        });
       });
     </script>
   </body>
