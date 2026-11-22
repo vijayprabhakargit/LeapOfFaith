@@ -16,7 +16,7 @@ const topics = quiz ? [...new Set(quiz.questions.map((q) => q.topic))].slice(0, 
   quiz && (
     <a class="quiz-tile" href={`/quiz/${quiz.date}/`}>
       <span class="quiz-tile-kicker">Daily quiz</span>
-      <span class="quiz-tile-title">Test yourself on the past week's news</span>
+      <span class="quiz-tile-title">Test yourself on today's edition + the last 6 days</span>
       <span class="quiz-tile-meta">
         {count} questions{topics.length > 0 && ` · ${topics.join(" · ")}`}
       </span>
