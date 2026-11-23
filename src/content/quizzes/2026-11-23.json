@@ -1,0 +1,204 @@
+{
+  "date": "2026-11-23",
+  "generatedAt": "2026-11-23T02:17:26.599Z",
+  "title": "Daily Prelims Quiz",
+  "windowStart": "2026-11-17",
+  "windowEnd": "2026-11-23",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Consider the following statements:\n1. Under Article 137, the Supreme Court has the power to review any judgment pronounced or order made by it.\n2. A review petition is not a continuation of the original appeal and is ordinarily heard by the same Bench that passed the original order.\n3. In the Karthigai Deepam matter, Tamil Nadu's stated ground for review is that the interim order was passed without hearing the State.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 0,
+      "explanation": "Article 137 confers review jurisdiction on the Supreme Court, and a review petition is not a continuation of the appeal and is ordinarily heard by the same Bench. Tamil Nadu's stated ground was that the interim order granted final relief at the interlocutory stage, not that it was passed without hearing the State.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 2,
+      "question": "Consider the following statements regarding the India–European Union trade relationship:\n1. India and the European Union are set to sign their long-pending free trade agreement on December 16 during the Prime Minister's Brussels visit.\n2. India–EU FTA negotiations began in 2007, were suspended in 2013 and relaunched in 2022.\n3. The European Union is India's largest trading partner in goods.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 3,
+      "explanation": "The India–EU FTA is expected to be signed on December 16 during PM Modi's Brussels visit, with negotiations having begun in 2007, been suspended in 2013 and relaunched in 2022. The EU is India's largest trading partner in goods.",
+      "topic": "Economy"
+    },
+    {
+      "id": 3,
+      "question": "Consider the following statements regarding COP31:\n1. COP31, held in Antalya, Türkiye, ended without a major deal after record extra time.\n2. The central deadlock was over whether the outcome text should mention fossil fuels; the EU declined to endorse a pact that omitted them.\n3. The COP31 President faced criticism for calling it the 'best COP ever' amid the deadlock.\nHow many of the above statements are correct?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "COP31 in Antalya ended without a major deal after record extra time, with the deadlock centred on fossil-fuel language and the EU refusing to endorse a text omitting it. The COP31 President was criticised for calling it the 'best COP ever' amid the deadlock.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 4,
+      "question": "The Gulf of Finland, recently in the news after a drone strike on a Russia-bound cargo ship, is bordered by which one of the following groups of countries?",
+      "options": [
+        "Finland, Estonia and Russia",
+        "Sweden, Finland and Russia",
+        "Poland, Lithuania and Russia",
+        "Denmark, Germany and Poland"
+      ],
+      "answer": 0,
+      "explanation": "The Gulf of Finland is the easternmost arm of the Baltic Sea, bordered by Finland, Estonia and Russia, with St Petersburg at its head. The drone strike on a Russia-bound cargo ship occurred in this gulf.",
+      "topic": "Geography"
+    },
+    {
+      "id": 5,
+      "question": "Consider the following pairs:\n1. Karthigai Deepam — a festival of lights observed in Tamil Nadu in the Tamil month of Karthigai\n2. Thiruparankundram — a rock-cut temple located near Madurai\n3. Deepathoon — the temple flagstaff, distinct from the lamp pillar\nHow many of the above pairs are correctly matched?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "Karthigai Deepam is a Tamil festival of lights observed in the month of Karthigai, and Thiruparankundram is a rock-cut temple near Madurai. Deepathoon refers to a lamp pillar, not the temple flagstaff, so the third pair is incorrectly matched.",
+      "topic": "History & Culture"
+    },
+    {
+      "id": 6,
+      "question": "Statement-I: The Chief Justice of India has called for clear guidelines on the use of artificial intelligence in legal research, including disclosure norms.\nStatement-II: AI detection tools are reliable enough to be the sole basis for penalising students for academic misconduct.\nWhich one of the following is correct in respect of the above statements?",
+      "options": [
+        "Both Statement-I and Statement-II are correct and Statement-II explains Statement-I",
+        "Both are correct but Statement-II does not explain Statement-I",
+        "Statement-I is correct but Statement-II is incorrect",
+        "Statement-I is incorrect but Statement-II is correct"
+      ],
+      "answer": 2,
+      "explanation": "CJI Surya Kant called for AI guidelines and disclosure norms in legal research, but he also stated that no student should be penalised solely on the basis of an AI detection tool. Hence Statement-I is correct and Statement-II is incorrect.",
+      "topic": "Science & Technology"
+    },
+    {
+      "id": 7,
+      "question": "The recent trilateral summit involving the United States, China and Russia, followed by a joint 'peace declaration', was held in which one of the following cities?",
+      "options": [
+        "Shenzhen",
+        "Antalya",
+        "Manila",
+        "Brussels"
+      ],
+      "answer": 0,
+      "explanation": "The US–China–Russia trilateral meeting was held in Shenzhen, China, during the US President's Asia tour, after which China and Russia issued a joint document described as a 'peace declaration'.",
+      "topic": "International Relations"
+    },
+    {
+      "id": 8,
+      "question": "Consider the following statements:\n1. Input Tax Credit under GST allows a registered taxpayer to set off tax paid on inputs against tax payable on output.\n2. The GST Council is a statutory body constituted under the Central Goods and Services Tax Act, 2017.\n3. The recent draft GST changes aim to restrict input tax credit to protect government revenue.\nWhich of the statements given above is/are NOT correct?",
+      "options": [
+        "1 and 2 only",
+        "1 and 3 only",
+        "2 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 2,
+      "explanation": "The GST Council is a constitutional body under Article 279A, not a statutory body under the CGST Act. The recent draft GST changes aim to protect input tax credit, not restrict it, so statements 2 and 3 are not correct.",
+      "topic": "Economy"
+    },
+    {
+      "id": 9,
+      "question": "A State government proposes to coordinate pollution-control measures with neighbouring States based on a common airshed rather than city-centric curbs. Which one of the following best describes this approach?",
+      "options": [
+        "A city-wise emergency action plan under GRAP",
+        "A blanket ban on all construction activity in the State",
+        "A regional, airshed-based strategy covering multiple administrative jurisdictions",
+        "Relocation of all polluting industries to neighbouring States"
+      ],
+      "answer": 2,
+      "explanation": "An airshed-based approach coordinates pollution control across neighbouring States and administrative boundaries, as Delhi has discussed with the World Bank. It is distinct from city-centric GRAP emergency measures.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 10,
+      "question": "Benghazi, recently in the news after a drone attack on a Russian navy vessel at its naval base, is located in which one of the following countries?",
+      "options": [
+        "Syria",
+        "Yemen",
+        "Sudan",
+        "Libya"
+      ],
+      "answer": 3,
+      "explanation": "Benghazi is in eastern Libya and hosts a naval base; it is the seat of the country's eastern administration, while Tripoli is the capital and seat of the UN-recognised Government of National Unity.",
+      "topic": "Geography"
+    },
+    {
+      "id": 11,
+      "question": "Consider the following statements:\n1. The Election Commission of India is a constitutional body under Article 324 of the Constitution.\n2. The Special Intensive Revision (SIR) is a house-to-house verification of electoral rolls.\n3. The Delhi Chief Electoral Officer was transferred to Jammu and Kashmir during the SIR process.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 3,
+      "explanation": "The ECI is a constitutional body under Article 324, SIR involves house-to-house verification of electoral rolls, and the Delhi Chief Electoral Officer was transferred to Jammu and Kashmir during the SIR process.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 12,
+      "question": "Consider the following statements:\n1. IndusInd Bank has terminated the employment of its former MD & CEO and is seeking to recover a portion of his pay.\n2. A 'clawback' provision allows a company to recover incentive-based compensation from an executive in specified circumstances.\n3. The Reserve Bank of India has mandated that all private banks must claw back the entire remuneration of their former CEOs in every case.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 0,
+      "explanation": "IndusInd Bank ended the employment of its former MD & CEO and is moving to recover part of his pay, and a clawback allows recovery of incentive-based compensation in specified circumstances. The RBI has not mandated clawback of entire remuneration in every case.",
+      "topic": "Economy"
+    },
+    {
+      "id": 13,
+      "question": "The IndiaAI Mission, which forms part of India's AI regulatory and promotional stack, was approved in which one of the following years?",
+      "options": [
+        "2021",
+        "2024",
+        "2022",
+        "2023"
+      ],
+      "answer": 1,
+      "explanation": "The IndiaAI Mission was approved in March 2024 with an outlay of about Rs 10,372 crore. It complements India's AI regulatory stack, including the IT Rules, 2021 and the DPDP Act, 2023.",
+      "topic": "Science & Technology"
+    },
+    {
+      "id": 14,
+      "question": "The Loss and Damage Fund under the UNFCCC was operationalised at which one of the following COP sessions?",
+      "options": [
+        "COP26, Glasgow",
+        "COP28, Dubai",
+        "COP27, Sharm el-Sheikh",
+        "COP31, Antalya"
+      ],
+      "answer": 1,
+      "explanation": "The Loss and Damage Fund was operationalised at COP28 in Dubai in 2023. COP31 in Antalya discussed climate finance but did not operationalise the fund.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 15,
+      "question": "Consider the following statements regarding the National Green Tribunal:\n1. The National Green Tribunal was established under the National Green Tribunal Act, 2010.\n2. It has appellate jurisdiction over orders passed under specified environmental laws.\n3. Its orders are subject to appeal before the Supreme Court.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 3,
+      "explanation": "The NGT was established under the NGT Act, 2010, exercises appellate jurisdiction over specified environmental laws, and its orders are appealable to the Supreme Court. It is a specialised environmental forum, not a body under the Environment (Protection) Act, 1986.",
+      "topic": "Polity & Governance"
+    }
+  ]
+}

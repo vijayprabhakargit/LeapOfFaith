@@ -1,7 +1,7 @@
 {
   "version": 1,
   "startedOn": "2026-11-21",
-  "updatedAt": "2026-11-22T04:09:01.367Z",
+  "updatedAt": "2026-11-23T02:16:00.778Z",
   "completed": [
     {
       "lessonId": "geo-foundations-1",
@@ -12,26 +12,31 @@
       "lessonId": "geo-foundations-2",
       "unitId": "geo-foundations",
       "date": "2026-11-22"
+    },
+    {
+      "lessonId": "geo-foundations-3",
+      "unitId": "geo-foundations",
+      "date": "2026-11-23"
     }
   ],
   "current": {
     "unitId": "geo-foundations",
-    "lessonId": "geo-foundations-3"
+    "lessonId": "geo-foundations-4"
   },
   "lastHandoff": {
-    "date": "2026-11-22",
-    "lessonId": "geo-foundations-2",
+    "date": "2026-11-23",
+    "lessonId": "geo-foundations-3",
     "covered": [
-      "Latitude and longitude as angular coordinates, with the crucial asymmetry that latitude has a natural zero and longitude does not.",
-      "Parallels versus meridians, and the variation in the length of a degree of longitude from about 111 km at the Equator to about 56 km at 60°N.",
-      "Great circles and small circles, with the Equator as the only great-circle parallel.",
-      "The five major circles (Equator, tropics at 23½°, polar circles at 66½°) derived from the Earth's axial tilt, and their consequences for insolation, climate belts, Coriolis strength and day length.",
-      "Longitude as time: 15° = 1 hour, 1° = 4 minutes, 1′ of arc = 4 seconds, with Delhi's ~21-minute local lag behind IST as the worked Indian example.",
-      "Local versus standard time, the 1884 International Meridian Conference and the choice of Greenwich, and why time-zone boundaries are political rather than geometric.",
-      "India's standard meridian at 82°30′E (UTC+5:30), the arithmetic behind the half-hour offset, and the two-time-zone debate.",
-      "The International Date Line: its zig-zag, the Kiribati (1995) and Samoa (2011) adjustments, and the westward-add / eastward-subtract rule."
+      "The necessity of distortion: sphere versus plane, Gauss's intrinsic-curvature argument, the orange-peel demonstration.",
+      "The four map properties — area, shape, distance, direction — and why no projection preserves all four; Tissot's indicatrix as the audit tool.",
+      "Scale in three forms: statement, representative fraction (unit-free) and graphical (survives reproduction); the 1:50,000 worked arithmetic (1 cm = 500 m).",
+      "Large versus small scale explained via the size of the fraction, with the Indian ladder from cadastral 1:4,000 to world 1:50,000,000.",
+      "The three projection families — cylindrical/Mercator (1569, conformal, rhumb lines straight, area inflated at high latitudes), conic (mid-latitude east–west extents, meridians converging on an apex), azimuthal (true direction from the centre, polar maps, UN emblem); plus compromise projections (Robinson, Winkel Tripel from 1998).",
+      "Topographic sheets and conventional signs; contour rules (no crossing, spacing = slope, rings = hill, hachures = depression, V points upstream); gradient as vertical interval divided by horizontal equivalent; spot heights and trigonometrical stations.",
+      "Remote sensing (passive versus active sensors; four resolutions; IRS from 1988, Cartosat, RISAT, Bhuvan) versus GIS (layering and overlay analysis), with GNSS as the positioning leg.",
+      "The closing argument that every map is an argument — projection, scale, classification and omission as both technical and political choices."
     ],
-    "next": "Lesson 3: Reading the Earth — Maps, Scale and Projections. Map scale in statement, representative fraction and graphical forms; large versus small-scale maps; the necessity of distortion; Mercator, conic and azimuthal projections; topographic sheets, contours and conventional signs; remote sensing and GIS; and the closing argument that every map is an argument.",
-    "notes": "The Eratosthenes callback was reused deliberately in the opening of Section 1 (reference frames) and again in Section 3 (measuring an arc on a sphere; the longitude problem and Harrison's chronometers). Do not re-explain the oblate spheroid or the solar-system material. The Delhi–New York great-circle image was carried forward in Section 1 as a bridge to the projection lesson — pick it up again in Lesson 3 when discussing why Mercator's straight lines were a navigational triumph and a cartographic distortion. Figure 'latitude-belts' is reusable whenever climate belts, insolation angles or day length come up (monsoon, pressure belts, biomes). Figure 'time-strip' is reusable in the context of globalisation, markets and geopolitics. Figure 'india-meridian' is reusable in the two-time-zone debate and in any discussion of India's physiographic extent. The 'map as argument' stance from Lesson 1 was restated at the end of Section 5 and should be the hinge into Lesson 3."
+    "next": "Lesson 4: The Earth in Motion — Rotation, Revolution and the Seasons. Rotation and revolution, axial tilt, circumpolar stars, the apparent motion of the Sun, solstices and equinoxes, day length and seasons, the analemma, why the tropics have a different seasonality, and a preview of the Coriolis effect.",
+    "notes": "The Delhi–New York great-circle image from Lesson 2 was deliberately paid off in the Mercator paragraph of Section 3 — the straight line on a Mercator chart is the rhumb line and it is longer than the great circle. Reuse that pairing whenever navigation, aviation routes or map distortion comes up. The 'map as argument' stance from Lesson 1 was restated at the close of Section 6 and should now be treated as a settled premise rather than something to re-establish. Figure 'three-projections' is reusable in any discussion of map politics, colonial cartography or the Mercator debate; figure 'contour-reading' is reusable for landforms, slope, drainage and site-selection questions in settlement and agriculture; figure 'scale-ladder' is reusable whenever cartographic generalisation or the detail-versus-coverage trade-off appears. Figure 'latitude-belts' from Lesson 2 is explicitly carried forward into Lesson 4 — do not rebuild it. The oblate spheroid and the solar-system material were not revisited and should stay in Lesson 1. The Eratosthenes and Harrison callbacks are now spent; retire them."
   }
 }
