@@ -307,6 +307,7 @@ read the paper. Everything here is built and maintained in personal time, so any
 appreciated and goes straight into keeping the daily editions coming.
 
 - **Buy me a coffee** — [buymeacoffee.com/leapoffaith](https://buymeacoffee.com/leapoffaith)
+- **Patreon** — [patreon.com/Leap_Of_Faith](https://patreon.com/Leap_Of_Faith)
 - **UPI** — `odvprabhakar-1@okaxis`
 
 Support is entirely optional. Contributing code, reporting bugs or suggesting sources is just as valuable.

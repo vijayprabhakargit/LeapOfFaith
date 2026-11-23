@@ -1230,6 +1230,12 @@ footer.site .support-pane .support-note {
   font-size: 11px;
 }
 
+footer.site .support-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 footer.site a.bmc {
   display: inline-flex;
   align-items: center;
