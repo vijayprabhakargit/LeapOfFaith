@@ -1,0 +1,204 @@
+{
+  "date": "2026-11-24",
+  "generatedAt": "2026-11-24T03:08:58.718Z",
+  "title": "Daily Prelims Quiz",
+  "windowStart": "2026-11-18",
+  "windowEnd": "2026-11-24",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Consider the following statements regarding the Special Intensive Revision (SIR) of electoral rolls:\n1. The Supreme Court has directed the Election Commission of India to expand the number of appellate tribunals handling appeals arising from the SIR in West Bengal.\n2. Appeals against orders of the Electoral Registration Officer lie to an appellate authority designated by the Election Commission, ordinarily the District Magistrate or Additional District Magistrate.\n3. Under Section 22 of the Representation of the People Act, 1950, the appeal window is 30 days from the date of the Electoral Registration Officer's order.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "2 and 3 only",
+        "1 and 2 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 1,
+      "explanation": "Statements 1 and 2 are correct: the Court asked the ECI to add appellate tribunals for SIR appeals in West Bengal, and Section 22 of the RP Act, 1950 routes ERO-order appeals to an ECI-designated authority, ordinarily the DM or ADM. Statement 3 is the trap — the Section 22 window is 15 days, not 30.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 2,
+      "question": "Consider the following statements regarding the recent developments at Nvidia:\n1. Jensen Huang was reinstated as the company's President and CEO days after resigning, following a board decision.\n2. Nvidia shares rose about 31 per cent on the reinstatement, adding roughly $1 trillion to the company's market value.\n3. The board's decision was taken without any input from the United States government.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 0,
+      "explanation": "Statements 1 and 2 are correct as reported. Statement 3 is the entity/absolute trap: the board said it acted after 'input from senior levels of the United States government', and the President claimed credit for the deal.",
+      "topic": "Economy"
+    },
+    {
+      "id": 3,
+      "question": "Consider the following statements regarding solid waste management in India:\n1. The Solid Waste Management Rules are framed under the Water (Prevention and Control of Pollution) Act, 1974.\n2. The Supreme Court has recently flagged gaps in the implementation of the Solid Waste Management Rules, 2026.\n3. Under these Rules, the Union Government alone is responsible for the collection, segregation and disposal of municipal solid waste.\nHow many of the above statements are correct?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "Only statement 2 is correct — the Court flagged implementation gaps in the Solid Waste Management Rules, 2026 while hearing the Yamuna pollution matter. Statement 1 is wrong because these Rules are framed under the Environment (Protection) Act, 1986, and statement 3 is wrong because collection, segregation and disposal are the responsibility of local bodies, not the Union Government alone.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 4,
+      "question": "Chabahar port, developed with Indian participation in Iran and figuring in discussions on sanctions and connectivity, lies on which one of the following?",
+      "options": [
+        "Persian Gulf",
+        "Strait of Hormuz",
+        "Gulf of Oman",
+        "Caspian Sea"
+      ],
+      "answer": 2,
+      "explanation": "Chabahar lies on the Gulf of Oman, outside the Strait of Hormuz — which is precisely why it is valued as a sanctions-resilient gateway for the International North–South Transport Corridor. The Strait of Hormuz is a chokepoint, not a location of the port.",
+      "topic": "Geography"
+    },
+    {
+      "id": 5,
+      "question": "Consider the following pairs:\n1. Fifth Schedule — Article 244(1)\n2. Sixth Schedule — Article 244(1)\n3. PESA, 1996 — Extension of Part IX of the Constitution to Fifth Schedule Areas\nHow many of the above pairs are correctly matched?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "Pairs 1 and 3 are correctly matched. Pair 2 is the trap: the Sixth Schedule is governed by Article 244(2), while Article 244(1) covers the Fifth Schedule — a classic article-swap.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 6,
+      "question": "Statement-I: Nvidia operates its own semiconductor fabrication plants.\nStatement-II: Nvidia designs GPUs and AI accelerators but relies on external foundries for manufacturing.\nWhich one of the following is correct in respect of the above statements?",
+      "options": [
+        "Both Statement-I and Statement-II are correct and Statement-II explains Statement-I",
+        "Both Statement-I and Statement-II are correct but Statement-II does not explain Statement-I",
+        "Statement-I is correct but Statement-II is incorrect",
+        "Statement-I is incorrect but Statement-II is correct"
+      ],
+      "answer": 3,
+      "explanation": "Nvidia is a 'fabless' designer — it designs chips but does not own fabrication plants, depending on foundries such as TSMC. Hence Statement-I is incorrect while Statement-II is correct, which is why the fabless model makes Nvidia sensitive to export controls and foundry capacity.",
+      "topic": "Science & Technology"
+    },
+    {
+      "id": 7,
+      "question": "The India–Bangladesh Extradition Treaty, invoked in the context of Dhaka's demand for the return of former Prime Minister Sheikh Hasina, was signed in which one of the following years?",
+      "options": [
+        "2010",
+        "2015",
+        "2013",
+        "2018"
+      ],
+      "answer": 2,
+      "explanation": "The treaty was signed in January 2013; India's extradition process is governed by the Extradition Act, 1962. The 2010 and 2015 dates are decoys drawn from other India–Bangladesh agreements.",
+      "topic": "International Relations"
+    },
+    {
+      "id": 8,
+      "question": "Consider the following statements:\n1. India is set to impose a 162.5 per cent duty on bulk Scotch imports.\n2. The measure comes amid a trade standoff between India and the United Kingdom.\n3. The duty is being imposed under the Foreign Exchange Management Act, 1999.\nWhich of the statements given above is/are NOT correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "3 only"
+      ],
+      "answer": 3,
+      "explanation": "Statements 1 and 2 are correct as reported. Statement 3 is the constitutional-vs-statutory trap: import duties are levied under customs law (the Customs Act, 1962 and Customs Tariff Act, 1975), not FEMA, which governs foreign exchange transactions.",
+      "topic": "Economy"
+    },
+    {
+      "id": 9,
+      "question": "An AI company announces that its model has produced a proof of a long-standing unsolved mathematical conjecture. Which one of the following is the most appropriate response in the light of established scientific practice?",
+      "options": [
+        "The claim should be accepted once the company's own researchers verify it internally",
+        "The claim should be accepted only after independent verification by mathematicians, since AI systems can generate plausible but incorrect outputs",
+        "The claim should be treated as established because AI systems cannot generate false mathematical claims",
+        "The claim should be rejected outright because AI cannot assist mathematical research"
+      ],
+      "answer": 1,
+      "explanation": "Scientific claims, including AI-generated proofs, require independent verification — AI systems can produce confident but erroneous outputs. Options (a) and (c) rely on self-certification or an absolute claim about AI reliability, and (d) is an over-correction.",
+      "topic": "Science & Technology"
+    },
+    {
+      "id": 10,
+      "question": "Consider the following statements regarding the Merchant Discount Rate (MDR) in digital payments:\n1. MDR is the fee a merchant pays to a bank or payment service provider for accepting a digital payment.\n2. The Reserve Bank of India has barred banks from levying MDR on UPI transactions to merchants.\n3. Reports indicate that the framework for MDR on UPI is being finalised without any delay.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 0,
+      "explanation": "Statements 1 and 2 are correct — MDR is the merchant-side fee, and the RBI's zero-MDR mandate on UPI merchant transactions has been in force since 2020. Statement 3 is the trap: reports indicate the UPI MDR framework is facing delays, not proceeding without delay.",
+      "topic": "Economy"
+    },
+    {
+      "id": 11,
+      "question": "Consider the following statements:\n1. The Hindu Marriage Act, 1955 prohibits a marriage between sapindas in all cases, without any exception for custom or usage.\n2. The Supreme Court has recently flagged the health risks associated with marriages between close relatives.\n3. Consanguineous marriages are associated with an increased incidence of certain inherited disorders.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "1 and 3 only",
+        "1, 2 and 3",
+        "2 and 3 only"
+      ],
+      "answer": 3,
+      "explanation": "Statements 2 and 3 are correct — the Court flagged the health risks of close-relative marriages, and consanguinity raises the risk of autosomal recessive disorders. Statement 1 is the absolute-word trap: the Act prohibits sapinda marriages unless the custom or usage governing each party permits them.",
+      "topic": "Society & Social Justice"
+    },
+    {
+      "id": 12,
+      "question": "Which one of the following best describes 'jobless growth'?",
+      "options": [
+        "Growth in output accompanied by stagnant or falling employment",
+        "Growth driven entirely by the services sector",
+        "Growth achieved through capital-intensive public investment",
+        "Growth accompanied by rising real wages"
+      ],
+      "answer": 0,
+      "explanation": "Jobless growth means output expands without a commensurate rise in employment. The other options describe sectoral composition, the mode of investment or wage outcomes, none of which by itself defines the phenomenon.",
+      "topic": "Economy"
+    },
+    {
+      "id": 13,
+      "question": "Consider the following statements regarding the development package announced during Nepali Prime Minister Balen Shah's recent visit to Delhi:\n1. India announced a development package of over ₹15,000 crore for Nepal.\n2. Eight agreements were signed covering trade, infrastructure, energy and technology.\n3. India will set up an offshore IIT campus in Sri Lanka as part of the package.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 3 only",
+        "2 and 3 only",
+        "1 and 2 only",
+        "1, 2 and 3"
+      ],
+      "answer": 2,
+      "explanation": "Statements 1 and 2 are correct — the package exceeded ₹15,000 crore and eight agreements were signed. Statement 3 is an entity swap: the offshore IIT campus is to come up in Nepal, not Sri Lanka.",
+      "topic": "International Relations"
+    },
+    {
+      "id": 14,
+      "question": "The 'Antalya compact', recently in the news in the context of COP31, relates to which one of the following?",
+      "options": [
+        "Fossil fuel phase-out",
+        "Climate finance for adaptation",
+        "Carbon border adjustment",
+        "Energy-efficient buildings"
+      ],
+      "answer": 3,
+      "explanation": "The proposed Antalya compact concerns energy-efficient buildings and was among the negotiating items at COP31. Fossil fuel phase-out language and climate finance were separate, and more contentious, strands of the same negotiation.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 15,
+      "question": "The 'Board of Peace' recently in the news is associated with which one of the following?",
+      "options": [
+        "A UN peacekeeping mission in the Democratic Republic of Congo",
+        "The US President's plan for Gaza",
+        "A Saudi-led coalition mechanism for Yemen",
+        "An ASEAN mechanism for the South China Sea"
+      ],
+      "answer": 1,
+      "explanation": "The Board of Peace is associated with the US President's Gaza plan and has faulted both Israel and Hamas for the failure to move beyond the ceasefire. The other options are unrelated multilateral or coalition mechanisms.",
+      "topic": "International Relations"
+    }
+  ]
+}

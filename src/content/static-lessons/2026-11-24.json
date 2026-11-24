@@ -1,0 +1,309 @@
+{
+  "date": "2026-11-24",
+  "generatedAt": "2026-11-24T03:07:23.892Z",
+  "title": "The Earth in Motion: Rotation, Revolution and the Seasons",
+  "subtitle": "Why the tropics have two summers, why the Arctic has a midnight sun, and why the Earth is closest to the Sun in the middle of the northern winter.",
+  "readMinutes": 14,
+  "hook": "Every map you drew last week was a still photograph of a planet that never stands still. The Earth spins at roughly 1,670 km/h at the equator and races around the Sun at about 29.8 km per second — and it does both while leaning over at 23.5 degrees. Almost everything we call climate, from the monsoon to the trade winds to the midnight sun, falls out of those three facts. Let us take them one at a time.",
+  "sections": [
+    {
+      "heading": "Two motions, one planet",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Stop reading for a second and notice what you are standing on. The Earth is doing two quite separate things at once. It is spinning about its own axis — that is rotation — and it is also travelling around the Sun — that is revolution. Rotation is west to east, which is why the Sun, the Moon and every star appear to rise in the east and set in the west. Seen from directly above the North Pole, the spin is anticlockwise. Revolution is anticlockwise too, and it takes a year."
+        },
+        {
+          "type": "paragraph",
+          "text": "Here is a detail that trips people up. The Earth takes 23 hours 56 minutes and 4 seconds to complete one spin relative to the distant stars. That is the sidereal day. But the day we live by — the solar day, from one noon to the next — is 24 hours. Why the four-minute gap? Because while the Earth was spinning, it also moved a little way along its orbit. To bring the Sun back over the same meridian, the planet has to turn a fraction more than one full turn. Imagine walking around a lamp while pirouetting: to face the lamp again, you must spin slightly past the full circle each time."
+        },
+        {
+          "type": "paragraph",
+          "text": "The orbit itself is not a circle but an ellipse, with the Sun at one focus. The Earth therefore moves faster when it is nearer the Sun and slower when it is farther away. The plane in which this journey happens is called the plane of the ecliptic. And now the crucial fact: the Earth's axis is not perpendicular to that plane. It leans. The angle of lean is about 23.5 degrees from the perpendicular, which is the same as saying the axis makes an angle of about 66.5 degrees with the plane of the orbit. Hold on to those two numbers — 23.5 and 66.5. They will explain almost everything that follows."
+        }
+      ],
+      "refs": [
+        1,
+        3
+      ]
+    },
+    {
+      "heading": "The tilted axis: the one fact that makes seasons",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The lean is not a wobble that changes direction through the year. The axis stays parallel to itself at every point of the orbit — astronomers call this axial parallelism. Right now, and on every day of the year, the north end of the Earth's axis points towards roughly the same spot in the sky, close to the star Polaris. What changes is not the direction of the lean but the Earth's position relative to the Sun. In June, the northern half of the globe is leaning towards the Sun. In December, it is leaning away. That is the whole mechanism."
+        },
+        {
+          "type": "paragraph",
+          "text": "But surely, a student objects, the Earth is closer to the Sun at some times than others — does that not matter? It does, but far less than you would think. The orbit's eccentricity is only about 0.0167. The Earth is roughly 147.1 million km from the Sun at its closest point and about 152.1 million km at its farthest — a difference of barely three per cent. Because received energy falls with the square of distance, that changes the intensity of sunlight by only about seven per cent. The tilt, by contrast, changes both the angle at which sunlight strikes the ground and the number of hours it shines."
+        },
+        {
+          "type": "paragraph",
+          "text": "Put numbers on it for Delhi. At local noon on 21 June, the Sun stands about 84.8 degrees above the horizon and the day lasts about 13 hours 49 minutes. On 22 December, the noon Sun is only about 38 degrees high and the day lasts about 10 hours 11 minutes. Multiply the day length by the effectiveness of the slanting rays and the daily dose of sunshine in June is more than double that of December. A seven per cent distance effect cannot compete with that. Tilt wins, and it wins easily."
+        },
+        {
+          "type": "callout",
+          "title": "The cleanest proof",
+          "text": "If distance from the Sun caused the seasons, both hemispheres would have summer at the same time. They do not — they have opposite seasons. And the Earth is actually nearest the Sun in early January, in the depths of the northern winter. Perihelion falls in the first week of January; aphelion in the first week of July. The northern winter happens when we are closest to the Sun, which is the neatest possible refutation of the distance theory.",
+          "tone": "note"
+        },
+        {
+          "type": "paragraph",
+          "text": "One footnote worth filing away. The tilt is not perfectly constant over geological time. It oscillates between roughly 22.1 and 24.5 degrees on a cycle of about 41,000 years, and it is one of the orbital rhythms — the Milankovitch cycles — that pace the ice ages. For a human lifetime, though, 23.5 degrees is as good as a constant."
+        }
+      ],
+      "refs": [
+        1,
+        5
+      ]
+    },
+    {
+      "heading": "The Sun's annual journey: solstices and equinoxes",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Imagine a pin stuck into the globe at the point where the Sun is directly overhead at local noon. That point is called the subsolar point, and its latitude is the Sun's declination. Because of the tilt, the subsolar point is never fixed. Through the year it migrates steadily between 23.5 degrees north — the Tropic of Cancer — and 23.5 degrees south, the Tropic of Capricorn, and back again. Everything else follows from that migration."
+        },
+        {
+          "type": "figure",
+          "figureId": "revolution-four-positions"
+        },
+        {
+          "type": "paragraph",
+          "text": "Four dates mark the turning points. Around 21 June, the subsolar point reaches the Tropic of Cancer and turns back — the June solstice, and the northern summer. Around 22 or 23 September it crosses the equator heading south — the September equinox. Around 22 December it touches the Tropic of Capricorn and reverses — the December solstice, the northern winter. And around 21 March it crosses the equator heading north — the March equinox. The word solstice comes from the Latin for 'sun standing still', because for a few days the noon altitude of the Sun barely changes before it reverses. Equinox means 'equal night': on those two dates, day and night are of nearly equal length everywhere on Earth, and the Sun rises due east and sets due west."
+        },
+        {
+          "type": "paragraph",
+          "text": "Now the question you must be able to answer cold. What happens at the Arctic Circle on the June solstice? The Arctic Circle sits at 66.5 degrees north — and notice that 66.5 is exactly 90 minus 23.5. It is the lowest latitude at which the Sun can stay above the horizon for a full 24 hours. On 21 June, at that latitude, the Sun does not set at all. It dips at midnight until it just grazes the horizon, then climbs again. Further north the midnight Sun lasts longer, until at the North Pole itself there are six months of continuous daylight. Six months later, on the December solstice, the same circle has 24 hours of darkness — the polar night."
+        }
+      ],
+      "refs": [
+        1,
+        2
+      ]
+    },
+    {
+      "heading": "Day length, the tropics, and the analemma",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The single most useful graph in this lesson is the day-length curve. Plot hours of daylight against the months of the year, and draw one line for each latitude. At the equator the line is flat: twelve hours, all year, give or take a few minutes. At Delhi, near 28.6 degrees north, it is a gentle wave between about 10 hours 11 minutes in December and 13 hours 49 minutes in June. At the Arctic Circle the wave becomes a cliff, plunging from 24 hours in June to zero in December. The higher the latitude, the more violent the swing."
+        },
+        {
+          "type": "figure",
+          "figureId": "day-length-curves"
+        },
+        {
+          "type": "paragraph",
+          "text": "This is why the tropics have a different kind of year. Between the two tropics, the Sun passes directly overhead twice a year — except exactly on the tropics themselves, where it happens once. Bengaluru, at about 13 degrees north, has its two 'zero shadow days' in the last week of April and again in the third week of August, when a vertical pole casts no shadow at noon. Day length barely varies. So the tropics do not have the four-season pattern of the mid-latitudes, where the year is carved up by temperature. They have a hot season, a wet season and a cool season, and what changes is not so much the heat as the rain — the migration of the rain-bearing belt and the monsoon. Chennai's annual temperature range is modest; its rainfall calendar is dramatic."
+        },
+        {
+          "type": "paragraph",
+          "text": "There is one more curiosity, and it is a favourite of examiners. If you photograph the Sun from exactly the same spot at exactly the same clock time every day for a year, and superimpose the images, the Sun does not sit still. It traces a slender figure-of-eight in the sky. This is the analemma, and it is printed on many globes, usually somewhere over the Pacific. Its vertical extent comes from the tilt — the Sun's declination swinging between the tropics. Its horizontal width comes from the fact that the Earth's orbit is elliptical and its speed varies, so the Sun does not keep perfect clock time. The result is the equation of time: solar noon can run up to about 16 minutes ahead of clock noon, or about 14 minutes behind. The analemma is the tilt and the ellipse, drawn in the sky."
+        },
+        {
+          "type": "figure",
+          "figureId": "analemma"
+        }
+      ],
+      "refs": [
+        1,
+        3
+      ]
+    },
+    {
+      "heading": "Reading the sky: circumpolar stars and the Sun's daily arc",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The tilt also decides which stars you can ever see. A circumpolar star is one that never sets for an observer at a given latitude — it circles the pole and stays above the horizon all night. At latitude φ, a star is circumpolar if its declination is greater than 90 minus φ. At the North Pole, every star in the northern sky is circumpolar. At the equator, none are: everything rises and sets. In between, the circle of circumpolar stars grows as you go north."
+        },
+        {
+          "type": "paragraph",
+          "text": "Here is a fact worth carrying into navigation and map-reading. The altitude of Polaris above the northern horizon is equal to your latitude. In Delhi, Polaris sits about 28.6 degrees up. In Kanyakumari, barely eight degrees above the horizon. That is why the Pole Star was the sailor's latitude-finder for centuries — and why the Saptarishi, the seven stars of the Great Bear, wheels around it through the Indian night."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Sun's daily arc behaves in the same spirit. It always rises in the east and sets in the west, but the exact point of sunrise swings north and south through the year. At the equinoxes it is due east. In the northern summer it rises well north of east — in Delhi on 21 June, more than 25 degrees north of east — and in winter it rises south of east. Watch a fixed pole's noon shadow and you are watching the same migration: in Delhi the noon shadow always points north, but in Bengaluru it flips direction twice a year, which is precisely the zero shadow day."
+        }
+      ],
+      "refs": [
+        1,
+        3
+      ]
+    },
+    {
+      "heading": "A preview: the Coriolis effect",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rotation does one more thing, and it will occupy us properly when we reach atmospheric circulation. Because the Earth turns beneath anything moving freely over its surface, that object appears to be deflected. Ferrel's law states the rule: deflection is to the right in the Northern Hemisphere and to the left in the Southern. The deflection is zero at the equator and greatest at the poles, and it grows with the speed of the moving object."
+        },
+        {
+          "type": "paragraph",
+          "text": "Why? A point on the equator is carried eastward faster than a point nearer the pole, because it has a longer circle to complete in the same 24 hours. A parcel of air moving north from the equator carries its extra eastward speed with it. It arrives ahead of the ground beneath it — to the east — and to an observer on that ground it looks as though it has been pushed to the right. Nothing has pushed it. The ground has simply slowed down underneath it."
+        },
+        {
+          "type": "paragraph",
+          "text": "The consequences are everywhere once you start looking. The trade winds blow from the north-east in the Northern Hemisphere and from the south-east in the Southern. The westerlies come from the south-west in the north. Ocean gyres circulate clockwise in the northern oceans and anticlockwise in the southern. Cyclones spin anticlockwise in the north and clockwise in the south, and they cannot easily form within about five degrees of the equator, where the deflecting force is too feeble to start the spin. The Somali jet, the monsoon's low-level current, curves under the same law. We will return to all of this — but for now, notice that a spinning planet is not a neutral stage. It bends everything that moves across it."
+        }
+      ],
+      "refs": [
+        1,
+        3
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "id": "revolution-four-positions",
+      "kind": "diagram",
+      "title": "The Earth's orbit at four key positions",
+      "caption": "Notice that the axis keeps pointing the same way at every position — that is axial parallelism. Only the Earth's position relative to the Sun changes. At the June solstice the north end of the axis leans towards the Sun; at the December solstice it leans away. The equinoxes sit in between, when the axis is side-on to the Sun. Perihelion falls in early January, barely two weeks after the December solstice — the northern winter happens when we are closest to the Sun.",
+      "alt": "Schematic plan view of the Earth's elliptical orbit around the Sun, showing four positions labelled June solstice, September equinox, December solstice and March equinox, each with a small Earth whose axis is tilted 23.5 degrees and always leans the same way.",
+      "credit": "Original diagram for The Daily Brief",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 470\" role=\"img\" aria-label=\"Schematic plan view of Earth's orbit around the Sun showing four positions: June solstice, September equinox, December solstice and March equinox, with the axis tilted 23.5 degrees and always pointing the same way.\"><rect width=\"800\" height=\"470\" fill=\"var(--paper-2)\"/><ellipse cx=\"400\" cy=\"225\" rx=\"300\" ry=\"160\" fill=\"none\" stroke=\"var(--rule)\" stroke-width=\"2\" stroke-dasharray=\"7 7\"/><circle cx=\"400\" cy=\"225\" r=\"24\" fill=\"var(--accent)\"/><text x=\"400\" y=\"272\" text-anchor=\"middle\" font-size=\"14\" fill=\"var(--ink)\">Sun</text><text x=\"400\" y=\"60\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--muted)\">not to scale</text><text x=\"100\" y=\"160\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--muted)\">Perihelion: early January</text><text x=\"700\" y=\"160\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--muted)\">Aphelion: early July</text><circle cx=\"700\" cy=\"225\" r=\"22\" fill=\"var(--paper-2)\" stroke=\"var(--ink)\" stroke-width=\"2\"/><line x1=\"686\" y1=\"194\" x2=\"714\" y2=\"256\" stroke=\"var(--ink)\" stroke-width=\"2\"/><text x=\"678\" y=\"188\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">N</text><text x=\"700\" y=\"292\" text-anchor=\"middle\" font-size=\"13\" fill=\"var(--ink)\">June solstice</text><text x=\"700\" y=\"308\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">N pole tilted towards Sun</text><circle cx=\"100\" cy=\"225\" r=\"22\" fill=\"var(--paper-2)\" stroke=\"var(--ink)\" stroke-width=\"2\"/><line x1=\"86\" y1=\"194\" x2=\"114\" y2=\"256\" stroke=\"var(--ink)\" stroke-width=\"2\"/><text x=\"78\" y=\"188\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">N</text><text x=\"100\" y=\"292\" text-anchor=\"middle\" font-size=\"13\" fill=\"var(--ink)\">December solstice</text><text x=\"100\" y=\"308\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">N pole tilted away</text><circle cx=\"400\" cy=\"65\" r=\"22\" fill=\"var(--paper-2)\" stroke=\"var(--ink)\" stroke-width=\"2\"/><line x1=\"386\" y1=\"34\" x2=\"414\" y2=\"96\" stroke=\"var(--ink)\" stroke-width=\"2\"/><text x=\"378\" y=\"28\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">N</text><text x=\"445\" y=\"62\" text-anchor=\"start\" font-size=\"13\" fill=\"var(--ink)\">September equinox</text><circle cx=\"400\" cy=\"385\" r=\"22\" fill=\"var(--paper-2)\" stroke=\"var(--ink)\" stroke-width=\"2\"/><line x1=\"386\" y1=\"354\" x2=\"414\" y2=\"416\" stroke=\"var(--ink)\" stroke-width=\"2\"/><text x=\"378\" y=\"348\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">N</text><text x=\"445\" y=\"392\" text-anchor=\"start\" font-size=\"13\" fill=\"var(--ink)\">March equinox</text><text x=\"400\" y=\"452\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--muted)\">Earth revolves anticlockwise seen from above the North Pole; the axis stays parallel to itself throughout</text></svg>"
+    },
+    {
+      "id": "day-length-curves",
+      "kind": "chart",
+      "title": "Hours of daylight through the year at three latitudes",
+      "caption": "Notice how the amplitude grows with latitude. The equator is a flat line at twelve hours. Delhi swings gently between about 10 hours 11 minutes and 13 hours 49 minutes. The Arctic Circle swings between nothing and everything — zero hours in December, twenty-four in June. This single graph explains why the tropics have no real winter and the polar regions have no real summer.",
+      "alt": "Line chart of hours of daylight against months of the year for the equator, Delhi at 28.6 degrees north, and the Arctic Circle at 66.5 degrees north, showing increasing seasonal swing with latitude.",
+      "credit": "Original diagram for The Daily Brief",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 420\" role=\"img\" aria-label=\"Line chart of hours of daylight through the year at the equator, at Delhi and at the Arctic Circle.\"><rect width=\"800\" height=\"420\" fill=\"var(--paper-2)\"/><line x1=\"90\" y1=\"340\" x2=\"760\" y2=\"340\" stroke=\"var(--rule)\" stroke-width=\"1.5\"/><line x1=\"90\" y1=\"265\" x2=\"760\" y2=\"265\" stroke=\"var(--rule)\" stroke-width=\"1\" stroke-dasharray=\"4 4\"/><line x1=\"90\" y1=\"190\" x2=\"760\" y2=\"190\" stroke=\"var(--rule)\" stroke-width=\"1\" stroke-dasharray=\"4 4\"/><line x1=\"90\" y1=\"115\" x2=\"760\" y2=\"115\" stroke=\"var(--rule)\" stroke-width=\"1\" stroke-dasharray=\"4 4\"/><line x1=\"90\" y1=\"40\" x2=\"760\" y2=\"40\" stroke=\"var(--rule)\" stroke-width=\"1\" stroke-dasharray=\"4 4\"/><text x=\"80\" y=\"345\" text-anchor=\"end\" font-size=\"11\" fill=\"var(--muted)\">0</text><text x=\"80\" y=\"270\" text-anchor=\"end\" font-size=\"11\" fill=\"var(--muted)\">6</text><text x=\"80\" y=\"195\" text-anchor=\"end\" font-size=\"11\" fill=\"var(--muted)\">12</text><text x=\"80\" y=\"120\" text-anchor=\"end\" font-size=\"11\" fill=\"var(--muted)\">18</text><text x=\"80\" y=\"45\" text-anchor=\"end\" font-size=\"11\" fill=\"var(--muted)\">24</text><text x=\"45\" y=\"200\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--ink)\" transform=\"rotate(-90 45 200)\">hours of daylight</text><text x=\"118\" y=\"362\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">Jan</text><text x=\"174\" y=\"362\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">Feb</text><text x=\"230\" y=\"362\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">Mar</text><text x=\"285\" y=\"362\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">Apr</text><text x=\"341\" y=\"362\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">May</text><text x=\"397\" y=\"362\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">Jun</text><text x=\"453\" y=\"362\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">Jul</text><text x=\"509\" y=\"362\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">Aug</text><text x=\"564\" y=\"362\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">Sep</text><text x=\"620\" y=\"362\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">Oct</text><text x=\"676\" y=\"362\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">Nov</text><text x=\"732\" y=\"362\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">Dec</text><path d=\"M 90 190 L 760 190\" fill=\"none\" stroke=\"var(--muted)\" stroke-width=\"2.5\"/><path d=\"M 90 210 C 200 196, 320 170, 397 167 C 480 170, 600 196, 732 212 L 760 211\" fill=\"none\" stroke=\"var(--ink)\" stroke-width=\"2.5\"/><path d=\"M 90 338 C 230 320, 350 150, 397 40 C 445 150, 565 320, 732 340 L 760 340\" fill=\"none\" stroke=\"var(--accent)\" stroke-width=\"2.5\"/><line x1=\"110\" y1=\"60\" x2=\"150\" y2=\"60\" stroke=\"var(--muted)\" stroke-width=\"2.5\"/><text x=\"158\" y=\"64\" font-size=\"12\" fill=\"var(--ink)\">Equator (0&#176;)</text><line x1=\"110\" y1=\"82\" x2=\"150\" y2=\"82\" stroke=\"var(--ink)\" stroke-width=\"2.5\"/><text x=\"158\" y=\"86\" font-size=\"12\" fill=\"var(--ink)\">Delhi (28.6&#176;N)</text><line x1=\"110\" y1=\"104\" x2=\"150\" y2=\"104\" stroke=\"var(--accent)\" stroke-width=\"2.5\"/><text x=\"158\" y=\"108\" font-size=\"12\" fill=\"var(--ink)\">Arctic Circle (66.5&#176;N)</text><text x=\"400\" y=\"400\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--muted)\">Schematic curves; solstices and equinoxes placed at month centres</text></svg>"
+    },
+    {
+      "id": "analemma",
+      "kind": "diagram",
+      "title": "The analemma: the Sun's figure-of-eight",
+      "caption": "Photograph the Sun from the same spot at the same clock time every day for a year and it traces this shape. The vertical extent is the tilt — the Sun's declination swinging between the tropics. The horizontal width is the equation of time, caused by the elliptical orbit and the varying orbital speed. Solar noon can run about 16 minutes ahead of clock noon, or about 14 minutes behind.",
+      "alt": "A vertical figure-of-eight shape labelled with the June solstice at the top, the December solstice at the bottom and the equinoxes near the crossing point, with a dashed meridian line behind it.",
+      "credit": "Original diagram for The Daily Brief",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 420\" role=\"img\" aria-label=\"Diagram of the analemma, a vertical figure-of-eight traced by the Sun at the same clock time through the year.\"><rect width=\"800\" height=\"420\" fill=\"var(--paper-2)\"/><line x1=\"400\" y1=\"55\" x2=\"400\" y2=\"375\" stroke=\"var(--rule)\" stroke-width=\"1.5\" stroke-dasharray=\"6 6\"/><text x=\"408\" y=\"52\" font-size=\"11\" fill=\"var(--muted)\">mean noon meridian</text><path d=\"M 400 210 C 440 210, 448 100, 400 100 C 352 100, 360 210, 400 210 C 460 210, 472 340, 400 340 C 328 340, 340 210, 400 210\" fill=\"none\" stroke=\"var(--accent)\" stroke-width=\"3\"/><circle cx=\"400\" cy=\"100\" r=\"4\" fill=\"var(--ink)\"/><circle cx=\"400\" cy=\"340\" r=\"4\" fill=\"var(--ink)\"/><circle cx=\"400\" cy=\"210\" r=\"4\" fill=\"var(--ink)\"/><text x=\"470\" y=\"96\" font-size=\"13\" fill=\"var(--ink)\">June solstice</text><text x=\"470\" y=\"112\" font-size=\"11\" fill=\"var(--muted)\">Sun highest</text><text x=\"400\" y=\"372\" text-anchor=\"middle\" font-size=\"13\" fill=\"var(--ink)\">December solstice</text><text x=\"400\" y=\"388\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">Sun lowest</text><text x=\"300\" y=\"206\" text-anchor=\"end\" font-size=\"13\" fill=\"var(--ink)\">Equinoxes</text><text x=\"300\" y=\"222\" text-anchor=\"end\" font-size=\"11\" fill=\"var(--muted)\">crossing point</text><text x=\"400\" y=\"30\" text-anchor=\"middle\" font-size=\"12\" fill=\"var(--muted)\">Sun's position at the same clock time, every day for one year</text><text x=\"400\" y=\"412\" text-anchor=\"middle\" font-size=\"11\" fill=\"var(--muted)\">Vertical extent = axial tilt; horizontal width = equation of time</text></svg>"
+    }
+  ],
+  "anecdote": {
+    "title": "The king who measured the tilt",
+    "body": "In the 1720s and 1730s, Sawai Jai Singh II, the astronomer-king of Amber, built a chain of observatories across northern India — at Delhi, Jaipur, Ujjain, Varanasi and Mathura. The largest instrument at Jaipur, the Samrat Yantra, is a colossal sundial: a gnomon whose shadow, read against a graduated quadrant, gives the time of day and, tracked across the year, the Sun's changing declination. Jai Singh's astronomers were not building a clock. They were measuring the tilt — following the Sun's slow annual migration between the tropics, the very migration that gives us our seasons. Three centuries later, the same migration is what a sun-synchronous satellite exploits to photograph India at the same local time every single day."
+  },
+  "exam": {
+    "prelims": [
+      "Seasons are caused by the 23.5-degree axial tilt and axial parallelism, not by distance from the Sun. The Earth is at perihelion in early January and aphelion in early July — the northern winter occurs when we are closest to the Sun.",
+      "On the June solstice (about 21 June) the Sun is vertically overhead at the Tropic of Cancer (23.5 degrees N) and the Arctic Circle (66.5 degrees N) has 24 hours of daylight. On the December solstice (about 22 December) the Sun is overhead at the Tropic of Capricorn and the Arctic Circle has 24 hours of darkness.",
+      "At the equinoxes (about 21 March and 22-23 September) day and night are nearly equal everywhere, and the Sun rises due east and sets due west. Solstices mark the turning points of the Sun's declination; equinoxes mark its crossings of the equator.",
+      "Day length at the equator is about 12 hours throughout the year; the seasonal range widens with latitude and reaches 0 to 24 hours at the polar circles. The noon altitude of the Sun equals 90 degrees minus latitude plus declination.",
+      "The Coriolis deflection is zero at the equator and maximum at the poles, and is to the right in the Northern Hemisphere and to the left in the Southern (Ferrel's law). It is why cyclones rarely form within about 5 degrees of the equator."
+    ],
+    "mains": [
+      "\"The seasons are a consequence of the Earth's axial tilt rather than its varying distance from the Sun.\" Explain this statement, with reference to the timing of perihelion and aphelion and the contrast between the two hemispheres. (150 words)",
+      "Discuss how the rotation of the Earth shapes the general circulation of the atmosphere and the oceans. Evaluate its role in the formation and track of tropical cyclones. (250 words)"
+    ],
+    "keyTerms": [
+      {
+        "term": "Rotation",
+        "meaning": "The spin of the Earth about its own axis, west to east, taking 23 hours 56 minutes 4 seconds relative to the stars (sidereal day) and 24 hours relative to the Sun (solar day)."
+      },
+      {
+        "term": "Revolution",
+        "meaning": "The Earth's orbital journey around the Sun in an ellipse, taking about 365.256 days relative to the stars and 365.2422 days from equinox to equinox."
+      },
+      {
+        "term": "Axial tilt (obliquity)",
+        "meaning": "The 23.5-degree lean of the Earth's axis from the perpendicular to the plane of the ecliptic; the fundamental cause of the seasons."
+      },
+      {
+        "term": "Axial parallelism",
+        "meaning": "The fact that the Earth's axis remains parallel to itself throughout the orbit, always pointing towards roughly the same point in the sky near Polaris."
+      },
+      {
+        "term": "Subsolar point",
+        "meaning": "The point on the Earth's surface where the Sun is directly overhead at local noon; its latitude is the Sun's declination, and it migrates between the two tropics through the year."
+      },
+      {
+        "term": "Solstice",
+        "meaning": "The two dates when the subsolar point reaches its extreme latitude and reverses — about 21 June at the Tropic of Cancer and about 22 December at the Tropic of Capricorn."
+      },
+      {
+        "term": "Equinox",
+        "meaning": "The two dates when the subsolar point crosses the equator, giving nearly equal day and night everywhere — about 21 March and 22-23 September."
+      },
+      {
+        "term": "Analemma",
+        "meaning": "The figure-of-eight traced by the Sun's position when photographed at the same clock time through a year; its vertical extent comes from the tilt, its width from the equation of time."
+      },
+      {
+        "term": "Circumpolar star",
+        "meaning": "A star that never sets for an observer at a given latitude; at latitude phi, stars with declination greater than 90 minus phi are circumpolar."
+      },
+      {
+        "term": "Coriolis effect (Ferrel's law)",
+        "meaning": "The apparent deflection of freely moving objects due to the Earth's rotation — to the right in the Northern Hemisphere, to the left in the Southern, zero at the equator and maximum at the poles."
+      }
+    ]
+  },
+  "recap": [
+    "The Earth rotates west to east on its axis and revolves anticlockwise around the Sun; the sidereal day is 23 hours 56 minutes 4 seconds, the solar day 24 hours, and the four-minute gap exists because the Earth also moves along its orbit.",
+    "The axis is tilted about 23.5 degrees from the perpendicular to the plane of the ecliptic and stays parallel to itself all year. That tilt, not distance, causes the seasons — the Earth is closest to the Sun in early January, in the northern winter.",
+    "The subsolar point migrates between the Tropic of Cancer and the Tropic of Capricorn, producing the June and December solstices and the March and September equinoxes. On the June solstice the Arctic Circle has 24 hours of daylight; on the December solstice, 24 hours of darkness.",
+    "Day length is nearly constant at the equator and swings to 0-24 hours at the polar circles. The tropics therefore have a rainfall-driven seasonality rather than a temperature-driven one.",
+    "The analemma — the Sun's figure-of-eight in the sky — is the tilt and the elliptical orbit drawn together, and it is the reason solar noon and clock noon differ by up to about 16 minutes.",
+    "Rotation also produces the Coriolis deflection: right in the Northern Hemisphere, left in the Southern, zero at the equator. It shapes the trade winds, the westerlies, ocean gyres and the spin of cyclones."
+  ],
+  "nextUp": "We have been standing on the surface, watching the sky. Next time we go the other way — downwards. How do we know what lies beneath our feet when no one has ever been there? The answer is seismic waves: P, S and L, bending and shadowing as they pass through the interior, telling us where the crust ends and the mantle begins, where the outer core turns liquid and the inner core stays solid. We will meet the Mohorovičić and Gutenberg discontinuities, sort out the lithosphere from the asthenosphere, and ask why the sea surface itself is not a perfect sphere but a lumpy geoid.",
+  "references": [
+    {
+      "label": "NCERT Class XI — Fundamentals of Physical Geography",
+      "href": "https://ncert.nic.in/textbook/pdf/kegy101.pdf",
+      "kind": "official"
+    },
+    {
+      "label": "NCERT textbooks (official, free)",
+      "href": "https://ncert.nic.in/textbook.php",
+      "kind": "official"
+    },
+    {
+      "label": "Earth",
+      "href": "https://en.wikipedia.org/wiki/Earth",
+      "kind": "wiki"
+    },
+    {
+      "label": "Solar System",
+      "href": "https://en.wikipedia.org/wiki/Solar_System",
+      "kind": "wiki"
+    },
+    {
+      "label": "NASA — Earth Fact Sheet",
+      "href": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+      "kind": "official"
+    }
+  ],
+  "series": {
+    "subject": "Geography",
+    "subjectKey": "geography",
+    "paper": "Prelims GS-I · Mains GS-I",
+    "unitId": "geo-foundations",
+    "unitTitle": "Foundations: How Geography Sees the World",
+    "lessonId": "geo-foundations-4",
+    "lessonNumber": 4,
+    "lessonCount": 5,
+    "seriesLessonNumber": 4,
+    "syllabusNode": "Geography — Foundations of the discipline; Earth in the solar system"
+  },
+  "handoff": {
+    "covered": [
+      "Rotation and revolution: west-to-east spin, anticlockwise orbit, equatorial speed about 1,670 km/h, orbital speed about 29.8 km/s; sidereal day (23h56m4s) versus solar day (24h) and the reason for the four-minute gap.",
+      "The elliptical orbit, the plane of the ecliptic, and the 23.5-degree axial tilt (66.5 degrees to the orbital plane) with axial parallelism towards Polaris.",
+      "Why tilt beats distance: eccentricity 0.0167, perihelion about 147.1 million km in early January, aphelion about 152.1 million km in early July, roughly 3 per cent distance variation and about 7 per cent insolation variation, against a more-than-doubling of daily insolation at Delhi between the solstices (noon altitude 84.8 degrees and 13h49m day in June versus 38 degrees and 10h11m in December).",
+      "The subsolar point and the Sun's declination; the four cardinal positions — June solstice, September equinox, December solstice, March equinox; equinox versus solstice, including the etymology and the due-east sunrise at equinox.",
+      "The Arctic Circle at 66.5 degrees N as 90 minus 23.5; the midnight Sun and the polar night; six months of daylight at the pole.",
+      "Day length by latitude, with the equator flat at 12 hours, Delhi swinging 10h11m to 13h49m, and the Arctic Circle swinging 0 to 24 hours; tropical seasonality as rainfall-driven rather than temperature-driven, with zero shadow days at Bengaluru in late April and the third week of August.",
+      "The analemma and the equation of time (about plus 16 minutes to minus 14 minutes).",
+      "Circumpolar stars, the rule that declination must exceed 90 minus latitude, and the fact that the altitude of Polaris equals the observer's latitude.",
+      "A preview of the Coriolis effect: Ferrel's law, the physical explanation from differing eastward speeds, and its consequences for trade winds, westerlies, ocean gyres and cyclone spin, including the near-equatorial inhibition."
+    ],
+    "next": "Lesson 5: Inside the Earth — Layers, Seismic Waves and the Geoid. Earth's internal structure; crust, mantle, outer and inner core; composition and state; seismic waves (P, S, L); shadow zones; the Mohorovičić and Gutenberg discontinuities; lithosphere versus asthenosphere; isostasy; the geoid; and how we know the inside without ever seeing it.",
+    "notes": "The latitude-belts figure from Lesson 2 was carried forward conceptually into the day-length and tropics discussion and was deliberately NOT rebuilt — do not reconstruct it in Lesson 5 either. The 'map as argument' stance from Lesson 1 is now a settled premise and should not be re-established. The Eratosthenes and Harrison callbacks are spent and retired. New reusable figures created here: 'revolution-four-positions' (reusable for Milankovitch cycles, insolation, palaeoclimate and any orbital-mechanics question), 'day-length-curves' (reusable for insolation, agriculture, solar energy siting and the tropical-versus-temperate contrast), and 'analemma' (reusable for the equation of time, sundials, solar geometry and the Jantar Mantar instruments). The Jantar Mantar anecdote is a good Indian anchor and can be reused in the history of science or the art-and-culture overlap. The Coriolis preview was kept deliberately short and qualitative — it must be paid off properly in the atmospheric circulation lesson, where the pressure-gradient force, geostrophic balance and the three-cell model will need the full treatment. The sun-synchronous orbit line at the end of the anecdote is a deliberate hook that can be picked up in the remote sensing or climatology units."
+  }
+}

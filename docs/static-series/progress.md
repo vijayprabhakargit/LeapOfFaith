@@ -3,12 +3,12 @@
 > Generated from `config/staticSeries.ts` and `data/static-series/progress.json`.
 > The plan is the source of truth; this page is a reading aid.
 
-**Progress:** 3 / 347 lessons complete.
-**Next up:** The Earth in Motion: Rotation, Revolution and the Seasons (`geo-foundations-4`) — Geography, lesson 4 of 5.
+**Progress:** 4 / 347 lessons complete.
+**Next up:** Inside the Earth: Layers, Seismic Waves and the Geoid (`geo-foundations-5`) — Geography, lesson 5 of 5.
 
 ## Subjects
 
-- **Geography** — 3/60 lessons (15 units)
+- **Geography** — 4/60 lessons (15 units)
 - **Polity, Constitution & Governance** — 0/40 lessons (13 units)
 - **Economy & Development** — 0/38 lessons (12 units)
 - **History, Freedom Struggle & World History** — 0/35 lessons (9 units)
@@ -22,15 +22,15 @@
 
 ## Geography
 
-### Foundations: How Geography Sees the World — 3/5 · in progress
+### Foundations: How Geography Sees the World — 4/5 · in progress
 
 _Geography — Foundations of the discipline; Earth in the solar system_
 
 - [x] The World Before the Map: Geography as a Way of Seeing (`geo-foundations-1`) — 2026-11-21
 - [x] The Grid We Live By: Latitude, Longitude and Time (`geo-foundations-2`) — 2026-11-22
 - [x] Reading the Earth: Maps, Scale and Projections (`geo-foundations-3`) — 2026-11-23
-- [ ] The Earth in Motion: Rotation, Revolution and the Seasons (`geo-foundations-4`) — **next**
-- [ ] Inside the Earth: Layers, Seismic Waves and the Geoid (`geo-foundations-5`)
+- [x] The Earth in Motion: Rotation, Revolution and the Seasons (`geo-foundations-4`) — 2026-11-24
+- [ ] Inside the Earth: Layers, Seismic Waves and the Geoid (`geo-foundations-5`) — **next**
 
 ### The Restless Earth: Tectonics and Its Consequences — 0/4 · not started
 
