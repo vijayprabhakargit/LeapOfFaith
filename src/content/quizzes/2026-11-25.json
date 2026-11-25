@@ -1,0 +1,204 @@
+{
+  "date": "2026-11-25",
+  "generatedAt": "2026-11-25T03:28:41.733Z",
+  "title": "Daily Prelims Quiz",
+  "windowStart": "2026-11-19",
+  "windowEnd": "2026-11-25",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Consider the following statements regarding the Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (AB-PMJAY):\n1. It provides health cover of ₹5 lakh per family per year for secondary and tertiary care hospitalisation.\n2. It is implemented by the National Health Authority.\n3. It is available only to families covered under the Socio-Economic Caste Census 2011 deprivation criteria.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 0,
+      "explanation": "AB-PMJAY provides ₹5 lakh per family per year and is implemented by the National Health Authority. Eligibility also includes occupational categories for urban workers, so the claim that it is available only through SECC 2011 deprivation criteria is too absolute. The brief notes the expansion of Ayushman Bharat packages.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 2,
+      "question": "Consider the following statements regarding India's crude oil imports:\n1. India and China are on course to import record volumes of Russian crude in 2026, with combined purchases reported at roughly 3.4 million barrels a day.\n2. Russia's Urals is a Middle Eastern benchmark crude grade.\n3. The Strait of Hormuz carries roughly one-fifth of global petroleum liquids.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 2,
+      "explanation": "Urals is Russia's flagship export crude grade, not a Middle Eastern benchmark. Statements 1 and 3 are correct: the brief reports record Russian crude imports by India and China, and the Strait of Hormuz carries about one-fifth of global petroleum liquids.",
+      "topic": "Economy"
+    },
+    {
+      "id": 3,
+      "question": "Consider the following statements regarding antimicrobial resistance (AMR) in the context of India's dairy sector:\n1. AMR occurs when microorganisms develop resistance to antimicrobials.\n2. The use of antibiotics in livestock can contribute to AMR.\n3. India's dairy sector is entirely free of antibiotic use.\nHow many of the above statements are correct?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "AMR is the resistance of microorganisms to antimicrobials, and antibiotic use in livestock can contribute to it. The claim that India's dairy sector is entirely free of antibiotic use is false; the brief flags dairy AMR as a challenge.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 4,
+      "question": "Zaporizhzhia, recently in the news in the context of the Russia–Ukraine conflict, is located in which one of the following countries?",
+      "options": [
+        "Belarus",
+        "Moldova",
+        "Ukraine",
+        "Romania"
+      ],
+      "answer": 2,
+      "explanation": "Zaporizhzhia is in southern Ukraine. The brief reports a Russian overnight strike on Zaporizhzhia that killed civilians and wounded many, including children.",
+      "topic": "Geography"
+    },
+    {
+      "id": 5,
+      "question": "Consider the following pairs of classical dances and the States with which they are traditionally associated:\n1. Bharatanatyam — Tamil Nadu\n2. Kathakali — Kerala\n3. Odissi — Odisha\nHow many of the above pairs are correctly matched?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "All three pairs are correctly matched: Bharatanatyam is associated with Tamil Nadu, Kathakali with Kerala, and Odissi with Odisha. This is standard static culture knowledge.",
+      "topic": "History & Culture"
+    },
+    {
+      "id": 6,
+      "question": "Statement-I: Sea drones (Unmanned Surface Vessels) have emerged as a significant asymmetric capability in naval warfare.\nStatement-II: They are relatively low-cost, unmanned platforms capable of carrying explosives over long distances, making them attractive to navies lacking conventional fleet superiority.\nWhich one of the following is correct in respect of the above statements?",
+      "options": [
+        "Both Statement-I and Statement-II are correct and Statement-II explains Statement-I",
+        "Both are correct but Statement-II does not explain Statement-I",
+        "Statement-I is correct but Statement-II is incorrect",
+        "Statement-I is incorrect but Statement-II is correct"
+      ],
+      "answer": 0,
+      "explanation": "Both statements are correct, and the low-cost, unmanned, long-range explosive capability explains why USVs are an asymmetric naval tool. The brief notes Ukraine's extensive use of sea drones against Russia's Black Sea Fleet.",
+      "topic": "Science & Technology"
+    },
+    {
+      "id": 7,
+      "question": "The India–Nepal Eminent Persons' Group (EPG), recently in the news, was constituted in which one of the following years?",
+      "options": [
+        "2014",
+        "2015",
+        "2016",
+        "2018"
+      ],
+      "answer": 2,
+      "explanation": "The EPG was constituted in 2016 with four members from each side and submitted its report in 2018; it has not been made public. The brief notes the row after Foreign Secretary Vikram Misri described the report as 'not relevant'.",
+      "topic": "International Relations"
+    },
+    {
+      "id": 8,
+      "question": "Consider the following statements:\n1. The US has historically used Section 301 primarily against China and Section 232 for steel and aluminium imports.\n2. Under WTO rules, MFN treatment permits a member to discriminate among trading partners in tariffs.\n3. GSP benefits extended by the US to India lapsed in June 2021.\nWhich of the statements given above is/are NOT correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 1,
+      "explanation": "MFN treatment requires non-discrimination among WTO members, and GSP benefits for India lapsed in June 2019, not 2021. Statement 1 is correct; the brief reports fresh US import duties covering India, China and 14 other trading partners.",
+      "topic": "Economy"
+    },
+    {
+      "id": 9,
+      "question": "An Indian firm uses an exchange house in Dubai to settle payments for Iranian oil. It is subsequently designated by the US Treasury's Office of Foreign Assets Control (OFAC). Which one of the following best explains this action?",
+      "options": [
+        "Primary sanctions imposed under a UN Security Council resolution",
+        "Secondary sanctions targeting third-country entities with no direct US nexus",
+        "An anti-dumping measure under WTO rules",
+        "A penalty under India's Foreign Exchange Management Act, 1999"
+      ],
+      "answer": 1,
+      "explanation": "OFAC administers most US sanctions, and secondary sanctions can hit third-country entities with no direct US nexus. The brief reports US sanctions on Iran's 'shadow banking' networks of exchange houses and front companies.",
+      "topic": "Economy"
+    },
+    {
+      "id": 10,
+      "question": "Which one of the following best describes India's strategy of 'multi-alignment'?",
+      "options": [
+        "Forming a formal military alliance with a single great power",
+        "Engaging simultaneously with multiple major powers and groupings while retaining strategic autonomy",
+        "Aligning exclusively with the Global South against all developed countries",
+        "Pursuing autarky by minimising all external economic engagement"
+      ],
+      "answer": 1,
+      "explanation": "Multi-alignment means engaging the Quad, BRICS, SCO, G20 and IBSA simultaneously while retaining strategic autonomy. The brief discusses India charting a multipolar course amid great-power bargaining.",
+      "topic": "International Relations"
+    },
+    {
+      "id": 11,
+      "question": "Consider the following statements regarding vehicular emission norms in India:\n1. The Supreme Court has recently heard a plea relating to BS-VI vehicles in Delhi-NCR.\n2. BS-VI emission norms were implemented in India from April 1, 2020.\n3. BS-VI norms require sulphur content in fuel to be not more than 50 ppm.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 0,
+      "explanation": "BS-VI norms were implemented from April 1, 2020, and the Supreme Court heard a Delhi-NCR BS-VI vehicle plea. BS-VI fuel has 10 ppm sulphur, not 50 ppm, so statement 3 is incorrect.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 12,
+      "question": "Consider the following statements regarding the Bank of Maharashtra:\n1. It is a public sector bank.\n2. It is exploring an asset management company (AMC) business and an overseas bond issue.\n3. AMC business in India is regulated by the Securities and Exchange Board of India (SEBI).\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 3,
+      "explanation": "Bank of Maharashtra is a public sector bank; the brief reports its plans to explore an AMC business and an overseas bond issue. SEBI regulates asset management companies in India, so all three statements are correct.",
+      "topic": "Economy"
+    },
+    {
+      "id": 13,
+      "question": "Consider the following statements regarding reports on Chinese satellite activity during Operation Sindoor:\n1. Three Chinese satellites reportedly maintained focus on Gujarat's coast during Operation Sindoor.\n2. Operation Sindoor refers to Indian military strikes on terror infrastructure across the border in May 2025.\n3. The Congress accused the Modi government of downplaying China's role in Operation Sindoor.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 3,
+      "explanation": "All three are reported in the brief: ThePrint on three Chinese satellites focused on Gujarat's coast, the definition of Operation Sindoor as the May 2025 strikes, and National Herald on the Congress accusation.",
+      "topic": "Science & Technology"
+    },
+    {
+      "id": 14,
+      "question": "Consider the following statements regarding air pollution and public health:\n1. Air pollution is a risk factor for respiratory and cardiovascular diseases.\n2. The Hindu opinion links air-pollution response to COVID-19 lessons, stressing that allocations should reflect the greatest health risks.\n3. The National AQI scale categorises an AQI between 301 and 400 as 'very poor'.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 3,
+      "explanation": "All three statements are correct. Air pollution is linked to respiratory and cardiovascular diseases, the brief notes the COVID-19 lessons analogy for health-risk-based allocations, and AQI 301–400 is 'very poor' on the National AQI scale.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 15,
+      "question": "Consider the following statements regarding the India–Nepal Treaty of Peace and Friendship, 1950:\n1. The treaty provides for an open border between India and Nepal.\n2. India and Nepal share a border of over 1,700 km.\n3. The treaty has been revised to include a mutual security clause.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 0,
+      "explanation": "The 1950 treaty underpins the open border between India and Nepal, and the two countries share a border of over 1,700 km. The treaty has not been revised to include a mutual security clause, so statement 3 is incorrect.",
+      "topic": "Geography"
+    }
+  ]
+}

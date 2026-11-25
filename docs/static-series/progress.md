@@ -3,12 +3,12 @@
 > Generated from `config/staticSeries.ts` and `data/static-series/progress.json`.
 > The plan is the source of truth; this page is a reading aid.
 
-**Progress:** 4 / 347 lessons complete.
-**Next up:** Inside the Earth: Layers, Seismic Waves and the Geoid (`geo-foundations-5`) — Geography, lesson 5 of 5.
+**Progress:** 5 / 347 lessons complete.
+**Next up:** Continental Drift to Plate Tectonics: A Theory That Changed Everything (`geo-tectonics-1`) — Geography, lesson 1 of 4.
 
 ## Subjects
 
-- **Geography** — 4/60 lessons (15 units)
+- **Geography** — 5/60 lessons (15 units)
 - **Polity, Constitution & Governance** — 0/40 lessons (13 units)
 - **Economy & Development** — 0/38 lessons (12 units)
 - **History, Freedom Struggle & World History** — 0/35 lessons (9 units)
@@ -22,7 +22,7 @@
 
 ## Geography
 
-### Foundations: How Geography Sees the World — 4/5 · in progress
+### Foundations: How Geography Sees the World — 5/5 · ✓ complete
 
 _Geography — Foundations of the discipline; Earth in the solar system_
 
@@ -30,13 +30,13 @@ _Geography — Foundations of the discipline; Earth in the solar system_
 - [x] The Grid We Live By: Latitude, Longitude and Time (`geo-foundations-2`) — 2026-11-22
 - [x] Reading the Earth: Maps, Scale and Projections (`geo-foundations-3`) — 2026-11-23
 - [x] The Earth in Motion: Rotation, Revolution and the Seasons (`geo-foundations-4`) — 2026-11-24
-- [ ] Inside the Earth: Layers, Seismic Waves and the Geoid (`geo-foundations-5`) — **next**
+- [x] Inside the Earth: Layers, Seismic Waves and the Geoid (`geo-foundations-5`) — 2026-11-25
 
 ### The Restless Earth: Tectonics and Its Consequences — 0/4 · not started
 
 _Geography — Plate tectonics, earthquakes, volcanoes and mountain building_
 
-- [ ] Continental Drift to Plate Tectonics: A Theory That Changed Everything (`geo-tectonics-1`)
+- [ ] Continental Drift to Plate Tectonics: A Theory That Changed Everything (`geo-tectonics-1`) — **next**
 - [ ] Earthquakes: When the Crust Snaps (`geo-tectonics-2`)
 - [ ] Volcanoes: Mountains That Breathe (`geo-tectonics-3`)
 - [ ] Mountain Building and the Rock Cycle (`geo-tectonics-4`)

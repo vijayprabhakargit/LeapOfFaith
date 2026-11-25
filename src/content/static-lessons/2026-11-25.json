@@ -1,0 +1,319 @@
+{
+  "date": "2026-11-25",
+  "generatedAt": "2026-11-25T03:27:19.110Z",
+  "title": "Inside the Earth: Layers, Seismic Waves and the Geoid",
+  "subtitle": "We have never seen more than a scratch of the planet's surface — yet we can describe its core to the kilometre. Here is how.",
+  "readMinutes": 14,
+  "hook": "In 1989, on the Kola Peninsula in Arctic Russia, a drill string stopped turning at 12,262 metres. It is still the deepest hole humanity has ever made. Set that against the Earth's mean radius of about 6,371 kilometres and you get a humbling number: we have directly sampled roughly one part in five hundred of the planet's depth. Everything else — the mantle, the core, the whole architecture below our feet — is inference. The astonishing thing is not that we infer. It is how precisely we infer.",
+  "sections": [
+    {
+      "heading": "A place no one has ever been",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Start with the arithmetic of disappointment. The deepest mine on Earth, Mponeng in South Africa, reaches about four kilometres down. The deepest borehole, Kola in Arctic Russia, stopped at 12.26 kilometres in 1989 and has never been beaten. The Earth's mean radius is 6,371 kilometres. So our direct access to the planet's depth is roughly one part in five hundred — and even that is only at two or three lucky spots. Everything else we say about the interior is inference. The question worth asking is not whether we infer, but how we manage to infer so precisely."
+        },
+        {
+          "type": "paragraph",
+          "text": "Four witnesses do the work. The first is density. Surface rocks — granite, basalt, sandstone — average between 2.7 and 3.0 grams per cubic centimetre. The Earth as a whole has a mean density of about 5.5. If the planet were uniformly made of crustal rock, it would weigh far less than it does. Something much denser must lie beneath, and it must lie beneath everywhere. The second witness is seismic waves, and it is by far the most informative. The third is gravity — the shape and strength of the Earth's gravitational field. The fourth is meteorites: iron meteorites are natural samples of core-like metal, and stony meteorites resemble mantle rock. Together, these four have given us a picture detailed enough to be taught in school."
+        },
+        {
+          "type": "callout",
+          "title": "The oldest argument in geophysics",
+          "text": "Crustal rock: about 2.7–3.0 g/cm³. Mean density of the whole Earth: about 5.5 g/cm³. That gap is not a rounding error. It demands a dense core, and it demanded one long before anyone had a seismograph.",
+          "tone": "note"
+        }
+      ],
+      "refs": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "heading": "The layered Earth: crust, mantle, core",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The chemical division of the Earth has three parts. The crust is a thin silicate skin, and it comes in two flavours. Oceanic crust is 5 to 10 kilometres thick, basaltic, denser (about 3.0 g/cm³) and geologically young. Continental crust is 30 to 70 kilometres thick, granitic, lighter (about 2.7 g/cm³) and often very old — parts of the Dharwar craton in Karnataka have been stable for over two and a half billion years. Older textbooks called these SiAl (silica and alumina) and SiMa (silica and magnesia). The terms are crude, but they capture the essential contrast: the continents are light rafts, the ocean floors are heavier slabs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Below the crust lies the mantle, extending to a depth of about 2,900 kilometres. It is rich in silicon, oxygen, iron and magnesium, and its dominant rock type is peridotite, built largely of the mineral olivine. Here is the point students most often miss: the mantle is solid. S waves travel through it, and S waves cannot travel through liquid. But at the temperatures and pressures of the mantle, rock deforms plastically over geological time. Think of glacier ice, or of pitch. It is rigid if you hit it, and it flows if you wait a million years."
+        },
+        {
+          "type": "paragraph",
+          "text": "At 2,900 kilometres we reach the core, made of nickel and iron — the old acronym is NIFE. The outer core, from 2,900 to about 5,150 kilometres, is liquid. The inner core, from 5,150 kilometres to the centre, is solid. The boundaries between these shells carry the names of the scientists who found them. The Mohorovičić discontinuity, or Moho, separates crust from mantle. The Gutenberg discontinuity separates mantle from core. The Lehmann discontinuity separates the outer core from the inner core. There is also the Conrad discontinuity, within the continental crust, separating granitic from basaltic layers — but it is not sharp everywhere and is less often asked about."
+        },
+        {
+          "type": "figure",
+          "figureId": "earth-interior"
+        }
+      ],
+      "refs": [
+        1,
+        3
+      ]
+    },
+    {
+      "heading": "Seismic waves: the X-ray we never had to build",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Earthquakes generate three broad families of waves. P waves, or primary waves, are longitudinal: the rock is alternately squeezed and stretched in the direction the wave travels. They are the fastest, moving at roughly 6 to 8 kilometres per second in the crust and up to 13 kilometres per second in the deep mantle, and they pass through solids, liquids and gases alike. S waves, or secondary waves, are transverse: the rock is shaken side to side, perpendicular to the direction of travel. They are slower, about 3.5 to 4.5 kilometres per second in the crust, and they travel only through solids. L waves, or surface waves, travel along the surface, are the slowest, have the largest amplitude, and do the most damage to buildings."
+        },
+        {
+          "type": "paragraph",
+          "text": "Now the trick. When a large earthquake occurs, seismograph stations around the world record it. Plot the arrival time of each wave against the angular distance from the epicentre and you get a travel-time curve. Then look at where waves do not arrive. Beyond about 103 degrees of angular distance from the epicentre — roughly a third of the way around the globe — S waves vanish. Not weakened, not delayed: absent. And they are absent in every direction, all the way to the antipode. This is the S-wave shadow zone, and it is the single most important observation in the history of the Earth's interior."
+        },
+        {
+          "type": "callout",
+          "title": "The two numbers to carry into the exam hall",
+          "text": "P-wave shadow zone: 103° to 142° from the epicentre — a ring. S-wave shadow zone: everything beyond 103°, all the way to 180° — a cap. The P shadow sits inside the S shadow, and that nesting is the whole story.",
+          "tone": "exam"
+        },
+        {
+          "type": "paragraph",
+          "text": "Why should S waves disappear? Because they cannot pass through liquid. If the outer core were solid, S waves would travel straight through it and arrive on the far side of the planet. They do not. Therefore the outer core is liquid. That is the whole argument, and it is airtight. No drill, no sample, no instrument lowered into the Earth was needed — only a careful reading of where the ground did not shake."
+        },
+        {
+          "type": "paragraph",
+          "text": "P waves tell a subtler story. They too disappear between 103 and 142 degrees — the P-wave shadow zone — but they reappear beyond 142 degrees. Why? Because the liquid outer core refracts them inward, bending their paths, and the solid inner core refracts them back out again. The P shadow zone is therefore a ring, not a cap. And the very fact that P waves come back at all is evidence that the inner core is solid: a liquid inner core would not bend them sharply enough. Two shadow zones, two conclusions, one earthquake."
+        },
+        {
+          "type": "figure",
+          "figureId": "seismic-shadow-zones"
+        }
+      ],
+      "refs": [
+        1,
+        3
+      ]
+    },
+    {
+      "heading": "Why the outer core is liquid but the inner core is solid",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "So we have a liquid outer core and a solid inner core, both made of iron and nickel, both at temperatures estimated between roughly 4,000 and 6,000 kelvin — comparable to the surface of the Sun. Why is one molten and the other not? The answer is not temperature. It is pressure."
+        },
+        {
+          "type": "paragraph",
+          "text": "At the boundary between the inner and outer core, the pressure is around 330 gigapascals — roughly three million times the pressure of the atmosphere at sea level. The melting point of iron climbs steeply as pressure rises. At the top of the outer core, the actual temperature is above the melting point, so the iron is liquid. Deeper down, pressure pushes the melting point above the actual temperature, and the iron freezes. The inner core is solid not because it is cooler — it is in fact slightly hotter — but because it is squeezed. This is a genuinely counter-intuitive result, and it is worth sitting with for a moment."
+        },
+        {
+          "type": "paragraph",
+          "text": "The liquid outer core is not still. It convects, and because the Earth rotates, that convection organises itself into columns and rolls aligned with the axis. Moving molten iron carries electric currents, and electric currents generate magnetic fields. This is the geodynamo, and it is why a compass needle points north. It is also why we have an atmosphere: the magnetic field deflects the solar wind, which would otherwise strip away our air over geological time. Meanwhile, as the Earth slowly cools, the inner core grows by roughly a millimetre a year, and the latent heat released at that freezing boundary helps drive the convection. The engine feeds itself."
+        }
+      ],
+      "refs": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "heading": "Lithosphere, asthenosphere and isostasy",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Now a distinction that trips up a great many students. The crust–mantle–core division is chemical: it is about what the rock is made of. The lithosphere–asthenosphere division is mechanical: it is about how the rock behaves. These are not the same cut, and they do not coincide."
+        },
+        {
+          "type": "callout",
+          "title": "Two ways of slicing the same Earth",
+          "text": "Chemical layers (by composition): crust, mantle, core. Mechanical layers (by strength and state): lithosphere, asthenosphere, mesosphere, outer core, inner core. A question that asks for 'layers of the Earth' is ambiguous unless you say which scheme you are using.",
+          "tone": "note"
+        },
+        {
+          "type": "paragraph",
+          "text": "The lithosphere is the crust plus the uppermost, rigid part of the mantle. It averages about 100 kilometres thick, and reaches 200 kilometres or more beneath old continental shields such as the Peninsular Indian block. It is brittle, and it is broken into the plates that carry the continents and oceans. The asthenosphere lies beneath it, from roughly 100 to 400 kilometres. It is hot enough and weak enough to flow plastically. Seismic waves slow down in it — geophysicists call it the low-velocity zone — and it is the source of most of the magma that reaches the surface. The plates slide over it."
+        },
+        {
+          "type": "paragraph",
+          "text": "Isostasy is the principle that crustal blocks float in gravitational balance on the denser mantle, much as ice floats on water. The word means 'equal standing'. Two models explain it. In Airy's model, the crust has uniform density but variable thickness: a mountain is a thick block with a deep root, exactly like the submerged part of an iceberg. In Pratt's model, the crust has variable density but a uniform depth of compensation: a mountain is a lighter block. Both models describe the same reality from different angles, and both are used in different settings."
+        },
+        {
+          "type": "paragraph",
+          "text": "India offers textbook examples. The Himalaya is the classic Airy case: the range sits on a greatly thickened crustal root, which is why gravity measurements over the mountains are anomalously low — the root is less dense than the mantle it displaces. The Ganga plain, loaded with kilometres of sediment eroded off the Himalaya, flexes downward under the weight. The Peninsular shield is old, cold and stiff, with a thick lithosphere and little isostatic adjustment. And when the great ice sheets of the last glaciation melted, Scandinavia and northern Canada began to rise, and they are still rising by a few millimetres a year. That is isostasy in slow motion, and it is measurable with a GPS receiver."
+        },
+        {
+          "type": "figure",
+          "figureId": "isostasy-airy"
+        }
+      ],
+      "refs": [
+        1,
+        3
+      ]
+    },
+    {
+      "heading": "The geoid: the true shape of the Earth",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We say the Earth is an oblate spheroid, flattened at the poles and bulging at the equator. True, but incomplete. The Earth is not a smooth mathematical solid. Its mass is unevenly distributed — dense slabs here, light roots there — and so its gravitational field is lumpy. The geoid is the surface that mean sea level would take if the oceans were extended under the continents through imaginary narrow channels. It is an equipotential surface of gravity: the shape the Earth's water 'wants' to be. It is, in the most literal sense, the true shape of the Earth."
+        },
+        {
+          "type": "paragraph",
+          "text": "The geoid departs from the reference ellipsoid used by satellite navigation — the WGS84 ellipsoid — by up to about a hundred metres in either direction. That sounds trivial until you need it. GPS gives heights above the ellipsoid. Surveyors, engineers, flood planners and dam builders need heights above the geoid, because that is what 'height above sea level' actually means. The difference between the two is called the geoid undulation, and it must be modelled and mapped for every country. India maintains its own geoid model for precisely this reason."
+        },
+        {
+          "type": "paragraph",
+          "text": "The geoid is also a window into the deep Earth. A mass excess pulls the geoid up; a mass deficit lets it dip. The most striking example on the planet is the Indian Ocean Geoid Low, a broad depression centred south of the Indian peninsula, where the sea surface sits roughly 106 metres below the reference ellipsoid — the largest such low anywhere on Earth. It is a gravitational whisper from the mantle, and geophysicists are still debating exactly what produces it. The lesson is elegant: the shape of the ocean surface is a message about the rocks a thousand kilometres beneath it."
+        }
+      ],
+      "refs": [
+        3,
+        5
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "id": "earth-interior",
+      "kind": "diagram",
+      "title": "A quarter cut-away of the Earth",
+      "caption": "Notice the three named boundaries: Moho between crust and mantle, Gutenberg between mantle and core, Lehmann between outer and inner core. The crust is drawn far thicker than it really is — at true scale it would be a hairline on this page.",
+      "alt": "Quarter cut-away of the Earth showing the crust, mantle, liquid outer core and solid inner core, with the Moho, Gutenberg and Lehmann discontinuities marked along a radial line.",
+      "credit": "Original diagram for The Daily Brief",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 460\" role=\"img\" aria-label=\"Quarter cut-away of Earth showing crust, mantle, outer core and inner core, with the Moho, Gutenberg and Lehmann discontinuities marked\"><rect width=\"800\" height=\"460\" fill=\"var(--paper-2)\"/><path d=\"M 495 400 A 395 395 0 0 0 100 5 L 100 20 A 380 380 0 0 1 480 400 Z\" fill=\"var(--ink)\" stroke=\"var(--ink)\" stroke-width=\"1\"/><path d=\"M 480 400 A 380 380 0 0 0 100 20 L 100 185 A 215 215 0 0 1 315 400 Z\" fill=\"var(--rule)\" stroke=\"var(--ink)\" stroke-width=\"1\"/><path d=\"M 315 400 A 215 215 0 0 0 100 185 L 100 320 A 80 80 0 0 1 180 400 Z\" fill=\"var(--muted)\" stroke=\"var(--ink)\" stroke-width=\"1\"/><path d=\"M 180 400 A 80 80 0 0 0 100 320 L 100 400 Z\" fill=\"var(--accent)\" stroke=\"var(--ink)\" stroke-width=\"1\"/><line x1=\"100\" y1=\"400\" x2=\"379\" y2=\"121\" stroke=\"var(--ink)\" stroke-width=\"1\" stroke-dasharray=\"5 5\" opacity=\"0.55\"/><text x=\"392\" y=\"106\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--ink)\">Moho</text><text x=\"392\" y=\"121\" font-family=\"sans-serif\" font-size=\"11\" fill=\"var(--ink)\">crust / mantle</text><text x=\"266\" y=\"234\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--ink)\">Gutenberg</text><text x=\"266\" y=\"249\" font-family=\"sans-serif\" font-size=\"11\" fill=\"var(--ink)\">mantle / core</text><text x=\"172\" y=\"330\" font-family=\"sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"var(--ink)\">Lehmann</text><text x=\"172\" y=\"345\" font-family=\"sans-serif\" font-size=\"11\" fill=\"var(--ink)\">outer / inner core</text><rect x=\"530\" y=\"70\" width=\"22\" height=\"14\" fill=\"var(--ink)\"/><text x=\"562\" y=\"82\" font-family=\"sans-serif\" font-size=\"13\" fill=\"var(--ink)\">Crust — 0 to about 35 km</text><rect x=\"530\" y=\"104\" width=\"22\" height=\"14\" fill=\"var(--rule)\" stroke=\"var(--ink)\" stroke-width=\"1\"/><text x=\"562\" y=\"116\" font-family=\"sans-serif\" font-size=\"13\" fill=\"var(--ink)\">Mantle — to 2,900 km</text><rect x=\"530\" y=\"138\" width=\"22\" height=\"14\" fill=\"var(--muted)\"/><text x=\"562\" y=\"150\" font-family=\"sans-serif\" font-size=\"13\" fill=\"var(--ink)\">Outer core — 2,900–5,150 km</text><text x=\"562\" y=\"166\" font-family=\"sans-serif\" font-size=\"12\" fill=\"var(--ink)\">liquid iron–nickel</text><rect x=\"530\" y=\"182\" width=\"22\" height=\"14\" fill=\"var(--accent)\"/><text x=\"562\" y=\"194\" font-family=\"sans-serif\" font-size=\"13\" fill=\"var(--ink)\">Inner core — 5,150–6,371 km</text><text x=\"562\" y=\"210\" font-family=\"sans-serif\" font-size=\"12\" fill=\"var(--ink)\">solid iron–nickel</text><text x=\"530\" y=\"260\" font-family=\"sans-serif\" font-size=\"12\" fill=\"var(--ink)\">Depths not to scale.</text><text x=\"530\" y=\"278\" font-family=\"sans-serif\" font-size=\"12\" fill=\"var(--ink)\">Earth's mean radius: 6,371 km.</text></svg>"
+    },
+    {
+      "id": "seismic-shadow-zones",
+      "kind": "diagram",
+      "title": "The two shadow zones",
+      "caption": "The darker band is the P-wave shadow zone, 103° to 142° from the focus. The lighter cap is the S-wave shadow zone, everything beyond 103°. Notice that the P shadow sits entirely inside the S shadow — and that P waves return beyond 142° while S waves never do.",
+      "alt": "Cross-section of the Earth with an earthquake focus at the top, showing the P-wave shadow zone as a band between 103 and 142 degrees and the S-wave shadow zone as a cap beyond 103 degrees.",
+      "credit": "Original diagram for The Daily Brief",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 480\" role=\"img\" aria-label=\"Cross-section of Earth showing the P-wave shadow zone between 103 and 142 degrees and the S-wave shadow zone beyond 103 degrees\"><rect width=\"800\" height=\"480\" fill=\"var(--paper-2)\"/><circle cx=\"400\" cy=\"215\" r=\"175\" fill=\"var(--paper-2)\" stroke=\"var(--ink)\" stroke-width=\"2\"/><path d=\"M 230 254 A 175 175 0 0 0 570 254 Z\" fill=\"var(--muted)\" opacity=\"0.35\"/><path d=\"M 230 254 A 175 175 0 0 0 292 353 L 508 353 A 175 175 0 0 0 570 254 Z\" fill=\"var(--accent)\" opacity=\"0.45\"/><circle cx=\"400\" cy=\"215\" r=\"96\" fill=\"none\" stroke=\"var(--ink)\" stroke-width=\"1.2\" stroke-dasharray=\"5 4\"/><line x1=\"400\" y1=\"40\" x2=\"488\" y2=\"63\" stroke=\"var(--ink)\" stroke-width=\"1.2\"/><line x1=\"400\" y1=\"40\" x2=\"552\" y2=\"128\" stroke=\"var(--ink)\" stroke-width=\"1.2\"/><line x1=\"400\" y1=\"40\" x2=\"400\" y2=\"390\" stroke=\"var(--ink)\" stroke-width=\"1.2\"/><line x1=\"400\" y1=\"40\" x2=\"312\" y2=\"63\" stroke=\"var(--ink)\" stroke-width=\"1.2\"/><line x1=\"400\" y1=\"40\" x2=\"248\" y2=\"128\" stroke=\"var(--ink)\" stroke-width=\"1.2\"/><circle cx=\"400\" cy=\"40\" r=\"5\" fill=\"var(--ink)\"/><text x=\"400\" y=\"26\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"var(--ink)\">Focus</text><text x=\"600\" y=\"70\" font-family=\"sans-serif\" font-size=\"12\" fill=\"var(--ink)\">P and S waves</text><text x=\"600\" y=\"86\" font-family=\"sans-serif\" font-size=\"12\" fill=\"var(--ink)\">reach the surface</text><line x1=\"596\" y1=\"80\" x2=\"556\" y2=\"126\" stroke=\"var(--ink)\" stroke-width=\"1\"/><text x=\"600\" y=\"250\" font-family=\"sans-serif\" font-size=\"12\" fill=\"var(--ink)\">P-wave shadow zone</text><text x=\"600\" y=\"266\" font-family=\"sans-serif\" font-size=\"12\" fill=\"var(--ink)\">103° to 142°</text><line x1=\"596\" y1=\"258\" x2=\"540\" y2=\"292\" stroke=\"var(--ink)\" stroke-width=\"1\"/><text x=\"60\" y=\"215\" font-family=\"sans-serif\" font-size=\"12\" fill=\"var(--ink)\">core boundary</text><line x1=\"156\" y1=\"212\" x2=\"304\" y2=\"212\" stroke=\"var(--ink)\" stroke-width=\"1\"/><text x=\"400\" y=\"428\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"var(--ink)\">S-wave shadow zone: no S waves arrive beyond 103°</text><text x=\"400\" y=\"450\" font-family=\"sans-serif\" font-size=\"12\" text-anchor=\"middle\" fill=\"var(--ink)\">P waves reappear beyond 142°, refracted through the solid inner core</text><text x=\"400\" y=\"472\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"var(--ink)\">Schematic; angles measured from the focus. Not to scale.</text></svg>"
+    },
+    {
+      "id": "isostasy-airy",
+      "kind": "diagram",
+      "title": "Airy isostasy: mountains have roots",
+      "caption": "The mountain block is thicker than the normal crust, so it sinks deeper into the denser mantle — the same reason an iceberg floats low. The dashed line is the level of compensation, where the pressure from every column is equal. The root is drawn far shallower than reality; in the Himalaya it runs to roughly four or five times the height of the range.",
+      "alt": "Cross-section showing a normal crustal block and a mountain block with a deep root floating in the denser mantle, with a dashed level of compensation line below.",
+      "credit": "Original diagram for The Daily Brief",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 420\" role=\"img\" aria-label=\"Airy isostasy: a mountain block with a deep low-density root floating in the denser mantle, beside a normal crustal block\"><rect width=\"800\" height=\"420\" fill=\"var(--paper-2)\"/><rect x=\"0\" y=\"150\" width=\"800\" height=\"270\" fill=\"var(--rule)\"/><rect x=\"40\" y=\"150\" width=\"320\" height=\"50\" fill=\"var(--paper-2)\" stroke=\"var(--ink)\" stroke-width=\"1.5\"/><path d=\"M 440 150 L 600 60 L 760 150 L 760 200 Q 600 460 440 200 Z\" fill=\"var(--paper-2)\" stroke=\"var(--ink)\" stroke-width=\"1.5\"/><line x1=\"40\" y1=\"150\" x2=\"440\" y2=\"150\" stroke=\"var(--ink)\" stroke-width=\"1\" stroke-dasharray=\"6 5\"/><line x1=\"40\" y1=\"345\" x2=\"760\" y2=\"345\" stroke=\"var(--ink)\" stroke-width=\"1.2\" stroke-dasharray=\"6 5\"/><text x=\"200\" y=\"172\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"var(--ink)\">Normal crust</text><text x=\"200\" y=\"190\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"var(--ink)\">about 2.7 g/cm³</text><text x=\"600\" y=\"115\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"var(--ink)\">Mountain range</text><text x=\"600\" y=\"300\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"var(--ink)\">Root</text><text x=\"200\" y=\"300\" font-family=\"sans-serif\" font-size=\"13\" text-anchor=\"middle\" fill=\"var(--ink)\">Mantle — about 3.3 g/cm³, yields plastically</text><text x=\"150\" y=\"337\" font-family=\"sans-serif\" font-size=\"12\" fill=\"var(--ink)\">Level of compensation</text><text x=\"40\" y=\"140\" font-family=\"sans-serif\" font-size=\"11\" fill=\"var(--ink)\">reference level</text><text x=\"400\" y=\"400\" font-family=\"sans-serif\" font-size=\"11\" text-anchor=\"middle\" fill=\"var(--ink)\">Airy's model: uniform crustal density, variable thickness. Not to scale.</text></svg>"
+    }
+  ],
+  "anecdote": {
+    "title": "The woman who found the inner core without leaving her desk",
+    "body": "In the 1930s, a Danish seismologist named Inge Lehmann was reading seismograms of large earthquakes when she noticed something odd: faint arrivals inside what should have been the P-wave shadow zone. If the core were entirely liquid, nothing should have been recorded there. Lehmann proposed that the core had two parts — a liquid outer shell and a solid inner sphere — and that the boundary between them reflected and refracted P waves back into the shadow. She published the idea in 1936. That boundary is now called the Lehmann discontinuity, and the American Geophysical Union's medal for solid-Earth geophysics carries her name. She died in 1993, aged 104."
+  },
+  "exam": {
+    "prelims": [
+      "P waves are longitudinal and travel through solids, liquids and gases; S waves are transverse and travel only through solids. This single contrast explains both shadow zones.",
+      "The S-wave shadow zone begins at 103° from the epicentre and covers everything beyond it. The P-wave shadow zone is the ring between 103° and 142°; P waves reappear beyond 142°.",
+      "Discontinuities to memorise: Mohorovičić (crust–mantle), Gutenberg (mantle–core), Lehmann (outer core–inner core). Conrad lies within the continental crust.",
+      "The lithosphere is a mechanical layer — crust plus rigid uppermost mantle, roughly 100 km thick. The asthenosphere below it is plastic and is the seismic low-velocity zone.",
+      "Isostasy: Airy's model uses uniform density with variable thickness (mountain roots); Pratt's model uses variable density with a uniform depth of compensation.",
+      "Mean density of the Earth is about 5.5 g/cm³ against 2.7–3.0 g/cm³ for crustal rock — the classic density argument for a dense metallic core.",
+      "The geoid is an equipotential surface of gravity coinciding with mean sea level; it departs from the WGS84 reference ellipsoid by up to about ±100 m."
+    ],
+    "mains": [
+      "The Earth's interior is known to us almost entirely through indirect evidence. Discuss how seismic waves have been used to reconstruct the internal structure of the Earth. (GS-I, 150 words)",
+      "Explain the concept of isostasy and examine its relevance to the evolution of the Himalayan region and the Indo-Gangetic plain. (GS-I, 250 words)",
+      "What is the geoid, and why does it matter for surveying, navigation and our understanding of the deep mantle? Illustrate with the Indian Ocean Geoid Low. (GS-I, 150 words)"
+    ],
+    "keyTerms": [
+      {
+        "term": "Geoid",
+        "meaning": "The equipotential surface of the Earth's gravity field that coincides with mean sea level, extended imaginarily beneath the continents; the true shape of the Earth."
+      },
+      {
+        "term": "Mohorovičić discontinuity (Moho)",
+        "meaning": "The boundary between the crust and the mantle, marked by a sharp increase in seismic wave velocity."
+      },
+      {
+        "term": "Gutenberg discontinuity",
+        "meaning": "The boundary between the mantle and the outer core at about 2,900 km depth, where S waves disappear."
+      },
+      {
+        "term": "Lehmann discontinuity",
+        "meaning": "The boundary between the liquid outer core and the solid inner core, at about 5,150 km depth."
+      },
+      {
+        "term": "Shadow zone",
+        "meaning": "A region of the Earth's surface from which a given type of seismic wave is absent — the S-wave shadow beyond 103°, the P-wave shadow between 103° and 142°."
+      },
+      {
+        "term": "Asthenosphere",
+        "meaning": "The hot, weak, plastically deforming layer roughly 100–400 km deep; the seismic low-velocity zone over which lithospheric plates move."
+      },
+      {
+        "term": "Isostasy",
+        "meaning": "The state of gravitational balance in which crustal blocks float on the denser mantle; Airy and Pratt offered competing models."
+      },
+      {
+        "term": "Geodynamo",
+        "meaning": "The self-sustaining process by which convection in the liquid outer core, organised by Earth's rotation, generates the planet's magnetic field."
+      }
+    ]
+  },
+  "recap": [
+    "We have directly sampled only about one part in five hundred of the Earth's depth. Everything else rests on four indirect witnesses: density arithmetic, seismic waves, gravity, and meteorites.",
+    "Chemically the Earth is crust, mantle and core. The crust is thin and silicate; the mantle is solid peridotite that flows plastically over geological time; the core is iron–nickel, liquid outside and solid inside.",
+    "Seismic waves are the decisive tool. S waves vanish beyond 103° from the epicentre because they cannot cross a liquid — proof that the outer core is molten. P waves vanish between 103° and 142° but return beyond 142°, refracted by a solid inner core.",
+    "The outer core is liquid and the inner core solid because of pressure, not temperature: the melting point of iron rises faster with depth than the temperature does. The convecting liquid core drives the geodynamo.",
+    "The crust–mantle–core division is chemical; the lithosphere–asthenosphere division is mechanical. The lithosphere is rigid and broken into plates; the asthenosphere is plastic and is what the plates slide over.",
+    "Isostasy explains why mountains have roots and why Scandinavia and Canada are still rising after the ice age. The geoid — mean sea level extended under the continents — is the true shape of the Earth, and its undulations are a message from the deep mantle."
+  ],
+  "nextUp": "We now have a layered planet with a rigid outer shell and a weak layer beneath it. That is exactly the machinery plate tectonics needs. Next time we pick up the story in 1912, when a German meteorologist named Alfred Wegener looked at a world map and could not unsee the jigsaw fit of South America and Africa. We will follow his evidence — fossils, rocks, ancient glaciations — watch the scientific establishment reject him, and then watch the 1960s vindicate him through sea-floor spreading and magnetic striping. From continental drift to plate tectonics: a theory that changed everything.",
+  "references": [
+    {
+      "label": "NCERT Class XI — Fundamentals of Physical Geography",
+      "href": "https://ncert.nic.in/textbook/pdf/kegy101.pdf",
+      "kind": "official"
+    },
+    {
+      "label": "NCERT textbooks (official, free)",
+      "href": "https://ncert.nic.in/textbook.php",
+      "kind": "official"
+    },
+    {
+      "label": "Earth",
+      "href": "https://en.wikipedia.org/wiki/Earth",
+      "kind": "wiki"
+    },
+    {
+      "label": "Solar System",
+      "href": "https://en.wikipedia.org/wiki/Solar_System",
+      "kind": "wiki"
+    },
+    {
+      "label": "NASA — Earth Fact Sheet",
+      "href": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+      "kind": "official"
+    }
+  ],
+  "series": {
+    "subject": "Geography",
+    "subjectKey": "geography",
+    "paper": "Prelims GS-I · Mains GS-I",
+    "unitId": "geo-foundations",
+    "unitTitle": "Foundations: How Geography Sees the World",
+    "lessonId": "geo-foundations-5",
+    "lessonNumber": 5,
+    "lessonCount": 5,
+    "seriesLessonNumber": 5,
+    "syllabusNode": "Geography — Foundations of the discipline; Earth in the solar system"
+  },
+  "handoff": {
+    "covered": [
+      "The problem of indirect knowledge: Kola borehole at 12.26 km against a 6,371 km radius; the four witnesses (density, seismic waves, gravity, meteorites).",
+      "The density argument: crustal rock 2.7–3.0 g/cm³ against a mean Earth density of about 5.5 g/cm³.",
+      "Chemical layering: oceanic crust (5–10 km, basaltic, ~3.0) versus continental crust (30–70 km, granitic, ~2.7); SiAl and SiMa; mantle to 2,900 km, peridotite, solid but plastic; core as NIFE, outer liquid, inner solid.",
+      "Discontinuities: Moho (crust–mantle), Gutenberg (mantle–core), Lehmann (outer–inner core), with Conrad mentioned only in passing.",
+      "Seismic waves: P (longitudinal, fastest, all media), S (transverse, solids only), L (surface, slowest, most destructive).",
+      "Shadow zones: S-wave shadow beyond 103°; P-wave shadow 103°–142°; P waves returning beyond 142° via inner-core refraction. The nesting of the P shadow inside the S shadow was emphasised.",
+      "Why the outer core is liquid and the inner core solid: pressure at the inner-core boundary around 330 GPa raising the melting point of iron above the ambient temperature; the geodynamo and the growing inner core.",
+      "Lithosphere versus asthenosphere as a mechanical rather than chemical division; the low-velocity zone; the lithosphere as the plate.",
+      "Isostasy: Airy (uniform density, variable thickness, roots) versus Pratt (variable density, uniform depth of compensation); Himalayan crustal root, Ganga plain flexure, Peninsular shield rigidity, post-glacial rebound in Scandinavia and Canada.",
+      "The geoid: equipotential surface at mean sea level, departures of up to about ±100 m from the WGS84 ellipsoid, orthometric versus ellipsoidal heights, and the Indian Ocean Geoid Low at roughly 106 m."
+    ],
+    "next": "Continental Drift to Plate Tectonics: A Theory That Changed Everything — Wegener's continental drift and its evidence (jigsaw fit, fossils, rocks, palaeoclimate); why drift was rejected; sea-floor spreading and magnetic striping; Harry Hess and the 1960s revolution; plate boundaries (divergent, convergent, transform); mantle convection; hotspots.",
+    "notes": "Three new reusable figures were created here. 'earth-interior' is the master cut-away and should be reused whenever the internal structure, discontinuities or core composition come up — including in the plate tectonics lesson and in any question on the geodynamo or the magnetic field. 'seismic-shadow-zones' is reusable for earthquake seismology, for the structure of the Earth, and for any question on how geophysicists image the interior; it pairs naturally with the earth-interior figure. 'isostasy-airy' is reusable for the Himalaya, for the Ganga basin, for post-glacial rebound, for gravity anomalies and for the broader theme of crustal compensation. The Inge Lehmann anecdote is a strong Indian-classroom-friendly story about women in science and about inference from absence — it can be reused in the history-of-science overlap and in essay openings. The Kola borehole figure (12.26 km against 6,371 km) is a good hook and can be reused in any lesson on the scale of the Earth. Deliberately NOT done here: the latitude-belts figure from Lesson 2 was not rebuilt, and the 'map as argument' stance from Lesson 1 was not re-established. The Coriolis preview from Lesson 4 was not paid off here — it still belongs to the atmospheric circulation lesson, where the pressure-gradient force, geostrophic balance and the three-cell model need the full treatment. The sun-synchronous orbit hook from Lesson 4 also remains open for the remote sensing or climatology unit. The next teacher should open by connecting the rigid lithosphere and plastic asthenosphere directly to the idea of mobile plates — that is the bridge into Wegener."
+  }
+}
