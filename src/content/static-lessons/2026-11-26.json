@@ -1,0 +1,307 @@
+{
+  "date": "2026-11-26",
+  "generatedAt": "2026-11-26T03:49:42.249Z",
+  "title": "Continental Drift to Plate Tectonics: A Theory That Changed Everything",
+  "subtitle": "How a ridiculed idea about moving continents became the single theory that explains the Earth's surface",
+  "readMinutes": 14,
+  "hook": "Take a school atlas. Put your finger on the bulge of Brazil and slide it up the page until it meets the Gulf of Guinea. It fits — not perfectly, but so nearly that a schoolboy noticed it in 1620. In 1912 a German meteorologist told the world that the continents had actually moved. The world said no. Fifty years later, the ocean floor said yes.",
+  "sections": [
+    {
+      "heading": "The fit that would not go away",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alfred Wegener was not the first person to notice the fit. Francis Bacon had remarked on it in 1620, and the Frenchman Antonio Snider-Pellegrini had drawn the two coasts together in 1858. What Wegener did — in two papers in 1912 and then in a book, The Origin of Continents and Oceans, first published in 1915 — was to turn a curiosity into a case. He proposed that around 250 million years ago all the continents had lain together in one great landmass, which he called Pangaea, surrounded by one ocean, Panthalassa. Pangaea then broke up and the pieces drifted apart: Laurasia in the north, Gondwanaland in the south, with the Tethys Sea between them. His evidence was not one thing but four, and they had to be answered together."
+        },
+        {
+          "type": "paragraph",
+          "text": "The first was the fit itself. Anyone can see it in an atlas: the bulge of Brazil nestles into the Gulf of Guinea. But Wegener's critics pointed out that the fit is imperfect — there are overlaps and gaps. The answer came only in 1965, when the Cambridge geophysicists Edward Bullard, Jim Everett and Alan Smith used a computer to fit the continents not at the coastline but along a submarine contour several hundred metres down — the 500-fathom line, about 900 metres. The fit became almost exact. That is a lesson in itself: the coastline is a temporary accident of sea level, while the shelf and slope are the true edge of the continent. Fit the continent, not the shore."
+        },
+        {
+          "type": "paragraph",
+          "text": "The second was fossils. The seed fern Glossopteris has leaves too heavy to blow across an ocean and seeds too large to float. Yet its fossils are found in India, Australia, South Africa, South America and Antarctica. Mesosaurus was a small freshwater reptile — it could not have swum the Atlantic. Lystrosaurus and Cynognathus are land animals found on two continents each. In India, Glossopteris is a familiar name to anyone who has read about the Damodar valley coalfields; the same flora appears in the coal measures of Australia and South Africa. The Talchir boulder bed of the Indian peninsula is a glacial deposit, and the coal seams above it carry the same plants. Wegener's point was simple: identical organisms on opposite shores of a wide ocean are not a coincidence. They are a broken family album."
+        },
+        {
+          "type": "paragraph",
+          "text": "The third was rocks. Belts of ancient rock can be matched across the ocean. The 2,000-million-year-old granite-greenstone belts of Ghana continue in Brazil. The Caledonian fold belt of Scandinavia and Scotland reappears in Greenland and the Appalachians. The fourth was palaeoclimate, and it is the most elegant of all. Around 250 million years ago, glacial deposits — tillites and striated pavements — were laid down in India, Australia, South Africa, South America and Antarctica, and the striations all point away from a centre in the southern hemisphere. Meanwhile coal seams, which need warm, wet, tropical conditions, lie in Antarctica. Coral reefs and evaporites lie in the Sahara. Coal in Antarctica and glaciers in India make sense only if the continents moved. That is the argument in one sentence."
+        },
+        {
+          "type": "figure",
+          "figureId": "pangaea-evidence"
+        }
+      ],
+      "refs": [
+        1,
+        3
+      ]
+    },
+    {
+      "heading": "Why the world said no",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A theory needs a mechanism, and Wegener did not have one. He suggested two forces: the pole-fleeing force, a centrifugal effect of the Earth's rotation, and tidal drag from the Sun and Moon. Both are real. Both are also far too weak. The English geophysicist Harold Jeffreys calculated that these forces were smaller than the strength of the rocks they were supposed to move, by orders of magnitude. It was like proposing to push a loaded truck with a feather. Wegener revised his book four times and kept changing his figures; his estimates of how fast the continents moved were far too high. The geological establishment, which had spent decades measuring vertical uplift and subsidence, saw no need for horizontal motion at all."
+        },
+        {
+          "type": "paragraph",
+          "text": "There was a deeper reason too. Geology in the 1920s was fixist. Isostasy — the Airy and Pratt models we met in the last lesson — explained vertical motion beautifully. Mountains had roots; continents floated in balance. Everything that needed explaining could be explained by things going up and down. Horizontal motion of thousands of kilometres was not merely unsupported; it was unnecessary. And there was the sociology of it. Wegener was a meteorologist and a polar explorer, not a geologist. Outsiders who overturn a field's assumptions are rarely thanked for it. His theory was called 'continental drift' and treated as a fantasy — a beautiful hypothesis with no engine."
+        },
+        {
+          "type": "callout",
+          "title": "The lesson of the rejection",
+          "text": "Wegener was not wrong about the pattern; he was wrong about the force. A theory can be rejected for a good reason and still be true. When you read that a scientific idea was dismissed, always ask: dismissed for lack of evidence, or for lack of mechanism? The two are very different, and only the second can be repaired by a new instrument.",
+          "tone": "note"
+        }
+      ],
+      "refs": [
+        1,
+        3
+      ]
+    },
+    {
+      "heading": "The ocean floor answers back",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The Second World War gave geologists a new instrument and a new reason to use it. Sonar and the echo sounder, developed to hunt submarines, could measure the depth of the ocean continuously. Harry Hess, a Princeton geologist serving in the Pacific, ran echo-sounding lines across the ocean floor and found something odd: flat-topped seamounts, which he called guyots. Flat tops mean erosion, and erosion means they were once at the surface. Why were they now a kilometre or more down? The ocean floor, everyone had assumed, was a flat, ancient, featureless plain. It was not. It had mountains, ridges, trenches and a structure."
+        },
+        {
+          "type": "paragraph",
+          "text": "In the 1950s, Marie Tharp and Bruce Heezen, working at Columbia University, began compiling the Atlantic soundings into a map. Tharp was not allowed on the research ship — women were barred from the vessel at the time — so she drew from the data on shore. What emerged was a continuous submarine mountain range running down the middle of the Atlantic, with a rift valley along its crest. They called it the Great Global Rift. It was the largest mountain chain on Earth, and nobody had known it was there. Tharp's map is one of the great acts of inference in the earth sciences — the same kind of inference from absence that gave Inge Lehmann the inner core."
+        },
+        {
+          "type": "paragraph",
+          "text": "In 1962 Hess published a short, cautious paper called 'History of Ocean Basins'. He proposed that the ocean floor is not permanent. Magma rises along the mid-ocean ridge, spreads out on both sides, cools and hardens, and is eventually consumed at the trenches. The ocean floor is a conveyor belt. He called it sea-floor spreading. The idea was almost too neat, and Hess himself called it 'geopoetry'. But it made a prediction that could be tested: if the ocean floor is being created at the ridges and destroyed at the trenches, then no part of it should be very old. The continents could be billions of years old; the ocean floor should be young."
+        },
+        {
+          "type": "paragraph",
+          "text": "The test came from magnetism. As basaltic lava cools below about 580°C — the Curie point of magnetite — the iron minerals in it lock in the direction of the Earth's magnetic field at that moment. The field reverses polarity every so often. In 1963, Fred Vine and Drummond Matthews in Cambridge, and independently Lawrence Morley in Canada, realised what this meant. If the ocean floor spreads, each new strip of crust records the field of its time, and the record should be a symmetrical barcode of stripes on either side of the ridge. It was. The stripes matched the reversal timescale. Morley's paper was rejected by two journals; Vine and Matthews published in Nature. Deep-sea drilling from 1968 confirmed the ages: no ocean floor older than about 180–200 million years, and the age increases away from the ridges."
+        },
+        {
+          "type": "figure",
+          "figureId": "magnetic-striping"
+        }
+      ],
+      "refs": [
+        2,
+        3
+      ]
+    },
+    {
+      "heading": "The three boundaries",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Plates meet in three ways. At a divergent boundary, two plates move apart. Magma rises to fill the gap and new crust is created — so these are called constructive margins. On the ocean floor this produces the mid-ocean ridge; on land it produces a rift valley. The East African Rift is the classic example: Africa is being pulled apart along a 6,000-km system of faults, and the Red Sea is what a rift looks like when it has grown into a young ocean. Iceland sits astride the Mid-Atlantic Ridge and is being pulled apart by about 2 cm a year. Earthquakes here are shallow and mild; volcanoes are common."
+        },
+        {
+          "type": "paragraph",
+          "text": "At a convergent boundary, two plates move together. This is a destructive margin, because crust is consumed. There are three cases. Ocean meets ocean: the older, denser plate sinks, forming a deep trench and a curved chain of volcanic islands — an island arc. Japan, the Philippines and the Aleutians are examples. Ocean meets continent: the oceanic plate subducts beneath the continent, producing a trench, a volcanic mountain chain and a fold belt — the Andes are the type example. Continent meets continent: neither plate will sink, because continental rock is too buoyant. So the crust crumples and thickens. That is the Himalaya — India driving into Asia, with some Indian crust thrust under Tibet but the dominant process being shortening and thickening of the crust."
+        },
+        {
+          "type": "paragraph",
+          "text": "At a transform boundary, two plates slide past each other. No crust is created and none is destroyed — a conservative margin. The San Andreas Fault in California is the famous example, where the Pacific Plate slides northwest past the North American Plate at about 5 cm a year. The Anatolian Fault in Turkey and the Chaman Fault in Pakistan and Afghanistan are others. Earthquakes here are shallow but can be very large, because the two blocks lock, build up strain, and then slip. The 1906 San Francisco earthquake was a transform event."
+        },
+        {
+          "type": "paragraph",
+          "text": "So why do almost all earthquakes and volcanoes occur at plate margins? Because that is where the plates interact. In the plate interior, the lithosphere rides along on the asthenosphere without much internal strain. At a margin, the relative motion has to be accommodated — by new crust forming, by crust being consumed, or by the two blocks grinding past each other. All three processes fracture rock. And all three bring heat and magma within reach of the surface. The Pacific 'Ring of Fire' is simply the perimeter of the Pacific Plate, where subduction is happening almost all the way round. Roughly three-quarters of the world's active volcanoes and about nine-tenths of its earthquakes lie on that ring."
+        },
+        {
+          "type": "figure",
+          "figureId": "plate-boundaries"
+        },
+        {
+          "type": "callout",
+          "title": "Exam shorthand for the three margins",
+          "text": "Divergent = tension, ridge or rift, shallow quakes, new crust. Convergent = compression, trench plus volcanic arc, deepest quakes, crust destroyed. Transform = shear, fault line, shallow but strong quakes, crust conserved. If a question asks you to identify a margin from a description, look first for the landform, then for the depth of the earthquakes.",
+          "tone": "exam"
+        }
+      ],
+      "refs": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "heading": "What moves the plates?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The mechanism Wegener lacked was proposed, ironically, while he was still alive. In 1929 the British geologist Arthur Holmes suggested that heat from radioactive decay in the mantle sets up slow convection currents. Hot rock rises, spreads sideways, cools and sinks. Holmes proposed that these currents could drag the continents. He was largely ignored, for the same reasons Wegener was. But he was right about the physics. The mantle is solid rock that flows — we met this in the last lesson — at speeds of centimetres a year over millions of years. Convection is the engine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Modern plate tectonics recognises three drivers. Slab pull is the dominant one: a cold, dense subducting slab sinks under its own weight and pulls the rest of the plate behind it, like a tablecloth sliding off a table. Ridge push is the gravitational sliding of newly formed crust away from the elevated ridge. Basal drag is the friction of the convecting asthenosphere against the base of the plate. Slab pull is the engine; ridge push is the shove. This is why plates with long subducting margins move fastest — the Pacific Plate, for example, moves at up to about 10 cm a year, while plates with little subduction, like the African Plate, move more slowly."
+        },
+        {
+          "type": "paragraph",
+          "text": "Not all volcanism is at plate margins. In 1963 the Canadian geophysicist Tuzo Wilson proposed that some volcanoes are fed by plumes of hot rock rising from deep in the mantle — hotspots. As a plate moves over a hotspot, it leaves a trail of extinct volcanoes. The Hawaiian-Emperor chain is the classic example: a line of islands and seamounts getting older to the northwest, with a bend at about 47 million years that records a change in the direction of the Pacific Plate. India has its own record. About 66 million years ago the Reunion hotspot erupted the Deccan Traps; the trail runs south from India through the Chagos-Laccadive Ridge to Reunion. The Kerguelen hotspot left the Rajmahal Traps in Jharkhand about 117 million years ago. Hotspots are roughly fixed pins that let us measure plate motion."
+        },
+        {
+          "type": "paragraph",
+          "text": "Put all this together and you get the Wilson cycle, named after the same Tuzo Wilson: oceans open, widen, then close. The Atlantic is opening. The Pacific is closing. The Mediterranean is the last remnant of the Tethys, and the Himalaya is where the Tethys finally closed. The speeds are almost comically slow — typically 2 to 10 cm a year, about the rate at which your fingernails grow. India is moving north at roughly 5 cm a year. Over 50 million years that is 2,500 km. That is how a Tethys Ocean becomes a mountain range. The Earth is not fast; it is patient."
+        },
+        {
+          "type": "callout",
+          "title": "One distinction worth keeping",
+          "text": "Continental drift and plate tectonics are not the same idea. Drift says the continents moved. Plate tectonics says the whole lithosphere — ocean floor and continent together — is divided into rigid plates that move over the asthenosphere. Drift was the observation; plate tectonics was the theory that explained it. In an answer, never use the two terms interchangeably.",
+          "tone": "warning"
+        }
+      ],
+      "refs": [
+        2,
+        3
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "id": "pangaea-evidence",
+      "kind": "map",
+      "title": "Pangaea and the evidence that would not fit",
+      "caption": "Panel A shows the single landmass Wegener proposed, with India tucked into Gondwana. Panel B shows the same fossils appearing on both coasts of the Atlantic — organisms that could not have crossed an ocean. Notice that the evidence is not one clue but four independent kinds, all pointing the same way.",
+      "alt": "Two-panel schematic: Pangaea with Laurasia, Gondwana and Tethys, and the matching coastlines of South America and Africa with identical fossil markers on both sides.",
+      "credit": "Original diagram for The Daily Brief",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400' role='img' aria-label='Pangaea and the fossil evidence for continental drift'>\n  <text x='20' y='28' font-size='15' fill='var(--ink)'>A. Pangaea, about 250 million years ago</text>\n  <path d='M70 150 L110 110 L180 95 L250 110 L300 140 L320 190 L300 240 L240 270 L170 275 L110 250 L75 210 Z' fill='var(--paper-2)' stroke='var(--ink)' stroke-width='2'/>\n  <line x1='80' y1='185' x2='312' y2='185' stroke='var(--muted)' stroke-width='1.5' stroke-dasharray='6 5'/>\n  <text x='150' y='170' font-size='13' fill='var(--muted)'>Laurasia</text>\n  <text x='150' y='215' font-size='13' fill='var(--muted)'>Gondwana</text>\n  <text x='330' y='150' font-size='12' fill='var(--accent)'>Tethys</text>\n  <text x='40' y='320' font-size='12' fill='var(--muted)'>Panthalassa</text>\n  <path d='M255 235 L275 245 L262 262 Z' fill='var(--accent)' opacity='0.5' stroke='var(--ink)' stroke-width='1'/>\n  <text x='282' y='262' font-size='11' fill='var(--ink)'>India</text>\n  <text x='430' y='28' font-size='15' fill='var(--ink)'>B. The evidence: a broken family album</text>\n  <path d='M470 110 L510 95 L535 125 L530 175 L515 230 L495 285 L470 305 L455 270 L462 215 L458 165 L460 125 Z' fill='var(--paper-2)' stroke='var(--ink)' stroke-width='2'/>\n  <path d='M560 100 L610 90 L650 120 L655 175 L635 235 L605 290 L575 300 L560 255 L565 200 L555 150 L550 115 Z' fill='var(--paper-2)' stroke='var(--ink)' stroke-width='2'/>\n  <text x='470' y='330' font-size='12' fill='var(--muted)'>South America</text>\n  <text x='580' y='330' font-size='12' fill='var(--muted)'>Africa</text>\n  <circle cx='500' cy='170' r='5' fill='var(--accent)'/>\n  <circle cx='575' cy='170' r='5' fill='var(--accent)'/>\n  <circle cx='495' cy='215' r='5' fill='var(--accent)'/>\n  <circle cx='580' cy='215' r='5' fill='var(--accent)'/>\n  <circle cx='505' cy='255' r='5' fill='var(--accent)'/>\n  <circle cx='570' cy='255' r='5' fill='var(--accent)'/>\n  <text x='430' y='365' font-size='12' fill='var(--ink)'>● identical fossils on both coasts</text>\n  <text x='620' y='392' font-size='11' fill='var(--muted)'>Schematic; not to scale</text>\n</svg>"
+    },
+    {
+      "id": "magnetic-striping",
+      "kind": "chart",
+      "title": "The ocean floor as a magnetic tape recorder",
+      "caption": "Dark and light bands record alternating reversals of the Earth's magnetic field. The crucial detail is symmetry: the barcode on one side of the ridge mirrors the barcode on the other. That mirror image is what sea-floor spreading predicts and what a stationary ocean floor cannot produce.",
+      "alt": "A chart of alternating dark and light magnetic stripes arranged symmetrically about a central mid-ocean ridge, with crust age increasing away from the ridge on both sides.",
+      "credit": "Original diagram for The Daily Brief",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 340' role='img' aria-label='Symmetric magnetic stripes on the ocean floor about a mid-ocean ridge'>\n  <text x='400' y='25' font-size='15' fill='var(--ink)' text-anchor='middle'>The ocean floor as a magnetic tape recorder</text>\n  <text x='400' y='48' font-size='12' fill='var(--accent)' text-anchor='middle'>ridge</text>\n  <line x1='400' y1='55' x2='400' y2='200' stroke='var(--accent)' stroke-width='3'/>\n  <rect x='100' y='70' width='40' height='120' fill='var(--paper-2)' stroke='var(--rule)'/>\n  <rect x='140' y='70' width='40' height='120' fill='var(--ink)' opacity='0.75'/>\n  <rect x='180' y='70' width='40' height='120' fill='var(--paper-2)' stroke='var(--rule)'/>\n  <rect x='220' y='70' width='40' height='120' fill='var(--ink)' opacity='0.75'/>\n  <rect x='260' y='70' width='40' height='120' fill='var(--paper-2)' stroke='var(--rule)'/>\n  <rect x='300' y='70' width='40' height='120' fill='var(--ink)' opacity='0.75'/>\n  <rect x='340' y='70' width='40' height='120' fill='var(--paper-2)' stroke='var(--rule)'/>\n  <rect x='380' y='70' width='40' height='120' fill='var(--ink)' opacity='0.75'/>\n  <rect x='420' y='70' width='40' height='120' fill='var(--paper-2)' stroke='var(--rule)'/>\n  <rect x='460' y='70' width='40' height='120' fill='var(--ink)' opacity='0.75'/>\n  <rect x='500' y='70' width='40' height='120' fill='var(--paper-2)' stroke='var(--rule)'/>\n  <rect x='540' y='70' width='40' height='120' fill='var(--ink)' opacity='0.75'/>\n  <rect x='580' y='70' width='40' height='120' fill='var(--paper-2)' stroke='var(--rule)'/>\n  <rect x='620' y='70' width='40' height='120' fill='var(--ink)' opacity='0.75'/>\n  <rect x='660' y='70' width='40' height='120' fill='var(--paper-2)' stroke='var(--rule)'/>\n  <line x1='100' y1='215' x2='700' y2='215' stroke='var(--muted)' stroke-width='1.5'/>\n  <text x='100' y='235' font-size='11' fill='var(--muted)' text-anchor='middle'>older</text>\n  <text x='400' y='235' font-size='11' fill='var(--muted)' text-anchor='middle'>youngest crust</text>\n  <text x='700' y='235' font-size='11' fill='var(--muted)' text-anchor='middle'>older</text>\n  <rect x='230' y='268' width='18' height='12' fill='var(--ink)' opacity='0.75'/>\n  <text x='255' y='279' font-size='12' fill='var(--ink)'>normal polarity</text>\n  <rect x='400' y='268' width='18' height='12' fill='var(--paper-2)' stroke='var(--rule)'/>\n  <text x='425' y='279' font-size='12' fill='var(--ink)'>reversed polarity</text>\n  <text x='400' y='320' font-size='11' fill='var(--muted)' text-anchor='middle'>The barcode is the same on both sides of the ridge. Not to scale.</text>\n</svg>"
+    },
+    {
+      "id": "plate-boundaries",
+      "kind": "diagram",
+      "title": "The three ways plates meet",
+      "caption": "Panels 1 and 2 are cross-sections; panel 3 is a map view. In the divergent panel, note the magma rising into the gap. In the convergent panel, follow the slab down — the volcano sits above it, not at the trench. In the transform panel, the two blocks slide past each other and nothing is created or destroyed.",
+      "alt": "Three-panel schematic showing a divergent ridge with rising magma, a convergent subduction zone with a trench and volcano, and a transform fault in map view.",
+      "credit": "Original diagram for The Daily Brief",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400' role='img' aria-label='Cross-sections of divergent and convergent plate boundaries and a map view of a transform fault'>\n  <text x='15' y='28' font-size='15' fill='var(--ink)'>Divergent (constructive)</text>\n  <line x1='25' y1='110' x2='255' y2='110' stroke='var(--muted)' stroke-width='1.5' stroke-dasharray='6 5'/>\n  <text x='25' y='102' font-size='11' fill='var(--muted)'>sea level</text>\n  <path d='M25 250 L90 205 L130 185 L140 180 L150 185 L190 205 L255 250' fill='none' stroke='var(--ink)' stroke-width='3'/>\n  <ellipse cx='140' cy='300' rx='48' ry='28' fill='var(--accent)' opacity='0.25' stroke='var(--accent)' stroke-width='1.5'/>\n  <path d='M136 272 L136 190 L144 190 L144 272 Z' fill='var(--accent)' opacity='0.5'/>\n  <line x1='140' y1='150' x2='60' y2='150' stroke='var(--ink)' stroke-width='2'/>\n  <path d='M60 150 L72 144 L72 156 Z' fill='var(--ink)'/>\n  <line x1='140' y1='150' x2='220' y2='150' stroke='var(--ink)' stroke-width='2'/>\n  <path d='M220 150 L208 144 L208 156 Z' fill='var(--ink)'/>\n  <text x='140' y='172' font-size='11' fill='var(--ink)' text-anchor='middle'>ridge</text>\n  <text x='140' y='345' font-size='11' fill='var(--accent)' text-anchor='middle'>magma rises</text>\n  <text x='205' y='230' font-size='11' fill='var(--muted)'>new crust</text>\n  <text x='275' y='28' font-size='15' fill='var(--ink)'>Convergent (destructive)</text>\n  <line x1='285' y1='110' x2='515' y2='110' stroke='var(--muted)' stroke-width='1.5' stroke-dasharray='6 5'/>\n  <path d='M285 210 L400 210 L460 350' fill='none' stroke='var(--ink)' stroke-width='12' stroke-linecap='round'/>\n  <path d='M400 150 L515 150 L515 235 L400 215 Z' fill='var(--paper-2)' stroke='var(--ink)' stroke-width='2'/>\n  <path d='M450 150 L470 95 L490 150 Z' fill='var(--accent)' opacity='0.5' stroke='var(--ink)' stroke-width='1.5'/>\n  <line x1='320' y1='190' x2='380' y2='190' stroke='var(--ink)' stroke-width='2'/>\n  <path d='M380 190 L368 184 L368 196 Z' fill='var(--ink)'/>\n  <line x1='505' y1='130' x2='455' y2='130' stroke='var(--ink)' stroke-width='2'/>\n  <path d='M455 130 L467 124 L467 136 Z' fill='var(--ink)'/>\n  <text x='392' y='255' font-size='11' fill='var(--accent)' text-anchor='end'>trench</text>\n  <text x='470' y='85' font-size='11' fill='var(--ink)' text-anchor='middle'>volcano</text>\n  <text x='300' y='235' font-size='11' fill='var(--muted)'>oceanic plate</text>\n  <text x='470' y='225' font-size='11' fill='var(--muted)'>continental crust</text>\n  <text x='475' y='300' font-size='11' fill='var(--muted)'>slab</text>\n  <text x='535' y='28' font-size='15' fill='var(--ink)'>Transform (conservative)</text>\n  <rect x='545' y='90' width='115' height='140' fill='var(--paper-2)' stroke='var(--ink)' stroke-width='2'/>\n  <rect x='660' y='90' width='115' height='140' fill='var(--paper-2)' stroke='var(--ink)' stroke-width='2'/>\n  <line x1='660' y1='70' x2='660' y2='250' stroke='var(--accent)' stroke-width='3'/>\n  <line x1='600' y1='110' x2='600' y2='180' stroke='var(--ink)' stroke-width='2'/>\n  <path d='M600 180 L594 168 L606 168 Z' fill='var(--ink)'/>\n  <line x1='720' y1='180' x2='720' y2='110' stroke='var(--ink)' stroke-width='2'/>\n  <path d='M720 110 L714 122 L726 122 Z' fill='var(--ink)'/>\n  <text x='660' y='275' font-size='11' fill='var(--accent)' text-anchor='middle'>transform fault</text>\n  <text x='660' y='300' font-size='11' fill='var(--muted)' text-anchor='middle'>no crust created or destroyed</text>\n  <text x='660' y='325' font-size='11' fill='var(--muted)' text-anchor='middle'>map view</text>\n  <text x='15' y='385' font-size='11' fill='var(--muted)'>Panels 1–2 are cross-sections; panel 3 is a map view. Not to scale.</text>\n</svg>"
+    }
+  ],
+  "anecdote": {
+    "title": "The man who died before the verdict",
+    "body": "In November 1930, on his fourth expedition to the Greenland ice sheet, Alfred Wegener set out from the base camp towards the mid-ice station at Eismitte to reach colleagues who were running short of supplies. He never arrived. His body was found the following year, half-buried in the snow, and he was buried there in the ice. He was fifty. Within thirty years of his death the theory he had been laughed at for was proved correct — by evidence from the one place he had never been able to look: the floor of the ocean. There is a hard lesson in that for anyone who holds an unpopular idea. Wegener did not live to see the answer, but he had already asked the right question."
+  },
+  "exam": {
+    "prelims": [
+      "Wegener's four evidence types: jigsaw fit, fossils (Glossopteris, Mesosaurus, Lystrosaurus, Cynognathus), matching rock belts, and palaeoclimate (glacial tillites and coal in the 'wrong' places).",
+      "The fit is best at the edge of the continental shelf or slope, not at the coastline — Bullard, Everett and Smith, 1965.",
+      "Sea-floor spreading (Hess, 1962) plus magnetic striping (Vine, Matthews and Morley, 1963) is what converted continental drift into plate tectonics. No ocean floor is older than about 180–200 million years.",
+      "Three boundaries: divergent (ridge or rift, new crust), convergent (trench, island arc or volcanic arc, crust destroyed), transform (fault, crust conserved).",
+      "Hotspot trails as a motion record: Hawaii–Emperor chain, Reunion hotspot to the Deccan Traps and the Chagos-Laccadive Ridge, Kerguelen hotspot to the Rajmahal Traps.",
+      "Slab pull, not ridge push, is the dominant driver of plate motion."
+    ],
+    "mains": [
+      "Continental drift was rejected for fifty years not for want of evidence but for want of a mechanism. Discuss with reference to the development of plate tectonic theory.",
+      "Explain how sea-floor spreading and palaeomagnetism together transformed Wegener's continental drift into modern plate tectonics.",
+      "With reference to the Indian plate, explain how the three types of plate boundary produce different landforms and different levels of seismic and volcanic hazard."
+    ],
+    "keyTerms": [
+      {
+        "term": "Pangaea",
+        "meaning": "The single supercontinent proposed by Wegener, assembled about 250 million years ago and later broken up."
+      },
+      {
+        "term": "Panthalassa",
+        "meaning": "The single world ocean that surrounded Pangaea."
+      },
+      {
+        "term": "Sea-floor spreading",
+        "meaning": "Hess's proposal that new oceanic crust forms at mid-ocean ridges, spreads sideways and is consumed at trenches."
+      },
+      {
+        "term": "Magnetic striping",
+        "meaning": "Symmetrical bands of normally and reversely magnetised rock on the ocean floor, recording field reversals as crust formed."
+      },
+      {
+        "term": "Subduction",
+        "meaning": "The sinking of a cold, dense lithospheric plate beneath another plate at a convergent margin."
+      },
+      {
+        "term": "Transform fault",
+        "meaning": "A boundary where two plates slide past each other horizontally, with no crust created or destroyed."
+      },
+      {
+        "term": "Hotspot",
+        "meaning": "A roughly fixed plume of hot mantle rock that produces a chain of volcanoes as a plate moves over it."
+      },
+      {
+        "term": "Slab pull",
+        "meaning": "The gravitational sinking of a subducting plate, which drags the rest of the plate along; the dominant driver of plate motion."
+      },
+      {
+        "term": "Wilson cycle",
+        "meaning": "The opening, widening and closing of an ocean basin over a long geological cycle."
+      }
+    ]
+  },
+  "recap": [
+    "Wegener's case rested on four independent lines of evidence — the jigsaw fit, fossils, matching rock belts and palaeoclimate — and it was strong enough to survive fifty years of rejection.",
+    "It was rejected because Wegener had no adequate mechanism; his pole-fleeing and tidal-drag forces were far too weak, and fixist geology had no need for horizontal motion.",
+    "Sea-floor spreading and magnetic striping supplied both the mechanism and the proof: the ocean floor is young, is created at ridges and destroyed at trenches, and carries a symmetrical magnetic barcode.",
+    "Plates meet at divergent, convergent and transform boundaries; each produces a characteristic landform and a characteristic depth and style of earthquake.",
+    "Earthquakes and volcanoes cluster at plate margins because that is where relative motion is accommodated and where heat and magma reach the surface.",
+    "Slab pull is the main engine of plate motion, hotspots provide a rough reference frame, and the Wilson cycle ties the whole story together."
+  ],
+  "nextUp": "We have established that plates move and that they interact at their edges. But what actually happens when two plates lock against each other for decades and then slip? Next time we look at the earthquake itself — the focus and the epicentre, the elastic-rebound theory, the seismic waves that carry the rupture across the country, and the difference between magnitude and intensity. We will also ask the question that matters most to us: how much of India is at risk, and why the Himalayan arc is the most dangerous plate boundary on Earth.",
+  "references": [
+    {
+      "label": "NCERT Class XI — Fundamentals of Physical Geography",
+      "href": "https://ncert.nic.in/textbook/pdf/kegy101.pdf",
+      "kind": "official"
+    },
+    {
+      "label": "USGS — Plate Tectonics",
+      "href": "https://www.usgs.gov/programs/earthquake-hazards/plate-tectonics",
+      "kind": "official"
+    },
+    {
+      "label": "Plate tectonics",
+      "href": "https://en.wikipedia.org/wiki/Plate_tectonics",
+      "kind": "wiki"
+    },
+    {
+      "label": "Earthquake",
+      "href": "https://en.wikipedia.org/wiki/Earthquake",
+      "kind": "wiki"
+    },
+    {
+      "label": "Volcano",
+      "href": "https://en.wikipedia.org/wiki/Volcano",
+      "kind": "wiki"
+    }
+  ],
+  "series": {
+    "subject": "Geography",
+    "subjectKey": "geography",
+    "paper": "Prelims GS-I · Mains GS-I",
+    "unitId": "geo-tectonics",
+    "unitTitle": "The Restless Earth: Tectonics and Its Consequences",
+    "lessonId": "geo-tectonics-1",
+    "lessonNumber": 1,
+    "lessonCount": 4,
+    "seriesLessonNumber": 6,
+    "syllabusNode": "Geography — Plate tectonics, earthquakes, volcanoes and mountain building"
+  },
+  "handoff": {
+    "covered": [
+      "Wegener's continental drift: Pangaea, Panthalassa, Laurasia, Gondwanaland and Tethys; the 1912 papers and the 1915 book.",
+      "The four evidence types: jigsaw fit (refined by Bullard, Everett and Smith, 1965, at the 500-fathom contour), fossils (Glossopteris, Mesosaurus, Lystrosaurus, Cynognathus), matching rock belts (Ghana–Brazil, Caledonian–Appalachian) and palaeoclimate (tillites in India, coal in Antarctica, evaporites in the Sahara).",
+      "Why drift was rejected: no adequate mechanism (pole-fleeing force and tidal drag, dismissed by Jeffreys), the fixist tradition built on isostasy, and the outsider status of Wegener.",
+      "The 1960s revolution: wartime echo sounding, Hess and the guyots, Marie Tharp and Bruce Heezen's Great Global Rift, Hess's 1962 sea-floor spreading, and Vine–Matthews–Morley magnetic striping in 1963.",
+      "The clinching evidence: ocean floor nowhere older than about 180–200 million years, age increasing away from ridges, confirmed by deep-sea drilling from 1968.",
+      "The three plate boundaries: divergent (ridge, rift, East African Rift, Iceland), convergent (ocean–ocean, ocean–continent, continent–continent; trench, island arc, volcanic arc, Himalaya) and transform (San Andreas, Anatolian, Chaman).",
+      "Why earthquakes and volcanoes cluster at margins, and the Ring of Fire.",
+      "Mantle convection (Holmes, 1929), slab pull versus ridge push versus basal drag, hotspots (Wilson, 1963; Hawaii–Emperor, Reunion–Deccan, Kerguelen–Rajmahal) and the Wilson cycle."
+    ],
+    "next": "Earthquakes: When the Crust Snaps — focus and epicentre; elastic-rebound theory; seismic waves; magnitude versus intensity; Richter and moment magnitude scales; seismographs; distribution of earthquakes; shallow, intermediate and deep-focus quakes; tsunamis; India's seismic zones; Bhuj, Latur, Nepal and the Himalayan risk.",
+    "notes": "This lesson deliberately paid off the lithosphere/asthenosphere distinction from Lesson 5 in its opening and again in the convection section — the bridge worked and should be reused. The isostasy callback in the 'why the world said no' section is worth keeping: it explains why fixism was rational, not stupid. The Inge Lehmann thread was extended to Marie Tharp, which gives the series a running women-in-science motif; the next teacher can reuse both. Three new figures were built. 'pangaea-evidence' is reusable for Gondwana, for the Damodar coalfields and for any question on palaeoclimatic evidence. 'magnetic-striping' is reusable for palaeomagnetism, for the geodynamo and magnetic field reversal questions, and pairs naturally with the 'earth-interior' figure from Lesson 5. 'plate-boundaries' is the master boundary figure and should be reused in the earthquake lesson (for the Benioff zone and for the depth of quakes at each margin) and in the volcano lesson. Deliberately NOT done here: the Benioff zone was named only in passing and deserves full treatment next time; the Wilson cycle was introduced but not developed; and no Indian seismic zone detail was given, since that belongs to the earthquake lesson. The 'map as argument' stance from Lesson 1 was not re-established, and the Coriolis preview from Lesson 4 remains unpaid — it still belongs to atmospheric circulation."
+  }
+}

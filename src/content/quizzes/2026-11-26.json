@@ -1,0 +1,204 @@
+{
+  "date": "2026-11-26",
+  "generatedAt": "2026-11-26T03:51:05.629Z",
+  "title": "Daily Prelims Quiz",
+  "windowStart": "2026-11-20",
+  "windowEnd": "2026-11-26",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Consider the following statements:\n1. The Central Bureau of Investigation derives its police powers from the Delhi Special Police Establishment Act, 1946.\n2. The Enforcement Directorate functions under the administrative control of the Ministry of Home Affairs.\n3. The Supreme Court has recently set aside an Allahabad High Court order directing the CBI and the Enforcement Directorate to verify a complaint relating to the assets of a political leader.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 2,
+      "explanation": "The CBI's police powers flow from the Delhi Special Police Establishment Act, 1946, and the Supreme Court recently set aside the Allahabad High Court's direction for a CBI/ED verification of a complaint about a political leader's assets. Statement 2 is the trap: the Enforcement Directorate functions under the Department of Revenue, Ministry of Finance, not the Ministry of Home Affairs.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 2,
+      "question": "Consider the following statements regarding the trade measures recently proposed by the United States:\n1. The United States has proposed tariffs of up to 25 per cent on India and 13 other trading partners following a probe into alleged excess industrial capacity.\n2. Under the proposal, India's tariff could be capped at 17 per cent if a reciprocal trade deal is signed.\n3. India's Commerce Ministry has accepted the finding of structural excess capacity against Indian industry.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 0,
+      "explanation": "The USTR proposed duties of up to 25 per cent after an excess-capacity probe, with a 17 per cent cap if a reciprocal deal is signed. India's Commerce Ministry rejected the structural excess-capacity claim and said the notice was under examination, so statement 3 is incorrect.",
+      "topic": "Economy"
+    },
+    {
+      "id": 3,
+      "question": "Consider the following statements regarding India's climate commitments:\n1. India has committed to reducing the emissions intensity of its GDP by 45 per cent from 2005 levels by 2030.\n2. India has committed to reducing its absolute greenhouse gas emissions by 45 per cent from 2005 levels by 2030.\n3. India has announced a target of achieving net zero emissions by 2070.\nHow many of the above statements are correct?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "India's updated NDC targets a 45 per cent reduction in the emissions intensity of GDP — not absolute emissions — from 2005 levels by 2030, alongside 50 per cent non-fossil installed capacity by 2030 and net zero by 2070. Statement 2 swaps intensity for absolute emissions, the standard trap.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 4,
+      "question": "Hodeidah, which figured in the news following strikes by a Saudi-led coalition, is a port city located in which one of the following countries?",
+      "options": [
+        "Oman",
+        "Yemen",
+        "Saudi Arabia",
+        "Djibouti"
+      ],
+      "answer": 1,
+      "explanation": "Hodeidah is a major Yemeni Red Sea port that the Saudi-led coalition struck, describing it as a hub for smuggling weapons and ballistic missiles. It is not in Oman, Saudi Arabia or Djibouti.",
+      "topic": "Geography"
+    },
+    {
+      "id": 5,
+      "question": "Consider the following pairs:\n1. Thiruparankundram — rock-cut temple located near Madurai\n2. Mahabalipuram — rock-cut monuments built under the Pallavas\n3. Ellora — Kailasa temple attributed to the Chola king Rajaraja I\nHow many of the above pairs are correctly matched?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "Thiruparankundram, near Madurai, is a rock-cut temple in the news over the Karthigai Deepam lamp dispute, and Mahabalipuram's monuments are Pallava creations. Pair 3 is wrong: the Kailasa temple at Ellora is attributed to the Rashtrakuta king Krishna I, not to Rajaraja I.",
+      "topic": "History & Culture"
+    },
+    {
+      "id": 6,
+      "question": "Statement-I: The United States is seeking answers from Nvidia about its sale of advanced chips to China.\nStatement-II: Advanced AI chips fall under United States export controls administered through the Export Administration Regulations and the Entity List.\nWhich one of the following is correct in respect of the above statements?",
+      "options": [
+        "Both Statement-I and Statement-II are correct and Statement-II explains Statement-I",
+        "Both Statement-I and Statement-II are correct but Statement-II does not explain Statement-I",
+        "Statement-I is correct but Statement-II is incorrect",
+        "Statement-I is incorrect but Statement-II is correct"
+      ],
+      "answer": 0,
+      "explanation": "US Treasury Secretary Scott Bessent said Washington is seeking answers on Nvidia's chip sales to China, and the scrutiny arises precisely because advanced AI chips are export-controlled under the EAR and the Entity List — so Statement-II explains Statement-I.",
+      "topic": "Science & Technology"
+    },
+    {
+      "id": 7,
+      "question": "The Working Mechanism for Consultation and Coordination (WMCC), referred to in the context of recent high-level border talks, is a mechanism for India's boundary-related discussions with which one of the following countries?",
+      "options": [
+        "Pakistan",
+        "Nepal",
+        "China",
+        "Myanmar"
+      ],
+      "answer": 2,
+      "explanation": "The WMCC is one of the India–China boundary-management mechanisms, along with the Special Representatives dialogue and Corps Commander-level talks; it figured in the recent Arunachal-sector talks.",
+      "topic": "International Relations"
+    },
+    {
+      "id": 8,
+      "question": "Consider the following statements:\n1. The Shiromani Akali Dal exited the National Democratic Alliance in 2020 over the three farm laws.\n2. Punjab has a 117-member Legislative Assembly and 13 Lok Sabha seats.\n3. In the 2022 Punjab Assembly election, the Shiromani Akali Dal emerged as the second-largest party.\nWhich of the statements given above is/are NOT correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "3 only"
+      ],
+      "answer": 3,
+      "explanation": "The SAD left the NDA in 2020 over the farm laws, and Punjab has 117 assembly seats and 13 Lok Sabha seats. In 2022 the Congress (18 seats) was the second-largest party while the SAD won only 3 seats, so statement 3 alone is not correct.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 9,
+      "question": "The Kalapani–Lipulekh–Limpiyadhura area, which has figured in India–Nepal boundary discussions, lies at the trijunction of India, Nepal and which one of the following countries?",
+      "options": [
+        "Bhutan",
+        "China",
+        "Bangladesh",
+        "Myanmar"
+      ],
+      "answer": 1,
+      "explanation": "The disputed Kalapani–Lipulekh–Limpiyadhura tract lies at the India–Nepal–China trijunction; Nepal's 2020 map claimed it, and the issue recurs in bilateral talks, including the recent row over the Eminent Persons' Group report.",
+      "topic": "Geography"
+    },
+    {
+      "id": 10,
+      "question": "With reference to the term 'strategic communication', which one of the following best describes it?",
+      "options": [
+        "The interception and decryption of an adversary's military communications",
+        "The censorship of domestic media during an armed conflict",
+        "The deployment of electronic warfare assets in forward areas",
+        "The coordinated use of information and messaging to advance national security objectives"
+      ],
+      "answer": 3,
+      "explanation": "Strategic communication is the coordinated use of information to advance national security objectives; it is distinct from propaganda and from signals intelligence or censorship, and was invoked in the debate over the Rafale loss claims in Operation Sindoor.",
+      "topic": "Science & Technology"
+    },
+    {
+      "id": 11,
+      "question": "Consider the following statements regarding contempt of court in India:\n1. The Supreme Court and the High Courts derive their power to punish for contempt from Articles 129 and 215 of the Constitution respectively.\n2. The Contempt of Courts Act, 1971 defines and limits the powers of certain courts in punishing contempt.\n3. In the Karthigai Deepam matter, the Supreme Court initiated suo motu contempt proceedings against the State of Tamil Nadu.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 0,
+      "explanation": "Articles 129 and 215 make the Supreme Court and the High Courts courts of record with the power to punish for contempt, and the Contempt of Courts Act, 1971 defines that power. In the Thiruparankundram matter the Court declined to take suo motu contempt and asked parties to file a contempt petition, so statement 3 is incorrect.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 12,
+      "question": "Consider the following statements regarding India's approach to bilateral investment treaties (BITs):\n1. India's model BIT, adopted in 2015, requires an investor to exhaust local remedies before resorting to international arbitration.\n2. India terminated a large number of its older BITs and has since negotiated new treaties on the basis of the 2015 model.\n3. Reports indicate that negotiations on an India–United Kingdom investment treaty have stalled over tax and arbitration provisions.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 3,
+      "explanation": "India's 2015 model BIT requires exhaustion of local remedies before arbitration, and India terminated its older BITs and renegotiates on that model. The India–UK investment treaty talks have reportedly stalled over tax and arbitration issues, making all three statements correct.",
+      "topic": "Economy"
+    },
+    {
+      "id": 13,
+      "question": "Consider the following statements:\n1. Article 136 of the Constitution empowers the Supreme Court to grant special leave to appeal from any judgment, decree, determination, sentence or order passed by any court or tribunal in the territory of India.\n2. The Supreme Court has recently issued notice to the Delhi Police on fresh bail pleas moved in the 2002 Gujarat riots cases.\n3. Special leave under Article 136 is discretionary and is not available to a litigant as of right.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 2,
+      "explanation": "Article 136 confers a discretionary special leave jurisdiction, not a right of appeal, and the Supreme Court recently issued notice to the Delhi Police on fresh bail pleas in the Delhi riots conspiracy case. Statement 2 swaps the case: the bail pleas relate to the 2020 North-East Delhi riots, not the 2002 Gujarat riots.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 14,
+      "question": "Consider the following statements regarding the international climate change regime:\n1. The United Nations Framework Convention on Climate Change, adopted in 1992, is the parent treaty under which the Kyoto Protocol and the Paris Agreement were negotiated.\n2. The Kyoto Protocol, adopted in 1997, established binding emission-reduction targets for all Parties to the Convention.\n3. The Paris Agreement, adopted in 2015, requires all Parties to communicate nationally determined contributions.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 2,
+      "explanation": "The UNFCCC (1992) is the parent treaty; the Kyoto Protocol set binding targets only for Annex I (developed) Parties, while the Paris Agreement requires NDCs from all Parties. Statement 2's 'all Parties' is therefore incorrect.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 15,
+      "question": "Consider the following statements regarding credit rating:\n1. A credit rating is an assessment of the creditworthiness of a borrower or of a debt instrument.\n2. Placing an issuer on 'downgrade watch' indicates a heightened possibility of a rating reduction in the near term.\n3. In India, credit rating agencies are regulated by the Reserve Bank of India.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 0,
+      "explanation": "A credit rating assesses creditworthiness, and a 'downgrade watch' signals a heightened near-term risk of a rating cut — as S&P reportedly placed Nvidia on watch. In India, credit rating agencies are regulated by SEBI, not the RBI, so statement 3 is incorrect.",
+      "topic": "Economy"
+    }
+  ]
+}
