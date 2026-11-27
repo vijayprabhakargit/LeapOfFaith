@@ -1,0 +1,204 @@
+{
+  "date": "2026-11-27",
+  "generatedAt": "2026-11-27T03:23:47.412Z",
+  "title": "Daily Prelims Quiz",
+  "windowStart": "2026-11-21",
+  "windowEnd": "2026-11-27",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Consider the following statements:\n1. The Supreme Court has directed that packaged foods high in fat, sugar or salt carry warning labels, including separate pictorial warnings.\n2. The Food Safety and Standards Authority of India (FSSAI) is a constitutional body established under Article 324.\n3. The Court asked global food firms to end 'double standards' in labelling across markets.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 2,
+      "explanation": "The Supreme Court ordered warning labels on packaged foods high in fat, sugar or salt, including separate pictorial warnings, and asked global firms to end double standards. FSSAI is a statutory regulator under the Food Safety and Standards Act, 2006, not a constitutional body under Article 324.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 2,
+      "question": "Consider the following statements:\n1. The Office of Foreign Assets Control (OFAC), under the US Treasury, administers most US sanctions.\n2. Iranian banks were disconnected from SWIFT in 2012 and again in 2018.\n3. Chabahar port, developed with Indian participation, lies on the Strait of Hormuz.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 0,
+      "explanation": "OFAC under the US Treasury administers most US sanctions, and Iranian banks were disconnected from SWIFT in 2012 and again in 2018. Chabahar port lies on the Gulf of Oman, not on the Strait of Hormuz.",
+      "topic": "Economy"
+    },
+    {
+      "id": 3,
+      "question": "Consider the following statements:\n1. COP31 was held in Antalya, Türkiye.\n2. COP31 ended with the adoption of the 'Antalya pact' after record extra time.\n3. Despite the absence of an overarching pact, outcomes were agreed on food, forests, oceans and nature.\nHow many of the above statements are correct?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "COP31 was held in Antalya, Türkiye, and ended without an overarching pact; the proposed 'Antalya pact' was rejected. However, outcomes were agreed on food, forests, oceans and nature, so statements 1 and 3 are correct.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 4,
+      "question": "Dymer, recently in the news after a Russian strike on an apartment building, is located in which one of the following countries?",
+      "options": [
+        "Poland",
+        "Romania",
+        "Moldova",
+        "Ukraine"
+      ],
+      "answer": 3,
+      "explanation": "Dymer, the site of a Russian strike on a five-storey apartment building, is in Kyiv Oblast in Ukraine.",
+      "topic": "Geography"
+    },
+    {
+      "id": 5,
+      "question": "Consider the following pairs:\n1. Thirupparankundram — one of the six abodes (Arupadai Veedu) of Lord Murugan\n2. Karthigai Deepam — observed in the Tamil month of Karthigai\n3. Arupadai Veedu — the six abodes of Lord Murugan\nHow many of the above pairs are correctly matched?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "Thirupparankundram is one of the six abodes (Arupadai Veedu) of Lord Murugan; Karthigai Deepam is observed in the Tamil month of Karthigai; and Arupadai Veedu refers to the six abodes of Lord Murugan. All pairs are correctly matched.",
+      "topic": "History & Culture"
+    },
+    {
+      "id": 6,
+      "question": "Statement-I: SAP is considering at least 10,000 job cuts as part of an AI-driven restructuring.\nStatement-II: AI adoption is reshaping corporate workforces and product lines, leading some firms to restructure.\nWhich one of the following is correct in respect of the above statements?",
+      "options": [
+        "Both Statement-I and Statement-II are correct and Statement-II explains Statement-I",
+        "Both Statement-I and Statement-II are correct but Statement-II does not explain Statement-I",
+        "Statement-I is correct but Statement-II is incorrect",
+        "Statement-I is incorrect but Statement-II is correct"
+      ],
+      "answer": 0,
+      "explanation": "SAP is reported to be considering at least 10,000 job cuts in an AI-driven restructuring. The broader AI-driven reshaping of corporate workforces and product lines explains why such restructuring is being undertaken.",
+      "topic": "Science & Technology"
+    },
+    {
+      "id": 7,
+      "question": "The India–Nepal Eminent Persons' Group (EPG), recently in the news, submitted its report in which one of the following years?",
+      "options": [
+        "2014",
+        "2016",
+        "2018",
+        "2020"
+      ],
+      "answer": 2,
+      "explanation": "The India–Nepal Eminent Persons' Group was constituted in 2016 and submitted its report in 2018; the report has not been made public.",
+      "topic": "International Relations"
+    },
+    {
+      "id": 8,
+      "question": "Consider the following statements:\n1. The special session of Parliament is scheduled from November 30 to December 3, 2026.\n2. The Lok Sabha is scheduled to convene on December 2 and the Rajya Sabha on November 30.\n3. The session is for 'Essential Government Business'.\nWhich of the statements given above is/are NOT correct?",
+      "options": [
+        "1 and 2 only",
+        "2 only",
+        "1 and 3 only",
+        "3 only"
+      ],
+      "answer": 1,
+      "explanation": "The special session is scheduled from November 30 to December 3, 2026, for 'Essential Government Business'. The Lok Sabha convenes on November 30 and the Rajya Sabha on December 2, so statement 2 is reversed and is the only incorrect statement.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 9,
+      "question": "A person's name has been deleted during the Special Intensive Revision (SIR) of electoral rolls. Which one of the following forms is meant for making an objection or seeking deletion of a name from the electoral roll?",
+      "options": [
+        "Form 6",
+        "Form 8",
+        "Form 8A",
+        "Form 7"
+      ],
+      "answer": 3,
+      "explanation": "Form 7 is used for objection or deletion of a name from the electoral roll; Form 6 is for new enrolment and Form 8 for correction or shifting.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 10,
+      "question": "The GST Council, which makes recommendations on GST rates, exemptions and threshold limits, is constituted under which Article of the Constitution?",
+      "options": [
+        "Article 279A",
+        "Article 246A",
+        "Article 269A",
+        "Article 280"
+      ],
+      "answer": 0,
+      "explanation": "The GST Council is a constitutional body constituted under Article 279A to make recommendations on GST rates, exemptions and threshold limits.",
+      "topic": "Economy"
+    },
+    {
+      "id": 11,
+      "question": "Consider the following statements:\n1. Delimitation is the process of fixing the number of seats and boundaries of territorial constituencies.\n2. The Delimitation Commission is constituted by the President and its orders have the force of law.\n3. The 84th Constitutional Amendment froze the total number of Lok Sabha seats until the first census after 2031.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "2 and 3 only",
+        "1 and 2 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 1,
+      "explanation": "Delimitation fixes the number of seats and boundaries of territorial constituencies, and the Delimitation Commission is constituted by the President with orders having the force of law. The 84th Amendment froze Lok Sabha seats until the first census after 2026, not 2031.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 12,
+      "question": "The India–European Union free trade agreement, expected to be signed in December 2026, is expected to come into force in which one of the following years?",
+      "options": [
+        "2027",
+        "2026",
+        "2028",
+        "2030"
+      ],
+      "answer": 0,
+      "explanation": "The India–EU free trade agreement is expected to be signed on December 16 during PM Modi's Brussels visit and to come into force in 2027.",
+      "topic": "Economy"
+    },
+    {
+      "id": 13,
+      "question": "The '35x35' goal discussed at COP31 relates to which one of the following?",
+      "options": [
+        "Reducing fossil-fuel subsidies by 35% by 2035",
+        "Increasing climate finance to $35 billion annually by 2035",
+        "Cutting global emissions by 35% from 2019 levels by 2035",
+        "Raising electricity's share of total final energy use to 35% by 2035"
+      ],
+      "answer": 3,
+      "explanation": "The '35x35' goal under discussion at COP31 seeks to raise electricity's share of total final energy use to 35% by 2035.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 14,
+      "question": "The Gulf of Finland, recently in the news after a drone strike on a Russia-bound cargo ship, is bordered by Finland, Estonia and Russia. Which one of the following countries does NOT border the Gulf of Finland?",
+      "options": [
+        "Finland",
+        "Estonia",
+        "Latvia",
+        "Russia"
+      ],
+      "answer": 2,
+      "explanation": "The Gulf of Finland is bordered by Finland, Estonia and Russia; Latvia does not border it. It is the easternmost arm of the Baltic Sea.",
+      "topic": "Geography"
+    },
+    {
+      "id": 15,
+      "question": "Nvidia has stopped shipping AI servers to buyers in which one of the following groups of countries?",
+      "options": [
+        "Vietnam, Philippines, Thailand and Indonesia",
+        "Malaysia, Singapore, Thailand and Indonesia",
+        "Malaysia, Singapore, Vietnam and Indonesia",
+        "Malaysia, Thailand, Philippines and Indonesia"
+      ],
+      "answer": 1,
+      "explanation": "Nvidia has stopped shipping AI servers to buyers in Malaysia, Singapore, Thailand and Indonesia, according to a Financial Times report cited in the briefs.",
+      "topic": "Science & Technology"
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "date": "2026-11-27",
+  "generatedAt": "2026-11-27T03:20:38.706Z",
+  "title": "Earthquakes: When the Crust Snaps",
+  "subtitle": "Rock bends for centuries, stores the strain — and then, in ninety seconds, hands it all back.",
+  "readMinutes": 17,
+  "hook": "On the morning of 26 January 2001, the ground under Kutch tore open along a fault that had not been mapped. In under a minute, towns across Gujarat were rubble. No instrument could have shouted 'now' — and yet geologists could soon point to the exact spot, some twenty kilometres down, where it had begun. Earthquake science can explain almost everything afterwards and predict almost nothing beforehand. This lesson is about the machinery behind that sentence.",
+  "sections": [
+    {
+      "heading": "The Snap: Focus, Epicentre and the Elastic Rebound",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rock is not brittle the way glass is. Squeeze it slowly — over years, over centuries — and it bends. It stores the energy of that bending the way a bamboo pole stores energy when you press it across your knee. Keep pressing, and the strain accumulates silently along a plane of weakness we call a fault. Then one day the rock's strength is exceeded. It fractures. The two blocks jerk past each other and snap back to a less strained position. That sudden snap is an earthquake, and the picture is called elastic-rebound theory."
+        },
+        {
+          "type": "paragraph",
+          "text": "Now the vocabulary, which examiners love. The focus, or hypocentre, is the point inside the Earth where the rupture begins. The epicentre is the point on the surface vertically above the focus — drop a plumb line from the focus and where it touches the ground, that is the epicentre. The fault plane is the surface along which the two blocks slip. The focal depth is the distance from the epicentre straight down to the focus. Notice what the focus is not: it is not the whole rupture. It is only the starting point. From there the break propagates along the fault at two to three kilometres per second, and in a great earthquake it can run for hundreds of kilometres."
+        },
+        {
+          "type": "figure",
+          "figureId": "eq-fault-block"
+        },
+        {
+          "type": "paragraph",
+          "text": "Two consequences follow. First, the epicentre is the first place to shake, not necessarily the worst-hit place. If the rupture unzips towards a city, that city receives a longer, sharper dose of energy than a town of the same size in the opposite direction — seismologists call this directivity. Second, an earthquake is not a point event. The epicentre is a dot on a map; the shaking is a field that spreads, weakens with distance, and is modified by whatever rock and soil it passes through. Hold on to that word 'modified'. It will explain why a single earthquake has a dozen different stories."
+        }
+      ],
+      "refs": [
+        1,
+        4
+      ]
+    },
+    {
+      "heading": "Seismic Waves: The Messengers",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "When the rock snaps, the energy does not travel as one pulse. It radiates as elastic waves in two families. Body waves travel through the interior. P waves — primary waves — are compressional: the rock is alternately squeezed and stretched, with particle motion along the direction of travel, exactly like a sound wave in air. They are the fastest, so they arrive first, and they pass through solids, liquids and gases alike. S waves — secondary waves — are transverse: the rock is sheared from side to side, particle motion at right angles to the direction of travel. They are slower, arriving second, and here is the crucial fact: S waves travel only through solids."
+        },
+        {
+          "type": "paragraph",
+          "text": "That single fact did more for our knowledge of the Earth's interior than any drill ever has. S waves vanish beyond about 103° from the epicentre — the S-wave shadow zone — and P waves are also missing in a band from roughly 103° to 142°. The only way to explain both is a liquid outer core, which stops S waves dead and refracts P waves. You met the shadow zone in the lesson on the interior; now you know where that evidence came from. Seismology is the only science that photographs the inside of a planet without ever going there."
+        },
+        {
+          "type": "paragraph",
+          "text": "The second family, surface waves, travels along the ground surface rather than through the body of the Earth: Love waves, which shake the ground side to side, and Rayleigh waves, which make it roll in an elliptical, sea-like motion. They are the slowest of the three, but they carry the largest amplitudes and do most of the damage. When survivors say 'the ground moved like water', they are describing Rayleigh waves."
+        },
+        {
+          "type": "paragraph",
+          "text": "How do we catch them? A seismograph is a heavy mass suspended on a frame so that, when the ground shakes, the mass stays put by inertia while the frame moves with the Earth. The relative movement is recorded as a wiggling trace — a seismogram. That trace has a simple, beautiful use. P waves arrive first, S waves arrive later, and the time gap between the two arrivals grows with distance from the epicentre. Measure the gap and you have the distance. One station gives a circle of possible epicentres; two circles intersect at two points; three circles intersect at one. That is how an epicentre is located — and why you need a network, not a single instrument."
+        }
+      ],
+      "refs": [
+        1,
+        4
+      ]
+    },
+    {
+      "heading": "Magnitude and Intensity: Two Questions, Two Answers",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Here is the confusion that costs marks every year. Magnitude and intensity are not two scales for the same thing; they answer two different questions. Magnitude asks: how much energy did the source release? It is a single number for the whole earthquake, derived from instruments. Intensity asks: how hard did the ground shake here? It is a different number for every place, derived from what people felt and what broke. Magnitude is a property of the earthquake. Intensity is a property of the earthquake plus the place."
+        },
+        {
+          "type": "callout",
+          "title": "The one-line answer",
+          "text": "Magnitude = energy at the source; one number for the whole earthquake. Intensity = shaking at a place; one number for every place. The 2001 Bhuj earthquake had one magnitude (7.7) and hundreds of intensities, from barely-felt to total destruction.",
+          "tone": "exam"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Richter scale, devised by Charles Richter in 1935 in California, was the first practical magnitude scale. It was defined as the logarithm of the largest amplitude recorded on a standard Wood–Anderson seismometer 100 km from the epicentre. Because it is logarithmic, each whole number is a tenfold jump in amplitude and roughly thirty-two times more energy — so a magnitude 7 is not slightly bigger than a 6, it is about thirty-two times more energetic. But the Richter scale was designed for local, moderate Californian earthquakes, and it saturates: above about magnitude 6.5 to 7 it simply cannot tell two great earthquakes apart. Modern practice therefore uses the moment magnitude scale, Mw, based on seismic moment — the rigidity of the rock multiplied by the area of fault that ruptured and the average slip along it. It works from tiny tremors to the largest events ever recorded."
+        },
+        {
+          "type": "paragraph",
+          "text": "Intensity is measured on descriptive scales. The Modified Mercalli scale runs from I to XII; India commonly uses the closely related MSK scale. At intensity I, only instruments notice. At VI, furniture moves, plaster cracks, some tiles fall. At IX, even well-built buildings suffer damage. At XII, destruction is nearly total. Read those descriptions again and you will see they are written for engineers: an intensity value is a damage report, not an energy meter. India's seismic zoning map is drawn in these terms — which is why its zones are labelled with Roman numerals and not with magnitudes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Now the interesting part: why the same earthquake can produce intensity VIII in one town and intensity IV in another. Four reasons. Distance from the epicentre, obviously. Focal depth — a shallow quake delivers more energy to the surface. Directivity, as we saw. And the one people forget: the ground beneath your feet. Soft alluvium, river deposits and dried lake beds amplify shaking; hard granite and basalt damp it. In 2001, Bhuj was destroyed — but so were high-rise buildings in Ahmedabad, 250 km away, because Ahmedabad sits on soft river sediments. In 2015, the Kathmandu Valley, an ancient lake bed, shook like a bowl of jelly. Geologists call this site amplification. Add the quality of construction, and you have explained most of the pattern of death in any earthquake."
+        }
+      ],
+      "refs": [
+        2,
+        4
+      ]
+    },
+    {
+      "heading": "Depth: Why Shallow Earthquakes Are the Killers",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Earthquakes are classified by focal depth: shallow (0–70 km), intermediate (70–300 km) and deep (300–700 km). Shallow earthquakes are by far the most common and by far the most destructive, and there are three reasons. First, the energy is released close to where people live; there is less rock between the focus and the surface to absorb and scatter it. Second, at shallow depths the rock is cold and brittle, so a long stretch of fault can snap at once. Third, the wavefront has not had space to spread and weaken. A magnitude 6 at 10 km depth will shake a town far more violently than a magnitude 6 at 300 km."
+        },
+        {
+          "type": "paragraph",
+          "text": "Deep-focus earthquakes pose a puzzle. At 600 km down, the rock should be hot and ductile — and ductile rock does not fracture. The answer is the slab. Deep earthquakes occur only in subduction zones, and their foci lie on a dipping plane that traces the cold, descending oceanic plate. This plane is called the Wadati–Benioff zone, after the Japanese seismologist Kiyoo Wadati, who noticed it in the 1920s and 1930s, and the American Hugo Benioff, who developed the idea in the 1950s. Deep quakes stop at about 700 km, beyond which the slab has warmed enough to deform without brittle failure."
+        },
+        {
+          "type": "paragraph",
+          "text": "Look back at the plate-boundaries diagram from the last lesson and this whole section collapses into one picture. Ocean–ocean and ocean–continent convergence give you a Benioff zone: shallow quakes at the trench, intermediate ones beneath the volcanic arc, deep ones far inland beneath the continent. Continent–continent collision gives you shallow earthquakes only, because neither plate is dense enough to sink deep — which is precisely why Himalayan earthquakes are shallow, and precisely why they are so dangerous. Mid-ocean ridges and transform faults produce shallow quakes only. And a small, deadly minority occur far from any boundary at all: intraplate earthquakes, of which Latur and Bhuj are India's most painful examples."
+        },
+        {
+          "type": "paragraph",
+          "text": "Where in the world? Roughly four out of five earthquakes occur around the Pacific rim — the Ring of Fire, where subduction is continuous. Most of the remainder fall along the Alpine–Himalayan belt, which runs from the Mediterranean through Iran, the Himalaya and Sumatra to the Pacific. Plot the epicentres on a blank world map and you will have drawn the plate boundaries without measuring a single one. That is the 'map as argument' idea we began this series with, and here it pays you back."
+        }
+      ],
+      "refs": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "heading": "Tsunamis: When the Sea Floor Snaps",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The word is Japanese for 'harbour wave'. It is not a tidal wave; the tides have nothing to do with it. A tsunami needs one specific thing: a sudden, large, vertical displacement of the sea floor. In practice that means a shallow-focus undersea earthquake of about magnitude 7.5 or more on a thrust or reverse fault, where one block is pushed up over the other. Landslides, the collapse of a volcano and, very rarely, a meteorite impact can do it too — but the overwhelming majority of destructive tsunamis are born in subduction zones."
+        },
+        {
+          "type": "paragraph",
+          "text": "Follow the physics. The sea floor jerks upward by a few metres. The entire water column above it — perhaps four kilometres deep — is lifted with it. Gravity then pulls that water back down, and the disturbance spreads outward as a wave. What a wave it is. In the deep ocean the wavelength can be 100 to 200 km while the height is less than a metre: a ship sails straight over it and notices nothing. Its speed is set by the depth of the water, approximately the square root of (g × depth), which for four kilometres of water works out at roughly 700–800 km/h — the cruising speed of an airliner."
+        },
+        {
+          "type": "figure",
+          "figureId": "tsunami-generation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Then the wave reaches the coast, and everything changes. Speed depends on depth, so as the water shallows the wave slows dramatically. The back of the wave catches up with the front, and the energy that was spread over 200 km of ocean is squeezed into a few kilometres of shoreline. The wave grows. This is shoaling, and it is why the open ocean is safe and the beach is not. It is also why the first sign is often the opposite of what you expect: as the trough of the wave arrives, the sea pulls back and exposes the sea floor. People walk out to look. Then the crest arrives."
+        },
+        {
+          "type": "paragraph",
+          "text": "On 26 December 2004, a rupture off Sumatra — moment magnitude around 9.1, running some 1,300 km north towards the Andaman Islands, the longest instrumented rupture in history — lifted the sea floor and sent waves across the entire Indian Ocean. More than 200,000 people died in fourteen countries; India lost over 10,000 lives, mostly in Tamil Nadu, Andhra Pradesh, Kerala and the Andaman & Nicobar Islands. The Indian Ocean had no warning system then. It has one now: the Indian Tsunami Early Warning Centre, run by INCOIS at Hyderabad since 2007, using seafloor pressure recorders, tide gauges and seismic networks. Warning works because P waves travel at kilometres per second while a tsunami crosses an ocean at the speed of a jet — Sumatra to Chennai took about two hours, and that gap is everything. The simplest advice still holds: if you are on a coast and feel strong shaking, or see the sea retreat, do not wait for a siren. Walk inland and uphill."
+        }
+      ],
+      "refs": [
+        4,
+        5
+      ]
+    },
+    {
+      "heading": "India's Seismic Zones: Living on the Edge of a Collision",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Recall where we ended last time. India is not riding on a plate; India is the plate. The Indian plate is converging with Eurasia at roughly five centimetres a year — about the rate at which your fingernails grow. But the collision does not slide smoothly. Most of the convergence is absorbed in the Himalaya along a stack of thrust faults — the Main Central Thrust, the Main Boundary Thrust and the Main Frontal Thrust — where the Indian crust is pushed under Tibet. The rest is taken up in the Shillong plateau, in the Indo-Burman ranges and in the Andaman arc. The Himalaya, in other words, is not a mountain range that finished forming. It is a collision in progress, and the faults that built it are still locked and loading."
+        },
+        {
+          "type": "paragraph",
+          "text": "Locked faults load and load, and then release. In a span of fifty-three years India recorded four great earthquakes: Shillong, 1897, magnitude about 8.0; Kangra, 1905, about 7.8; Bihar–Nepal, 1934, about 8.0; and Assam, 1950, about 8.6. Since 1950 the central Himalaya — roughly the stretch from Uttarakhand through western Nepal — has been unusually quiet, even as GPS measurements show it is still being squeezed at the same rate. Seismologists call this the central seismic gap: a segment that has not ruptured for long enough that strain is presumed to be accumulating on it. A seismic gap is not a prediction. It is a statement that the hazard has not gone away, and that our building stock has not caught up with it."
+        },
+        {
+          "type": "figure",
+          "figureId": "india-seismic-zones"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Bureau of Indian Standards divides the country into four seismic zones — II, III, IV and V. There is no Zone I; it was merged into Zone II decades ago, and that is exactly the sort of detail a Prelims question likes. Zone V is the highest: the entire North-East, parts of Jammu & Kashmir, Himachal Pradesh and Uttarakhand, the Kutch region of Gujarat, parts of north Bihar, and the Andaman & Nicobar Islands. Zone IV includes Delhi, much of the Indo-Gangetic plain, parts of Gujarat, and pockets such as the Koyna region of Maharashtra. Zone III covers most of the peninsula and Zone II the least active parts of the stable cratonic interior. The zones are drawn from expected MSK intensity, and it is worth saying clearly: this is a hazard map, not a risk map. It tells you what the ground can do. It says nothing about what your building will do."
+        },
+        {
+          "type": "paragraph",
+          "text": "Latur, 1993, is the lesson. At 3.56 a.m. on 30 September 1993, an earthquake of magnitude about 6.2 with a focus only about 10 km deep struck the Latur–Osmanabad region of Maharashtra — in Zone III, the 'safe' peninsula. Nearly 10,000 people died. Why? The focus was shallow, so surface shaking was violent; it came at night, when people were asleep indoors; and the houses were built of unreinforced stone and mud masonry with heavy roofs and no horizontal bands. A moderate earthquake in a low-hazard zone killed more people than many larger earthquakes in well-built cities. The map was not wrong. The buildings were."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bhuj, 2001. At 8.46 a.m. on 26 January, Republic Day, a magnitude 7.7 earthquake on a fault that had not been mapped struck Kutch and killed more than 13,000 people. Kutch was in Zone V; the hazard was known. The construction was not. Nepal, 2015: on 25 April, the Gorkha earthquake, magnitude 7.8, killed nearly 9,000 people, damaged more than eight lakh homes and triggered an avalanche on Everest; the Kathmandu Valley's lake sediments amplified the shaking far beyond what the magnitude alone would suggest. Three earthquakes, three magnitudes, one identical story: the hazard is geological, the disaster is social."
+        },
+        {
+          "type": "quote",
+          "text": "Earthquakes don't kill people. Buildings do.",
+          "attribution": "A saying among earthquake engineers"
+        },
+        {
+          "type": "paragraph",
+          "text": "And so to the risk. Tens of millions of people live in the Himalayan seismic belt and in the Gangetic plain beyond it, where soft sediments can liquefy — behaving momentarily like a liquid, so that buildings sink and tilt. Add hill towns built without slope studies, roads cut into unstable rock, dams, and a building code that is excellent on paper and weakly enforced on site. A great earthquake in the central seismic gap is not a question of whether. Which makes the unglamorous parts of earthquake science — enforcing IS 1893, retrofitting schools and hospitals, mapping landslides, drilling communities — the most valuable work India can do."
+        }
+      ],
+      "refs": [
+        1,
+        2,
+        4
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "id": "eq-fault-block",
+      "kind": "diagram",
+      "title": "Anatomy of an earthquake: focus, epicentre, fault plane",
+      "caption": "The rupture begins at the focus (hypocentre) and radiates energy in all directions. The point on the surface directly above it is the epicentre; the vertical distance between the two is the focal depth. Notice that the dashed wavefronts are circles centred on the focus, not on the epicentre — which is why a deep earthquake shakes a much wider area than a shallow one of the same magnitude.",
+      "alt": "Cross-section through the ground showing a diagonal fault plane, the focus deep inside the Earth, the epicentre directly above it, concentric dashed seismic wavefronts radiating from the focus, and buildings shaking at the surface.",
+      "credit": "Original diagram for The Daily Brief",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 420' role='img' aria-label='Cross-section of a fault showing the focus, the epicentre above it, the fault plane and concentric seismic wavefronts'><defs><clipPath id='eqFaultClip'><rect x='0' y='140' width='800' height='280'/></clipPath></defs><rect x='0' y='0' width='800' height='420' fill='var(--paper)'/><rect x='0' y='140' width='800' height='280' fill='var(--paper-2)'/><g clip-path='url(#eqFaultClip)' fill='none' stroke='var(--muted)' stroke-width='1.6' stroke-dasharray='6 6'><circle cx='377' cy='300' r='180'/><circle cx='377' cy='300' r='240'/><circle cx='377' cy='300' r='300'/></g><line x1='330' y1='420' x2='440' y2='140' stroke='var(--accent)' stroke-width='3'/><line x1='377' y1='140' x2='377' y2='300' stroke='var(--ink)' stroke-width='1.2' stroke-dasharray='4 4'/><line x1='0' y1='140' x2='800' y2='140' stroke='var(--ink)' stroke-width='2'/><g fill='var(--muted)' opacity='0.85'><rect x='240' y='112' width='22' height='28'/><rect x='268' y='100' width='18' height='40'/><rect x='292' y='118' width='24' height='22'/><rect x='610' y='110' width='26' height='30'/></g><text x='14' y='130' font-size='13' fill='var(--muted)'>Ground surface</text><text x='238' y='96' font-size='12' fill='var(--muted)'>Buildings shake</text><circle cx='377' cy='140' r='6' fill='var(--accent)'/><circle cx='377' cy='300' r='6' fill='var(--accent)'/><text x='392' y='120' font-size='13' fill='var(--ink)'>Epicentre</text><text x='392' y='308' font-size='13' fill='var(--ink)'>Focus (hypocentre)</text><text x='368' y='366' font-size='13' fill='var(--accent)'>Fault plane</text><text x='330' y='232' font-size='12' fill='var(--muted)' text-anchor='end'>Focal depth</text><text x='20' y='190' font-size='13' fill='var(--muted)'>Seismic waves</text><line x1='108' y1='196' x2='140' y2='258' stroke='var(--muted)' stroke-width='1.2'/><text x='600' y='86' font-size='12' fill='var(--muted)'>Seismograph station</text><line x1='623' y1='140' x2='623' y2='152' stroke='var(--muted)' stroke-width='2'/></svg>"
+    },
+    {
+      "id": "india-seismic-zones",
+      "kind": "map",
+      "title": "India's seismic zones II–V, with major earthquakes",
+      "caption": "Zone V (deepest shading) runs along the Himalaya, across the entire North-East, over Kutch and down the Andaman & Nicobar chain — every one of these is a place where plates meet or where an old rift is being squeezed. Zone IV covers Delhi and the Indo-Gangetic plain. Most of the peninsula is Zone III, but the 1993 Latur earthquake (marker 2) shows that 'moderate' is not 'safe'. The map is drawn from expected MSK intensity, not from magnitude.",
+      "alt": "Schematic map of India with the Himalayan belt, North-East, Kutch and Andaman Islands shaded as seismic Zone V, the Indo-Gangetic plain as Zone IV, and numbered markers for the Bhuj, Latur, Nepal, Kangra, Assam and Shillong earthquakes.",
+      "credit": "Original diagram for The Daily Brief",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 520' role='img' aria-label='Schematic map of India showing seismic zones II to V and the locations of major earthquakes'><rect x='0' y='0' width='720' height='520' fill='var(--paper)'/><path d='M 135 30 L 150 45 L 175 60 L 195 90 L 195 105 L 225 112 L 255 132 L 285 150 L 315 155 L 337 157 L 352 165 L 380 148 L 420 135 L 465 150 L 450 180 L 425 200 L 405 225 L 398 248 L 383 218 L 360 192 L 330 172 L 330 210 L 315 232 L 315 247 L 285 277 L 260 300 L 240 315 L 225 345 L 214 375 L 195 415 L 172 448 L 155 425 L 150 420 L 135 385 L 120 352 L 108 315 L 103 285 L 80 270 L 60 255 L 45 235 L 37 217 L 48 190 L 60 165 L 85 135 L 105 115 L 120 105 L 128 70 L 135 45 Z' fill='var(--paper-2)'/><path d='M 150 108 L 185 130 L 215 150 L 245 165 L 275 178 L 305 186 L 335 192 L 360 196 L 368 232 L 330 240 L 295 232 L 255 212 L 215 188 L 180 162 L 150 138 Z' fill='var(--accent)' fill-opacity='0.22'/><path d='M 150 45 L 175 60 L 195 90 L 195 105 L 225 112 L 255 132 L 285 150 L 315 155 L 337 157 L 352 165 L 380 148 L 420 135 L 465 150 L 465 185 L 425 176 L 390 186 L 358 194 L 335 192 L 305 186 L 275 178 L 245 165 L 215 150 L 185 130 L 150 108 L 120 104 L 126 68 Z' fill='var(--accent)' fill-opacity='0.5'/><path d='M 352 165 L 380 148 L 420 135 L 465 150 L 450 180 L 425 200 L 405 225 L 398 248 L 383 218 L 360 192 L 330 172 Z' fill='var(--accent)' fill-opacity='0.5'/><path d='M 40 210 L 68 204 L 80 224 L 70 246 L 46 240 L 34 224 Z' fill='var(--accent)' fill-opacity='0.5'/><g fill='var(--accent)' fill-opacity='0.5'><ellipse cx='400' cy='362' rx='5' ry='13'/><ellipse cx='404' cy='392' rx='5' ry='13'/><ellipse cx='408' cy='422' rx='5' ry='13'/><ellipse cx='412' cy='452' rx='5' ry='13'/><ellipse cx='416' cy='478' rx='5' ry='13'/></g><path d='M 135 30 L 150 45 L 175 60 L 195 90 L 195 105 L 225 112 L 255 132 L 285 150 L 315 155 L 337 157 L 352 165 L 380 148 L 420 135 L 465 150 L 450 180 L 425 200 L 405 225 L 398 248 L 383 218 L 360 192 L 330 172 L 330 210 L 315 232 L 315 247 L 285 277 L 260 300 L 240 315 L 225 345 L 214 375 L 195 415 L 172 448 L 155 425 L 150 420 L 135 385 L 120 352 L 108 315 L 103 285 L 80 270 L 60 255 L 45 235 L 37 217 L 48 190 L 60 165 L 85 135 L 105 115 L 120 105 L 128 70 L 135 45 Z' fill='none' stroke='var(--ink)' stroke-width='1.8'/><text x='172' y='332' font-size='12' fill='var(--muted)' text-anchor='middle'>Zone III</text><text x='171' y='410' font-size='11' fill='var(--muted)' text-anchor='middle'>Zone II</text><g><circle cx='56' cy='222' r='8' fill='var(--ink)'/><circle cx='158' cy='298' r='8' fill='var(--ink)'/><circle cx='280' cy='150' r='8' fill='var(--ink)'/><circle cx='155' cy='89' r='8' fill='var(--ink)'/><circle cx='448' cy='162' r='8' fill='var(--ink)'/><circle cx='383' cy='180' r='8' fill='var(--ink)'/></g><g font-size='10' fill='var(--paper)' text-anchor='middle'><text x='56' y='225.5'>1</text><text x='158' y='301.5'>2</text><text x='280' y='153.5'>3</text><text x='155' y='92.5'>4</text><text x='448' y='165.5'>5</text><text x='383' y='183.5'>6</text></g><text x='480' y='46' font-size='13' fill='var(--ink)'>Seismic zones (BIS IS 1893)</text><rect x='480' y='62' width='22' height='14' fill='var(--accent)' fill-opacity='0.5'/><text x='512' y='74' font-size='12' fill='var(--muted)'>V — very severe</text><rect x='480' y='86' width='22' height='14' fill='var(--accent)' fill-opacity='0.22'/><text x='512' y='98' font-size='12' fill='var(--muted)'>IV — severe</text><rect x='480' y='110' width='22' height='14' fill='var(--paper-2)'/><text x='512' y='122' font-size='12' fill='var(--muted)'>III — moderate</text><rect x='480' y='134' width='22' height='14' fill='var(--paper-2)' stroke='var(--rule)' stroke-width='1'/><text x='512' y='146' font-size='12' fill='var(--muted)'>II — low</text><text x='480' y='186' font-size='13' fill='var(--ink)'>Major earthquakes</text><g font-size='12' fill='var(--muted)'><text x='480' y='210'>1&#160;&#160;Bhuj, 2001 — Mw 7.7</text><text x='480' y='232'>2&#160;&#160;Latur, 1993 — Mw 6.2</text><text x='480' y='254'>3&#160;&#160;Nepal, 2015 — Mw 7.8</text><text x='480' y='276'>4&#160;&#160;Kangra, 1905 — Mw 7.8</text><text x='480' y='298'>5&#160;&#160;Assam, 1950 — Mw 8.6</text><text x='480' y='320'>6&#160;&#160;Shillong, 1897 — Mw 8.0</text></g><text x='480' y='366' font-size='11' fill='var(--muted)'>Schematic — zone boundaries</text><text x='480' y='382' font-size='11' fill='var(--muted)'>indicative only; not to scale.</text></svg>"
+    },
+    {
+      "id": "tsunami-generation",
+      "kind": "diagram",
+      "title": "How an undersea thrust earthquake makes a tsunami",
+      "caption": "The sea floor steps up along the fault and lifts the whole water column with it. In deep water the resulting wave is over 100 km long and under a metre high, so a boat rides over it without noticing — but it travels at jet-aircraft speed. As the sea shallows, the wave slows, the crests pile up and the wave grows. That is why the danger is almost entirely at the shoreline.",
+      "alt": "Cross-section of the ocean showing a thrust fault lifting the sea floor, the water column displaced above it, wave crests travelling towards a coast and growing taller as the water shallows.",
+      "credit": "Original diagram for The Daily Brief",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 320' role='img' aria-label='Cross-section of the ocean showing an undersea thrust earthquake lifting the sea floor and generating a tsunami that grows near the coast'><rect x='0' y='0' width='800' height='320' fill='var(--paper)'/><path d='M 0 90 L 250 90 Q 335 58 420 90 L 690 90 L 690 95 L 600 235 L 350 235 L 350 265 L 0 265 Z' fill='var(--paper-2)'/><path d='M 690 95 L 690 90 L 712 52 L 800 52 L 800 320 L 690 320 Z' fill='var(--muted)' fill-opacity='0.28'/><path d='M 0 90 L 250 90 Q 335 58 420 90 L 690 90' fill='none' stroke='var(--ink)' stroke-width='2'/><path d='M 0 265 L 335 265' fill='none' stroke='var(--ink)' stroke-width='2'/><path d='M 345 235 L 600 235 L 690 95' fill='none' stroke='var(--ink)' stroke-width='2'/><path d='M 335 265 L 345 235' fill='none' stroke='var(--accent)' stroke-width='3'/><path d='M 335 265 L 312 318' fill='none' stroke='var(--accent)' stroke-width='2' stroke-dasharray='5 5'/><path d='M 385 228 L 385 204' fill='none' stroke='var(--accent)' stroke-width='2'/><path d='M 379 208 L 385 198 L 391 208 Z' fill='var(--accent)'/><g fill='none' stroke='var(--accent)' stroke-width='2'><path d='M 118 90 Q 140 78 162 90'/><path d='M 180 90 Q 202 76 224 90'/><path d='M 470 90 Q 490 78 510 90'/><path d='M 535 90 Q 560 68 585 90'/><path d='M 600 90 Q 632 50 664 90'/></g><path d='M 138 82 L 168 82 L 162 90 L 144 90 Z' fill='var(--muted)'/><rect x='720' y='30' width='20' height='22' fill='var(--muted)'/><rect x='752' y='22' width='22' height='30' fill='var(--muted)'/><text x='16' y='126' font-size='12' fill='var(--muted)'>Deep ocean: wavelength 100–200 km,</text><text x='16' y='142' font-size='12' fill='var(--muted)'>height under 1 m — ships sail over it</text><text x='196' y='46' font-size='12' fill='var(--accent)'>Water column lifted</text><line x1='268' y1='52' x2='302' y2='70' stroke='var(--accent)' stroke-width='1.2'/><text x='60' y='300' font-size='12' fill='var(--muted)'>Thrust fault steps the sea floor up</text><line x1='268' y1='294' x2='330' y2='270' stroke='var(--muted)' stroke-width='1.2'/><text x='400' y='132' font-size='12' fill='var(--muted)'>Waves race outward at 700–800 km/h</text><text x='470' y='192' font-size='12' fill='var(--muted)'>Slows and grows near shore</text><text x='16' y='314' font-size='11' fill='var(--muted)'>Schematic — not to scale.</text></svg>"
+    }
+  ],
+  "anecdote": {
+    "title": "The Fence That Moved",
+    "body": "After the San Francisco earthquake of 18 April 1906, surveyors went out to re-measure the land. Along the San Andreas Fault they found something odd. Fences, roads and rows of trees that crossed the fault line had been offset by up to several metres — and the offset shrank steadily with distance from the fault, vanishing a few kilometres away. The land had not merely shaken; it had moved, permanently. H. F. Reid, a geologist working through the survey records, saw what it meant. The ground on either side had been bending elastically for decades, storing strain like a bent ruler, and the earthquake was the instant it snapped back. Elastic-rebound theory — the idea at the heart of this lesson — was read off a line of fence posts."
+  },
+  "exam": {
+    "prelims": [
+      "Magnitude is a single instrument-derived number for the energy released at the source; intensity is a place-by-place measure of shaking and damage, recorded on the Modified Mercalli or MSK scale. India's seismic zone map is drawn from expected MSK intensity, not from magnitude.",
+      "Depth classes: shallow 0–70 km, intermediate 70–300 km, deep 300–700 km. Deep-focus earthquakes occur only along subducting slabs (the Wadati–Benioff zone) and are never recorded in continent–continent collision belts such as the Himalaya.",
+      "P waves are compressional and pass through solids, liquids and gases; S waves are transverse and pass only through solids. Their shadow zones (S beyond about 103°, P between about 103° and 142°) are the proof that the outer core is liquid.",
+      "The Richter scale saturates above about magnitude 6.5–7, so large earthquakes are now reported on the moment magnitude scale (Mw), which is calculated from seismic moment — rigidity × fault area × average slip.",
+      "India has four seismic zones — II, III, IV and V; there is no Zone I. Zone V covers the entire North-East, parts of Jammu & Kashmir, Himachal Pradesh and Uttarakhand, Kutch, parts of north Bihar, and the Andaman & Nicobar Islands."
+    ],
+    "mains": [
+      "'The Himalayan belt is a seismic time bomb.' Explain the tectonic reasons for the high seismicity of the Himalaya and evaluate India's earthquake preparedness in the light of the 2015 Nepal earthquake. (250 words)",
+      "Distinguish between the magnitude and the intensity of an earthquake. Using the 1993 Latur earthquake, explain why a moderate earthquake in a 'low-hazard' zone can cause catastrophic loss of life. (150 words)",
+      "Explain the mechanism by which a subduction-zone earthquake generates a tsunami, and account for why the same wave is imperceptible in the open ocean but devastating at the coast. (150 words)"
+    ],
+    "keyTerms": [
+      {
+        "term": "Focus (hypocentre)",
+        "meaning": "The point inside the Earth where the rupture begins and from which seismic energy radiates."
+      },
+      {
+        "term": "Epicentre",
+        "meaning": "The point on the Earth's surface vertically above the focus."
+      },
+      {
+        "term": "Elastic-rebound theory",
+        "meaning": "The sudden release of slowly accumulated elastic strain when rock fractures and slips along a fault."
+      },
+      {
+        "term": "Seismograph",
+        "meaning": "An instrument that records ground motion; its output, the wiggling trace, is a seismogram."
+      },
+      {
+        "term": "Magnitude",
+        "meaning": "An instrument-derived measure of the energy released at the source — one value per earthquake."
+      },
+      {
+        "term": "Intensity",
+        "meaning": "A measure of shaking and damage at a particular place, on the Modified Mercalli or MSK scale — a different value for every place."
+      },
+      {
+        "term": "Wadati–Benioff zone",
+        "meaning": "The inclined plane of earthquake foci that marks the cold, descending oceanic slab in a subduction zone."
+      },
+      {
+        "term": "Seismic gap",
+        "meaning": "A segment of an active fault that has not ruptured for a long time and is therefore presumed to be storing strain."
+      }
+    ]
+  },
+  "recap": [
+    "Rock bends, stores strain and snaps along a fault; the snap is the earthquake (elastic-rebound theory). The focus is where rupture begins; the epicentre is the point on the surface directly above it.",
+    "P waves are fast, compressional and pass through everything; S waves are slower, transverse and stop at liquids; surface waves (Love and Rayleigh) are slowest and most damaging. Their shadow zones proved the outer core is liquid.",
+    "Magnitude measures energy released at the source on a logarithmic scale (Richter, now moment magnitude Mw); intensity measures shaking at a place (Modified Mercalli, MSK). One earthquake, one magnitude, many intensities.",
+    "Shallow earthquakes are the most destructive because the energy is released close to the surface. Deep-focus quakes occur only along the dipping Wadati–Benioff zone of a subducting slab — which is why the Himalaya produces only shallow quakes.",
+    "A tsunami is generated when a shallow, large undersea thrust earthquake lifts the sea floor and the whole water column above it; the wave is tiny and jet-fast in deep water and grows violently as it shoals at the coast.",
+    "India has four seismic zones (II–V), with the Himalaya, the North-East, Kutch and the Andamans in Zone V. The central seismic gap, combined with weak construction, makes the Himalayan belt India's largest earthquake risk."
+  ],
+  "nextUp": "Next time we ask what happens when the rock does not snap but melts. Volcanoes: Mountains That Breathe picks up the same machinery — subduction, divergence, hotspots — and follows it to the surface: magma and lava, why some volcanoes ooze and others explode (viscosity and gas content), shield, composite and cinder-cone cones, calderas and fissure eruptions, pyroclastic flows and lahars, the Ring of Fire, hotspot chains from Hawaii to Yellowstone, volcanic landforms and soils, and India's own volcanic legacy — the Deccan Traps, which erupted around the time the dinosaurs died, and Barren Island, the only active volcano on Indian soil.",
+  "references": [
+    {
+      "label": "NCERT Class XI — Fundamentals of Physical Geography",
+      "href": "https://ncert.nic.in/textbook/pdf/kegy101.pdf",
+      "kind": "official"
+    },
+    {
+      "label": "USGS — Plate Tectonics",
+      "href": "https://www.usgs.gov/programs/earthquake-hazards/plate-tectonics",
+      "kind": "official"
+    },
+    {
+      "label": "Plate tectonics",
+      "href": "https://en.wikipedia.org/wiki/Plate_tectonics",
+      "kind": "wiki"
+    },
+    {
+      "label": "Earthquake",
+      "href": "https://en.wikipedia.org/wiki/Earthquake",
+      "kind": "wiki"
+    },
+    {
+      "label": "Volcano",
+      "href": "https://en.wikipedia.org/wiki/Volcano",
+      "kind": "wiki"
+    }
+  ],
+  "series": {
+    "subject": "Geography",
+    "subjectKey": "geography",
+    "paper": "Prelims GS-I · Mains GS-I",
+    "unitId": "geo-tectonics",
+    "unitTitle": "The Restless Earth: Tectonics and Its Consequences",
+    "lessonId": "geo-tectonics-2",
+    "lessonNumber": 2,
+    "lessonCount": 4,
+    "seriesLessonNumber": 7,
+    "syllabusNode": "Geography — Plate tectonics, earthquakes, volcanoes and mountain building"
+  },
+  "handoff": {
+    "covered": [
+      "Focus and hypocentre, epicentre, fault plane and focal depth; elastic-rebound theory and the 1906 San Francisco fence-line surveys.",
+      "Seismic waves: P, S, Love and Rayleigh; the S-wave and P-wave shadow zones as evidence for the liquid outer core (callback to the interior lesson); the seismograph and epicentre location from the P–S time gap.",
+      "Magnitude versus intensity; the Richter scale and its saturation; moment magnitude (Mw); Modified Mercalli and MSK intensity; site amplification (Ahmedabad 2001, Kathmandu 2015).",
+      "Depth classification — shallow (0–70 km), intermediate (70–300 km), deep (300–700 km); the Wadati–Benioff zone and why the Himalaya produces only shallow quakes; global distribution and the Ring of Fire.",
+      "Tsunami generation — vertical sea-floor displacement, long wavelength, jet speed in deep water, shoaling at the coast; the 2004 Indian Ocean tsunami and the INCOIS warning centre at Hyderabad.",
+      "India's seismic zones II–V (BIS IS 1893, based on MSK intensity), the central seismic gap, and the case studies of Latur 1993, Bhuj 2001 and Nepal 2015."
+    ],
+    "next": "Volcanoes: Mountains That Breathe — magma, lava, viscosity and gas content; shield, composite and cinder-cone volcanoes; calderas and fissure eruptions; pyroclastic flows and lahars; the Ring of Fire; hotspot volcanism (Hawaii, Yellowstone); volcanic landforms and soils; India's volcanic legacy (Deccan Traps, Barren Island); volcanic hazards and benefits.",
+    "notes": "The 'plate-boundaries' figure from Lesson 6 was reused verbally throughout the depth section — once for the Benioff zone and once for the depth of quakes at each margin — and the new 'india-seismic-zones' figure should in turn be reused in the volcano lesson (Barren Island sits on the Andaman arc, which is Zone V) and for any disaster-management or hazard-mapping question. 'eq-fault-block' is the master earthquake figure and pairs with the older 'plate-boundaries' diagram; 'tsunami-generation' can be reused for coastal hazards, for the 2004 case study, and for oceanography. The 'magnetic-striping' and 'earth-interior' figures from Lessons 5–6 pair naturally with the shadow-zone paragraph if that material is ever revised. The women-in-science thread (Inge Lehmann → Marie Tharp) was NOT extended here; Lehmann's shadow-zone work is the obvious next link and can be paid off in the volcano lesson or in a revision piece. Deliberately NOT done: the Benioff zone's role in generating arc magmas (that is the volcano lesson's opening), the later stages of the Wilson cycle, and any detailed treatment of seismic-resistant construction (IS 1893 detailing, base isolation) beyond naming the code. The 'map as argument' stance from Lesson 1 was re-established in the distribution paragraph — worth keeping alive. The Coriolis preview from Lesson 4 is still unpaid and still belongs to atmospheric circulation."
+  }
+}
