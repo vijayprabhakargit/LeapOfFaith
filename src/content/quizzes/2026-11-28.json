@@ -1,0 +1,204 @@
+{
+  "date": "2026-11-28",
+  "generatedAt": "2026-11-28T02:56:43.123Z",
+  "title": "Daily Prelims Quiz",
+  "windowStart": "2026-11-22",
+  "windowEnd": "2026-11-28",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Consider the following statements regarding the delimitation-linked Bill recently cleared by the Union Cabinet:\n1. It proposes to increase the total number of Lok Sabha seats by 50 per cent, taking the strength of the House to 850.\n2. It proposes to freeze the proportion of seats allotted to each State until 2051.\n3. The delimitation Bill itself is a Constitution Amendment Bill and therefore requires a special majority under Article 368 for its passage.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 0,
+      "explanation": "The Cabinet-cleared delimitation Bill proposes a 50 per cent increase in Lok Sabha seats (to 850) and freezes State-wise proportions until 2051. Statement 3 is the trap: the delimitation Bill is accompanied by a separate Constitutional Amendment Bill (on women's reservation), and it is that accompanying Bill, not the delimitation Bill itself, which would need a special majority under Article 368.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 2,
+      "question": "Consider the following statements regarding the trade measures recently announced by the United States:\n1. The Trump administration has invoked Section 301 of the Trade Act, 1974 to restore duties that the US Supreme Court had struck down.\n2. Section 301 investigations are conducted by the World Trade Organization at the request of a complaining member.\n3. The United States has threatened a 40 per cent tariff on China, indicating that tariffs are being used as negotiating leverage in US–China talks.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 2,
+      "explanation": "Section 301 of the US Trade Act, 1974 is a domestic instrument invoked by the United States Trade Representative, not by the WTO — so statement 2 is incorrect. Statements 1 and 3 reflect the brief: the administration used Section 301 to restore struck-down duties and has threatened a 40 per cent tariff on China as leverage.",
+      "topic": "Economy"
+    },
+    {
+      "id": 3,
+      "question": "Consider the following statements:\n1. Live storage in India's monitored major reservoirs has fallen to about 32 per cent below the level recorded at the same point last year.\n2. The southern region is the worst affected by this shortfall.\n3. Region-wise reservoir storage data are compiled and reported by the Central Ground Water Board, an attached office of the Ministry of Jal Shakti.\nHow many of the above statements are correct?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 1,
+      "explanation": "Statements 1 and 2 are correct as per the Down To Earth report based on official data. Statement 3 is an entity swap: region-wise reservoir storage is reported by the Central Water Commission, not the Central Ground Water Board.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 4,
+      "question": "The Bab-el-Mandeb, a chokepoint that has figured in recent disruptions to global shipping, connects which one of the following?",
+      "options": [
+        "The Mediterranean Sea and the Red Sea",
+        "The Persian Gulf and the Gulf of Oman",
+        "The Red Sea and the Gulf of Aden",
+        "The Black Sea and the Aegean Sea"
+      ],
+      "answer": 2,
+      "explanation": "Bab-el-Mandeb links the Red Sea to the Gulf of Aden and is a critical chokepoint alongside the Strait of Hormuz. The Persian Gulf–Gulf of Oman link is the Strait of Hormuz, while the Suez Canal connects the Mediterranean Sea with the Red Sea.",
+      "topic": "Geography"
+    },
+    {
+      "id": 5,
+      "question": "Consider the following pairs of festivals and the States with which they are traditionally associated:\n1. Karthigai Deepam — Tamil Nadu\n2. Hornbill Festival — Nagaland\n3. Onam — Kerala\nHow many of the above pairs are correctly matched?",
+      "options": [
+        "Only one",
+        "Only two",
+        "All three",
+        "None"
+      ],
+      "answer": 2,
+      "explanation": "All three pairs are correctly matched. Karthigai Deepam is a Tamil festival of lights observed in the Tamil month of Karthigai, the Hornbill Festival is Nagaland's annual cultural festival, and Onam is Kerala's harvest festival.",
+      "topic": "History & Culture"
+    },
+    {
+      "id": 6,
+      "question": "Statement-I: The Indian Computer Emergency Response Team (CERT-In) has flagged fresh vulnerabilities in widely used software applications such as WhatsApp and ASUS software.\nStatement-II: CERT-In is the national nodal agency under the Ministry of Electronics and Information Technology for responding to computer security incidents.\nWhich one of the following is correct in respect of the above statements?",
+      "options": [
+        "Both Statement-I and Statement-II are correct and Statement-II explains Statement-I",
+        "Both Statement-I and Statement-II are correct but Statement-II does not explain Statement-I",
+        "Statement-I is correct but Statement-II is incorrect",
+        "Statement-I is incorrect but Statement-II is correct"
+      ],
+      "answer": 0,
+      "explanation": "Both statements are correct. CERT-In's mandate as the national nodal agency for cyber incident response under MeitY is precisely why it issues vulnerability advisories, so Statement-II explains Statement-I.",
+      "topic": "Science & Technology"
+    },
+    {
+      "id": 7,
+      "question": "The Joint Comprehensive Plan of Action (JCPOA), referred to in the context of recent US–Iran tensions, was endorsed by which one of the following United Nations Security Council resolutions?",
+      "options": [
+        "Resolution 1540",
+        "Resolution 1696",
+        "Resolution 1929",
+        "Resolution 2231"
+      ],
+      "answer": 3,
+      "explanation": "UNSC Resolution 2231 (2015) endorsed the JCPOA and contains the 'snapback' procedure for reviving pre-2015 UN sanctions on Iran. Resolutions 1696 and 1929 were earlier Iran-related sanctions resolutions, not the endorsing resolution.",
+      "topic": "International Relations"
+    },
+    {
+      "id": 8,
+      "question": "Consider the following statements:\n1. Former Chief Justice of India B.R. Gavai has written to the President alleging a lack of diversity in the Supreme Court.\n2. The Supreme Court Collegium for judicial appointments consists of the Chief Justice of India and the two senior-most judges of the Supreme Court.\n3. The Collegium system for appointments to the higher judiciary is expressly provided for in the Constitution.\nWhich of the statements given above is/are NOT correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 1,
+      "explanation": "Statements 2 and 3 are not correct. The Collegium comprises the Chief Justice of India and the four senior-most judges of the Supreme Court, and it is a judicial creation under the 'Judges Cases' rather than an express constitutional provision. Statement 1 reflects the reported letter by former CJI B.R. Gavai.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 9,
+      "question": "At COP31 in Antalya, a coalition of countries refused to adopt the proposed 'Antalya pact', and the summit closed without an overarching agreement. Which one of the following best explains this outcome?",
+      "options": [
+        "Decisions under the UNFCCC are taken by a two-thirds majority of the Parties present and voting.",
+        "Decisions under the UNFCCC are taken by a weighted voting formula reflecting each Party's share of global emissions.",
+        "Decisions under the UNFCCC are generally taken by consensus, which gives any blocking coalition an effective veto over outcomes.",
+        "Decisions under the UNFCCC are referred to the International Court of Justice for a binding ruling."
+      ],
+      "answer": 2,
+      "explanation": "UNFCCC decisions are generally taken by consensus, so a coalition refusing to endorse the Antalya pact could effectively block it — which is why COP31 closed without a pact. Majority voting, weighted voting and ICJ referral do not govern the COP decision-making process.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 10,
+      "question": "With reference to the term 'money mule account', recently in the news, which one of the following best describes it?",
+      "options": [
+        "An account opened by a bank to park unclaimed deposits of customers.",
+        "An account maintained by the Reserve Bank of India for settling inter-bank transactions.",
+        "An account used exclusively for government welfare transfers under the Direct Benefit Transfer scheme.",
+        "An account used to receive and transfer the proceeds of cyber-enabled financial frauds, often on behalf of others."
+      ],
+      "answer": 3,
+      "explanation": "A money mule account is one used to layer and move the proceeds of cyber-enabled financial frauds, which is why the RBI issued amendment directions on 'Suspected Money Mule Accounts to Prevent Cyber-enabled Financial Frauds' in November 2026.",
+      "topic": "Economy"
+    },
+    {
+      "id": 11,
+      "question": "Consider the following statements regarding the Constitutional Amendment Bill accompanying the delimitation Bill:\n1. An amendment to the Constitution under Article 368 requires to be passed by each House of Parliament by a simple majority of the members present and voting.\n2. The 106th Constitutional Amendment provided for 33 per cent reservation for women in the Lok Sabha and the State Legislative Assemblies.\n3. The 106th Amendment's reservation for women is to come into effect after the delimitation exercise.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 1,
+      "explanation": "Statement 1 is incorrect: Article 368 requires a special majority — a majority of the total membership of each House and a majority of not less than two-thirds of the members present and voting. Statements 2 and 3 are correct; the 106th Amendment's women's reservation is tied to the delimitation exercise.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 12,
+      "question": "Consider the following statements regarding employment and poverty measurement in India:\n1. NITI Aayog's National Multidimensional Poverty Index measures deprivation across three dimensions and twelve indicators.\n2. The Unemployment Rate is calculated as the number of unemployed persons divided by the labour force.\n3. The Periodic Labour Force Survey, in place since 2017, provides quarterly urban and annual all-India employment estimates.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 3,
+      "explanation": "All three statements are correct. The National MPI uses three dimensions and twelve indicators; the Unemployment Rate is unemployed persons as a share of the labour force; and the PLFS has provided quarterly urban and annual all-India estimates since 2017.",
+      "topic": "Economy"
+    },
+    {
+      "id": 13,
+      "question": "Consider the following statements:\n1. Article 144 of the Constitution requires all authorities, civil and judicial, in the territory of India to act in aid of the High Courts.\n2. The power of the Supreme Court to punish for contempt of itself is derived from Article 129 of the Constitution.\n3. The Supreme Court has recently suspended the trustees of the Thiruparankundram temple and issued a contempt notice over non-compliance with its order.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 1,
+      "explanation": "Statement 1 is incorrect: Article 144 requires all authorities, civil and judicial, to act in aid of the Supreme Court, not the High Courts. Article 129 confers the contempt power on the Supreme Court, and the Court did suspend the Thiruparankundram trustees and issue a contempt notice.",
+      "topic": "Polity & Governance"
+    },
+    {
+      "id": 14,
+      "question": "Consider the following statements regarding the proposed hydropower project on the Siang river in Arunachal Pradesh:\n1. The Siang is known as the Yarlung Tsangpo in Tibet and as the Jamuna in Bangladesh.\n2. The Environmental Impact Assessment Notification, 2006 is issued under the Water (Prevention and Control of Pollution) Act, 1974.\n3. Local communities have protested against the project over displacement, ecological damage and inadequate consent processes.\nWhich of the statements given above is/are correct?",
+      "options": [
+        "1 and 2 only",
+        "2 and 3 only",
+        "1 and 3 only",
+        "1, 2 and 3"
+      ],
+      "answer": 2,
+      "explanation": "Statement 2 is incorrect: the EIA Notification, 2006 is issued under the Environment (Protection) Act, 1986. Statements 1 and 3 are correct — the Siang is the Arunachal Pradesh stretch of the Brahmaputra (Yarlung Tsangpo in Tibet, Jamuna in Bangladesh), and the project has drawn local protests.",
+      "topic": "Environment & Ecology"
+    },
+    {
+      "id": 15,
+      "question": "With reference to the Strait of Hormuz, which one of the following best describes 'transit passage' under the United Nations Convention on the Law of the Sea?",
+      "options": [
+        "The right of continuous and expeditious navigation through an international strait, which cannot be suspended by the coastal State.",
+        "The right of a coastal State to suspend navigation through an international strait at will.",
+        "The right of foreign vessels to fish in the exclusive economic zone of a coastal State.",
+        "The right of a landlocked State to access the sea through a neighbouring State's territory."
+      ],
+      "answer": 0,
+      "explanation": "Under UNCLOS Part III, transit passage through international straits such as the Strait of Hormuz cannot be suspended or impeded by the coastal State, unlike innocent passage through a coastal State's territorial sea. The other options describe unrelated rights.",
+      "topic": "Geography"
+    }
+  ]
+}

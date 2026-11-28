@@ -1,0 +1,324 @@
+{
+  "date": "2026-11-28",
+  "generatedAt": "2026-11-28T02:54:22.827Z",
+  "title": "Volcanoes: Mountains That Breathe",
+  "subtitle": "Why one volcano whispers and another screams — and what India's own volcanoes left behind",
+  "readMinutes": 15,
+  "hook": "Some mountains breathe fire; others merely breathe. In 79 CE a Roman naturalist sailed towards a towering cloud over the Bay of Naples to get a closer look, and never came back. That eruption buried two cities and gave us the first eyewitness description of a volcano in history. Volcanoes are the most spectacular proof that the Earth's crust is thin, hot and restless — and the reason one of them whispers while another screams comes down to just two physical properties.",
+  "sections": [
+    {
+      "heading": "The Plumbing: Magma, Lava and the Two Dials",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Start underground, because almost everything about a volcano is decided before the eruption begins. Magma is molten or partly molten rock — not a clean liquid, but a slush of melt, crystals and dissolved gas — held in a chamber several kilometres down. When it reaches the surface we call it lava. The change of name is not pedantry. The moment magma breaks the surface, the pressure that was keeping its gases dissolved collapses, and the gas begins to come out. Everything that follows — the fountain, the ash cloud, the flow, the bang — is the story of how easily that gas escapes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Magma is made in three main ways. It can form by decompression, when hot rock rises and the falling pressure lets it melt without gaining any heat — this is what happens beneath mid-ocean ridges and beneath hotspots. It can form by adding heat. And it can form by adding water, which is the crucial mechanism along the Ring of Fire. Here is the payoff to the Benioff zone from the last lesson. As an oceanic slab descends, it drags seawater and water-bearing minerals down with it. At roughly a hundred kilometres' depth, heat and pressure drive that water out of the slab and into the mantle wedge above it. Water lowers the melting point of rock sharply: wet rock melts where dry rock would stay solid. The wedge partially melts, and magma begins to rise."
+        },
+        {
+          "type": "paragraph",
+          "text": "Now the two dials that decide the eruption. The first is viscosity — a fluid's resistance to flow. In magma, viscosity is governed mainly by silica content and temperature. Silica builds long chain-like molecules in the melt, so more silica means a stiffer, stickier magma; higher temperature makes it runnier. Basaltic magma, with roughly half silica, pours like warm honey. Rhyolitic magma, with seventy per cent or more, behaves more like cold toothpaste. The second dial is gas content. Water vapour and carbon dioxide sit dissolved in the magma under pressure; as the magma rises and pressure falls, they exsolve into bubbles, exactly as the fizz appears when you unscrew a bottle of soft drink."
+        },
+        {
+          "type": "paragraph",
+          "text": "Put the two dials together and the whole secret is out. Runny magma with modest gas: bubbles rise through it easily and burst at the surface, sometimes as a lava fountain. The eruption is effusive — quiet, and often spectacularly beautiful. Sticky magma with plenty of gas: the bubbles cannot escape. They grow, merge, and the pressure inside them builds until the magma itself shatters into fragments. That is an explosive eruption, and its products are not flows but ash, pumice and shattered rock thrown into the sky. A shaken fizzy bottle opened suddenly, versus a bottle of still water tipped over — that is the difference in one image."
+        },
+        {
+          "type": "callout",
+          "title": "The one-line rule",
+          "text": "Runny, low-silica magma lets gas escape → quiet, effusive eruption. Sticky, high-silica magma traps gas → violent, explosive eruption. Shape, hazard and landscape all follow from this single sentence.",
+          "tone": "note"
+        }
+      ],
+      "refs": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "heading": "Three Shapes, One Logic",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A volcano's shape is a diary of its eruptions. Runny basaltic lava spreads far before it solidifies, so it builds a broad, gently sloping dome — a shield volcano, named because it looks like a warrior's shield lying convex side up. Mauna Loa in Hawaii is the classic example; its flanks slope only a few degrees, and its summit carries a shallow depression rather than a sharp crater. Shield volcanoes are enormous in volume and mild in temper."
+        },
+        {
+          "type": "paragraph",
+          "text": "Where the magma is sticky, the story changes. A composite volcano — also called a stratovolcano — is built from alternating layers of lava and fragmented rock thrown out by explosions. Because the material is viscous, it piles up close to the vent, giving the steep, symmetrical cone with a crater at the top that a child draws when asked to draw a volcano. Fuji, Vesuvius, Rainier and the great Andean peaks are all composite. They are the typical volcano of a subduction zone, and they are the dangerous ones."
+        },
+        {
+          "type": "paragraph",
+          "text": "The third and smallest type is the cinder cone — a steep little heap of loose ash, scoria and cinder, usually built by a single short-lived eruption and often perched on the flank of a larger volcano. Cinder cones have a bowl-shaped crater and rarely exceed a few hundred metres in height. Because they are made of loose material, they erode away quickly."
+        },
+        {
+          "type": "paragraph",
+          "text": "Notice what has just happened. We have not memorised three shapes; we have derived them from one property. Look at a volcano's profile on a map and you can often guess the chemistry of its magma — and from the chemistry, guess its tectonic setting. The figure below puts the three side by side."
+        },
+        {
+          "type": "figure",
+          "figureId": "volcano-profiles"
+        }
+      ],
+      "refs": [
+        1,
+        5
+      ]
+    },
+    {
+      "heading": "When the Roof Falls In: Calderas and Fissure Eruptions",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Not every volcanic depression is a crater. A crater is a constructional feature — a bowl at the top of a vent, tens to a few hundred metres across. A caldera is a collapse feature, kilometres across, formed when a large eruption empties the magma chamber beneath and the ground above it simply falls in. The distinction matters because calderas record the biggest eruptions. Yellowstone's caldera in Wyoming formed in an eruption about 640,000 years ago. Krakatoa's 1883 eruption collapsed into a caldera and sent a tsunami across the Sunda Strait. Toba, in Sumatra, produced one of the largest known eruptions of the last million years, roughly 74,000 years ago."
+        },
+        {
+          "type": "paragraph",
+          "text": "The second and far more voluminous style is the fissure eruption. Instead of a single central vent, magma reaches the surface along a long crack and pours out in sheets. One fissure eruption is rarely dramatic — but repeat it for hundreds of thousands of years and you build a flood basalt province, thousands of cubic kilometres of lava laid down flow upon flow. The old name for these provinces is traps, from the Swedish word for stairs, because the stacked flows weather into step-like terraces."
+        },
+        {
+          "type": "paragraph",
+          "text": "Here is a fact that surprises most students. The largest volcanic system on Earth is not a cone at all; it is the mid-ocean ridge system, a crack tens of thousands of kilometres long in the ocean floor where fissure eruptions happen constantly. We see almost none of it. Iceland is the rare place where the ridge rises above the waves, which is why Icelanders live with both volcanic eruptions and geothermal heat."
+        },
+        {
+          "type": "paragraph",
+          "text": "And the greatest flood basalt province on the Indian subcontinent — the Deccan Traps — was built in exactly this way. Hold that thought; we return to it shortly."
+        }
+      ],
+      "refs": [
+        1,
+        5
+      ]
+    },
+    {
+      "heading": "The Ring of Fire and the Other Kind of Volcano",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Where, then, are the volcanoes? Draw them on a world map and they do not scatter at random. They line up along plate boundaries with almost military discipline, and the most famous alignment of all is the Ring of Fire — a horseshoe roughly 40,000 kilometres long around the Pacific rim, from New Zealand through Indonesia, the Philippines and Japan, across the Aleutians, and down the west coast of the Americas to Chile. It carries the great majority of the world's active volcanoes and the great majority of its earthquakes. It exists because almost the entire Pacific rim is a subduction margin. A quieter belt runs along the mid-ocean ridges, mostly under water. A smaller one runs through the Mediterranean and the Middle East, where the African and Eurasian plates converge."
+        },
+        {
+          "type": "figure",
+          "figureId": "ring-of-fire"
+        },
+        {
+          "type": "paragraph",
+          "text": "Subduction-zone volcanoes all obey the logic from Section 1. Water driven off the descending slab makes the mantle wedge melt; the resulting magma is silica-rich and sticky; it rises into composite cones and erupts explosively. And the line of volcanoes sits a fairly fixed distance behind the trench — typically above the point where the top of the descending slab is about 100 to 150 kilometres deep. That is why volcanic arcs run parallel to trenches all over the world. Incidentally, we know the shape of that slab not by seeing it but by listening to the earthquakes that occur along it — the same inference-from-waves logic that revealed the Earth's liquid outer core."
+        },
+        {
+          "type": "figure",
+          "figureId": "subduction-vs-hotspot"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hotspot volcanoes are a different animal altogether. A hotspot is a plume of unusually hot mantle rising from deep within the Earth, and it stays put while the plate above it glides along. The result is a chain: an active volcano directly over the plume, and progressively older, more eroded, often submerged volcanoes trailing away in the direction the plate is moving. Hawaii is the textbook case — Kilauea and Mauna Loa sit over the plume, and the Hawaiian chain stretches north-west through Maui, Oahu and Kauai to Midway and beyond, ending in the Emperor seamounts. The gentle bend in that chain records a change in the direction of Pacific plate motion."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yellowstone is a hotspot under a continent rather than under ocean crust, and that changes the product: instead of runny basalts building shields, continental hotspots generate huge volumes of sticky, silica-rich magma and therefore enormous caldera-forming eruptions. So the two families differ in three ways worth fixing in memory — setting (plate boundary versus plate interior), magma source (water-fluxed mantle wedge versus a deep plume) and temperament (explosive composite cones versus gentle shield volcanoes)."
+        }
+      ],
+      "refs": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "heading": "Killers and Gifts",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lava flows, oddly, are among the least deadly volcanic hazards; they are slow, and people usually walk away. The killers are fast and indirect. The worst is the pyroclastic flow — a ground-hugging avalanche of hot gas, ash and rock fragments that can travel at hundreds of kilometres an hour at several hundred degrees Celsius. In 1902, a pyroclastic flow from Mount Pelée destroyed the town of Saint-Pierre on Martinique within minutes, killing nearly thirty thousand people."
+        },
+        {
+          "type": "paragraph",
+          "text": "Then there are lahars — volcanic mudflows. When ash and debris mix with water, whether from rain or from melted snow and glacier ice on the summit, the mixture races down valleys with the consistency of wet concrete. After the Nevado del Ruiz eruption in Colombia in 1985, a lahar buried the town of Armero and killed more than twenty thousand people, even though volcanologists had warned that the town was in danger. Ash fall is the third hazard: it collapses roofs, closes airports, ruins crops and disrupts life hundreds of kilometres downwind. And the biggest eruptions reach further still — sulphate aerosols injected into the stratosphere reflect sunlight and cool the whole planet. The eruption of Tambora in 1815 was followed by the 'year without a summer' across Europe and North America in 1816."
+        },
+        {
+          "type": "paragraph",
+          "text": "Yet volcanoes give as much as they take. Weathering of ash and basalt produces some of the most fertile soils on Earth, which is why Java in Indonesia and the volcanic highlands of the Andes and Central America carry dense populations. Volcanic regions supply geothermal energy — Iceland heats almost all its homes this way — along with sulphur, pumice, pozzolana for cement and basalt for road metal and building stone. Volcanoes are also a window into the deep Earth, and outgassing from ancient volcanoes helped build the early atmosphere and the oceans."
+        },
+        {
+          "type": "paragraph",
+          "text": "The lesson here is that hazard and risk are not the same thing. A volcano's hazard depends on its style of eruption; its risk depends on who is standing nearby. Barren Island erupts into an empty sea and harms no one. Several million people live in and around Naples, under Vesuvius. Same planet, same physics, very different consequences."
+        }
+      ],
+      "refs": [
+        5,
+        1
+      ]
+    },
+    {
+      "heading": "India's Volcanic Legacy: The Deccan Traps and Barren Island",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "India's mainland has no active volcano — but it has one of the greatest volcanic provinces on Earth. The Deccan Traps were erupted about 66 million years ago by fissure eruptions that flooded what is now Maharashtra, Madhya Pradesh, Gujarat and adjoining areas with layer upon layer of basalt. The province covers roughly half a million square kilometres, and near the Western Ghats the lava pile is up to two kilometres thick. Walk up to the Ghats and you are climbing the staircases of an ancient flood basalt."
+        },
+        {
+          "type": "paragraph",
+          "text": "Two things make the Deccan Traps more than a geological curiosity. First, its age coincides with the Cretaceous–Palaeogene boundary, the moment when the dinosaurs and a great many other species disappeared. The debate over how much of that extinction was caused by the Deccan eruptions and how much by the Chicxulub asteroid impact is still alive; most earth scientists now regard the impact as the primary trigger, with the eruptions acting as a serious additional stress on the climate. Second, the traps are widely linked to the Réunion mantle plume. India was passing over that hotspot as the eruptions occurred; India then drifted north, and the plume today feeds the island of Réunion in the Indian Ocean. A hotspot, a flood basalt and a drifting continent, all in one story."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Deccan basalt also gave India its black cotton soil — regur. Weathered basalt is rich in iron, lime, magnesia and potash, retains moisture remarkably well, and swells and cracks as it wets and dries, which is why it is described as self-ploughing. It is poor in nitrogen and organic matter, but cotton loves it. That single soil type explains why the cotton belt sits where it does. The same rock has been quarried for centuries — the Ajanta and Ellora caves are carved into Deccan basalt — and is still dug for road metal and building stone."
+        },
+        {
+          "type": "paragraph",
+          "text": "For a live volcano we must go to the Andaman Sea. Barren Island, about 140 kilometres north-east of Port Blair, is India's only active volcano. It is a stratovolcano on the Andaman–Nicobar arc, where the Indian plate descends beneath the Burma plate — the same subduction system that produced the 2004 tsunami. Its crater, roughly two kilometres wide, is breached on one side by the sea. After lying quiet for well over a century, it erupted again in 1991 and has erupted repeatedly since. Nearby Narcondam is dormant. And notice where Barren Island sits: inside seismic Zone V, on the very arc that gives the Andamans their earthquakes. One subduction zone, three consequences — volcanoes, earthquakes and a tsunami-generating margin."
+        }
+      ],
+      "refs": [
+        1,
+        5
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "id": "volcano-profiles",
+      "kind": "diagram",
+      "title": "Three volcano profiles, one underlying logic",
+      "caption": "Compare the three cross-sections. The shield volcano is broad and low because runny basaltic lava travels far before it freezes; its summit carries a shallow caldera rather than a sharp crater. The composite volcano is steep and layered, built of alternating lava and ash from sticky, gas-rich magma — note the crater notch at the top. The cinder cone is small, steep and made of loose ash, usually from a single short-lived eruption. All three are fed by a conduit from a magma chamber below. The shape you see on a map is a clue to the magma's chemistry, and the chemistry is a clue to the tectonic setting.",
+      "alt": "Three labelled cross-sections of a broad shield volcano, a steep layered composite volcano with a crater, and a small steep cinder cone, each with a conduit and magma chamber below.",
+      "credit": "Original diagram for The Daily Brief",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 440' role='img' aria-label='Cross-sections comparing a shield volcano, a composite volcano and a cinder cone'><rect x='0' y='0' width='800' height='440' fill='var(--paper-2)' opacity='0.3'/><line x1='20' y1='330' x2='780' y2='330' stroke='var(--ink)' stroke-width='2'/><path d='M40,330 Q160,200 280,330 Z' fill='var(--accent)' fill-opacity='0.2' stroke='var(--ink)' stroke-width='2'/><ellipse cx='160' cy='266' rx='16' ry='5' fill='var(--paper-2)' stroke='var(--ink)' stroke-width='1.5'/><line x1='160' y1='271' x2='160' y2='330' stroke='var(--ink)' stroke-width='1.5' stroke-dasharray='4 3'/><line x1='160' y1='330' x2='160' y2='388' stroke='var(--ink)' stroke-width='2'/><ellipse cx='160' cy='396' rx='34' ry='11' fill='var(--accent)' fill-opacity='0.35' stroke='var(--ink)' stroke-width='1.5'/><text x='160' y='40' text-anchor='middle' font-size='17' font-weight='bold' fill='var(--ink)'>SHIELD</text><text x='160' y='60' text-anchor='middle' font-size='12' fill='var(--muted)'>broad, gentle dome</text><text x='160' y='76' text-anchor='middle' font-size='12' fill='var(--muted)'>runny basalt lava</text><path d='M320,330 L392,150 L410,170 L430,150 L560,330 Z' fill='var(--accent)' fill-opacity='0.2' stroke='var(--ink)' stroke-width='2'/><line x1='332' y1='300' x2='538' y2='300' stroke='var(--ink)' stroke-width='1' opacity='0.45'/><line x1='352' y1='250' x2='502' y2='250' stroke='var(--ink)' stroke-width='1' opacity='0.45'/><line x1='372' y1='200' x2='466' y2='200' stroke='var(--ink)' stroke-width='1' opacity='0.45'/><line x1='413' y1='190' x2='423' y2='330' stroke='var(--ink)' stroke-width='1.5' stroke-dasharray='4 3'/><line x1='425' y1='330' x2='425' y2='388' stroke='var(--ink)' stroke-width='2'/><ellipse cx='425' cy='396' rx='34' ry='11' fill='var(--accent)' fill-opacity='0.35' stroke='var(--ink)' stroke-width='1.5'/><text x='440' y='40' text-anchor='middle' font-size='17' font-weight='bold' fill='var(--ink)'>COMPOSITE</text><text x='440' y='60' text-anchor='middle' font-size='12' fill='var(--muted)'>steep, layered cone</text><text x='440' y='76' text-anchor='middle' font-size='12' fill='var(--muted)'>sticky andesite</text><text x='445' y='112' text-anchor='middle' font-size='11' fill='var(--ink)'>alternating lava and ash</text><line x1='412' y1='118' x2='400' y2='158' stroke='var(--ink)' stroke-width='1' opacity='0.6'/><path d='M600,330 L655,205 L670,235 L685,205 L760,330 Z' fill='var(--accent)' fill-opacity='0.2' stroke='var(--ink)' stroke-width='2'/><line x1='670' y1='245' x2='670' y2='330' stroke='var(--ink)' stroke-width='1.5' stroke-dasharray='4 3'/><line x1='670' y1='330' x2='670' y2='388' stroke='var(--ink)' stroke-width='2'/><ellipse cx='670' cy='396' rx='30' ry='10' fill='var(--accent)' fill-opacity='0.35' stroke='var(--ink)' stroke-width='1.5'/><text x='680' y='40' text-anchor='middle' font-size='17' font-weight='bold' fill='var(--ink)'>CINDER CONE</text><text x='680' y='60' text-anchor='middle' font-size='12' fill='var(--muted)'>small, steep, ash-built</text><text x='680' y='76' text-anchor='middle' font-size='12' fill='var(--muted)'>short-lived, single vent</text><text x='160' y='430' text-anchor='middle' font-size='11' fill='var(--muted)'>magma chamber</text><text x='780' y='430' text-anchor='end' font-size='11' fill='var(--muted)'>not to scale</text></svg>"
+    },
+    {
+      "id": "subduction-vs-hotspot",
+      "kind": "diagram",
+      "title": "Two ways to make a volcano",
+      "caption": "Panel A: at a subduction zone the descending oceanic plate releases water into the mantle wedge, which lowers the melting point and generates sticky, gas-rich magma that builds explosive composite cones. Panel B: at a hotspot a plume of hot mantle rises from depth and stays put while the plate glides over it. The result is a chain — an active shield volcano directly over the plume, with older, eroded and finally submerged volcanoes trailing away in the direction of plate motion. Note the difference in setting, magma source and resulting shape.",
+      "alt": "Two cross-sections: on the left, an oceanic plate subducting beneath a continent, releasing water that triggers melting and feeds a composite volcano; on the right, a mantle plume under an oceanic plate producing a chain of shield volcanoes that get older away from the plume.",
+      "credit": "Original diagram for The Daily Brief",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 440' role='img' aria-label='Cross-sections comparing subduction-zone volcanism with hotspot volcanism'><rect x='0' y='0' width='800' height='440' fill='var(--paper-2)' opacity='0.3'/><line x1='400' y1='18' x2='400' y2='425' stroke='var(--rule)' stroke-width='1.5' stroke-dasharray='6 5'/><text x='200' y='28' text-anchor='middle' font-size='14' font-weight='bold' fill='var(--ink)'>A. SUBDUCTION-ZONE VOLCANISM</text><rect x='20' y='75' width='140' height='67' fill='var(--accent)' fill-opacity='0.15'/><text x='90' y='112' text-anchor='middle' font-size='12' fill='var(--muted)'>OCEAN</text><path d='M160,110 L385,100 L385,360 L160,360 Z' fill='var(--ink)' fill-opacity='0.07' stroke='var(--ink)' stroke-width='1'/><path d='M20,142 L160,142 L330,312 L330,328 L160,160 L20,160 Z' fill='var(--accent)' fill-opacity='0.45' stroke='var(--ink)' stroke-width='1.5'/><text x='152' y='130' text-anchor='middle' font-size='11' fill='var(--ink)'>trench</text><text x='72' y='205' text-anchor='middle' font-size='11' fill='var(--ink)'>oceanic plate</text><line x1='72' y1='196' x2='82' y2='163' stroke='var(--ink)' stroke-width='1' opacity='0.6'/><circle cx='225' cy='200' r='3' fill='var(--accent)'/><circle cx='245' cy='218' r='3' fill='var(--accent)'/><circle cx='262' cy='235' r='3' fill='var(--accent)'/><text x='290' y='190' text-anchor='middle' font-size='11' fill='var(--ink)'>water triggers melting</text><path d='M330,300 L323,128' stroke='var(--accent)' stroke-width='4' fill='none' opacity='0.75'/><path d='M323,116 L316,132 L330,132 Z' fill='var(--accent)'/><path d='M275,103 L300,50 L312,64 L324,50 L355,103 Z' fill='var(--accent)' fill-opacity='0.35' stroke='var(--ink)' stroke-width='1.5'/><text x='255' y='45' text-anchor='end' font-size='11' fill='var(--ink)'>composite volcano</text><line x1='258' y1='52' x2='288' y2='62' stroke='var(--ink)' stroke-width='1' opacity='0.6'/><text x='350' y='340' text-anchor='middle' font-size='11' fill='var(--muted)'>continental plate</text><text x='600' y='28' text-anchor='middle' font-size='14' font-weight='bold' fill='var(--ink)'>B. HOTSPOT VOLCANISM</text><rect x='420' y='95' width='370' height='45' fill='var(--accent)' fill-opacity='0.12'/><path d='M660,430 C675,360 685,250 680,166 L720,166 C715,250 725,360 740,430 Z' fill='var(--accent)' fill-opacity='0.3' stroke='var(--ink)' stroke-width='1'/><rect x='420' y='140' width='370' height='26' fill='var(--ink)' fill-opacity='0.15' stroke='var(--ink)' stroke-width='1'/><path d='M440,140 Q460,128 480,140 Z' fill='var(--accent)' fill-opacity='0.4' stroke='var(--ink)' stroke-width='1.5'/><path d='M505,140 Q530,105 555,140 Z' fill='var(--accent)' fill-opacity='0.4' stroke='var(--ink)' stroke-width='1.5'/><path d='M575,140 Q605,45 635,140 Z' fill='var(--accent)' fill-opacity='0.4' stroke='var(--ink)' stroke-width='1.5'/><path d='M655,140 Q700,10 745,140 Z' fill='var(--accent)' fill-opacity='0.4' stroke='var(--ink)' stroke-width='1.5'/><line x1='420' y1='95' x2='790' y2='95' stroke='var(--muted)' stroke-width='1' stroke-dasharray='5 4'/><text x='425' y='88' text-anchor='start' font-size='10' fill='var(--muted)'>sea level</text><text x='430' y='184' text-anchor='start' font-size='11' fill='var(--muted)'>oceanic lithosphere</text><text x='630' y='400' text-anchor='end' font-size='11' fill='var(--ink)'>mantle plume</text><line x1='650' y1='215' x2='505' y2='215' stroke='var(--ink)' stroke-width='1.5'/><path d='M497,215 L511,209 L511,221 Z' fill='var(--ink)'/><text x='575' y='235' text-anchor='middle' font-size='11' fill='var(--ink)'>plate motion</text><text x='430' y='250' text-anchor='start' font-size='11' fill='var(--muted)'>older islands</text><text x='700' y='52' text-anchor='middle' font-size='11' fill='var(--ink)'>active volcano</text><text x='780' y='432' text-anchor='end' font-size='10' fill='var(--muted)'>not to scale</text></svg>"
+    },
+    {
+      "id": "ring-of-fire",
+      "kind": "map",
+      "title": "The Ring of Fire and the hotspots",
+      "caption": "The thick band traces the subduction margins that encircle the Pacific — from New Zealand through Indonesia, Japan and the Aleutians, down the Americas to Chile. The small dark dots mark volcanoes clustered along it: this is a map of a plate boundary, not of random eruptions. Now look at the three marked hotspots. Hawaii sits in the middle of the Pacific plate, thousands of kilometres from any boundary; Yellowstone sits inside the North American plate; and the Deccan Traps, now on the Indian plate, mark where India once passed over the Réunion plume. Hotspots ignore plate boundaries — which is exactly why they are the exception that proves the rule.",
+      "alt": "Schematic Pacific-centred map showing the Ring of Fire band of subduction volcanoes encircling the ocean, with the Hawaii, Yellowstone and Deccan Traps hotspots marked well away from the band.",
+      "credit": "Original diagram for The Daily Brief",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 460' role='img' aria-label='Schematic Pacific-centred map of the Ring of Fire and major hotspots'><rect x='0' y='0' width='800' height='460' fill='var(--paper-2)' opacity='0.3'/><text x='400' y='28' text-anchor='middle' font-size='15' font-weight='bold' fill='var(--ink)'>The Ring of Fire — a schematic Pacific-centred view</text><rect x='30' y='50' width='740' height='340' fill='var(--accent)' fill-opacity='0.06' stroke='var(--rule)' stroke-width='1.5'/><path d='M40,50 L215,50 L220,110 L180,165 L155,220 L105,235 L60,210 L40,150 Z' fill='var(--ink)' fill-opacity='0.13' stroke='var(--ink)' stroke-width='1'/><text x='130' y='95' text-anchor='middle' font-size='11' fill='var(--muted)'>ASIA</text><path d='M55,305 L175,295 L195,360 L95,380 L45,345 Z' fill='var(--ink)' fill-opacity='0.13' stroke='var(--ink)' stroke-width='1'/><text x='118' y='343' text-anchor='middle' font-size='10' fill='var(--muted)'>AUSTRALIA</text><path d='M630,50 L770,50 L770,185 L720,220 L655,165 L625,105 Z' fill='var(--ink)' fill-opacity='0.13' stroke='var(--ink)' stroke-width='1'/><text x='700' y='115' text-anchor='middle' font-size='11' fill='var(--muted)'>N. AMERICA</text><path d='M670,250 L750,240 L765,365 L715,385 L675,325 Z' fill='var(--ink)' fill-opacity='0.13' stroke='var(--ink)' stroke-width='1'/><text x='716' y='310' text-anchor='middle' font-size='10' fill='var(--muted)'>S. AMERICA</text><path d='M215,385 C175,330 160,220 205,130 C260,60 470,55 580,85 C635,110 620,195 640,265 C655,315 680,360 705,385' fill='none' stroke='var(--accent)' stroke-width='9' stroke-linecap='round' opacity='0.7'/><g fill='var(--ink)'><circle cx='204' cy='367' r='3.5'/><circle cx='187' cy='323' r='3.5'/><circle cx='178' cy='271' r='3.5'/><circle cx='180' cy='214' r='3.5'/><circle cx='193' cy='158' r='3.5'/><circle cx='240' cy='102' r='3.5'/><circle cx='300' cy='82' r='3.5'/><circle cx='372' cy='70' r='3.5'/><circle cx='461' cy='68' r='3.5'/><circle cx='544' cy='77' r='3.5'/><circle cx='610' cy='114' r='3.5'/><circle cx='623' cy='158' r='3.5'/><circle cx='630' cy='211' r='3.5'/><circle cx='640' cy='265' r='3.5'/><circle cx='669' cy='334' r='3.5'/><circle cx='690' cy='368' r='3.5'/></g><text x='400' y='300' text-anchor='middle' font-size='13' fill='var(--muted)' letter-spacing='3'>PACIFIC OCEAN</text><circle cx='420' cy='230' r='6' fill='var(--accent)' stroke='var(--ink)' stroke-width='1'/><text x='420' y='212' text-anchor='middle' font-size='11' fill='var(--ink)'>Hawaii hotspot</text><circle cx='560' cy='180' r='6' fill='var(--accent)' stroke='var(--ink)' stroke-width='1'/><text x='560' y='200' text-anchor='middle' font-size='11' fill='var(--ink)'>Yellowstone</text><circle cx='105' cy='185' r='6' fill='var(--accent)' stroke='var(--ink)' stroke-width='1'/><text x='110' y='212' text-anchor='middle' font-size='11' fill='var(--ink)'>Deccan Traps</text><line x1='300' y1='420' x2='340' y2='420' stroke='var(--accent)' stroke-width='7' stroke-linecap='round' opacity='0.7'/><text x='348' y='424' text-anchor='start' font-size='11' fill='var(--ink)'>Ring of Fire (subduction margins)</text><circle cx='580' cy='420' r='5' fill='var(--accent)' stroke='var(--ink)' stroke-width='1'/><text x='592' y='424' text-anchor='start' font-size='11' fill='var(--ink)'>hotspot</text><text x='770' y='450' text-anchor='end' font-size='10' fill='var(--muted)'>not to scale; positions approximate</text></svg>"
+    }
+  ],
+  "anecdote": {
+    "title": "The first eyewitness",
+    "body": "In 79 CE, a young Roman named Pliny the Younger watched from Misenum as a pine-tree-shaped cloud rose over Vesuvius. His uncle, Pliny the Elder — commander of the Roman fleet and author of a vast natural history — sailed across the bay to observe and to rescue friends. He landed at Stabiae, slept through a night of falling ash, and died the next morning, most likely overcome by the gases. His nephew survived, and years later wrote two letters to the historian Tacitus describing what he had seen. Those letters are the first eyewitness account of a volcanic eruption, and the towering eruption columns of the most violent volcanoes are still called Plinian. The science began not with instruments but with somebody deciding to look."
+  },
+  "exam": {
+    "prelims": [
+      "Shield volcano = basaltic, low-silica, low-viscosity lava, gentle slopes (Mauna Loa). Composite/strato = alternating lava and ash, sticky andesitic magma, steep cone with crater (Fuji, Vesuvius). Cinder cone = loose ash and scoria, small, steep, short-lived.",
+      "A crater is a constructional feature at the vent; a caldera is a collapse feature formed when an eruption empties the magma chamber (Yellowstone, Krakatoa, Toba).",
+      "The Ring of Fire is the Pacific rim subduction belt, roughly 40,000 km long, carrying the majority of the world's active volcanoes and earthquakes.",
+      "Hotspot volcanoes (Hawaii, Yellowstone) are intra-plate, fed by a mantle plume fixed relative to the moving plate; the plate's motion builds an age-progressive chain of islands and seamounts.",
+      "Barren Island, in the Andaman Sea, is India's only active volcano and lies on the Andaman arc within seismic Zone V; Narcondam is dormant.",
+      "The Deccan Traps are flood basalts of fissure origin, roughly 66 million years old, and the parent material of India's black cotton (regur) soil.",
+      "Pyroclastic flow (nuée ardente) and lahar (volcanic mudflow) are the two deadliest volcanic hazards; lava flows are comparatively slow and rarely lethal."
+    ],
+    "mains": [
+      "Distinguish between volcanism at subduction zones and at hotspots. How does this difference shape the volcano's form, its eruption style and its hazard profile? (150 words)",
+      "The Deccan Traps are at once a geological archive, a climatic event and an agricultural resource. Discuss, linking flood basalt volcanism to the Cretaceous–Palaeogene boundary and to India's black cotton soil belt. (250 words)"
+    ],
+    "keyTerms": [
+      {
+        "term": "Magma",
+        "meaning": "Molten or partially molten rock, with dissolved gases and crystals, lying beneath the surface."
+      },
+      {
+        "term": "Lava",
+        "meaning": "Magma that has reached the surface and is losing its dissolved gases."
+      },
+      {
+        "term": "Viscosity",
+        "meaning": "A fluid's resistance to flow; in magma it is controlled mainly by silica content and temperature."
+      },
+      {
+        "term": "Pyroclastic flow",
+        "meaning": "A fast, ground-hugging avalanche of hot gas, ash and rock fragments produced by an explosive eruption."
+      },
+      {
+        "term": "Lahar",
+        "meaning": "A volcanic mudflow of ash and debris mixed with water, moving down valleys like wet concrete."
+      },
+      {
+        "term": "Caldera",
+        "meaning": "A large collapse depression formed when an eruption empties the magma chamber beneath the volcano."
+      },
+      {
+        "term": "Fissure eruption / flood basalt",
+        "meaning": "Lava pouring out along a long crack rather than a central vent, building vast layered basalt provinces called traps."
+      },
+      {
+        "term": "Hotspot",
+        "meaning": "A long-lived mantle plume, fixed relative to the moving plate, which produces chains of volcanoes such as Hawaii."
+      }
+    ]
+  },
+  "recap": [
+    "Viscosity and gas content decide everything: runny magma lets gas escape quietly, sticky magma traps it and explodes. Silica content and temperature set the viscosity.",
+    "Shape follows chemistry — shield (basalt, gentle), composite (andesite, steep and layered), cinder cone (ash, small and short-lived). A volcano's profile is a clue to its tectonic setting.",
+    "Calderas are collapse features, not explosion holes; fissure eruptions build flood basalt provinces, of which the Deccan Traps is India's example.",
+    "The Ring of Fire is the Pacific subduction belt; hotspot volcanoes sit inside plates and build age-progressive chains because the plate moves over a fixed plume.",
+    "Pyroclastic flows and lahars are the great killers; ash and sulphate aerosols affect climate; fertile soils, geothermal energy and minerals are the returns.",
+    "Barren Island is India's only active volcano, on the Andaman arc within Zone V; the Deccan Traps gave India its black cotton soil and its cotton belt."
+  ],
+  "nextUp": "We have now seen the plates move apart, grind past each other and dive beneath one another. Next time we ask what happens when two continents refuse to sink: Mountain Building and the Rock Cycle. You will meet the fold — anticline, syncline, nappe — and see how the Himalayas were stacked like a rug pushed against a wall. We will look at fault-block and rift-valley landscapes, at volcanic and residual mountains, and at the quiet balancing act called isostasy that gives every great range a deep root. And we will close the loop on the rock cycle, showing how igneous, sedimentary and metamorphic rocks are not three categories to memorise but three moments in one continuous system — the same system that has been recycling the Deccan basalt, the Himalayan limestone and the granite of the Peninsula for billions of years.",
+  "references": [
+    {
+      "label": "NCERT Class XI — Fundamentals of Physical Geography",
+      "href": "https://ncert.nic.in/textbook/pdf/kegy101.pdf",
+      "kind": "official"
+    },
+    {
+      "label": "USGS — Plate Tectonics",
+      "href": "https://www.usgs.gov/programs/earthquake-hazards/plate-tectonics",
+      "kind": "official"
+    },
+    {
+      "label": "Plate tectonics",
+      "href": "https://en.wikipedia.org/wiki/Plate_tectonics",
+      "kind": "wiki"
+    },
+    {
+      "label": "Earthquake",
+      "href": "https://en.wikipedia.org/wiki/Earthquake",
+      "kind": "wiki"
+    },
+    {
+      "label": "Volcano",
+      "href": "https://en.wikipedia.org/wiki/Volcano",
+      "kind": "wiki"
+    }
+  ],
+  "series": {
+    "subject": "Geography",
+    "subjectKey": "geography",
+    "paper": "Prelims GS-I · Mains GS-I",
+    "unitId": "geo-tectonics",
+    "unitTitle": "The Restless Earth: Tectonics and Its Consequences",
+    "lessonId": "geo-tectonics-3",
+    "lessonNumber": 3,
+    "lessonCount": 4,
+    "seriesLessonNumber": 8,
+    "syllabusNode": "Geography — Plate tectonics, earthquakes, volcanoes and mountain building"
+  },
+  "handoff": {
+    "covered": [
+      "Magma versus lava; the three ways magma is generated (decompression, added heat, added water); the Benioff-zone payoff promised at the end of Lesson 7 — slab dewatering lowers the melting point of the mantle wedge and generates arc magma.",
+      "Viscosity (silica content and temperature) and gas content as the two dials controlling effusive versus explosive eruption; the shaken-fizzy-bottle analogy.",
+      "Shield, composite and cinder-cone volcanoes derived from magma chemistry; the three-profile comparison figure.",
+      "Crater versus caldera; caldera examples (Yellowstone ~640 ka, Krakatoa 1883, Toba ~74 ka); fissure eruptions and flood basalt provinces; the origin of the word 'traps'; the mid-ocean ridge as the largest volcanic system.",
+      "The Ring of Fire (Pacific rim, ~40,000 km, majority of active volcanoes and earthquakes) and the mid-ocean ridge and Mediterranean belts.",
+      "Subduction-zone versus hotspot volcanism — setting, magma source and temperament; the 100–150 km depth rule for arcs; Hawaii's age-progressive chain and the Emperor seamount bend; Yellowstone as a continental hotspot.",
+      "Hazards: pyroclastic flows (Mount Pelée 1902), lahars (Nevado del Ruiz 1985), ash fall, sulphate aerosols and the 1816 'year without a summer' after Tambora 1815. Benefits: fertile volcanic soils, geothermal energy, minerals and building stone, outgassing and the early atmosphere.",
+      "India's volcanic legacy: the Deccan Traps (fissure-fed flood basalt, ~66 Ma, ~5 lakh km², up to ~2 km thick near the Western Ghats, K–Pg debate, Réunion plume link), regur/black cotton soil, Ajanta–Ellora carved in basalt, and Barren Island as India's only active volcano on the Andaman arc in seismic Zone V, with Narcondam dormant."
+    ],
+    "next": "Mountain Building and the Rock Cycle — Orogeny and mountain types (fold, fault-block, volcanic, residual); fold structures (anticline, syncline, nappe); faulting and rift valleys; the Himalayas as a collision mountain; isostasy and mountain roots; the rock cycle linking igneous, sedimentary and metamorphic rocks; why the rock cycle is a system.",
+    "notes": "The 'india-seismic-zones' figure was reused verbally for Barren Island (Andaman arc = Zone V) as planned; keep reusing it for any disaster-management or hazard-mapping question. The new 'volcano-profiles' figure is the master volcano figure — it can be reused for any question on volcano types or magma chemistry, and pairs naturally with 'plate-boundaries' from Lesson 6. The new 'subduction-vs-hotspot' cross-section is the figure to reuse whenever the exam asks to distinguish tectonic settings, and it also revives the Benioff zone visually. The new 'ring-of-fire' map deliberately extends the 'map as argument' stance from Lesson 1 and marks the Deccan Traps, so it can be reused in an Indian-geography or resource-geography context. Deliberately NOT done: any detailed treatment of volcano monitoring, prediction or early-warning systems (that belongs to a disaster-management lesson); the later stages of the Wilson cycle; and any quantitative treatment of eruption magnitude indices. The women-in-science thread (Inge Lehmann → Marie Tharp) was again NOT extended; a one-line nod was given in Section 4 to the shared logic of inferring hidden structure from seismic waves, but Lehmann's name is still unpaid and should be cashed in either in a revision piece or in the interior-of-the-Earth lesson. The Coriolis preview from Lesson 4 remains unpaid and still belongs to atmospheric circulation. The isostasy material next lesson should call back to the density contrast between oceanic and continental crust established in the interior and plate-tectonics lessons."
+  }
+}
